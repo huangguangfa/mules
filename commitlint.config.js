@@ -2,7 +2,7 @@ module.exports = {
     extends: ['cz'],
     parserPreset: {
         parserOpts: {
-            headerPattern: /^(.*?)((.*?)):\s?(.*)$/,
+            headerPattern: /^(.*?)\((.*?)\):\s?(.*)$/,
             headerCorrespondence: ['type', 'scope', 'subject'],
         },
     },
