@@ -15,4 +15,3 @@ module.exports = {
         { "type": "ci", "section": "👷 Continuous Integration | CI 配置" }
     ]
 }
- 
