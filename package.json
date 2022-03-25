@@ -9,13 +9,18 @@
         "commitizen": "^4.2.4",
         "commitlint-config-cz": "^0.13.3",
         "cz-customizable": "^6.3.0",
-        "husky": "^7.0.4",
+        "husky": "^1.2.0",
         "standard-version": "^9.3.2",
         "yorkie": "^2.0.0"
     },
     "config": {
         "commitizen": {
             "path": "cz-customizable"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -e -V"
         }
     }
 }
