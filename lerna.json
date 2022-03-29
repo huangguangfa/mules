@@ -10,6 +10,7 @@
             "ignored-file",
             "*.md"
         ],
-        "message": "feat(组件): lerna publish"
+        "message": "feat(组件): lerna publish",
+        "tag": "flippin-sweet"
     }
 }
