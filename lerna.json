@@ -1,16 +1,19 @@
 {
+    "version": "independent",
+    "command": {
+        "punlish": {
+            "ignoreChanges": [
+                "ignored-file",
+                "*.md"
+            ],
+            "message": "feat(组件): lerna publish",
+            "tag": "flippin-sweet"
+        }
+    },
     "packages": [
         "packages/*"
     ],
     "npmClient": "yarn",
-    "useWorkspaces": true,
-    "version": "independent",
-    "punlish": {
-        "ignoreChanges": [
-            "ignored-file",
-            "*.md"
-        ],
-        "message": "feat(组件): lerna publish",
-        "tag": "flippin-sweet"
-    }
+    "useWorkspaces": true
+    
 }
