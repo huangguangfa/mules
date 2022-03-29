@@ -1,6 +1,6 @@
 {
   "name": "@gf-sten/components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "组件库",
   "author": "hgf <1454556135@qq.com>",
   "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
@@ -10,7 +10,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "publishConfig":{
+  "publishConfig": {
     "access": "public"
   },
   "files": [
@@ -27,7 +27,7 @@
     "url": "https://github.com/huanggungfa/web-components-gf/issues"
   },
   "dependencies": {
-    "@gf-sten/icons": "^1.0.1",
-    "@gf-sten/themes": "^1.0.1"
+    "@gf-sten/icons": "^1.0.2",
+    "@gf-sten/themes": "^1.0.2"
   }
 }

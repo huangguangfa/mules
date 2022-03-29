@@ -25,7 +25,6 @@ module.exports = {
         footer: "关联关闭的issue，例如：#31, #34(可选):\n",
         confirmCommit: "确定提交?"
     },
-
     allowCustomScopes: true,
     allowBreakingChanges: ['新增', '修复'],
     subjectLimit: 100
