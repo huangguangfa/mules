@@ -141,3 +141,5 @@ module.exports = {
     ]
 }
 ```
+
+lerna version -m "feat(组件): lerna publish"

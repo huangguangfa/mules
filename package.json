@@ -5,7 +5,9 @@
     "scripts": {
         "i":"lerna bootstrap",
         "commit": "git cz",
-        "release": "standard-version"
+        "release": "standard-version",
+        "start:c": "lerna run start --scope @gf-sten/components",
+        "generate:c": "lerna run generate --scope @gf-sten/components"
     },
     "devDependencies": {
         "@commitlint/cli": "^16.2.3",
