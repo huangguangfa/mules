@@ -8,6 +8,9 @@
             ],
             "message": "feat(组件): lerna publish",
             "tag": "flippin-sweet"
+        },
+        "version": {
+            "message": "feat(组件): lerna publish"
         }
     },
     "packages": [
