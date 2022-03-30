@@ -5,10 +5,13 @@
   "author": "hgf <1454556135@qq.com>",
   "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
   "license": "ISC",
-  "main": "lib/icons.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
+  },
+  "exports": {
+    ".": "./lib/icons.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "lib"

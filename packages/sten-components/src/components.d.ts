@@ -21,6 +21,9 @@ export namespace Components {
         "middle": string;
     }
     interface StenButton {
+        /**
+          * **********************     装饰器 Start     * *******************
+         */
         "name": string;
         "show": () => Promise<void>;
     }
@@ -59,6 +62,9 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface StenButton {
+        /**
+          * **********************     装饰器 Start     * *******************
+         */
         "name"?: string;
         "onStenButton-show"?: (event: CustomEvent<{ name:string }>) => void;
     }
