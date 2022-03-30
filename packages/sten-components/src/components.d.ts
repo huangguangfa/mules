@@ -21,6 +21,8 @@ export namespace Components {
         "middle": string;
     }
     interface StenButton {
+        "name": string;
+        "show": () => Promise<void>;
     }
 }
 declare global {
@@ -57,6 +59,8 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface StenButton {
+        "name"?: string;
+        "onStenButton-show"?: (event: CustomEvent<{ name:string }>) => void;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
