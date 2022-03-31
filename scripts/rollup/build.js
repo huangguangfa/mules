@@ -1,9 +1,9 @@
 
 'use strict';
 const rollup = require('rollup');
-// const { babel , getBabelOutputPlugin } = require('@rollup/plugin-babel');
-// const { nodeResolve } = require('@rollup/plugin-node-resolve');
-// const { uglify } = require('rollup-plugin-uglify')
+const { babel, getBabelOutputPlugin } = require('@rollup/plugin-babel');
+const nodeResolve = require('@rollup/plugin-node-resolve').default;
+const { uglify } = require('rollup-plugin-uglify')
 const chalk = require('chalk');
 
 const argv = require('minimist')(process.argv.slice(2));
@@ -11,34 +11,25 @@ const Bundles = require('./bundles');
 const { getFilename } = Bundles;
 const bundles = Bundles.bundles;
 const isWatchMode = argv.watch;
-const buildMode = typeof argv.mode === 'string' && argv.mode.split(" ") || bundles.map( i=> i.entry);
-
+const buildMode = typeof argv.mode === 'string' && argv.mode.split(" ") || bundles.map(i => i.entry);
 
 function resolveEntryFork(resolvedEntry) {
     return require.resolve(`../../packages/${resolvedEntry}`);
 }
-
-// console.log('babelbabelbabel',babel)
-
-function getPlugins(){
+// 后缀
+const extensions = ['.js']
+function getRollupPlugins() {
     return [
-        // nodeResolve(),
-        // babel({
-        //     runtimeHelpers: true,
-        //     exclude: "node_modules/**",
-        //     externalHelpers: true
-        //     // babelHelpers:"runtime",
-        //     // exclude:"node_module"
-        // }),
-        // getBabelOutputPlugin({ 
-        //     presets: ['@babel/env'],
-        //     allowAllFormats:true,
-        //     plugins: [
-        //         ['@babel/plugin-transform-runtime', { useESModules: true }]
-        //     ]
-        // }),
+        nodeResolve({
+            preferBuiltins: false,
+            mainFields: ['module', 'main'],
+            extensions
+        }),
+        babel({
+            babelHelpers: 'bundled',
+            extensions
+        })
         // uglify()
-        // (process.env.NODE_ENV === 'production' && uglify())
     ]
 }
 
@@ -48,36 +39,47 @@ function getRollupOutputOptions(
     format,
     globalName,
     globals,
-){
+) {
     const config = {
         name: globalName,
         sourcemap: false,
-        globals
+        globals,
+        plugins: [
+            // getBabelOutputPlugin({ 
+            //     presets: ['@babel/preset-env'],
+            //     plugins: [
+            //         ["@babel/plugin-transform-runtime", {
+            //             corejs: 3  // 这样配置需要安装 @babel/runtime-corejs3 包
+            //         }]
+            //      ],
+            //     allowAllFormats:true
+            // })
+        ]
     }
-    return format.map( type => {
+    return format.map(type => {
         const name = `${globalName}.${type}.js`
         return {
             ...config,
-            file:`${outputPath.replace('index.js', '')}${outputDir}/${name}`,
-            format:type
+            file: `${outputPath.replace('index.js', '')}${outputDir}/${name}`,
+            format: type
         }
     })
 }
 
 function handleRollupError(error) {
     console.error(
-      `\x1b[31m-- 错误：${error.code}${error.plugin ? ` (${error.plugin})` : ''} --`
+        `\x1b[31m-- 错误：${error.code}${error.plugin ? ` (${error.plugin})` : ''} --`
     );
 }
 
-async function createBundle(bundle){
+async function createBundle(bundle) {
     const { format, entry, outputDir } = bundle;
     // const filename = getFilename(bundle);
     let resolvedEntry = resolveEntryFork(entry);
     const rollupOutputOptions = getRollupOutputOptions(resolvedEntry, outputDir, format, entry);
     const rollupConfig = {
         input: resolvedEntry,
-        plugins: getPlugins(),
+        plugins: getRollupPlugins(),
         output: rollupOutputOptions
     }
     if (isWatchMode) {
@@ -97,13 +99,13 @@ async function createBundle(bundle){
                     break;
             }
         });
-    } else{
+    } else {
         try {
             const result = await rollup.rollup(rollupConfig);
-            for( let outputConfig of rollupOutputOptions ){
+            for (let outputConfig of rollupOutputOptions) {
                 await result.write(outputConfig);
             }
-            console.log(chalk`{rgb(103, 194, 58) 【${entry}】 build success}`);
+            console.log(chalk`{rgb(103, 194, 58) 【${entry}包】build success}`);
         } catch (error) {
             throw error;
         }
@@ -111,9 +113,9 @@ async function createBundle(bundle){
 }
 
 // 循环模块 逐一打包
-function buildEverything(){
+function buildEverything() {
     for (const bundle of bundles) {
-        if(buildMode.includes(bundle.entry)) createBundle(bundle);
+        if (buildMode.includes(bundle.entry)) createBundle(bundle);
     }
 }
 
