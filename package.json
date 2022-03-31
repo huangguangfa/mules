@@ -1,13 +1,13 @@
 {
-    
     "name": "root",
     "private": true,
     "scripts": {
-        "i":"lerna bootstrap",
+        "i": "lerna bootstrap",
         "commit": "git cz",
         "release": "standard-version",
         "start:c": "lerna run start --scope @gf-sten/components",
-        "generate:c": "lerna run generate --scope @gf-sten/components"
+        "generate:c": "lerna run generate --scope @gf-sten/components",
+        "build:js": "node ./scripts/rollup/build.js --mode"
     },
     "devDependencies": {
         "@commitlint/cli": "^16.2.3",
@@ -16,6 +16,7 @@
         "cz-customizable": "^6.3.0",
         "husky": "^1.2.0",
         "lerna": "^4.0.0",
+        "rollup": "^2.70.1",
         "standard-version": "^9.3.2",
         "yorkie": "^2.0.0"
     },
