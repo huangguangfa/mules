@@ -6,15 +6,15 @@
   "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib",
+    "lib": "npm",
     "test": "__tests__"
   },
   "exports": {
-    ".": "./lib/themes.js",
+    ".": "./npm/themes.js",
     "./package.json": "./package.json"
   },
   "files": [
-    "lib"
+    "npm"
   ],
   "publishConfig": {
     "access": "public"

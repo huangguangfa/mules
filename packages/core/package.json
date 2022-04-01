@@ -1,7 +1,7 @@
 {
     "name": "@gf-ui/core",
     "version": "1.0.0",
-    "description": "> TODO: description",
+    "description": "核心基础库",
     "author": "hgf <1454556135@qq.com>",
     "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
     "license": "ISC",
@@ -9,14 +9,14 @@
         "access": "public"
     },
     "scripts": {
-        "test": "jest"
+        "test": "jest --coverage"
     },
     "directories": {
-        "lib": "lib",
+        "lib": "npm",
         "test": "__tests__"
     },
     "files": [
-        "lib"
+        "npm"
     ],
     "repository": {
         "type": "git",
