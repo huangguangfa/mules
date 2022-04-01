@@ -1,7 +1,7 @@
 
 'use strict';
 const rollup = require('rollup');
-const { babel, getBabelOutputPlugin } = require('@rollup/plugin-babel');
+const { babel } = require('@rollup/plugin-babel');
 const nodeResolve = require('@rollup/plugin-node-resolve').default;
 const { uglify } = require('rollup-plugin-uglify')
 const chalk = require('chalk');
@@ -28,8 +28,8 @@ function getRollupPlugins() {
         babel({
             babelHelpers: 'bundled',
             extensions
-        })
-        // uglify()
+        }),
+        uglify()
     ]
 }
 
