@@ -5,6 +5,7 @@
                 "esmodules":true,
                 "node":"current"
             }
-        }]
+        }],
+        "@babel/preset-typescript"
     ]
 }

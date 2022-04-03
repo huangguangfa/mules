@@ -3,7 +3,7 @@
 const bundles = [
     {
         entry: "core",                  // 模块名称
-        outputDir: "lib",               // 打包输出的文件夹
+        outputDir: "npm",               // 打包输出的文件夹
         format:['umd','es'],            // 打包代码格式
         minifyWithProdErrorCodes: true, //代码压缩
     }

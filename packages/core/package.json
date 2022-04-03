@@ -9,7 +9,7 @@
         "access": "public"
     },
     "scripts": {
-        "test": "jest --coverage"
+        "test": "jest --coverage --config ../../jest.config.js"
     },
     "directories": {
         "lib": "npm",
@@ -18,14 +18,6 @@
     "files": [
         "npm"
     ],
-    "jest": {
-        "testMatch": [
-            "**/__tests__/**/*.test.js"
-        ],
-        "transform": {
-            "^.+\\.jsx?$": "../../scripts/jest/babel.jest.config.js"
-        }
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/huanggungfa/web-components-gf.git"

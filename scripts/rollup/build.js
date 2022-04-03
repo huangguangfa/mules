@@ -1,11 +1,10 @@
-
 'use strict';
+
 const rollup = require('rollup');
 const { babel } = require('@rollup/plugin-babel');
 const nodeResolve = require('@rollup/plugin-node-resolve').default;
 const { uglify } = require('rollup-plugin-uglify')
 const chalk = require('chalk');
-
 const argv = require('minimist')(process.argv.slice(2));
 const Bundles = require('./bundles');
 const { getFilename } = Bundles;
@@ -14,10 +13,10 @@ const isWatchMode = argv.watch;
 const buildMode = typeof argv.mode === 'string' && argv.mode.split(" ") || bundles.map(i => i.entry);
 
 function resolveEntryFork(resolvedEntry) {
-    return require.resolve(`../../packages/${resolvedEntry}`);
+    return require.resolve(`../../packages/${resolvedEntry}/index.ts`);
 }
 // 后缀
-const extensions = ['.js']
+const extensions = ['.js', '.ts', '.tsx']
 function getRollupPlugins() {
     return [
         nodeResolve({
@@ -28,8 +27,8 @@ function getRollupPlugins() {
         babel({
             babelHelpers: 'bundled',
             extensions
-        }),
-        uglify()
+        })
+        // uglify()
     ]
 }
 
@@ -44,23 +43,13 @@ function getRollupOutputOptions(
         name: globalName,
         sourcemap: false,
         globals,
-        plugins: [
-            // getBabelOutputPlugin({ 
-            //     presets: ['@babel/preset-env'],
-            //     plugins: [
-            //         ["@babel/plugin-transform-runtime", {
-            //             corejs: 3  // 这样配置需要安装 @babel/runtime-corejs3 包
-            //         }]
-            //      ],
-            //     allowAllFormats:true
-            // })
-        ]
+        plugins: []
     }
     return format.map(type => {
         const name = `${globalName}.${type}.js`
         return {
             ...config,
-            file: `${outputPath.replace('index.js', '')}${outputDir}/${name}`,
+            file: `${outputPath.replace('index.ts', '')}${outputDir}/${name}`,
             format: type
         }
     })
@@ -74,7 +63,6 @@ function handleRollupError(error) {
 
 async function createBundle(bundle) {
     const { format, entry, outputDir } = bundle;
-    // const filename = getFilename(bundle);
     let resolvedEntry = resolveEntryFork(entry);
     const rollupOutputOptions = getRollupOutputOptions(resolvedEntry, outputDir, format, entry);
     const rollupConfig = {
