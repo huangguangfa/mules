@@ -9,7 +9,7 @@ export const is = (type: string, primitive: boolean = false) => {
     }
 }
 
-export const math = (item, pattern, flags) => {
+export const match = (item: string | number, pattern: RegExp | string, flags?: string): boolean => {
     const regex = new RegExp(pattern, flags)
-    return regex.test(item)
+    return regex.test(String(item))
 }
