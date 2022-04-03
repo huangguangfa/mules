@@ -8,7 +8,7 @@
         "start:c": "lerna run start --scope @gf-sten/components",
         "generate:c": "lerna run generate --scope @gf-sten/components",
         "build:js": "node ./scripts/rollup/build.js --mode",
-        "test": "jest"
+        "test:core": "lerna run test --scope @gf-ui/core"
     },
     "devDependencies": {
         "@babel/core": "^7.17.8",
@@ -33,11 +33,6 @@
     "workspaces": [
         "packages/*"
     ],
-    "jest": {
-        "testMatch": [
-            "**/__tests__/**/*.test.js"
-        ]
-    },
     "config": {
         "commitizen": {
             "path": "cz-customizable"

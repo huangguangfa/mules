@@ -18,6 +18,14 @@
     "files": [
         "npm"
     ],
+    "jest": {
+        "testMatch": [
+            "**/__tests__/**/*.test.js"
+        ],
+        "transform": {
+            "^.+\\.jsx?$": "../../scripts/jest/babel.jest.config.js"
+        }
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/huanggungfa/web-components-gf.git"
