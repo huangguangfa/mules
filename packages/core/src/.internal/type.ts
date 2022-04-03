@@ -1,6 +1,6 @@
 export const hasOwn = Object.prototype.hasOwnProperty;
 export const toString = Object.prototype.toString;
-export const isWindow = item => item && typeof item === 'object' && 'setInterval' in item;
+export const isWindow = (item: object): boolean => item && typeof item === 'object' && 'setInterval' in item;
 
 
 export const is = (type: string, primitive: boolean = false) => {
