@@ -1,4 +1,3 @@
-// const CryptoJS = require('crypto-js'); 
 import CryptoJS from 'crypto-js';
 import Type from '../type'
 import { ASYMMETRIC_CRYPTO_TYPE, SYMMETRIC_CRYPTO_TYPE } from '../config'
@@ -7,22 +6,31 @@ import { ASYMMETRIC_CRYPTO_TYPE, SYMMETRIC_CRYPTO_TYPE } from '../config'
 const _crypto_context = (() => {
     const context = {}
     // 非对称加密策略
-    Object.keys(ASYMMETRIC_CRYPTO_TYPE).forEach(prop => {
+    Object.keys(ASYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
         const _item = ASYMMETRIC_CRYPTO_TYPE[prop]
         if (_item.name) {
             const _crypto = CryptoJS[_item.name]
             context[_item.name] = { symmetric: false }
             if (_item.hmac) {
-                context[_item.name] = { ...context[prop], encrypt: (data, key) => _crypto(data, key).toString() }
+                context[_item.name] = {
+                    ...context[prop],
+                    encrypt: (data, key) => _crypto(data, key).toString()
+                }
             } else if (_item.params) {
-                context[_item.name] = { ...context[prop], encrypt: (data, key) => _crypto(data, key, _item.params).toString() }
+                context[_item.name] = {
+                    ...context[prop],
+                    encrypt: (data, key) => _crypto(data, key, _item.params).toString()
+                }
             } else {
-                context[_item.name] = { ...context[prop], encrypt: (data) => _crypto(data).toString() }
+                context[_item.name] = {
+                    ...context[prop],
+                    encrypt: (data) => _crypto(data).toString()
+                }
             }
         }
     })
     // 对称加密策略
-    Object.keys(SYMMETRIC_CRYPTO_TYPE).forEach(prop => {
+    Object.keys(SYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
         const _item = SYMMETRIC_CRYPTO_TYPE[prop]
         if (_item.name) {
             context[_item.name] = { symmetric: true }
@@ -66,10 +74,10 @@ const _crypto_context = (() => {
 })()
 
 /* 检测并返回当前加密算法 */
-export const getCryptoContext = (crypto) => {
-    const _context = _crypto_context[crypto]
+export const getCryptoContext = (cryptoName: string) => {
+    const _context = _crypto_context[cryptoName]
     if (!_context) {
-        console.error(`指定的加密算法[${crypto}]不在${ASYMMETRIC_CRYPTO_TYPE}或${SYMMETRIC_CRYPTO_TYPE}范围内！`)
+        console.error(`指定的加密算法[${cryptoName}]不在[ASYMMETRIC_CRYPTO_TYPE]或[SYMMETRIC_CRYPTO_TYPE]范围内！`)
         return false
     }
     return _context

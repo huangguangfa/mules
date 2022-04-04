@@ -4,6 +4,17 @@
  */
 import { getCryptoContext } from '../.internal/crypto'
 
+interface cryptoConfig {
+    name: string,
+    encoding?: boolean,
+    iv?: boolean,
+    hmac?: boolean,
+    params?: {
+        keySize: number,
+        iterations: number
+    }
+}
+
 export default class Crypto {
     /**
      * @method 加密当前的数据
@@ -13,7 +24,8 @@ export default class Crypto {
      * @param iv 矢量(来自应用配置)
      * @returns {String} 加密之后的密文字符串
      */
-    static encrypt(data, crypto, { key = '', iv = '' } = {}) {
+
+    static encrypt(data: string, crypto: cryptoConfig, { key = '', iv = '' } = {}): string {
         const context = getCryptoContext(crypto.name)
         if (!context) return data
         return context.symmetric ? context.encrypt(data, key, iv) : context.encrypt(data, key)
@@ -26,7 +38,7 @@ export default class Crypto {
      * @param iv 矢量(来自应用配置)
      * @returns {String} 解密之后的原文字符串
      */
-    static decrypt(data, crypto, { key = '', iv = '' } = {}) {
+    static decrypt(data: string, crypto: cryptoConfig, { key = '', iv = '' } = {}) {
         const context = getCryptoContext(crypto.name)
         if (!context) return data
         return context.symmetric ? context.decrypt(data, key, iv) : ''
