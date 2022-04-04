@@ -1,7 +1,7 @@
-const CryptoJS = require('crypto-js'); 
+// const CryptoJS = require('crypto-js'); 
+import CryptoJS from 'crypto-js';
 import Type from '../type'
 import { ASYMMETRIC_CRYPTO_TYPE, SYMMETRIC_CRYPTO_TYPE } from '../config'
-
 
 /* 采用策略模式实现 */
 const _crypto_context = (() => {

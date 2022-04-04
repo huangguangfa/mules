@@ -9,7 +9,8 @@
         "access": "public"
     },
     "scripts": {
-        "test": "jest --coverage --config ../../jest.config.js"
+        "test": "jest --coverage --config ../../jest.config.js",
+        "build": "rollup -c"
     },
     "directories": {
         "lib": "npm",

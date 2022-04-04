@@ -1,2 +1,3 @@
-export { default as Type } from "./type/index"
+export { default as Type } from "./type"
+export { default as Crypto } from "./crypto"
 

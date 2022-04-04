@@ -3,8 +3,8 @@
 const rollup = require('rollup');
 const { babel } = require('@rollup/plugin-babel');
 const nodeResolve = require('@rollup/plugin-node-resolve').default;
-const { uglify } = require('rollup-plugin-uglify')
-import commonjs from 'rollup-plugin-commonjs';
+const commonjs = require('@rollup/plugin-commonjs');
+const { uglify } = require('rollup-plugin-uglify');
 const chalk = require('chalk');
 const argv = require('minimist')(process.argv.slice(2));
 const Bundles = require('./bundles');
@@ -17,20 +17,17 @@ function resolveEntryFork(resolvedEntry) {
     return require.resolve(`../../packages/${resolvedEntry}/index.ts`);
 }
 // 后缀
-const extensions = ['.js', '.ts', '.tsx']
+const extensions = ['.js', '.ts', '.tsx', '.json', '.node']
 function getRollupPlugins() {
     return [
         nodeResolve({
             preferBuiltins: false,
-            mainFields: ['module', 'main'],
             extensions
         }),
+        commonjs(),
         babel({
             babelHelpers: 'bundled',
             extensions
-        }),
-        commonjs({
-            include: 'node_modules/**'
         })
         // uglify()
     ]
