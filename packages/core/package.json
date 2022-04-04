@@ -24,5 +24,8 @@
     },
     "bugs": {
         "url": "https://github.com/huanggungfa/web-components-gf/issues"
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1"
     }
 }

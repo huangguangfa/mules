@@ -4,7 +4,7 @@
 * @description 数据类型判断类
 */
 import { is, match } from '../.internal/type'
-import { DATA_REGEX_PATTERN } from '../conifg'
+import { DATA_REGEX_PATTERN } from '../config'
 
 export default class Type {
 

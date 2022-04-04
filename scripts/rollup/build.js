@@ -4,6 +4,7 @@ const rollup = require('rollup');
 const { babel } = require('@rollup/plugin-babel');
 const nodeResolve = require('@rollup/plugin-node-resolve').default;
 const { uglify } = require('rollup-plugin-uglify')
+import commonjs from 'rollup-plugin-commonjs';
 const chalk = require('chalk');
 const argv = require('minimist')(process.argv.slice(2));
 const Bundles = require('./bundles');
@@ -27,6 +28,9 @@ function getRollupPlugins() {
         babel({
             babelHelpers: 'bundled',
             extensions
+        }),
+        commonjs({
+            include: 'node_modules/**'
         })
         // uglify()
     ]
