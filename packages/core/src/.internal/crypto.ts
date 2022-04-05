@@ -14,12 +14,12 @@ const _crypto_context = (() => {
             if (_item.hmac) {
                 context[_item.name] = {
                     ...context[prop],
-                    encrypt: (data, key) => _crypto(data, key).toString()
+                    encrypt: (data, key: Record<string, string>) => _crypto(data, key).toString()
                 }
             } else if (_item.params) {
                 context[_item.name] = {
                     ...context[prop],
-                    encrypt: (data, key) => _crypto(data, key, _item.params).toString()
+                    encrypt: (data, key: Record<string, string>) => _crypto(data, key, _item.params).toString()
                 }
             } else {
                 context[_item.name] = {
