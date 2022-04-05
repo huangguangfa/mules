@@ -2,7 +2,7 @@ import Crypto from "../crypto";
 import { STORAGE_TYPE, DEFAULT_STORAGE_OPTIONS, SYMMETRIC_CRYPTO_TYPE } from "../config";
 
 interface storageOptions {
-    storage: string,
+    storage: Storage,
     secret?: boolean,
     encrypt?: Function,
     decrypt?: Function
@@ -10,7 +10,7 @@ interface storageOptions {
 
 export const getStorageOptions = (storageType: string, cryptoType: Record<'name', string>): storageOptions => {
     const options = {
-        storage: storageType === STORAGE_TYPE.local ? 'localStorage' : 'sessionStorage'
+        storage: storageType === STORAGE_TYPE.local ? localStorage : sessionStorage
     }
     if (!cryptoType) {
         return options;
