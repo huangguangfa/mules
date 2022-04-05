@@ -14,6 +14,6 @@ export const STORAGE_TYPE = {
 export const DEFAULT_STORAGE_OPTIONS = {
     storageType: STORAGE_TYPE.local,
     cryptoType: SYMMETRIC_CRYPTO_TYPE.none,
-    cryptoKey: 'xy-key',
-    cryptoIv: 'xy-iv'
+    cryptoKey: 'gf-key',
+    cryptoIv: 'gf-iv'
 }

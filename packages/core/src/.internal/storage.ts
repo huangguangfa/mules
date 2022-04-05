@@ -8,7 +8,7 @@ interface storageOptions {
     decrypt?: Function
 }
 
-export const getStorageOptions = (storageType: string, cryptoType: Record<'name', string>): storageOptions => {
+export const getStorageOptions = (storageType: string, cryptoType?: Record<'name', string>): storageOptions => {
     const options = {
         storage: storageType === STORAGE_TYPE.local ? localStorage : sessionStorage
     }
@@ -19,7 +19,7 @@ export const getStorageOptions = (storageType: string, cryptoType: Record<'name'
     const cryptoParams = { key: cryptoKey, iv: cryptoIv };
     return {
         ...options,
-        secret: [SYMMETRIC_CRYPTO_TYPE.aes, SYMMETRIC_CRYPTO_TYPE.des, SYMMETRIC_CRYPTO_TYPE.rc4].includes(cryptoType),
+        secret: [SYMMETRIC_CRYPTO_TYPE.aes.name, SYMMETRIC_CRYPTO_TYPE.des.name, SYMMETRIC_CRYPTO_TYPE.rc4.name].includes(cryptoType.name),
         encrypt: (data, secret: boolean = false) => secret ? Crypto.encrypt(data, cryptoType, cryptoParams) : data,
         decrypt: (data, secret: boolean = false) => secret ? Crypto.decrypt(data, cryptoType, cryptoParams) : data
     }
