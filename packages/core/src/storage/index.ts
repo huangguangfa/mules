@@ -88,7 +88,7 @@ class StorageInternal {
      * @param options[cryptoType] 加密类型（默认：SYMMETRIC_CRYPTO_TYPE.none, 仅限于aes,des,rc4）
      * @desc 值可能为简单类型，对象或数组
      */
-    static get(key: string, options: { def: () => boolean }) {
+    static get(key: string, options: { def:any }) {
         const { storageType, cryptoType, def } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
         const { storage, secret, decrypt } = getStorageOptions(storageType, cryptoType)
         try {

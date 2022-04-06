@@ -1,7 +1,10 @@
 /**
  * @constant 非对称加密算法类型
  */
-export const ASYMMETRIC_CRYPTO_TYPE = {
+
+export const ASYMMETRIC_CRYPTO_TYPE:{
+    [key: string]: any;
+} = {
     md5: { name: 'MD5' },
     sha1: { name: 'SHA1' },
     sha3: { name: 'SHA3' },
@@ -25,7 +28,9 @@ export const ASYMMETRIC_CRYPTO_TYPE = {
 /**
  * @constant 对称加密算法类型
  */
-export const SYMMETRIC_CRYPTO_TYPE = {
+export const SYMMETRIC_CRYPTO_TYPE:{
+    [key: string]: any;
+} = {
     base64: { name: 'Base64', encoding: true },
     aes: { name: 'AES' },
     des: { name: 'DES' },

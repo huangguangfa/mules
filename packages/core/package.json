@@ -9,7 +9,6 @@
         "access": "public"
     },
     "scripts": {
-        "test": "jest --coverage --config ../../jest.config.js",
         "build": "rollup -c"
     },
     "directories": {
@@ -27,6 +26,7 @@
         "url": "https://github.com/huanggungfa/web-components-gf/issues"
     },
     "dependencies": {
+        "@types/crypto-js": "^4.1.1",
         "crypto-js": "^4.1.1"
     }
 }
