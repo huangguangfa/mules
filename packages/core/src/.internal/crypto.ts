@@ -7,10 +7,10 @@ const _crypto_context = (() => {
     const context: { [key: string]: any } = {};
     // 非对称加密策略
     Object.keys(ASYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
-        
-        const _item:{ CryptoJS: typeof CryptoJS } = ASYMMETRIC_CRYPTO_TYPE[prop]
+
+        const _item = ASYMMETRIC_CRYPTO_TYPE[prop]
         if (_item.name) {
-            const _crypto = CryptoJS[ _item.name]
+            const _crypto: any = CryptoJS[_item.name as keyof typeof CryptoJS]
             context[_item.name] = { symmetric: false }
             if (_item.hmac) {
                 context[_item.name] = {
@@ -30,6 +30,7 @@ const _crypto_context = (() => {
             }
         }
     })
+
     // 对称加密策略
     Object.keys(SYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
         const _item = SYMMETRIC_CRYPTO_TYPE[prop]
@@ -38,8 +39,8 @@ const _crypto_context = (() => {
             if (_item.encoding) {
                 context[_item.name] = {
                     ...context[_item.name],
-                    encrypt: (data: string) => CryptoJS.enc[_item.name].stringify(CryptoJS.enc.Utf8.parse(data)).toString(),
-                    decrypt: (data: string) => CryptoJS.enc.Utf8.stringify(CryptoJS.enc[_item.name].parse(data))
+                    encrypt: (data: string) => CryptoJS.enc[_item.name as keyof typeof CryptoJS.enc].stringify(CryptoJS.enc.Utf8.parse(data)).toString(),
+                    decrypt: (data: string) => CryptoJS.enc.Utf8.stringify(CryptoJS.enc[_item.name as keyof typeof CryptoJS.enc].parse(data))
                 }
             } else {
                 const _key = (key: string) => CryptoJS.enc.Utf8.parse(key)
@@ -50,7 +51,7 @@ const _crypto_context = (() => {
                     format: CryptoJS.format.Hex
                 })
                 const _iv = Type.def(_item.iv, true)
-                const { encrypt, decrypt } = CryptoJS[_item.name]
+                const { encrypt, decrypt }: any = CryptoJS[_item.name as keyof typeof CryptoJS]
                 if (_iv) {
                     context[_item.name] = {
                         ...context[_item.name],
