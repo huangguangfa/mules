@@ -8,6 +8,9 @@ export const STORAGE_TYPE = {
     session: 'session'
 }
 
+
+
+
 /**
  * @constant 存储配置常量
  */

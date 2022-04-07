@@ -14,7 +14,7 @@ export default class Storage {
      * @param options[cryptoType] 加密类型（默认：SYMMETRIC_CRYPTO_TYPE.none, 仅限于aes,des,rc4）
      * @desc 支持简单数据类型，对象或数组的存储
      */
-    static set(key: string, value: any, options = null): void {
+    static set(key: string, value: any, options:{ def?:any }): void {
         StorageInternal.set(key, value, { ...options, storageType: STORAGE_TYPE.session })
     }
 
@@ -26,7 +26,7 @@ export default class Storage {
      * @desc 值可能为简单类型，对象或数组
      * @returns 返回当前会话存储key对应的值
      */
-     static get(key: string, options = null) {
+     static get(key: string, options = {}) {
         return StorageInternal.get(key, { ...options, storageType: STORAGE_TYPE.session })
     }
 
@@ -73,7 +73,7 @@ class StorageInternal {
      */
     static set(key: string, value: any, options = {}): void {
         const { storageType, cryptoType } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
-        const { storage, secret, encrypt } = getStorageOptions(storageType, cryptoType)
+        const { storage, secret, encrypt }:any = getStorageOptions(storageType, cryptoType)
         if (Type.isObject(value) || Type.isArray(value)) {
             storage[key] = encrypt(JSON.stringify(value), secret)
         } else {
@@ -88,9 +88,15 @@ class StorageInternal {
      * @param options[cryptoType] 加密类型（默认：SYMMETRIC_CRYPTO_TYPE.none, 仅限于aes,des,rc4）
      * @desc 值可能为简单类型，对象或数组
      */
-    static get(key: string, options: { def:any }) {
-        const { storageType, cryptoType, def } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
-        const { storage, secret, decrypt } = getStorageOptions(storageType, cryptoType)
+    static get(key: string, options = {}) {
+        const { storageType, cryptoType, def }:{
+            storageType: string,
+            cryptoType: any,
+            cryptoKey: string,
+            cryptoIv: string,
+            def?:any
+        } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
+        const { storage, secret, decrypt }:any = getStorageOptions(storageType, cryptoType)
         try {
             return JSON.parse(decrypt(storage[key] || '', secret)) || def
         } catch (e) {
