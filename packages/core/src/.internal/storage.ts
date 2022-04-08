@@ -10,7 +10,7 @@ interface storageOptions {
 
 export const getStorageOptions = (storageType: string, cryptoType?: Record<'name', string>): storageOptions => {
     const options = {
-        storage: storageType === STORAGE_TYPE.local ? localStorage : sessionStorage
+        storage: storageType === STORAGE_TYPE.local ?  localStorage : sessionStorage
     }
     if (!cryptoType) {
         return options;

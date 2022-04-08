@@ -1,12 +1,19 @@
 
 module.exports = {
+    testEnvironment: "jsdom",
     preset: "ts-jest",
-    testEnvironment: "node",
     testMatch: [
         "**/__tests__/**/*.test.ts"
     ],
-    // transform: {
-    //     "^.+\\.jsx?$": "./scripts/jest/babel.jest.config.js"
-    // },
-    projects: ["<rootDir>/packages/core/*"]
+    globals: {
+        'ts-jest': {
+            tsconfig: {
+                target: 'esnext',
+                sourceMap: true
+            }
+        }
+    },
+    // coverageDirectory: ['coverage'],
+    coverageReporters: ['html', 'lcov', 'text'],
+    rootDir: __dirname
 };

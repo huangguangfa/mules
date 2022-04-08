@@ -15,8 +15,6 @@ test("测试:是否为数组/空数组", () => {
     expect(Type.isArray([1, , 2])).toEqual(true);
     expect(Type.isEmptyArray([])).toEqual(true);
     expect(Type.isEmptyArray([''])).toEqual(false);
-    expect(Type.isEmptyArray(null)).toEqual(false);
-    expect(Type.isEmptyArray(undefined)).toEqual(false);
 })
 
 test("测试:是否为函数/空函数", () => {
@@ -68,8 +66,6 @@ test('测试：是否为真或0(排除null,undefined)', () => {
     expect(Type.isTrueOrZero('gf-ui')).toEqual(true)
     expect(Type.isTrueOrZero(0)).toEqual(true)
     expect(Type.isTrueOrZero('0')).toEqual(true)
-    expect(Type.isTrueOrZero(null)).toEqual(false)
-    expect(Type.isTrueOrZero(undefined)).toEqual(false)
 })
 
 test('测试：转化默认值(当值为undefined)', () => {

@@ -5,11 +5,6 @@ const keys = {
     web:"web"
 }
 
-const values = {
-    core:"core-data",
-    web:'core-web'
-}
-
 const def = 'mate-ui';
 
 test("测试:本地缓存(默认值)", () =>{
