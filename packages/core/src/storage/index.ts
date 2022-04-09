@@ -93,7 +93,7 @@ class StorageInternal {
      * @param options[cryptoType] 加密类型（默认：SYMMETRIC_CRYPTO_TYPE.none, 仅限于aes,des,rc4）
      * @desc 支持简单数据类型，对象或数组的存储
      */
-    static set(key: string, value: string, options:any): void {
+    static set(key: string, value: any, options:any): void {
         const { storageType, cryptoType }:any = { ...DEFAULT_STORAGE_OPTIONS, ...options }
         const { storage, secret, encrypt }: any = getStorageOptions(storageType, cryptoType)
         if (Type.isObject(value) || Type.isArray(value)) {
