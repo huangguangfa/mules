@@ -1,6 +1,6 @@
 {
     "name": "@gf-ui/core",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "核心基础库",
     "author": "hgf <1454556135@qq.com>",
     "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
@@ -20,7 +20,7 @@
     "files": [
         "npm"
     ],
-    "keywords":[
+    "keywords": [
         "gf",
         "gf-ui",
         "gfui"
