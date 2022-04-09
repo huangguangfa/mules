@@ -15,7 +15,7 @@
         "lib": "npm",
         "test": "__tests__"
     },
-    "main": "npm/index.js",
+    "main": "npm/core.umd.js",
     "module": "npm/core.es.js",
     "files": [
         "npm"
