@@ -11,7 +11,7 @@ module.exports = {
         { value: "revert", name: "revert 🌝:     版本回滚" },
         { value: "update", name: "update ⬆:    第三方库升级 " }
     ],
-    scopes: [{ name: '组件' }, { name: '样式' }, { name: '文档更改' }, { name: '其它变更' }],
+    scopes: [{ name: '组件' }, { name: '样式' }, { name: '文档更改' }, { name: '其它变更' }, { name: 'npm包' }],
     allowTicketNumber: false,
     isTicketNumberRequired: false,
     ticketNumberPrefix: 'TICKET-',

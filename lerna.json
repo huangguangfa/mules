@@ -8,7 +8,7 @@
             ]
         },
         "version": {
-            "message": "feat(组件): lerna publish"
+            "message": "feat(npm包): lerna publish"
         }
     },
     "packages": [
