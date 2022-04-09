@@ -1,0 +1,3 @@
+interface localStorage {
+    Jim: any; 
+}

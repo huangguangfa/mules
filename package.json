@@ -9,7 +9,7 @@
         "generate:c": "lerna run generate --scope @gf-sten/components",
         "build:js": "node ./scripts/rollup/build.js --mode",
         "test:core": "lerna run test --scope @gf-ui/core",
-        "test": "jest --verbose --runInBand --coverage"
+        "jest": "jest --verbose --runInBand --coverage"
     },
     "devDependencies": {
         "@babel/core": "^7.17.8",

@@ -13,7 +13,6 @@ module.exports = {
             }
         }
     },
-    // coverageDirectory: ['coverage'],
     coverageReporters: ['html', 'lcov', 'text'],
     rootDir: __dirname
 };

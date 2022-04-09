@@ -25,12 +25,27 @@ export const ASYMMETRIC_CRYPTO_TYPE:{
     none: { name: '' }
 }
 
+
+export interface SYMMETRIC_CRYPTO_TYPE{
+    base64:{
+        name:'Base64',
+        encoding?:boolean
+    },
+    aes: { name: 'AES' },
+    des: { name: 'DES' },
+    rc4: { name: 'RC4', iv?: false },
+    rabbit: { name: 'Rabbit' },
+    rabbitlegacy: { name: 'RabbitLegacy' },
+    none: { name: '' }
+}
+
+
+
+
 /**
  * @constant 对称加密算法类型
  */
-export const SYMMETRIC_CRYPTO_TYPE:{
-    [key: string]: any;
-} = {
+export const SYMMETRIC_CRYPTO_TYPE = {
     base64: { name: 'Base64', encoding: true },
     aes: { name: 'AES' },
     des: { name: 'DES' },
@@ -40,3 +55,13 @@ export const SYMMETRIC_CRYPTO_TYPE:{
     none: { name: '' }
 }
 
+type DeepReadonly<Obj extends Record<string, any>> = {
+    [Key in keyof Obj]:
+        Obj[Key] extends object
+            ? Obj[Key] extends Function
+                ? Obj[Key] 
+                : DeepReadonly<Obj[Key]>
+            : Obj[Key]
+}
+
+ export type SYMMETRIC_CRYPTO_TYPES = DeepReadonly<SYMMETRIC_CRYPTO_TYPE>

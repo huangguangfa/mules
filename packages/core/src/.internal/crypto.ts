@@ -1,7 +1,6 @@
 import CryptoJS from 'crypto-js';
 import Type from '../type';
 import { ASYMMETRIC_CRYPTO_TYPE, SYMMETRIC_CRYPTO_TYPE } from '../config';
-
 /* 采用策略模式实现 */
 const _crypto_context = (() => {
     const context: { [key: string]: any } = {};
@@ -33,7 +32,9 @@ const _crypto_context = (() => {
 
     // 对称加密策略
     Object.keys(SYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
-        const _item = SYMMETRIC_CRYPTO_TYPE[prop]
+        const _item:{
+            [key:string]:any
+        } = SYMMETRIC_CRYPTO_TYPE[prop as keyof typeof SYMMETRIC_CRYPTO_TYPE]
         if (_item.name) {
             context[_item.name] = { symmetric: true }
             if (_item.encoding) {
