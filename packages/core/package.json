@@ -15,8 +15,15 @@
         "lib": "npm",
         "test": "__tests__"
     },
+    "main": "npm/index.js",
+    "module": "npm/core.es.js",
     "files": [
         "npm"
+    ],
+    "keywords":[
+        "gf",
+        "gf-ui",
+        "gfui"
     ],
     "repository": {
         "type": "git",
