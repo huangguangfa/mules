@@ -115,7 +115,7 @@ export default class Type {
     * @param item 检测当前类型
     * @returns { Boolean } 如果是数字则返回true、否则返回false
     */
-    static isNumber(item: number): boolean {
+    static isNumber(item: any): boolean {
         return is("Number", true)(item);
     }
 
