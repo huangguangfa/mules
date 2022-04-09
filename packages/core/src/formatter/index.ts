@@ -9,7 +9,7 @@ export default class Formatter {
      * @param {String} format 格式化规则(默认: yyyy-MM-dd)
      * @returns {String} 转化后的日期
    */
-    static date(date: Date, format: string = DATE_FORMATTER.date) {
+    static date(date: Date | number, format: string = DATE_FORMATTER.date) {
         return parseDate(date, format)
     }
 
@@ -19,7 +19,7 @@ export default class Formatter {
      * @param {String} format 格式化规则
      * @returns {String} 转化后的日期
      */
-    static datetime(date: Date, format = DATE_FORMATTER.datetime) {
+    static datetime(date: Date | number, format = DATE_FORMATTER.datetime) {
         return parseDate(date, format)
     }
 
@@ -29,7 +29,7 @@ export default class Formatter {
    * @param {String} format 格式化规则
    * @returns {String} 转化后的日期
    */
-    static shortDatetime(date: Date, format = DATE_FORMATTER.datetimeShort) {
+    static shortDatetime(date: Date | number, format = DATE_FORMATTER.datetimeShort) {
         return parseDate(date, format)
     }
     /**
@@ -38,7 +38,7 @@ export default class Formatter {
      * @param {String} format 格式化规则
      * @returns {String} 转化后的日期
      */
-    static time(date: Date, format = DATE_FORMATTER.time) {
+    static time(date: Date | number, format = DATE_FORMATTER.time) {
         return parseDate(date, format)
     }
 
@@ -48,7 +48,7 @@ export default class Formatter {
    * @param {String} format 格式化规则
    * @returns {String} 转化后的日期
    */
-    static shortTime(date: Date, format = DATE_FORMATTER.timeShort) {
+    static shortTime(date: Date | number, format = DATE_FORMATTER.timeShort) {
         return parseDate(date, format)
     }
     /**
@@ -73,7 +73,7 @@ export default class Formatter {
      * @param {String} num 数值
      * @returns {String} 格式化后的字符串
      */
-    static positive(num: number) {
+    static positive(num: string) {
         return (num + '').replace(/[^\d]/g, '') // 清除非数字的字符
             .replace(/^(0)(\d+)/g, '$1') // 验证第一个字符是否为0且不能连续输入
     }
@@ -83,7 +83,7 @@ export default class Formatter {
      * @param {Number} precision 小数位精度(默认为2)
      * @returns {String} 格式化后的字符串
      */
-    static positiveNumber(num: number, precision: number = 2) {
+    static positiveNumber(num: string, precision: number = 2) {
         precision = Number(Type.isNumber(precision) && precision >= 0 ? Formatter.integer(precision) : 2)
         return (num + '').replace(/[^\d.]/g, '') // 清除非数字(小数点除外)的字符
             .replace(/(\.)(\d*)(\1*)/g, '$1$2') // 清除第二个小数点
