@@ -1,15 +1,22 @@
 export const data = {
   "key": "v-11de8e97",
   "path": "/zh/core/type.html",
-  "title": "Type/类型校验",
+  "title": "Type",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "Type/类型校验",
+    "title": "Type",
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "isObject",
+      "slug": "isobject",
+      "children": []
+    }
+  ],
   "git": {
     "updatedTime": 1649583076000,
     "contributors": [

@@ -1,9 +1,11 @@
 ---
 lang: zh-CN
-title: Type/类型校验
+title: Type
 description: 页面的描述
 ---
 
-# demo-child
+# Type
 
 > 我是 demo-child页面内容
+
+## isObject

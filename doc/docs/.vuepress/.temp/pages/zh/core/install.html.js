@@ -1,22 +1,15 @@
 export const data = {
   "key": "v-7e1abf34",
   "path": "/zh/core/install.html",
-  "title": "/core/install",
+  "title": "安装",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "/core/install",
+    "title": "安装",
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [
-    {
-      "level": 3,
-      "title": "安装",
-      "slug": "安装",
-      "children": []
-    }
-  ],
+  "headers": [],
   "git": {
     "updatedTime": 1649602856000,
     "contributors": [

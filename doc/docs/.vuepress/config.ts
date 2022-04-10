@@ -1,7 +1,6 @@
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import { defineUserConfig } from 'vuepress';
+import type { DefaultThemeOptions } from 'vuepress';
 import sidebar from "../../config/sidebar.config";
-const path = require('path') 
 export default defineUserConfig<DefaultThemeOptions>({
     // 站点配置
     lang: 'zh-CN',
@@ -49,6 +48,15 @@ export default defineUserConfig<DefaultThemeOptions>({
     },
     themeConfig: {
         selectLanguageText: '简体中文',
+        lastUpdatedText: '上次更新',
+        contributorsText: '贡献者',
+        tip: '提示',
+        warning: '注意',
+        danger: '警告',
+        backToHome: '返回首页',
+        openInNewWindow: '在新窗口打开',
+        toggleDarkMode: '切换夜间模式',
+        toggleSidebar: '切换侧边栏',
         navbar: [
             {
                 text: 'JS库',

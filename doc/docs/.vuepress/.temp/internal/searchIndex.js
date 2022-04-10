@@ -35,22 +35,22 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "/core/install",
-    "headers": [
-      {
-        "level": 3,
-        "title": "安装",
-        "slug": "安装",
-        "children": []
-      }
-    ],
+    "title": "安装",
+    "headers": [],
     "path": "/zh/core/install.html",
     "pathLocale": "/zh/core",
     "extraFields": []
   },
   {
-    "title": "Type/类型校验",
-    "headers": [],
+    "title": "Type",
+    "headers": [
+      {
+        "level": 2,
+        "title": "isObject",
+        "slug": "isobject",
+        "children": []
+      }
+    ],
     "path": "/zh/core/type.html",
     "pathLocale": "/zh/core",
     "extraFields": []

@@ -1,5 +1,14 @@
 export const themeData = {
   "selectLanguageText": "简体中文",
+  "lastUpdatedText": "上次更新",
+  "contributorsText": "贡献者",
+  "tip": "提示",
+  "warning": "注意",
+  "danger": "警告",
+  "backToHome": "返回首页",
+  "openInNewWindow": "在新窗口打开",
+  "toggleDarkMode": "切换夜间模式",
+  "toggleSidebar": "切换侧边栏",
   "navbar": [
     {
       "text": "JS库",
@@ -20,14 +29,8 @@ export const themeData = {
       {
         "text": "@gf-ui/core",
         "children": [
-          {
-            "text": "安装",
-            "link": "/zh/core/install"
-          },
-          {
-            "text": "Type(类型检查)",
-            "link": "/zh/core/type"
-          }
+          "/zh/core/install",
+          "/zh/core/type"
         ]
       }
     ],
@@ -59,13 +62,7 @@ export const themeData = {
   "editLink": true,
   "editLinkText": "Edit this page",
   "lastUpdated": true,
-  "lastUpdatedText": "Last Updated",
-  "contributors": true,
-  "contributorsText": "Contributors",
-  "backToHome": "Take me home",
-  "openInNewWindow": "open in new window",
-  "toggleDarkMode": "toggle dark mode",
-  "toggleSidebar": "toggle sidebar"
+  "contributors": true
 }
 
 if (import.meta.webpackHot) {

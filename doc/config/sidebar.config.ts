@@ -3,14 +3,8 @@ export default {
         {
             text: '@gf-ui/core',
             children: [
-                {
-                    text: '安装',
-                    link: '/zh/core/install',
-                },
-                {
-                    text: 'Type(类型检查)',
-                    link: '/zh/core/type',
-                }
+                "/zh/core/install",
+                '/zh/core/type'
             ]
         }
     ],
