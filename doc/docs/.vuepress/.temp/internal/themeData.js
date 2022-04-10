@@ -1,17 +1,56 @@
 export const themeData = {
+  "selectLanguageText": "简体中文",
+  "repo": "xugaoyi/vuepress-theme-vdoing",
+  "searchMaxSuggestions": 10,
+  "author": {
+    "name": "xugaoyi",
+    "link": "https://github.com/xugaoyi"
+  },
   "navbar": [
     {
-      "text": "接口定义",
-      "link": "/apiword"
-    },
-    {
-      "text": "接口字段定义",
-      "link": "/api"
-    },
-    {
-      "text": "附录：错误码",
-      "link": "/error"
+      "text": "JS库",
+      "children": [
+        {
+          "text": "@gf-ui/core",
+          "link": "/zh/core/install/"
+        },
+        {
+          "text": "@gf-ui/sten-icons",
+          "link": "/zh/sten-icon/install"
+        }
+      ]
     }
+  ],
+  "sidebar": {
+    "/zh/core/": [
+      {
+        "text": "@gf-ui/core",
+        "children": [
+          {
+            "text": "安装",
+            "link": "/zh/core/install"
+          },
+          {
+            "text": "Type(类型检查)",
+            "link": "/zh/core/type"
+          }
+        ]
+      }
+    ],
+    "/zh/sten-icon/": [
+      {
+        "text": "@gf-ui/sten-icon",
+        "children": [
+          {
+            "text": "安装",
+            "link": "/zh/sten-icon/install"
+          }
+        ]
+      }
+    ]
+  },
+  "notFound": [
+    "您输入的URL不对、请返回首页吧"
   ],
   "logo": "https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png",
   "locales": {
@@ -20,10 +59,7 @@ export const themeData = {
     }
   },
   "darkMode": true,
-  "repo": null,
-  "selectLanguageText": "Languages",
   "selectLanguageAriaLabel": "Select language",
-  "sidebar": "auto",
   "sidebarDepth": 2,
   "editLink": true,
   "editLinkText": "Edit this page",
@@ -31,12 +67,6 @@ export const themeData = {
   "lastUpdatedText": "Last Updated",
   "contributors": true,
   "contributorsText": "Contributors",
-  "notFound": [
-    "There's nothing here.",
-    "How did we get here?",
-    "That's a Four-Oh-Four.",
-    "Looks like we've got some broken links."
-  ],
   "backToHome": "Take me home",
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",

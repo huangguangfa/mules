@@ -1,10 +1,17 @@
 export const siteData = {
   "base": "/",
-  "lang": "en-US",
+  "lang": "zh-CN",
   "title": "@gf-ui",
-  "description": "Just playing around",
+  "description": "",
   "head": [],
-  "locales": {}
+  "locales": {
+    "/zh/core": {
+      "lang": "简体中文"
+    },
+    "/en/": {
+      "lang": "English"
+    }
+  }
 }
 
 if (import.meta.webpackHot) {

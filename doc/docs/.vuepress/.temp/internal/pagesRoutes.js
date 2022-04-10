@@ -1,12 +1,13 @@
 import { Vuepress } from '@vuepress/client/lib/components/Vuepress'
 
 const routeItems = [
-  ["v-8daa1a0e","/",{"title":"页面的标题"},["/index.html","/README.md"]],
-  ["v-953546a4","/test.html",{"title":"页面的标题"},["/test","/test.md"]],
-  ["v-fffb8e28","/guide/",{"title":"guide"},["/guide/index.html","/guide/README.md"]],
+  ["v-8daa1a0e","/",{"title":"首页"},["/index.html","/README.md"]],
+  ["v-2d0a870d","/en/",{"title":"title"},["/en/index.html","/en/README.md"]],
+  ["v-2b5b6848","/zh/core/",{"title":"core首页"},["/zh/core/index.html","/zh/core/README.md"]],
+  ["v-7e1abf34","/zh/core/install.html",{"title":"install"},["/zh/core/install","/zh/core/install.md"]],
+  ["v-11de8e97","/zh/core/type.html",{"title":"Type/类型校验"},["/zh/core/type","/zh/core/type.md"]],
+  ["v-4e0f94d9","/zh/sten-icon/install.html",{"title":"sten-icon"},["/zh/sten-icon/install","/zh/sten-icon/install.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
-  ["v-6ce48554","/contributing.html",{"title":"contributing"},["/contributing","/contributing.md"]],
-  ["v-4eaf9f84","/guide/page.html",{"title":"cuide-page"},["/guide/page","/guide/page.md"]],
 ]
 
 export const pagesRoutes = routeItems.reduce(

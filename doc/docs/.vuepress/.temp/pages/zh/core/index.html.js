@@ -1,26 +1,27 @@
 export const data = {
-  "key": "v-6ce48554",
-  "path": "/contributing.html",
-  "title": "contributing",
+  "key": "v-2b5b6848",
+  "path": "/zh/core/",
+  "title": "core首页",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "contributing",
+    "title": "core首页",
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 3,
+      "title": "demo",
+      "slug": "demo",
+      "children": []
+    }
+  ],
   "git": {
-    "updatedTime": 1649531971000,
-    "contributors": [
-      {
-        "name": "hgf",
-        "email": "1454556135@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "contributing.md"
+  "filePathRelative": "zh/core/README.md"
 }
 
 if (import.meta.webpackHot) {

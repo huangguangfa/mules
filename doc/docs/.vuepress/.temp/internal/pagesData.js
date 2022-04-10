@@ -1,14 +1,16 @@
 export const pagesData = {
   // path: /
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
-  // path: /test.html
-  "v-953546a4": () => import(/* webpackChunkName: "v-953546a4" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/test.html.js").then(({ data }) => data),
-  // path: /guide/
-  "v-fffb8e28": () => import(/* webpackChunkName: "v-fffb8e28" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/guide/index.html.js").then(({ data }) => data),
+  // path: /en/
+  "v-2d0a870d": () => import(/* webpackChunkName: "v-2d0a870d" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/en/index.html.js").then(({ data }) => data),
+  // path: /zh/core/
+  "v-2b5b6848": () => import(/* webpackChunkName: "v-2b5b6848" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/zh/core/index.html.js").then(({ data }) => data),
+  // path: /zh/core/install.html
+  "v-7e1abf34": () => import(/* webpackChunkName: "v-7e1abf34" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/zh/core/install.html.js").then(({ data }) => data),
+  // path: /zh/core/type.html
+  "v-11de8e97": () => import(/* webpackChunkName: "v-11de8e97" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/zh/core/type.html.js").then(({ data }) => data),
+  // path: /zh/sten-icon/install.html
+  "v-4e0f94d9": () => import(/* webpackChunkName: "v-4e0f94d9" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/zh/sten-icon/install.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
-  // path: /contributing.html
-  "v-6ce48554": () => import(/* webpackChunkName: "v-6ce48554" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/contributing.html.js").then(({ data }) => data),
-  // path: /guide/page.html
-  "v-4eaf9f84": () => import(/* webpackChunkName: "v-4eaf9f84" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/guide/page.html.js").then(({ data }) => data),
 }

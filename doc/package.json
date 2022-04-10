@@ -4,11 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {},
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.38"
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.38",
+    "@vuepress/plugin-git": "^2.0.0-beta.38",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.38",
+    "@vuepress/plugin-nprogress": "^2.0.0-beta.38",
+    "@vuepress/plugin-search": "^2.0.0-beta.38",
+    "vuepress": "^2.0.0-beta.38",
+    "vuepress-plugin-one-click-copy": "^1.0.6"
   }
 }

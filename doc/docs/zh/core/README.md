@@ -1,10 +1,13 @@
 ---
 lang: zh-CN
-title: guide
+title: core首页
 description: 页面的描述
 ---
 
 
-### guide
+### demo
 
-我是页面内容
+我是core首页
+
+
+

@@ -11,8 +11,14 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1649531971000,
+    "contributors": [
+      {
+        "name": "hgf",
+        "email": "1454556135@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "test.md"
 }
