@@ -15,6 +15,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             lang: 'English',
         }
     },
+    base:"/doc/",
     plugins: [
         [
             'one-click-copy', // 代码块复制按钮
@@ -36,14 +37,16 @@ export default defineUserConfig<DefaultThemeOptions>({
             },
         ]
     ],
+    head:[
+        ['link', { rel: 'icon', href: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png' }]
+    ],
+    bundlerConfig:{
+        viteOptions:{
+            dest:`/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/aaa`
+        }
+    },
     themeConfig: {
         selectLanguageText: '简体中文',
-        repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
-        searchMaxSuggestions: 10, // 搜索结果显示最大数
-        author: {
-            name: 'xugaoyi', // 必需
-            link: 'https://github.com/xugaoyi', // 可选的
-        },
         navbar: [
             {
                 text: 'JS库',

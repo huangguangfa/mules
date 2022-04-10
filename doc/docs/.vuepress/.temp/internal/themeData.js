@@ -1,11 +1,5 @@
 export const themeData = {
   "selectLanguageText": "简体中文",
-  "repo": "xugaoyi/vuepress-theme-vdoing",
-  "searchMaxSuggestions": 10,
-  "author": {
-    "name": "xugaoyi",
-    "link": "https://github.com/xugaoyi"
-  },
   "navbar": [
     {
       "text": "JS库",
@@ -59,6 +53,7 @@ export const themeData = {
     }
   },
   "darkMode": true,
+  "repo": null,
   "selectLanguageAriaLabel": "Select language",
   "sidebarDepth": 2,
   "editLink": true,
@@ -71,17 +66,4 @@ export const themeData = {
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",
   "toggleSidebar": "toggle sidebar"
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateThemeData) {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ themeData }) => {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  })
 }
