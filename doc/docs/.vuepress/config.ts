@@ -1,10 +1,11 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import sidebar from "../../config/sidebar.config";
+const path = require('path') 
 export default defineUserConfig<DefaultThemeOptions>({
     // 站点配置
     lang: 'zh-CN',
-    title: '@gf-ui',
+    title: '@gf-ui系列文档',
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     locales: {
@@ -38,7 +39,8 @@ export default defineUserConfig<DefaultThemeOptions>({
         ]
     ],
     head:[
-        ['link', { rel: 'icon', href: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png' }]
+        ['link', { rel: 'icon', href: '/images/logo.png' }],
+        ['link', { rel: 'icon', href: '/css/reset.css' }]
     ],
     bundlerConfig:{
         viteOptions:{

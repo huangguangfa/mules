@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "docs": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs -d gf-ui-doc"
   },
   "dependencies": {},
   "devDependencies": {

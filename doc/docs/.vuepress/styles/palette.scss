@@ -1,0 +1,10 @@
+:root{
+    --c-brand: #00a8d5;
+    --c-text-accent:#00a8d5;
+    --c-tip:#00a8d5;
+    --sidebar-width: 15rem;
+}
+  
+.sidebar-item:not(.sidebar-heading){
+    font-size: .9rem !important;
+}
