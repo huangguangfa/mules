@@ -30,7 +30,9 @@ export const themeData = {
         "text": "@gf-ui/core",
         "children": [
           "/zh/core/install",
-          "/zh/core/type"
+          "/zh/core/type",
+          "/zh/core/ctypto",
+          "/zh/core/storage"
         ]
       }
     ],

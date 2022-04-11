@@ -6,6 +6,17 @@
     --sidebar-width: 15rem;
 }
   
-.sidebar-item:not(.sidebar-heading){
-    font-size: .9rem !important;
+// .sidebar-item:not(.sidebar-heading){
+//     // font-size: .9rem !important;
+//     font-weight: 550 !important;
+// }
+
+.theme-default-content div[class*=language-]{
+    margin: 0;
+}
+.font-bold{
+    font-weight: bold;
+}
+.colorff0066{
+    color: #ff0066;
 }

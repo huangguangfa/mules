@@ -17,3 +17,4 @@
 
 
 scp -r /Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/gf-ui-doc root@120.25.233.183:/usr/gfDocker/nginx/web
+
