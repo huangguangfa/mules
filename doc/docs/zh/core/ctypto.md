@@ -40,7 +40,7 @@ Crypto.encrypt(data, { name: 'DES' }, { key, iv }) // 4ba7d000435c6b61db49777f9e
 
 
 ### `decrypt` 
-- 解密方法<font color=#FF0000> **【只针对对称加密算法】**</font>
+- 解密方法<span class="colorff0066 font-bold"> **【只针对对称加密算法】**</span>
 
 - `参数 (data, crypto, params) => string`
     - data `加密数据`

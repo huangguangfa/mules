@@ -54,27 +54,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1649656556000,
+    "updatedTime": 1649664476000,
     "contributors": [
       {
         "name": "gf",
         "email": "1454556135@qq.com",
-        "commits": 1
+        "commits": 2
       }
     ]
   },
   "filePathRelative": "zh/core/storage.md"
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
 }

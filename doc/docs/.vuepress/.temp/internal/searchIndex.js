@@ -63,7 +63,50 @@ export const searchIndex = [
   },
   {
     "title": "Storage类",
-    "headers": [],
+    "headers": [
+      {
+        "level": 3,
+        "title": "set",
+        "slug": "set",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "get",
+        "slug": "get",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "remove",
+        "slug": "remove",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "contains",
+        "slug": "contains",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "count",
+        "slug": "count",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "clear",
+        "slug": "clear",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "clearAll",
+        "slug": "clearall",
+        "children": []
+      }
+    ],
     "path": "/zh/core/storage.html",
     "pathLocale": "/zh/core",
     "extraFields": []
@@ -236,16 +279,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

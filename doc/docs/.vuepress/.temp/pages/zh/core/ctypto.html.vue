@@ -36,7 +36,7 @@ Crypto<span class="token punctuation">.</span><span class="token function">encry
 </code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="decrypt" tabindex="-1"><a class="header-anchor" href="#decrypt" aria-hidden="true">#</a> <code>decrypt</code></h3>
 <ul>
 <li>
-<p>解密方法<font color=#FF0000> <strong>【只针对对称加密算法】</strong></font></p>
+<p>解密方法<span class="colorff0066 font-bold"> <strong>【只针对对称加密算法】</strong></span></p>
 </li>
 <li>
 <p><code>参数 (data, crypto, params) =&gt; string</code></p>
