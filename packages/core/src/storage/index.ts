@@ -14,6 +14,7 @@ interface StorageOprinons{
     }
 }
 
+
 export default class Storage {
     /**
      * @method 设置指定key和value到会话储存实例中
@@ -59,7 +60,7 @@ export default class Storage {
     }
 
     /**
-     * @method 清除所有的会话缓存
+     * @method 清除指定会话缓存
      * @param storageType 存储位置
      */
     static clear(storageType:string = STORAGE_TYPE.session): void {

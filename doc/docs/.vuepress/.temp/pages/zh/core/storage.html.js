@@ -9,10 +9,59 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 3,
+      "title": "set",
+      "slug": "set",
+      "children": []
+    },
+    {
+      "level": 3,
+      "title": "get",
+      "slug": "get",
+      "children": []
+    },
+    {
+      "level": 3,
+      "title": "remove",
+      "slug": "remove",
+      "children": []
+    },
+    {
+      "level": 3,
+      "title": "contains",
+      "slug": "contains",
+      "children": []
+    },
+    {
+      "level": 3,
+      "title": "count",
+      "slug": "count",
+      "children": []
+    },
+    {
+      "level": 3,
+      "title": "clear",
+      "slug": "clear",
+      "children": []
+    },
+    {
+      "level": 3,
+      "title": "clearAll",
+      "slug": "clearall",
+      "children": []
+    }
+  ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1649656556000,
+    "contributors": [
+      {
+        "name": "gf",
+        "email": "1454556135@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "zh/core/storage.md"
 }

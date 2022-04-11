@@ -12,6 +12,8 @@ const values = {
     web: "@gf-ui/web"
 }
 
+
+
 test("测试:本地缓存(默认值)", () => {
     Storage.clear();
     expect(Storage.get(keys.core, { def })).toEqual(def);

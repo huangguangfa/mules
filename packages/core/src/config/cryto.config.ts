@@ -40,8 +40,6 @@ export interface SYMMETRIC_CRYPTO_TYPE{
 }
 
 
-
-
 /**
  * @constant 对称加密算法类型
  */
@@ -64,4 +62,4 @@ type DeepReadonly<Obj extends Record<string, any>> = {
             : Obj[Key]
 }
 
- export type SYMMETRIC_CRYPTO_TYPES = DeepReadonly<SYMMETRIC_CRYPTO_TYPE>
+export type SYMMETRIC_CRYPTO_TYPES = DeepReadonly<SYMMETRIC_CRYPTO_TYPE>
