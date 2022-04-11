@@ -1,0 +1,33 @@
+{
+  "name": "@gf-sten/icons",
+  "version": "1.0.8",
+  "description": "icon",
+  "author": "hgf <1454556135@qq.com>",
+  "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "npm",
+    "test": "__tests__"
+  },
+  "exports": {
+    ".": "./npm/icons.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "npm"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huanggungfa/web-components-gf.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/huanggungfa/web-components-gf/issues"
+  },
+  "gitHead": "51079704cf01b5d6603dbe6c65a5b73e9fc660c5"
+}

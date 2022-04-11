@@ -1,0 +1,41 @@
+{
+    "name": "@gf-ui/core",
+    "version": "1.0.3",
+    "description": "核心基础库",
+    "author": "hgf <1454556135@qq.com>",
+    "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
+    "license": "ISC",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "rollup -c"
+    },
+    "directories": {
+        "lib": "npm",
+        "test": "__tests__"
+    },
+    "main": "npm/core.umd.js",
+    "module": "npm/core.es.js",
+    "files": [
+        "npm"
+    ],
+    "keywords": [
+        "gf",
+        "gf-ui",
+        "gfui"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/huanggungfa/web-components-gf.git"
+    },
+    "bugs": {
+        "url": "https://github.com/huanggungfa/web-components-gf/issues"
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1"
+    },
+    "devDependencies": {
+        "@types/crypto-js": "^4.1.1"
+    }
+}

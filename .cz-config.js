@@ -11,7 +11,7 @@ module.exports = {
         { value: "revert", name: "revert 🌝:     版本回滚" },
         { value: "update", name: "update ⬆:    第三方库升级 " }
     ],
-    scopes: [{ name: '组件' }, { name: '样式' }, { name: '文档更改' },{ name: '测试11111' }, { name: '其它变更' }],
+    scopes: [{ name: '组件' }, { name: '样式' }, { name: '文档更改' }, { name: '其它变更' }, { name: 'npm包' }],
     allowTicketNumber: false,
     isTicketNumberRequired: false,
     ticketNumberPrefix: 'TICKET-',
@@ -25,7 +25,6 @@ module.exports = {
         footer: "关联关闭的issue，例如：#31, #34(可选):\n",
         confirmCommit: "确定提交?"
     },
-
     allowCustomScopes: true,
     allowBreakingChanges: ['新增', '修复'],
     subjectLimit: 100
