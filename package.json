@@ -7,8 +7,7 @@
         "release": "standard-version",
         "start:c": "lerna run start --scope @gf-sten/components",
         "generate:c": "lerna run generate --scope @gf-sten/components",
-        "build:js": "node ./scripts/rollup/build.js --mode",
-        "test:core": "lerna run test --scope @gf-ui/core",
+        "build:npm": "node ./scripts/rollup/build.js --mode",
         "jest": "jest --verbose --runInBand --coverage"
     },
     "devDependencies": {
