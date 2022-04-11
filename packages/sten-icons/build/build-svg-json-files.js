@@ -22,12 +22,11 @@ async function build(entryDir, outDir, outDirEsm, prefix, suffix) {
 
 function start() {
     const files = fs.readdirSync(entryDir, 'utf-8');
-    console.log('entryDir', entryDir)
     const batches = files
         .filter((f) => extname(f) === '.svg')
         .map(async (file) => {
-            const filePath = resolve(__dirname, '../svgs', file);
-            const result = optimize(filePath, {
+            const fileContent = fs.readFileSync(resolve(__dirname, '../svgs', file));
+            const { data } = optimize(fileContent, {
                 name: 'preset-default',
                 params: {
                     overrides: {
@@ -60,7 +59,7 @@ function start() {
                     },
                 ]
             })
-            console.log(result)
+            console.log(data)
         });
 
     //  const arr = await Promise.all(batches);
