@@ -1,14 +1,10 @@
 const fs = require('fs');
 const { resolve, extname } = require("path");
-const { optimize } = require('svgo');
-
-// const svgoPlugin = require('./plugins/svgo.plugin')
-
+const svgo = require("./transform-svg-json")
 
 const entryDir = resolve(__dirname, '../svgs');
 const outDir = resolve(__dirname, '../icons');
 const outDirEsm = resolve(__dirname, '../icons_esm');
-
 
 
 
@@ -21,48 +17,17 @@ async function build(entryDir, outDir, outDirEsm, prefix, suffix) {
 
 
 function start() {
-    const files = fs.readdirSync(entryDir, 'utf-8');
-    const batches = files
+    const svgFilesList = fs.readdirSync(entryDir, 'utf-8');
+    const batches = svgFilesList
         .filter((f) => extname(f) === '.svg')
-        .map(async (file) => {
-            const fileContent = fs.readFileSync(resolve(__dirname, '../svgs', file));
-            const { data } = optimize(fileContent, {
-                name: 'preset-default',
-                params: {
-                    overrides: {
-                        convertShapeToPath: {
-                            convertArcs: true
-                        },
-                        convertPathData: false
-                    }
-                },
-                plugins: [
-                    {
-                        name: 'convertColors',
-                        params: { currentColor: /^(?!url|none)./ },
-                    },
-                    {
-                        name: 'cleanupListOfValues',
-                        active: true,
-                    },
-                    {
-                        name: 'removeStyleElement',
-                        active: true,
-                    },
-                    {
-                        name: 'removeViewBox',
-                        active: false,
-                    },
-                    {
-                        name: 'removeDimensions',
-                        active: true,
-                    },
-                ]
-            })
-            console.log(data)
+        .map(async (fileName) => {
+            const svgContent = fs.readFileSync(resolve(entryDir, fileName));
+            const data = await svgo(svgContent, fileName)
+            console.log(JSON.stringify(data, null, 2))
         });
 
     //  const arr = await Promise.all(batches);
 }
+
 
 start()
