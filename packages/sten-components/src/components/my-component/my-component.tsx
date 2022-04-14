@@ -1,6 +1,6 @@
 import { Component, Prop, h, State } from '@stencil/core';
 import { format } from '../../utils/utils';
-
+import { Icon } from "../../../../sten-icons/icons_esm/icon"
 @Component({
     tag: 'my-component',
     styleUrl: 'my-component.css',
@@ -16,7 +16,12 @@ export class MyComponent {
         return format(this.first, this.middle, this.last);
     }
 
-    render() {
-        return <div><button onClick={() => this.num += 1}>add</button>Hello, World! I'm {this.getText()}, number is {this.num}</div>;
+    render(){
+        return <div>
+                <button onClick={() => this.num += 1}>add</button>
+                    Hello, World! I'm {this.getText()}, number is 
+                    {this.num}
+                <Icon ></Icon>
+            </div>;
     }
 }
