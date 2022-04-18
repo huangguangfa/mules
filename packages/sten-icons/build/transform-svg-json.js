@@ -3,7 +3,7 @@ const { parse } = require('svgson')
 
 function svgo(svgContent, svgFileName) {
     return new Promise((resolve, reject) => {
-        try{
+        try {
             const { data } = optimize(svgContent, {
                 name: 'preset-default',
                 params: {
@@ -38,9 +38,8 @@ function svgo(svgContent, svgFileName) {
                 ]
             })
             // 彩色不执行去颜色配置
-            parse(svgFileName.slice(-2) === '-c' ? svgContent : data).then( r => resolve(r));
-        }
-        catch(e){
+            parse(svgFileName.slice(-2) === '-c' ? svgContent : data).then(r => resolve(r));
+        } catch (e) {
             reject(e)
         }
     })

@@ -8,12 +8,12 @@ const outDirEsm = resolve(__dirname, '../icons_esm');
 
 
 
-async function build(entryDir, outDir, outDirEsm, prefix, suffix) {
-    fs.rmdirSync(outDir, { recursive: true });
-    fs.rmdirSync(outDirEsm, { recursive: true });
-    fs.mkdirSync(outDirEsm);
-    fs.mkdirSync(outDir);
-}
+// async function build(entryDir, outDir, outDirEsm, prefix, suffix) {
+//     fs.rmdirSync(outDir, { recursive: true });
+//     fs.rmdirSync(outDirEsm, { recursive: true });
+//     fs.mkdirSync(outDirEsm);
+//     fs.mkdirSync(outDir);
+// }
 
 
 function start() {
@@ -27,7 +27,13 @@ function start() {
         });
 
     //  const arr = await Promise.all(batches);
+
+    writeFiles()
 }
 
+function writeFiles() {
+    const jsonFileName = 'icon.js'
+    fs.writeFileSync(resolve(outDir, jsonFileName), 'const a = 1', 'utf-8');
+}
 
 start()
