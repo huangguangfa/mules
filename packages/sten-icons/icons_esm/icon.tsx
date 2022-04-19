@@ -1,11 +1,12 @@
 import { FunctionalComponent, h, Host } from '@stencil/core';
 
-
-export const Icon: FunctionalComponent = () => {
-   
+interface StenIconProps {
+    
+}
+export const Icon: FunctionalComponent<StenIconProps> = () => {
     return (
-        <div>
-            ui 组件
-        </div>
+        <Host>
+            <slot></slot>
+        </Host>
     );
 }

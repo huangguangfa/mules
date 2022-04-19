@@ -1,0 +1,1 @@
+import { Component } from "@stencil/core"

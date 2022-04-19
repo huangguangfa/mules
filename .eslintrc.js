@@ -1,6 +1,6 @@
 module.exports = {
     // 环境定义了预定义的全局变量。
-    "env":{
+    "env": {
         //环境定义了预定义的全局变量。更多在官网查看
         "browser": true,
         "node": true,
@@ -9,6 +9,7 @@ module.exports = {
         "es6": true,
         "mocha": true
     },
+    "parser": '@typescript-eslint/parser',
     // JavaScript 语言选项
     "parserOptions": {
         // ECMAScript 版本

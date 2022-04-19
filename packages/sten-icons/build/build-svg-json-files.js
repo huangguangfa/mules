@@ -7,7 +7,6 @@ const outDir = resolve(__dirname, '../icons');
 const outDirEsm = resolve(__dirname, '../icons_esm');
 
 
-
 // async function build(entryDir, outDir, outDirEsm, prefix, suffix) {
 //     fs.rmdirSync(outDir, { recursive: true });
 //     fs.rmdirSync(outDirEsm, { recursive: true });
