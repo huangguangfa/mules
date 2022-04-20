@@ -1,6 +1,6 @@
 import { Component, Prop, h, State } from '@stencil/core';
 import { format } from '../../utils/utils';
-import { Icon } from "../../../../sten-icons/icons_esm/icon"
+import { StenIconTest } from "../../../../sten-icons/icons_esm/svg-test"
 @Component({
     tag: 'my-component',
     styleUrl: 'my-component.css',
@@ -21,7 +21,7 @@ export class MyComponent {
                 <button onClick={() => this.num += 1}>add</button>
                     Hello, World! I'm {this.getText()}, number is 
                     {this.num}
-                <Icon ></Icon>
+                    <StenIconTest ></StenIconTest>
             </div>;
     }
 }

@@ -18,6 +18,8 @@ export namespace Components {
         "name": string;
         "show": () => Promise<void>;
     }
+    interface StenIcon {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -32,9 +34,16 @@ declare global {
         prototype: HTMLStenButtonElement;
         new (): HTMLStenButtonElement;
     };
+    interface HTMLStenIconElement extends Components.StenIcon, HTMLStencilElement {
+    }
+    var HTMLStenIconElement: {
+        prototype: HTMLStenIconElement;
+        new (): HTMLStenIconElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "sten-button": HTMLStenButtonElement;
+        "sten-icon": HTMLStenIconElement;
     }
 }
 declare namespace LocalJSX {
@@ -50,9 +59,12 @@ declare namespace LocalJSX {
         "name"?: string;
         "onStenButton-show"?: (event: CustomEvent<{ name:string }>) => void;
     }
+    interface StenIcon {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "sten-button": StenButton;
+        "sten-icon": StenIcon;
     }
 }
 export { LocalJSX as JSX };
@@ -61,6 +73,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
+            "sten-icon": LocalJSX.StenIcon & JSXBase.HTMLAttributes<HTMLStenIconElement>;
         }
     }
 }
