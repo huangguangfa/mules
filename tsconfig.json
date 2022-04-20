@@ -12,11 +12,18 @@
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "removeComments": false,
-        "jsx": "preserve",
+        "jsx": "react",
+        "jsxFactory": "h",
         "lib": [
             "esnext",
             "dom"
         ],
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
         "rootDir": "."
-    }
+    },
+    "exclude": [
+        "node_modules",
+        ".vscode-test"
+    ]
 }
