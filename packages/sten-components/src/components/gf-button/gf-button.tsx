@@ -8,12 +8,14 @@ import { ButtonColor } from "../../../types/gf-button";
 
 
 export class GfButton {
-    @Prop() color: ButtonColor = "primary"
+    @Prop() color: ButtonColor = "default"
     render() {
         return (
             <Host>
-                <button class="box">
-                    <slot></slot>
+                <button class={`gf-button gf-button-${this.color}`}>
+                    <span>
+                        <slot></slot>
+                    </span>
                 </button>
             </Host>
         );
