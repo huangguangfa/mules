@@ -2,8 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 import { ButtonColor } from "../../../types/gf-button";
 @Component({
     tag: 'gf-button',
-    styleUrl: 'gf-button.less',
-    shadow: true,
+    shadow: true
 })
 
 

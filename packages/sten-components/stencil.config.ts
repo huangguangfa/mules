@@ -1,8 +1,10 @@
 import { Config } from '@stencil/core';
-import { less } from '@stencil/less';
-
+const path = require("path")
+const globalStyle = path.resolve('../sten-themes', 'npm/index.css');
+console.log('globalStyle',globalStyle)
 export const config: Config = {
     namespace: 'sten-components',
+    globalStyle,
     outputTargets: [
         {
             type: 'dist',
@@ -18,8 +20,5 @@ export const config: Config = {
             type: 'www',
             serviceWorker: null, // disable service workers
         },
-    ],
-    plugins: [
-        less()
     ]
 };
