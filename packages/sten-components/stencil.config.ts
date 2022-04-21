@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { less } from '@stencil/less';
 
 export const config: Config = {
     namespace: 'sten-components',
@@ -18,4 +19,7 @@ export const config: Config = {
             serviceWorker: null, // disable service workers
         },
     ],
+    plugins: [
+        less()
+    ]
 };

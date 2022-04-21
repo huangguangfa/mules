@@ -1,5 +1,5 @@
 {
-  "name": "@gf-sten/components",
+  "name": "@gf-ui/components",
   "version": "0.0.5",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -32,6 +32,7 @@
     "@stencil/core": "^2.15.1"
   },
   "devDependencies": {
+    "@stencil/less": "^1.0.0",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",

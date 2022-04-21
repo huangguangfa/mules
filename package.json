@@ -5,8 +5,7 @@
         "i": "lerna bootstrap",
         "commit": "git cz",
         "release": "standard-version",
-        "start:c": "lerna run start --scope @gf-sten/components",
-        "generate:c": "lerna run generate --scope @gf-sten/components",
+        "start:c": "lerna run start --scope @gf-ui/components",
         "build:npm": "node ./scripts/rollup/build.js --mode",
         "start:npm": "node ./scripts/rollup/build.js --watch",
         "jest": "jest --verbose --runInBand --coverage"

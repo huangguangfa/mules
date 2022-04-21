@@ -5,11 +5,10 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ButtonColor } from "../types/gf-button";
 export namespace Components {
-    interface MyComponent {
-        "first": string;
-        "last": string;
-        "middle": string;
+    interface GfButton {
+        "color": ButtonColor;
     }
     interface StenButton {
         /**
@@ -20,11 +19,11 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLGfButtonElement extends Components.GfButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLGfButtonElement: {
+        prototype: HTMLGfButtonElement;
+        new (): HTMLGfButtonElement;
     };
     interface HTMLStenButtonElement extends Components.StenButton, HTMLStencilElement {
     }
@@ -33,15 +32,13 @@ declare global {
         new (): HTMLStenButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "gf-button": HTMLGfButtonElement;
         "sten-button": HTMLStenButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        "first"?: string;
-        "last"?: string;
-        "middle"?: string;
+    interface GfButton {
+        "color"?: ButtonColor;
     }
     interface StenButton {
         /**
@@ -51,7 +48,7 @@ declare namespace LocalJSX {
         "onStenButton-show"?: (event: CustomEvent<{ name:string }>) => void;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "gf-button": GfButton;
         "sten-button": StenButton;
     }
 }
@@ -59,7 +56,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }
     }
