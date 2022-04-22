@@ -1,6 +1,6 @@
 'use strict';
 
-const { series, src, dest } = require('gulp');
+const { series, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin');
@@ -15,10 +15,18 @@ function compile() {
         .pipe(dest('./npm'));
 }
 
-function copyfont() {
-    return src('./src/fonts/**')
-        .pipe(cssmin())
-        .pipe(dest('./npm/fonts'));
+// function copyfont() {
+//     return src('./src/fonts/**')
+//         .pipe(cssmin())
+//         .pipe(dest('./npm/fonts'));
+// }
+
+function watchFile() {
+    return watch(['./src/*.scss', './src/components/*.scss'], function (cb) {
+        compile()
+        cb();
+    });
 }
 
-exports.build = series(compile, copyfont);
+exports.build = series(compile);
+exports.dev = series(watchFile);

@@ -10,7 +10,8 @@
     "test": "__tests__"
   },
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "exports": {
     ".": "./npm/themes.js",
