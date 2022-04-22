@@ -1,10 +1,10 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { ButtonColor } from "../../../types/gf-button";
+
 @Component({
     tag: 'gf-button',
-    shadow: true
+    shadow: true,
 })
-
 
 export class GfButton {
     @Prop() color: ButtonColor = "default"

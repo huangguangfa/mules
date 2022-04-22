@@ -1,5 +1,5 @@
 import { Config } from '@stencil/core';
-const path = require("path")
+const path = require("path");
 const globalStyle = path.resolve('../sten-themes', 'npm/index.css');
 console.log('globalStyle',globalStyle)
 export const config: Config = {
