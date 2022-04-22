@@ -3,7 +3,7 @@ import { ButtonColor } from "../../../types/gf-button";
 
 @Component({
     tag: 'gf-button',
-    shadow: false,
+    shadow: true,
 })
 
 export class GfButton {
