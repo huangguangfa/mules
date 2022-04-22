@@ -1,4 +1,32 @@
-.gf-button {
-    color: red;
-    font-size: 20px;
+@charset "UTF-8";
+@import "../common/var";
+@import "../mixins/utils";
+@import "../mixins/mixins";
+
+@include b(button){
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: $--button-default-background-color;
+    border: $--border-base;
+    border-color: $--button-default-border-color;
+    color: $--button-default-font-color;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: $--button-font-weight;
+    padding: 10px 12px;
+    @include utils-user-select(none);
+
+    &:hover,
+    &:focus {
+        color: $--color-primary;
+        border-color: $--color-primary-light-7;
+        background-color: $--color-primary-light-9;
+    }
 }
+

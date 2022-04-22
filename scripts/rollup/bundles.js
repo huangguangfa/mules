@@ -4,19 +4,19 @@ const bundles = [
     {
         entry: "core",                  // 模块名称
         outputDir: "npm",               // 打包输出的文件夹
-        format:['umd','es'],            // 打包代码格式
-        minifyWithProdErrorCodes: true, //代码压缩
+        format: ['umd', 'es'],            // 打包代码格式
+        minifyWithProdErrorCodes: true, // 代码压缩
     }
 ];
 
 function deepFreeze(o) {
     Object.freeze(o);
-    Object.getOwnPropertyNames(o).forEach(function(prop) {
+    Object.getOwnPropertyNames(o).forEach(function (prop) {
         if (
             o[prop] !== null &&
             (typeof o[prop] === 'object' || typeof o[prop] === 'function') &&
             !Object.isFrozen(o[prop])
-        ){
+        ) {
             deepFreeze(o[prop]);
         }
     });
