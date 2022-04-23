@@ -35,6 +35,7 @@ export class StenButton {
         bubbles: true, // 事件是否冒泡到父级
     })
     displayShow: EventEmitter<{ name: string }>
+
     @Listen("scroll", { target: "window" })
     handleScroll(ev) {
         console.log(ev)

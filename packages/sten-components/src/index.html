@@ -4,39 +4,47 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>Stencil开发Tab</title>
     <link rel="stylesheet" href="/build/sten-components.css">
     <script type="module" src="/build/sten-components.esm.js"></script>
     <script nomodule src="/build/sten-components.js"></script>
 </head>
 
 <body>
-    <sten-button id="sten-button" name="李四">你好</sten-button>
-    <button id="apps">html和sten-button通信</button>
     <gf-button>普通按钮</gf-button>
     <gf-button color="primary">promary</gf-button>
-    <gf-button color="success">成功按钮</gf-button>
-    <gf-button color="primary" disabled="true">禁用按钮</gf-button>
+    <gf-button id="success-btn" color="success">成功按钮</gf-button>
+    <gf-button id="disable-btn" color="primary" disabled="true">禁用按钮</gf-button>
+
+
+    <button id="changid">change</button>
 </body>
 
 </html>
 
 <script>
-    const stenButton = document.getElementById("sten-button");
-    const apps = document.getElementById("apps")
-    apps.onclick = function () {
-        stenButton.show()
+    const disableButton = document.getElementById("disable-btn");
+    const successButton = document.getElementById("success-btn")
+    /* 
+        父子通信
+
+    */
+
+    document.getElementById("changid").onclick = function () {
+        // disableButton.disabled = !disableButton.disabled;
+        // disableButton.setAttribute("disabled", disableButton.getAttribute("disabled") === 'true' ? false : true)
+        disableButton._internal()
+        console.log([disableButton])
     }
 
-
-    stenButton.addEventListener('stenButton-show', (e) => {
-        console.log('监听组件抛出事件', e)
+    successButton.addEventListener("on-click", (e) => {
+        console.log(111, e)
     })
 </script>
 
 
 <style>
-    body {
+    /* body {
         height: 2000px;
-    }
+    } */
 </style>

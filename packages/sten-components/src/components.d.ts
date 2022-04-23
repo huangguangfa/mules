@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ButtonColor } from "../types/gf-button";
 export namespace Components {
     interface GfButton {
+        "_internal": () => Promise<void>;
         "color": ButtonColor;
         "disabled": boolean;
     }
@@ -41,6 +42,7 @@ declare namespace LocalJSX {
     interface GfButton {
         "color"?: ButtonColor;
         "disabled"?: boolean;
+        "onOn-click"?: (event: CustomEvent<{ data: Object }>) => void;
     }
     interface StenButton {
         /**
