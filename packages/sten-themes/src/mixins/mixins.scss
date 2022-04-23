@@ -1,5 +1,7 @@
 @import "./function.scss";
 @import "../common/var.scss";
+
+
 @mixin b($block) {
     $B: $namespace+'-'+$block !global;
     .#{$B} {
@@ -18,5 +20,13 @@
       #{$currentSelector} {
         @content;
       }
+    }
+}
+
+@mixin when($state) {
+    @at-root {
+        &.#{$state-prefix + $state} {
+            @content;
+        }
     }
 }

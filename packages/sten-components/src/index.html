@@ -12,21 +12,25 @@
 
 <body>
     <sten-button id="sten-button" name="李四">你好</sten-button>
-    <button id="apps">和sten-button通信</button>
+    <button id="apps">html和sten-button通信</button>
     <gf-button>普通按钮</gf-button>
+    <gf-button color="primary">promary</gf-button>
+    <gf-button color="success">成功按钮</gf-button>
+    <gf-button color="primary" disabled="true">禁用按钮</gf-button>
 </body>
 
 </html>
 
 <script>
-    const apps = document.getElementById("apps")
     const stenButton = document.getElementById("sten-button");
+    const apps = document.getElementById("apps")
     apps.onclick = function () {
         stenButton.show()
     }
 
+
     stenButton.addEventListener('stenButton-show', (e) => {
-        console.log(e)
+        console.log('监听组件抛出事件', e)
     })
 </script>
 

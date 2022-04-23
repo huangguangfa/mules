@@ -30,6 +30,8 @@
         }
     }
 }
+
+
 @mixin button-variant($color, $background-color, $border-color) {
     color: $color;
     background-color: $background-color;
@@ -66,7 +68,7 @@
         }
     }
   
-    &.is-plain {
-        @include button-plain($background-color);
-    }
+    // &.is-plain {
+    //     @include button-plain($background-color);
+    // }
 }

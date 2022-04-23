@@ -1,13 +1,13 @@
-import { 
-    Component, 
-    Host, 
-    h, 
-    Prop, 
-    Element, 
-    Method, 
-    Event, 
-    EventEmitter, 
-    Listen ,
+import {
+    Component,
+    Host,
+    h,
+    Prop,
+    Element,
+    Method,
+    Event,
+    EventEmitter,
+    Listen,
     State
 } from '@stencil/core';
 
@@ -25,8 +25,8 @@ export class StenButton {
     @State() num: number = 1;
     @Element() el: HTMLElement
     @Method()
-    async show():Promise<void>{
-        console.log('sten-botton')
+    async show(): Promise<void> {
+        console.log('外部调用组件sten-botton')
     }
     @Event({
         eventName: 'stenButton-show', // 事件名称
@@ -34,9 +34,9 @@ export class StenButton {
         cancelable: true, // 事件是否可以被取消
         bubbles: true, // 事件是否冒泡到父级
     })
-    displayShow:EventEmitter<{ name:string }>
-    @Listen("scroll", { target:"window" })
-    handleScroll(ev){
+    displayShow: EventEmitter<{ name: string }>
+    @Listen("scroll", { target: "window" })
+    handleScroll(ev) {
         console.log(ev)
     }
     /************************
@@ -47,12 +47,12 @@ export class StenButton {
     /***********************************
     *      生命周期(lifecycle) Start     *
     ************************************/
-    componentShouldUpdate(newValue, oldValue):boolean{
-        console.log('update',newValue, oldValue)
-        if(newValue === 5) return true;  //控制什么时候更新
+    componentShouldUpdate(newValue, oldValue): boolean {
+        console.log('update', newValue, oldValue)
+        if (newValue === 5) return true;  //控制什么时候更新
         return false  // 不要更新页面
     }
-    componentWillLoad(){
+    componentWillLoad() {
         console.log('laod')
     }
 
@@ -60,12 +60,12 @@ export class StenButton {
     *      生命周期(lifecycle) End      *
     ************************************/
 
-    Fn():void{
+    Fn(): void {
         this.displayShow.emit({
-            name:"StenButton-content"
+            name: "StenButton-content"
         })
     }
-    add():void{
+    add(): void {
         this.num += 1
     }
     render() {
@@ -75,7 +75,7 @@ export class StenButton {
                     <slot></slot>
                 </button>
 
-                <button  onClick={() => this.add()}>
+                <button onClick={() => this.add()}>
                     sten-button ADD ({this.num})
                 </button>
                 {this.name}
