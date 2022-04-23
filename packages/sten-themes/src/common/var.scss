@@ -69,7 +69,13 @@ $--border-radius-zero: 0 !default;
 /**************** 
 *   组件 Button  *
 ****************/
+$--button-hover-tint-percent: 20% !default;
+$--button-active-shade-percent: 10% !default;
 $--button-default-background-color: $--color-white !default;
 $--button-default-border-color:$--border-color-base !default;
 $--button-default-font-color:$--color-text-regular !default;
 $--button-font-weight:$--font-weight-primary !default;
+
+$--button-primary-border-color: $--color-primary !default;
+$--button-primary-font-color: $--color-white !default;
+$--button-primary-background-color: $--color-primary !default;

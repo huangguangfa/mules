@@ -2,6 +2,7 @@
 @import "../common/var";
 @import "../mixins/utils";
 @import "../mixins/mixins";
+@import "../mixins/button";
 
 @include b(button){
     display: inline-block;
@@ -27,6 +28,11 @@
         color: $--color-primary;
         border-color: $--color-primary-light-7;
         background-color: $--color-primary-light-9;
+    }
+
+
+    @include m(primary) {
+        @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
     }
 }
 
