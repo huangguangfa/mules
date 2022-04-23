@@ -9,8 +9,10 @@ import { ButtonColor } from "../types/gf-button";
 export namespace Components {
     interface GfButton {
         "_internal": () => Promise<void>;
+        "className": string;
         "color": ButtonColor;
         "disabled": boolean;
+        "textColor": string;
     }
     interface StenButton {
         /**
@@ -40,9 +42,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface GfButton {
+        "className"?: string;
         "color"?: ButtonColor;
         "disabled"?: boolean;
         "onOn-click"?: (event: CustomEvent<{ data: Object }>) => void;
+        "textColor"?: string;
     }
     interface StenButton {
         /**

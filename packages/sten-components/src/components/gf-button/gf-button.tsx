@@ -1,15 +1,17 @@
 import { Component, Host, h, Prop, Watch, Method, Event, EventEmitter } from '@stencil/core';
 import { ButtonColor } from "../../../types/gf-button";
+import { getButtonColor, getButtonStyle } from "./_button"
 
 @Component({
     tag: 'gf-button',
     shadow: false
 })
 
-
 export class GfButton {
     @Prop() color: ButtonColor = "default";
     @Prop() disabled: boolean = false;
+    @Prop() textColor: string = "#FFFFFF";
+    @Prop() className: string = "";
 
     componentWillLoad() {
         console.log('button组件初始化')
@@ -48,7 +50,8 @@ export class GfButton {
             <Host>
                 <button
                     onClick={this.handClick.bind(this)}
-                    class={`gf-button gf-button--${this.color} ${this.disabled ? 'is-disabled' : ''}`}>
+                    class={`gf-button ${this.className} ${getButtonColor(this.color)} ${this.disabled ? 'is-disabled' : ''}`}
+                    style={getButtonStyle(this.color, this.textColor)}>
                     <span>
                         <slot></slot>
                     </span>
