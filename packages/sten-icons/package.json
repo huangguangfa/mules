@@ -1,7 +1,7 @@
 {
   "name": "@gf-ui/icons",
   "version": "1.0.9",
-  "description": "icon",
+  "description": "跨框架Icon组件库",
   "author": "hgf <1454556135@qq.com>",
   "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
   "license": "ISC",

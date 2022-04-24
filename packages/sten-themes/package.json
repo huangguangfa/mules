@@ -1,7 +1,7 @@
 {
   "name": "@gf-ui/themes",
   "version": "1.0.9",
-  "description": "> TODO: description",
+  "description": "跨端主题库",
   "author": "hgf <1454556135@qq.com>",
   "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
   "license": "ISC",
