@@ -1,10 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-    <HelloWorld msg="Hello Vue 3 + Vite" />
+  <header>
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+    </div>
+  </header>
 </template>
 
 <style>
+@import './assets/base.css';
 </style>
