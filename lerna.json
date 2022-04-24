@@ -4,7 +4,8 @@
         "punlish": {
             "ignoreChanges": [
                 "ignored-file",
-                "*.md"
+                "*.md",
+                "package.json"
             ]
         },
         "version": {

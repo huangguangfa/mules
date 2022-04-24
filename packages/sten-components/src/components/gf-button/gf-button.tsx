@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop, Watch, Method, Event, EventEmitter } from '@stencil/core';
-import { ButtonColor } from "../../../types/gf-button";
+import { ButtonColor } from "../../types/gf-button";
 import { getButtonColor, getButtonStyle } from "./_button"
 
 @Component({

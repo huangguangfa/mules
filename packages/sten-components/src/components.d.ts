@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ButtonColor } from "../types/gf-button";
+import { ButtonColor } from "./types/gf-button";
 export namespace Components {
     interface GfButton {
         "_internal": () => Promise<void>;
