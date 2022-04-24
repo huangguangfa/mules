@@ -1,6 +1,6 @@
 {
-    "name": "@gf-ui/component",
-    "version": "0.0.10",
+    "name": "@gf-ui/components",
+    "version": "0.0.1",
     "description": "跨框架核心库",
     "main": "dist/index.cjs.js",
     "module": "dist/index.js",
