@@ -1,6 +1,6 @@
 {
   "name": "@gf-ui/icons",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "icon",
   "author": "hgf <1454556135@qq.com>",
   "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
@@ -34,6 +34,5 @@
     "camelcase": "^6.3.0",
     "svgo": "^2.8.0",
     "svgson": "^5.2.1"
-  },
-  "dependencies": {}
+  }
 }
