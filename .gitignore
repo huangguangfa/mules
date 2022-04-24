@@ -7,6 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 yarn.lock*
 .idea/
+.vscode/
 gf-ui-doc/
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
