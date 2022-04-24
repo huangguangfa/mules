@@ -11,7 +11,7 @@ export class GfButton {
     @Prop() color: ButtonColor = "default";
     @Prop() disabled: boolean = false;
     @Prop() textColor: string = "#FFFFFF";
-    @Prop() className: string = "";
+    @Prop() classNames: string = "";
 
     componentWillLoad() {
         console.log('button组件初始化')
@@ -50,7 +50,7 @@ export class GfButton {
             <Host>
                 <button
                     onClick={this.handClick.bind(this)}
-                    class={`gf-button ${this.className} ${getButtonColor(this.color)} ${this.disabled ? 'is-disabled' : ''}`}
+                    class={`gf-button ${this.classNames} ${getButtonColor(this.color)} ${this.disabled ? 'is-disabled' : ''}`}
                     style={getButtonStyle(this.color, this.textColor)}>
                     <span>
                         <slot></slot>

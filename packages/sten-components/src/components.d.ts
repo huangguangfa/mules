@@ -9,7 +9,7 @@ import { ButtonColor } from "../types/gf-button";
 export namespace Components {
     interface GfButton {
         "_internal": () => Promise<void>;
-        "className": string;
+        "classNames": string;
         "color": ButtonColor;
         "disabled": boolean;
         "textColor": string;
@@ -42,7 +42,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface GfButton {
-        "className"?: string;
+        "classNames"?: string;
         "color"?: ButtonColor;
         "disabled"?: boolean;
         "onOn-click"?: (event: CustomEvent<{ data: Object }>) => void;
