@@ -1,9 +1,28 @@
 <script setup lang="ts">
+import { reactive } from "vue";
+const button = reactive({
+  color: "primary",
+  disabled: false,
+});
 
+function buttonChange() {
+  const { color } = button;
+  button.color = color === "success" ? "primary" : "success";
+  button.disabled = false;
+}
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">Vue3</h1>
+    <h1 class="green">Vue3 跨框架UI库测试</h1>
+    <gf-button>普通按钮</gf-button>
+    <gf-button ref="gfButton" :color="button.color" :disabled="button.disabled" style="margin-left: 10px;">普通按钮
+    </gf-button>
+    <gf-button color="success" style="margin-left: 10px;">成功按钮</gf-button>
+    <gf-button color="#cc9999" style="margin-left: 10px;">自定义颜色</gf-button>
+    <div style="margin-top: 20px">
+      <button @click="buttonChange">修改button配置</button>
+      <button style="margin-left: 10px" @click="mes">button通信</button>
+    </div>
   </div>
 </template>

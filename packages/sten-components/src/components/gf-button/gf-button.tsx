@@ -7,14 +7,14 @@ import { getButtonColor, getButtonStyle } from "./_button"
     shadow: false
 })
 
-export class gfButton {
+export class GfButton {
     @Prop() color: ButtonColor = "default";
     @Prop() disabled: boolean = false;
     @Prop() textColor: string = "#FFFFFF";
     @Prop() classNames: string = "";
 
     componentWillLoad() {
-        console.log('button组件初始化')
+        console.log('lifecycle load')
     }
 
     @Watch("disabled")
