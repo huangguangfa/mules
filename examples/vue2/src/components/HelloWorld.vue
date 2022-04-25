@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import { GfButton } from "@gf-ui/components/dist/components/gf-button";
+customElements.define('gf-button', GfButton);
 export default {
     name: "HelloWorld",
     data() {

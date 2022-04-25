@@ -2,11 +2,13 @@ import Vue from "vue";
 import App from "./App.vue";
 
 /* eslint-disable */
-import { applyPolyfills, defineCustomElements } from "@gf-ui/components/loader";
-applyPolyfills().then(() => {
-    defineCustomElements();
-});
-// import { applyPolyfills, defineCustomElements } from "../../../packages/sten-components/loader/index";
+// import { applyPolyfills, defineCustomElements } from "@gf-ui/components/loader";
+// applyPolyfills().then(() => {
+//     defineCustomElements();
+// });
+
+
+
 import "../../../packages/sten-themes/npm/index.css"
 
 // 过滤我们的测试组件、不让vue做组件解析
