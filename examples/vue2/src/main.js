@@ -1,13 +1,13 @@
 import Vue from "vue";
 import App from "./App.vue";
-
+import { injectComponents } from "./plugins"
 /* eslint-disable */
 // import { applyPolyfills, defineCustomElements } from "@gf-ui/components/loader";
 // applyPolyfills().then(() => {
 //     defineCustomElements();
 // });
 
-
+injectComponents()
 
 import "../../../packages/sten-themes/npm/index.css"
 

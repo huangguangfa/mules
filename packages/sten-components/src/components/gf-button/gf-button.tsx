@@ -7,7 +7,7 @@ import { getButtonColor, getButtonStyle } from "./_button"
     shadow: false
 })
 
-export class GfButton {
+export class gfButton {
     @Prop() color: ButtonColor = "default";
     @Prop() disabled: boolean = false;
     @Prop() textColor: string = "#FFFFFF";
