@@ -1,10 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "../../../packages/sten-themes/npm/index.css";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { injectComponents } from "./plugins/index";
-injectComponents()
+injectComponents();
+
+declare global {
+  interface PxhRouter {
+    path: string
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "gf-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+    }
+  }
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from "vue";
+import { reactive, ref, onMounted } from "vue";
 const button = reactive({
   color: "primary",
   disabled: false,
@@ -10,6 +10,15 @@ function buttonChange() {
   button.color = color === "success" ? "primary" : "success";
   button.disabled = false;
 }
+
+const gfButton = ref(null);
+
+onMounted(() => {
+  gfButton.value.addEventListener("on-click", (e) => {
+    console.log('%c 「vue3」接收组件内部抛出事件', 'color:#67C23A', e);
+  });
+})
+
 </script>
 
 <template>
