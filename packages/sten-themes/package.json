@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/huanggungfa/web-components-gf/issues"
   },
-  "gitHead": "51079704cf01b5d6603dbe6c65a5b73e9fc660c5",
+  "gitHead": "77f63d704bda04958160802ac8bb158f70478112",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",

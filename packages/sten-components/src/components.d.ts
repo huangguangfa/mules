@@ -5,13 +5,15 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ButtonColor } from "./types/gf-button";
+import { ButtonColor, ButtonSize } from "./types/gf-button";
 export namespace Components {
     interface GfButton {
         "_internal": () => Promise<void>;
         "classNames": string;
         "color": ButtonColor;
         "disabled": boolean;
+        "plain": boolean;
+        "size": ButtonSize;
         "textColor": string;
     }
     interface StenButton {
@@ -46,6 +48,8 @@ declare namespace LocalJSX {
         "color"?: ButtonColor;
         "disabled"?: boolean;
         "onOn-click"?: (event: CustomEvent<{ data: Object }>) => void;
+        "plain"?: boolean;
+        "size"?: ButtonSize;
         "textColor"?: string;
     }
     interface StenButton {

@@ -45,6 +45,7 @@ $--font-size-medium: 16px !default;
 $--font-size-base: 14px !default;
 $--font-size-small: 13px !default;
 $--font-size-extra-small: 12px !default;
+$--font-size-extra-smaller: 11px !default;
 $--font-weight-primary: 500 !default;
 $--font-weight-secondary: 100 !default;
 $--font-line-height-primary: 24px !default;
@@ -76,6 +77,8 @@ $--button-default-border-color:$--border-color-base !default;
 $--button-default-border-radius:$--border-radius-base;
 $--button-default-font-color:$--color-text-regular !default;
 $--button-font-weight:$--font-weight-primary !default;
+
+/* button类型 */
 // primary
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
@@ -84,6 +87,35 @@ $--button-primary-background-color: $--color-primary !default;
 $--button-success-border-color: $--color-success !default;
 $--button-success-font-color: $--color-white !default;
 $--button-success-background-color: $--color-success !default;
+// info
+$--button-info-border-color: $--color-info !default;
+$--button-info-font-color: $--color-white !default;
+$--button-info-background-color: $--color-info !default;
+// warning
+$--button-warning-border-color: $--color-warning !default;
+$--button-warning-font-color: $--color-white !default;
+$--button-warning-background-color: $--color-warning !default;
+// danger
+$--button-danger-border-color: $--color-danger !default;
+$--button-danger-font-color: $--color-white !default;
+$--button-danger-background-color: $--color-danger !default;
+
+/* button大小 */
+
+$--button-large-font-size: $--font-size-base !default;
+$--button-large-border-radius: $--border-radius-base !default;
+$--button-large-padding-vertical: 10px !default;
+$--button-large-padding-horizontal: 20px !default;
+
+$--button-small-font-size: $--font-size-extra-small !default;
+$--button-small-border-radius: $--border-radius-base !default;
+$--button-small-padding-vertical: 6px !default;
+$--button-small-padding-horizontal: 10px !default;
+
+$--button-smaller-font-size: $--font-size-extra-smaller !default;
+$--button-smaller-border-radius: $--border-radius-base !default;
+$--button-smaller-padding-vertical: 4px !default;
+$--button-smaller-padding-horizontal: 8px !default;
 
 // disable
 $--button-disabled-font-color: $--color-text-placeholder !default;

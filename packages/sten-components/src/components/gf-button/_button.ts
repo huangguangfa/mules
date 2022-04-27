@@ -1,7 +1,7 @@
 import { setStyleSheet } from "../../utils/dom";
 let tepId = 0;
 function checkInternalColor(color: string): boolean {
-    const defaultColor: Array<string> = ["default", "primary", "success", "info", "warning", "danger", "error"];
+    const defaultColor: Array<string> = ["default", "primary", "success", "info", "warning", "danger"];
     return defaultColor.includes(color);
 }
 

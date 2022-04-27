@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop, Watch, Method, Event, EventEmitter } from '@stencil/core';
-import { ButtonColor } from "../../types/gf-button";
+import { ButtonColor, ButtonSize } from "../../types/gf-button";
 import { getButtonColor, getButtonStyle } from "./_button"
 
 @Component({
@@ -8,10 +8,12 @@ import { getButtonColor, getButtonStyle } from "./_button"
 })
 
 export class GfButton {
-    @Prop() color: ButtonColor = "default";
-    @Prop() disabled: boolean = false;
-    @Prop() textColor: string = "#FFFFFF";
-    @Prop() classNames: string = "";
+    @Prop() color: ButtonColor = "default"; // 按钮颜色
+    @Prop() disabled: boolean = false; // 禁用
+    @Prop() textColor: string = "#FFFFFF"; // 文字颜色
+    @Prop() classNames: string = "";  // 自定义类名
+    @Prop() plain: boolean = false;  // 朴素按钮
+    @Prop() size: ButtonSize = ""; // 大 中 小
 
     componentWillLoad() {
         console.log('lifecycle load')
@@ -50,7 +52,13 @@ export class GfButton {
             <Host>
                 <button
                     onClick={this.handClick.bind(this)}
-                    class={`gf-button ${this.classNames} ${getButtonColor(this.color)} ${this.disabled ? 'is-disabled' : ''}`}
+                    class={`gf-button 
+                        ${this.classNames} 
+                        ${getButtonColor(this.color)} 
+                        ${this.disabled ? 'is-disabled' : ''}
+                        ${this.plain && "is-plain" || ''}
+                        ${this.size && 'gf-button--' + this.size || ''}
+                    `}
                     style={getButtonStyle(this.color, this.textColor)}>
                     <span>
                         <slot></slot>
