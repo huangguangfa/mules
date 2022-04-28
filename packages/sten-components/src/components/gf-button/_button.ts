@@ -15,7 +15,7 @@ export function getButtonColor(color: string): string {
 export function getButtonStyle(color: string, textColor: string): Record<string, string | undefined> {
     if (!checkInternalColor(color)) {
         const tempClass = `gf-button-${tepId}`;
-        setStyleSheet(`.${tempClass}:hover, .${tempClass}:focus{
+        setStyleSheet(`.${tempClass}:hover{
             border-color:${color} !important;
             background-color:${color} !important;
          }`)

@@ -12,6 +12,8 @@
 | `classNames` | `class-names` |             | `string`                                                                            | `""`        |
 | `color`      | `color`       |             | `"danger" \| "default" \| "error" \| "info" \| "primary" \| "success" \| "warning"` | `"default"` |
 | `disabled`   | `disabled`    |             | `boolean`                                                                           | `false`     |
+| `plain`      | `plain`       |             | `boolean`                                                                           | `false`     |
+| `size`       | `size`        |             | `"" \| "large" \| "small" \| "smaller"`                                             | `""`        |
 | `textColor`  | `text-color`  |             | `string`                                                                            | `"#FFFFFF"` |
 
 
