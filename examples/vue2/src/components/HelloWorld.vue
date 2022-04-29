@@ -34,17 +34,9 @@ export default {
         // componenEvent("buttons",() =>[
 
         // ])
-
         this.$refs.gfButton.addEventListener("on-click", (e) => {
             console.log('%c 「vue2」接收组件内部抛出事件', 'color:#67C23A', e)
         });
-
-        // this.$refs.gfButton.addEventListener("on-click", (e) => {
-        //     console.log('%c 「vue2」接收组件内部抛出事件', 'color:#67C23A', e)
-        // });
-        // this.$refs.gfButton.addEventListener("on-click", (e) => {
-        //     console.log('%c 「vue2」接收组件内部抛出事件', 'color:#67C23A', e)
-        // });
     },
     methods: {
         demo() {
