@@ -13,18 +13,15 @@ export function getButtonColor(color: string): string {
 }
 
 export function getButtonStyle(color: string, textColor: string): Record<string, string | undefined> {
+    if (checkInternalColor(color)) return {};
     let rgb = color16ToRgb(color, 0.8);
-    if (!checkInternalColor(rgb)) {
-        const tempClass = `gf-button-${tepId}`;
-        const colorTemplate = colors => ` border-color:${colors} !important; background-color:${colors} !important;`
-        const hover = `.${tempClass}:hover{ ${colorTemplate(rgb)}  }`;
-        const active = `.${tempClass}:active{ ${colorTemplate(color)} }`;
-        setStyleSheet(active);
-        setStyleSheet(hover);
-        return {
-            background: color,
-            color: textColor
-        }
+    const tempClass = `gf-button-${tepId}`;
+    const colorTemplate = (colors: string) => ` border-color:${colors} !important; background-color:${colors} !important;`;
+    const classHover = `.${tempClass}:hover{ ${colorTemplate(rgb)}  }`;
+    const classActive = `.${tempClass}:active{ ${colorTemplate(color)} }`;
+    [classActive, classHover].forEach(css => setStyleSheet(css));
+    return {
+        background: color,
+        color: textColor
     }
-    return {}
 }

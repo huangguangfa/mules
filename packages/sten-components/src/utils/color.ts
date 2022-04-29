@@ -1,8 +1,7 @@
 import { DATA_REGEX_PATTERN } from "../config/index";
 
-
 /**
-* @overview: 16进制颜色转rgb //方法描述
+* @overview: 16进制颜色转rgb
 * @author gf
 * @param { color, opacity }  
 * @return { string }
@@ -23,8 +22,29 @@ export function color16ToRgb(color: string, opacity: number = 1): string {
     let arr = [];
     for (let i = 0; i < 6; i = i + 2) {
         let s = newStr.slice(i, i + 2)
-        console.log(s)
         arr.push(parseInt("0x" + s))
     }
     return `rgba(${arr.join(",")}, ${opacity})`;
+}
+
+/**
+* @overview: rgb转16进制颜色
+* @author gf
+* @param { color }  
+* @return { string }
+* @example rgbToColor16("rgb(81, 81, 162)") 
+*/
+export function rgbToColor16(rgbStr: string): string {
+    const reg = DATA_REGEX_PATTERN.colorRgb;
+    if (!reg.test(rgbStr)) { return };
+    const arr = rgbStr.slice(4, rgbStr.length - 1).split(",");
+    let color = '#';
+    for (let i = 0; i < arr.length; i++) {
+        let t = Number(arr[i]).toString(16)
+        if (t == "0") {
+            t = t + "0"
+        }
+        color += t;
+    }
+    return color;
 }
