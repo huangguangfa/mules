@@ -14,6 +14,7 @@
 </template>
 
 <script>
+
 export default {
     name: "HelloWorld",
     data() {
@@ -25,12 +26,6 @@ export default {
         };
     },
     mounted() {
-        // componenEvent("buttons",() =>[
-
-        // ])
-        // componenEvent("buttons",() =>[
-
-        // ])
         // componenEvent("buttons",() =>[
 
         // ])

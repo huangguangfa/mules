@@ -30,7 +30,7 @@ export class GfButton {
     }
 
     @Event({
-        eventName: "on-click",
+        eventName: "click",
         composed: true,
         cancelable: true,
         bubbles: true

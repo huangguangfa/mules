@@ -47,7 +47,7 @@ declare namespace LocalJSX {
         "classNames"?: string;
         "color"?: ButtonColor;
         "disabled"?: boolean;
-        "onOn-click"?: (event: CustomEvent<{ data: Object }>) => void;
+        "onClick"?: (event: CustomEvent<{ data: Object }>) => void;
         "plain"?: boolean;
         "size"?: ButtonSize;
         "textColor"?: string;

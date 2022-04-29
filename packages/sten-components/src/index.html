@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h3>背景颜色</h3>
+    <h3 onclick="handleClick()">背景颜色</h3>
     <gf-button>普通按钮</gf-button>
     <gf-button color="primary">正常按钮</gf-button>
     <gf-button id="success-btn" color="success">成功按钮</gf-button>
@@ -96,6 +96,9 @@
     // successButton.addEventListener("on-click", (e) => {
     //     console.log(111, e)
     // })
+    function handleClick() {
+        console.log(1111)
+    }
 </script>
 
 
