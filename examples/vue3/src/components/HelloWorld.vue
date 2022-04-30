@@ -13,18 +13,23 @@ function buttonChange() {
 
 const gfButton = ref(null);
 
-onMounted(() => {
-  gfButton.value.addEventListener("on-click", (e) => {
-    console.log('%c 「vue3」接收组件内部抛出事件', 'color:#67C23A', e);
-  });
-})
+// onMounted(() => {
+//   gfButton.value.addEventListener("on-click", (e) => {
+//     console.log('%c 「vue3」接收组件内部抛出事件', 'color:#67C23A', e);
+//   });
+// })
+
+
+function handleGfbuttonClick(e) {
+  console.log('自定义元素事件', e)
+}
 
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">Vue3 跨框架UI库测试</h1>
-    <gf-button>普通按钮</gf-button>
+    <gf-button @on-click.passive="handleGfbuttonClick">普通按钮</gf-button>
     <gf-button ref="gfButton" :color="button.color" :disabled="button.disabled" style="margin-left: 10px;">普通按钮
     </gf-button>
     <gf-button color="success" style="margin-left: 10px;">成功按钮</gf-button>

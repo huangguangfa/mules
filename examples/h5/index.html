@@ -11,12 +11,12 @@
 
 <body>
     <h1>传统HTML 跨框架UI库测试</h1>
-    <gf-button>普通按钮</gf-button>
-    <gf-button color="primary">promary</gf-button>
+    <gf-button select="test">普通按钮</gf-button>
+    <!-- <gf-button color="primary">promary</gf-button>
     <gf-button id="success-btn" color="success">成功按钮</gf-button>
     <gf-button id="disable-btn" color="primary" disabled="true">禁用按钮</gf-button>
     <gf-button color="rgba(0,0,0,0.2)" text-color="blue">自定义颜色</gf-button>
-    <gf-button class-name="aaa">自定义className</gf-button>
+    <gf-button class-name="aaa">自定义className</gf-button> -->
 
 
     <button id="changid">change</button>
@@ -26,19 +26,23 @@
 </html>
 
 <script>
-    const disableButton = document.getElementById("disable-btn");
-    const successButton = document.getElementById("success-btn");
+    // const disableButton = document.getElementById("disable-btn");
+    // const successButton = document.getElementById("success-btn");
 
-    document.getElementById("changid").onclick = function () {
-        // disableButton.disabled = !disableButton.disabled;
-        // disableButton.setAttribute("disabled", disableButton.getAttribute("disabled") === 'true' ? false : true)
-        disableButton._internal()
-        console.log([disableButton])
+    // document.getElementById("changid").onclick = function () {
+    //     // disableButton.disabled = !disableButton.disabled;
+    //     // disableButton.setAttribute("disabled", disableButton.getAttribute("disabled") === 'true' ? false : true)
+    //     disableButton._internal()
+    //     console.log([disableButton])
+    // }
+
+    // successButton.addEventListener("on-click", (e) => {
+    //     console.log('%c 「html」接收组件内部抛出事件', 'color:#67C23A', e)
+    // })
+
+    function test() {
+        console.log('test')
     }
-
-    successButton.addEventListener("on-click", (e) => {
-        console.log('%c 「html」接收组件内部抛出事件', 'color:#67C23A', e)
-    })
 </script>
 
 

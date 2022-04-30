@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>Vue2 跨框架UI库测试</h1>
-        <gf-button>普通按钮</gf-button>
+        <gf-button @on-click.passive="demo">普通按钮</gf-button>
         <gf-button ref="gfButton" :color="button.color" :disabled="button.disabled" style="margin-left: 10px;">普通按钮
         </gf-button>
         <gf-button color="success" style="margin-left: 10px;">成功按钮</gf-button>
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-
 export default {
     name: "HelloWorld",
     data() {
@@ -34,8 +33,8 @@ export default {
         });
     },
     methods: {
-        demo() {
-
+        demo(e) {
+            console.log('eees', e)
         },
         buttonChange() {
             const { color } = this.button;

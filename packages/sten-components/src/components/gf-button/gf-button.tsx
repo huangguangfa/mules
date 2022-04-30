@@ -30,13 +30,12 @@ export class GfButton {
     }
 
     @Event({
-        eventName: "click",
+        eventName: "on-click",
         composed: true,
         cancelable: true,
         bubbles: true
     })
     displayOnClick: EventEmitter<{ data: Object }>
-
     handClick(): void {
         if (this.disabled) return;
         this.displayOnClick.emit({
