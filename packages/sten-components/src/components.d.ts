@@ -23,6 +23,8 @@ export namespace Components {
         "name": string;
         "show": () => Promise<void>;
     }
+    interface StenIcons {
+    }
 }
 declare global {
     interface HTMLGfButtonElement extends Components.GfButton, HTMLStencilElement {
@@ -37,9 +39,16 @@ declare global {
         prototype: HTMLStenButtonElement;
         new (): HTMLStenButtonElement;
     };
+    interface HTMLStenIconsElement extends Components.StenIcons, HTMLStencilElement {
+    }
+    var HTMLStenIconsElement: {
+        prototype: HTMLStenIconsElement;
+        new (): HTMLStenIconsElement;
+    };
     interface HTMLElementTagNameMap {
         "gf-button": HTMLGfButtonElement;
         "sten-button": HTMLStenButtonElement;
+        "sten-icons": HTMLStenIconsElement;
     }
 }
 declare namespace LocalJSX {
@@ -59,9 +68,12 @@ declare namespace LocalJSX {
         "name"?: string;
         "onStenButton-show"?: (event: CustomEvent<{ name: string }>) => void;
     }
+    interface StenIcons {
+    }
     interface IntrinsicElements {
         "gf-button": GfButton;
         "sten-button": StenButton;
+        "sten-icons": StenIcons;
     }
 }
 export { LocalJSX as JSX };
@@ -70,6 +82,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
+            "sten-icons": LocalJSX.StenIcons & JSXBase.HTMLAttributes<HTMLStenIconsElement>;
         }
     }
 }
