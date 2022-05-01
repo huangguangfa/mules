@@ -24,7 +24,7 @@
     "url": "git+https://github.com/huanggungfa/web-components-gf.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "node build/build-svg-json-files.js"
   },
   "bugs": {
     "url": "https://github.com/huanggungfa/web-components-gf/issues"

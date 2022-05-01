@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { resolve, extname } = require("path");
+const { stringify } = require('svgson')
 const svgo = require("./transform-svg-json")
 
 const entryDir = resolve(__dirname, '../svgs');
@@ -15,19 +16,20 @@ const outDirEsm = resolve(__dirname, '../icons_esm');
 // }
 
 
-function start() {
+async function start() {
     const svgFilesList = fs.readdirSync(entryDir, 'utf-8');
     const batches = svgFilesList
-        .filter((f) => extname(f) === '.svg')
+        .filter(f => extname(f) === '.svg')
         .map(async (fileName) => {
             const svgContent = fs.readFileSync(resolve(entryDir, fileName));
-            const data = await svgo(svgContent, fileName)
-            console.log(JSON.stringify(data, null, 2))
+            const svgJSON = await svgo(svgContent, fileName);
+            // const svg = stringify(data);
+            // console.log(svg)
+            return svgJSON;
         });
-
-    //  const arr = await Promise.all(batches);
-
-    writeFiles()
+    const arr = await Promise.all(batches);
+    console.log(arr)
+    // writeFiles()
 }
 
 function writeFiles() {

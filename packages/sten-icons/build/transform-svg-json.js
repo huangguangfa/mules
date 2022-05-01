@@ -1,10 +1,10 @@
 const { optimize } = require('svgo');
-const { parse } = require('svgson')
+const { parse } = require('svgson');
 
 function svgo(svgContent, svgFileName) {
     return new Promise((resolve, reject) => {
         try {
-            const { data } = optimize(svgContent, {
+            const svgToJSON = () => optimize(svgContent, {
                 name: 'preset-default',
                 params: {
                     overrides: {
@@ -38,7 +38,8 @@ function svgo(svgContent, svgFileName) {
                 ]
             })
             // 彩色不执行去颜色配置
-            parse(svgFileName.slice(-2) === '-c' ? svgContent : data).then(r => resolve(r));
+            const checkSvgColor = svgFileName.substr(-6, 2) === '-c';
+            parse(checkSvgColor ? svgContent : svgToJSON().data).then(r => resolve(r));
         } catch (e) {
             reject(e)
         }
