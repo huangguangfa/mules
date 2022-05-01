@@ -6,20 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-
+    interface StenIcons {
+    }
 }
 declare global {
+    interface HTMLStenIconsElement extends Components.StenIcons, HTMLStencilElement {
+    }
+    var HTMLStenIconsElement: {
+        prototype: HTMLStenIconsElement;
+        new (): HTMLStenIconsElement;
+    };
     interface HTMLElementTagNameMap {
+        "sten-icons": HTMLStenIconsElement;
     }
 }
 declare namespace LocalJSX {
+    interface StenIcons {
+    }
     interface IntrinsicElements {
+        "sten-icons": StenIcons;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "sten-icons": LocalJSX.StenIcons & JSXBase.HTMLAttributes<HTMLStenIconsElement>;
         }
     }
 }

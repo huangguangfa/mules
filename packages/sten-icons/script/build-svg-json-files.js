@@ -3,9 +3,9 @@ const { resolve, extname } = require("path");
 const { stringify } = require('svgson')
 const svgo = require("./transform-svg-json")
 
-const entryDir = resolve(__dirname, '../svgs');
-const outDir = resolve(__dirname, '../icons');
-const outDirEsm = resolve(__dirname, '../icons_esm');
+const entryDir = resolve(__dirname, '../src/svgs');
+const outDir = resolve(__dirname, '../src/icons');
+const outDirEsm = resolve(__dirname, '../src/icons_esm');
 
 
 // async function build(entryDir, outDir, outDirEsm, prefix, suffix) {

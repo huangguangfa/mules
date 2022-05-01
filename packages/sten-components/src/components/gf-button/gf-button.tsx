@@ -1,7 +1,6 @@
 import { Component, Host, h, Prop, Watch, Method, Event, EventEmitter } from '@stencil/core';
 import { ButtonColor, ButtonSize } from "../../types/gf-button";
-import { getButtonColor, getButtonStyle } from "./_button"
-import { Icon } from "../../../../sten-iconss/components/icon"
+import { getButtonColor, getButtonStyle } from "./_button";
 @Component({
     tag: 'gf-button',
     shadow: false
@@ -49,7 +48,6 @@ export class GfButton {
     render() {
         return (
             <Host>
-                <Icon></Icon>
                 <button
                     onClick={this.handClick.bind(this)}
                     class={`gf-button 
