@@ -1,5 +1,5 @@
 {
-  "name": "@open-ui/icons",
+  "name": "@gf-ui/icons",
   "version": "0.0.1",
   "description": "跨框架Icon组件库",
   "main": "dist/index.cjs.js",
@@ -25,14 +25,20 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
+    "camelcase": "^6.3.0",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "svgo": "^2.8.0",
+    "svgson": "^5.2.1"
   },
   "license": "MIT"
 }
