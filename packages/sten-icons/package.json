@@ -2,37 +2,37 @@
   "name": "@open-ui/icons",
   "version": "0.0.1",
   "description": "跨框架Icon组件库",
-  "author": "hgf <1454556135@qq.com>",
-  "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
-  "license": "ISC",
-  "directories": {
-    "lib": "npm",
-    "test": "__tests__"
-  },
-  "exports": {
-    ".": "./npm/icons.js",
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "npm"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/sten-icons/sten-icons.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huanggungfa/web-components-gf.git"
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
   "scripts": {
-    "build": "node build/build-svg-json-files.js"
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
-  "bugs": {
-    "url": "https://github.com/huanggungfa/web-components-gf/issues"
+  "dependencies": {
+    "@stencil/core": "^2.13.0"
   },
-  "gitHead": "77f63d704bda04958160802ac8bb158f70478112",
   "devDependencies": {
-    "camelcase": "^6.3.0",
-    "svgo": "^2.8.0",
-    "svgson": "^5.2.1"
-  }
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "puppeteer": "^10.0.0"
+  },
+  "license": "MIT"
 }

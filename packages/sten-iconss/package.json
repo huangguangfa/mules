@@ -1,0 +1,38 @@
+{
+  "name": "@open-ui/icons",
+  "version": "0.0.1",
+  "description": "跨框架Icon组件库",
+  "author": "hgf <1454556135@qq.com>",
+  "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "npm",
+    "test": "__tests__"
+  },
+  "exports": {
+    ".": "./npm/icons.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "npm"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huanggungfa/web-components-gf.git"
+  },
+  "scripts": {
+    "build": "node build/build-svg-json-files.js"
+  },
+  "bugs": {
+    "url": "https://github.com/huanggungfa/web-components-gf/issues"
+  },
+  "gitHead": "77f63d704bda04958160802ac8bb158f70478112",
+  "devDependencies": {
+    "camelcase": "^6.3.0",
+    "svgo": "^2.8.0",
+    "svgson": "^5.2.1"
+  }
+}

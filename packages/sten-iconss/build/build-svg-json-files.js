@@ -20,7 +20,7 @@ async function start() {
     const svgFilesList = fs.readdirSync(entryDir, 'utf-8');
     const batches = svgFilesList
         .filter(f => extname(f) === '.svg')
-        .map(async (fileName) => {
+        .map(async fileName => {
             const svgContent = fs.readFileSync(resolve(entryDir, fileName));
             const svgJSON = await svgo(svgContent, fileName);
             // const svg = stringify(data);
