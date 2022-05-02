@@ -1,11 +1,12 @@
+
 import { Component, Host, h } from '@stencil/core';
-import { Icons } from "../../icon-base/index";
-import svgData from "../../icons/leftOutLined.js";
+import { Icons } from "../icon-base/index";
+import { arrowRight as svgData } from "../icons";
 @Component({
-    tag: 'sten-icons',
+    tag: 'gf-icon-arrow-right',
     shadow: true,
 })
-export class StenIcons {
+export class GfIconarrowRight {
     render() {
         return (
             <Host>
