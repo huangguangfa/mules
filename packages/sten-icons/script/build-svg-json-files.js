@@ -48,11 +48,11 @@ async function start() {
 }
 
 function saveSvgJson(svgInfo) {
+    console.log(svgInfo)
     const jsonSuffix = '.js'
     const fileName = `${svgInfo._name}${jsonSuffix}`;
-    const templateCode = `exports.default = ${JSON.stringify(svgInfo)}`;
+    const templateCode = `export default ${JSON.stringify(svgInfo)}`;
     fs.writeFileSync(resolve(outDir, fileName), templateCode);
-    console.log(template)
 }
 
 function writeFiles(svgJSONList) {
