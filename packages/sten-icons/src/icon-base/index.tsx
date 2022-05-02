@@ -1,18 +1,23 @@
 import { FunctionalComponent, h } from "@stencil/core";
 import { stringify } from "svgson"
 interface IconProps {
-    // size: number | string;
-    // styles: object;
-    // color: string;
-    // rotate: number;
-    // spin: boolean;
-    svgData: any;
+    size?: number | string;
+    styles?: object;
+    color?: string;
+    rotate?: number;
+    spin?: boolean;
+    opacity?: number | string;
+    svgData?: any;
 }
 
-// { size = 40, styles, color = '', rotate = '', spin, svgData }
-export const Icons: FunctionalComponent<IconProps> = ({ svgData }) => {
+export const Icons: FunctionalComponent<IconProps> = ({ svgData, size = 30, color = "red", rotate = 0, spin = false, opacity = 1 }) => {
+    svgData.attributes = {
+        ...svgData.attributes,
+        width: size,
+        height: size
+    };
     return (
-        <div innerHTML={stringify(svgData)}></div>
+        <span innerHTML={stringify(svgData)}></span>
     )
 }
 
