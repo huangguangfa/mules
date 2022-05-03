@@ -10,6 +10,8 @@ export namespace Components {
     }
     interface GfIconArrowRight {
     }
+    interface GfIconLoading {
+    }
 }
 declare global {
     interface HTMLGfIconArrowLeftElement extends Components.GfIconArrowLeft, HTMLStencilElement {
@@ -24,9 +26,16 @@ declare global {
         prototype: HTMLGfIconArrowRightElement;
         new (): HTMLGfIconArrowRightElement;
     };
+    interface HTMLGfIconLoadingElement extends Components.GfIconLoading, HTMLStencilElement {
+    }
+    var HTMLGfIconLoadingElement: {
+        prototype: HTMLGfIconLoadingElement;
+        new (): HTMLGfIconLoadingElement;
+    };
     interface HTMLElementTagNameMap {
         "gf-icon-arrow-left": HTMLGfIconArrowLeftElement;
         "gf-icon-arrow-right": HTMLGfIconArrowRightElement;
+        "gf-icon-loading": HTMLGfIconLoadingElement;
     }
 }
 declare namespace LocalJSX {
@@ -34,9 +43,12 @@ declare namespace LocalJSX {
     }
     interface GfIconArrowRight {
     }
+    interface GfIconLoading {
+    }
     interface IntrinsicElements {
         "gf-icon-arrow-left": GfIconArrowLeft;
         "gf-icon-arrow-right": GfIconArrowRight;
+        "gf-icon-loading": GfIconLoading;
     }
 }
 export { LocalJSX as JSX };
@@ -45,6 +57,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "gf-icon-arrow-left": LocalJSX.GfIconArrowLeft & JSXBase.HTMLAttributes<HTMLGfIconArrowLeftElement>;
             "gf-icon-arrow-right": LocalJSX.GfIconArrowRight & JSXBase.HTMLAttributes<HTMLGfIconArrowRightElement>;
+            "gf-icon-loading": LocalJSX.GfIconLoading & JSXBase.HTMLAttributes<HTMLGfIconLoadingElement>;
         }
     }
 }

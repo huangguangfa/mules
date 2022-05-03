@@ -1,5 +1,5 @@
-import { FunctionalComponent, h, Host } from "@stencil/core";
-import { stringify } from "svgson"
+import { FunctionalComponent, h } from "@stencil/core";
+import { stringify } from "svgson";
 interface IconProps {
     size?: number | string;
     styles?: object;
@@ -10,8 +10,8 @@ interface IconProps {
     svgData?: any;
 }
 
-function getOutStyle({ color = "red", rotate = 10, spin = false, opacity = 1 }: IconProps) {
-    const styleConfig: any = { color, display: "inline-block" }
+function getOutStyle({ color = "red", rotate = 0, spin = false, opacity = 1 }: IconProps) {
+    const styleConfig: any = { color, display: "inline-block", opacity }
     if (Number.isSafeInteger(rotate)) {
         styleConfig.transform = `rotate(${rotate}deg)`;
     }
@@ -27,7 +27,7 @@ export const Icons: FunctionalComponent<IconProps> = (props) => {
     };
     const outStyle = getOutStyle(props);
     return (
-        <div class="svg-wrap" innerHTML={stringify(svgData)} style={outStyle}></div>
+        <div class="svg-wrap gf-icon-loading" innerHTML={stringify(svgData)} style={outStyle}></div>
     )
 }
 

@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
     namespace: 'sten-icons',
+    globalStyle: "src/global/index.css",
     outputTargets: [
         {
             type: 'dist',
