@@ -10,8 +10,14 @@ interface IconProps {
     svgData?: any;
 }
 
-function getOutStyle({ color = "red", rotate = 0, spin = false, opacity = 1 }: IconProps) {
-    const styleConfig: any = { color, display: "inline-block", opacity }
+function getOutStyle({ color = "red", rotate = 0, opacity = 1, size = 30 }: IconProps) {
+    const styleConfig: any = {
+        display: "inline-block",
+        color,
+        opacity,
+        width: `${size}px`,
+        height: `${size}px`
+    }
     if (Number.isSafeInteger(rotate)) {
         styleConfig.transform = `rotate(${rotate}deg)`;
     }
@@ -19,7 +25,7 @@ function getOutStyle({ color = "red", rotate = 0, spin = false, opacity = 1 }: I
 }
 
 export const Icons: FunctionalComponent<IconProps> = (props) => {
-    const { svgData, size = 30 } = props;
+    const { svgData, size = 30, spin } = props;
     svgData.attributes = {
         ...svgData.attributes,
         width: size,
@@ -27,7 +33,7 @@ export const Icons: FunctionalComponent<IconProps> = (props) => {
     };
     const outStyle = getOutStyle(props);
     return (
-        <div class="svg-wrap gf-icon-loading" innerHTML={stringify(svgData)} style={outStyle}></div>
+        <div class={`svg-wrap ${spin ? 'gf-icon-loading' : ''}`} innerHTML={stringify(svgData)} style={outStyle}></div>
     )
 }
 

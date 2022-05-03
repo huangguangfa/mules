@@ -58,7 +58,7 @@ import { Icons } from "../icon-base/index";
 import { ${iconName} as svgData } from "../icons\";
 @Component({
     tag: '${componentName}',
-    shadow: true,
+    shadow: false
 })
 export class GfIcon${iconName} {
     render() {

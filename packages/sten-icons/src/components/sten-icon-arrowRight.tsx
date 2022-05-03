@@ -4,7 +4,7 @@ import { Icons } from "../icon-base/index";
 import { arrowRight as svgData } from "../icons";
 @Component({
     tag: 'gf-icon-arrow-right',
-    shadow: true,
+    shadow: false,
 })
 export class GfIconarrowRight {
     render() {
