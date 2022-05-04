@@ -6,7 +6,6 @@ const _crypto_context = (() => {
     const context: { [key: string]: any } = {};
     // 非对称加密策略
     Object.keys(ASYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
-
         const _item = ASYMMETRIC_CRYPTO_TYPE[prop]
         if (_item.name) {
             const _crypto: any = CryptoJS[_item.name as keyof typeof CryptoJS]
@@ -32,8 +31,8 @@ const _crypto_context = (() => {
 
     // 对称加密策略
     Object.keys(SYMMETRIC_CRYPTO_TYPE).forEach((prop: string) => {
-        const _item:{
-            [key:string]:any
+        const _item: {
+            [key: string]: any
         } = SYMMETRIC_CRYPTO_TYPE[prop as keyof typeof SYMMETRIC_CRYPTO_TYPE]
         if (_item.name) {
             context[_item.name] = { symmetric: true }

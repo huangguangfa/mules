@@ -59,7 +59,9 @@ export class GfButton {
                     `}
                     style={getButtonStyle(this.color, this.textColor)}>
                     <span>
+                        <slot name='icon-left'></slot>
                         <slot></slot>
+                        <slot name='icon-right'></slot>
                     </span>
                 </button>
             </Host>
