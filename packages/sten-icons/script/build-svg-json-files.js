@@ -3,7 +3,6 @@ const chalk = require('chalk');
 const { resolve, extname } = require("path");
 const svgo = require("./transform-svg-json");
 
-
 const entryDir = resolve(__dirname, '../src/svgs');
 const outDir = resolve(__dirname, '../src/icons');
 const HTMLPATH = resolve(__dirname, '../src/index.html');
@@ -59,7 +58,7 @@ import { ${iconName} as svgData } from "../icons\";
 @Component({
     tag: '${componentName}',
     shadow: false
-})
+})  
 export class GfIcon${iconName} {
     render() {
         return (
@@ -70,7 +69,7 @@ export class GfIcon${iconName} {
     }
 }
 `;
-    const fileName = `sten-icon-${iconName}.tsx`;
+    const fileName = `gf-icon-${iconName}.tsx`;
     fs.writeFileSync(resolve(outDirComponent, fileName), componentsTemplate);
     return componentName;
 }
@@ -115,9 +114,9 @@ function generateIconIndexContent(content) {
 */
 function writeFiles(svgJSONList) {
     let indexFileContent = '';
-    let componentNameList = []
+    let componentNameList = [];
     svgJSONList.forEach(svgItem => {
-        const name = svgItem._name
+        const name = svgItem._name.replace(/([\\:\-\\_]+(.))/g, (_, sep, letter, offset) => offset ? letter.toUpperCase() : letter);
         const jsonSuffix = '.js'
         const svgJsonfileName = `${name}${jsonSuffix}`;
         indexFileContent += `export { default as ${name} } from './${svgJsonfileName}'\n`;

@@ -1,12 +1,12 @@
 
 import { Component, Host, h } from '@stencil/core';
 import { Icons } from "../icon-base/index";
-import { arrowLeft as svgData } from "../icons";
+import { feedsFill as svgData } from "../icons";
 @Component({
-    tag: 'gf-icon-arrow-left',
-    shadow: false,
-})
-export class GfIconarrowLeft {
+    tag: 'gf-icon-feeds-fill',
+    shadow: false
+})  
+export class GfIconfeedsFill {
     render() {
         return (
             <Host>

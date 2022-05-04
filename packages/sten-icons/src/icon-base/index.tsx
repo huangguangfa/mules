@@ -10,7 +10,7 @@ interface IconProps {
     svgData?: any;
 }
 
-function getOutStyle({ color = "red", rotate = 0, opacity = 1, size = 30 }: IconProps) {
+function getOutStyle({ color, rotate = 0, opacity = 1, size = 30 }: IconProps) {
     const styleConfig: any = {
         display: "inline-block",
         color,

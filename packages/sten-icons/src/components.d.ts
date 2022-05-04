@@ -6,14 +6,72 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GfIconAddCartFill {
+    }
+    interface GfIconAddFill {
+    }
+    interface GfIconAddSelect {
+    }
+    interface GfIconArrowDown {
+    }
     interface GfIconArrowLeft {
     }
     interface GfIconArrowRight {
     }
+    interface GfIconArrowUp {
+    }
+    interface GfIconCalendarFill {
+    }
+    interface GfIconClose {
+    }
+    interface GfIconFalling {
+    }
+    interface GfIconFeedsFill {
+    }
+    interface GfIconLeftarrow {
+    }
     interface GfIconLoading {
+    }
+    interface GfIconMap {
+    }
+    interface GfIconQRcode {
+    }
+    interface GfIconRightarrow {
+    }
+    interface GfIconRising {
+    }
+    interface GfIconSet {
+    }
+    interface GfIconSuccessFill {
+    }
+    interface GfIconTaskManagement {
     }
 }
 declare global {
+    interface HTMLGfIconAddCartFillElement extends Components.GfIconAddCartFill, HTMLStencilElement {
+    }
+    var HTMLGfIconAddCartFillElement: {
+        prototype: HTMLGfIconAddCartFillElement;
+        new (): HTMLGfIconAddCartFillElement;
+    };
+    interface HTMLGfIconAddFillElement extends Components.GfIconAddFill, HTMLStencilElement {
+    }
+    var HTMLGfIconAddFillElement: {
+        prototype: HTMLGfIconAddFillElement;
+        new (): HTMLGfIconAddFillElement;
+    };
+    interface HTMLGfIconAddSelectElement extends Components.GfIconAddSelect, HTMLStencilElement {
+    }
+    var HTMLGfIconAddSelectElement: {
+        prototype: HTMLGfIconAddSelectElement;
+        new (): HTMLGfIconAddSelectElement;
+    };
+    interface HTMLGfIconArrowDownElement extends Components.GfIconArrowDown, HTMLStencilElement {
+    }
+    var HTMLGfIconArrowDownElement: {
+        prototype: HTMLGfIconArrowDownElement;
+        new (): HTMLGfIconArrowDownElement;
+    };
     interface HTMLGfIconArrowLeftElement extends Components.GfIconArrowLeft, HTMLStencilElement {
     }
     var HTMLGfIconArrowLeftElement: {
@@ -26,38 +84,201 @@ declare global {
         prototype: HTMLGfIconArrowRightElement;
         new (): HTMLGfIconArrowRightElement;
     };
+    interface HTMLGfIconArrowUpElement extends Components.GfIconArrowUp, HTMLStencilElement {
+    }
+    var HTMLGfIconArrowUpElement: {
+        prototype: HTMLGfIconArrowUpElement;
+        new (): HTMLGfIconArrowUpElement;
+    };
+    interface HTMLGfIconCalendarFillElement extends Components.GfIconCalendarFill, HTMLStencilElement {
+    }
+    var HTMLGfIconCalendarFillElement: {
+        prototype: HTMLGfIconCalendarFillElement;
+        new (): HTMLGfIconCalendarFillElement;
+    };
+    interface HTMLGfIconCloseElement extends Components.GfIconClose, HTMLStencilElement {
+    }
+    var HTMLGfIconCloseElement: {
+        prototype: HTMLGfIconCloseElement;
+        new (): HTMLGfIconCloseElement;
+    };
+    interface HTMLGfIconFallingElement extends Components.GfIconFalling, HTMLStencilElement {
+    }
+    var HTMLGfIconFallingElement: {
+        prototype: HTMLGfIconFallingElement;
+        new (): HTMLGfIconFallingElement;
+    };
+    interface HTMLGfIconFeedsFillElement extends Components.GfIconFeedsFill, HTMLStencilElement {
+    }
+    var HTMLGfIconFeedsFillElement: {
+        prototype: HTMLGfIconFeedsFillElement;
+        new (): HTMLGfIconFeedsFillElement;
+    };
+    interface HTMLGfIconLeftarrowElement extends Components.GfIconLeftarrow, HTMLStencilElement {
+    }
+    var HTMLGfIconLeftarrowElement: {
+        prototype: HTMLGfIconLeftarrowElement;
+        new (): HTMLGfIconLeftarrowElement;
+    };
     interface HTMLGfIconLoadingElement extends Components.GfIconLoading, HTMLStencilElement {
     }
     var HTMLGfIconLoadingElement: {
         prototype: HTMLGfIconLoadingElement;
         new (): HTMLGfIconLoadingElement;
     };
+    interface HTMLGfIconMapElement extends Components.GfIconMap, HTMLStencilElement {
+    }
+    var HTMLGfIconMapElement: {
+        prototype: HTMLGfIconMapElement;
+        new (): HTMLGfIconMapElement;
+    };
+    interface HTMLGfIconQRcodeElement extends Components.GfIconQRcode, HTMLStencilElement {
+    }
+    var HTMLGfIconQRcodeElement: {
+        prototype: HTMLGfIconQRcodeElement;
+        new (): HTMLGfIconQRcodeElement;
+    };
+    interface HTMLGfIconRightarrowElement extends Components.GfIconRightarrow, HTMLStencilElement {
+    }
+    var HTMLGfIconRightarrowElement: {
+        prototype: HTMLGfIconRightarrowElement;
+        new (): HTMLGfIconRightarrowElement;
+    };
+    interface HTMLGfIconRisingElement extends Components.GfIconRising, HTMLStencilElement {
+    }
+    var HTMLGfIconRisingElement: {
+        prototype: HTMLGfIconRisingElement;
+        new (): HTMLGfIconRisingElement;
+    };
+    interface HTMLGfIconSetElement extends Components.GfIconSet, HTMLStencilElement {
+    }
+    var HTMLGfIconSetElement: {
+        prototype: HTMLGfIconSetElement;
+        new (): HTMLGfIconSetElement;
+    };
+    interface HTMLGfIconSuccessFillElement extends Components.GfIconSuccessFill, HTMLStencilElement {
+    }
+    var HTMLGfIconSuccessFillElement: {
+        prototype: HTMLGfIconSuccessFillElement;
+        new (): HTMLGfIconSuccessFillElement;
+    };
+    interface HTMLGfIconTaskManagementElement extends Components.GfIconTaskManagement, HTMLStencilElement {
+    }
+    var HTMLGfIconTaskManagementElement: {
+        prototype: HTMLGfIconTaskManagementElement;
+        new (): HTMLGfIconTaskManagementElement;
+    };
     interface HTMLElementTagNameMap {
+        "gf-icon-add-cart-fill": HTMLGfIconAddCartFillElement;
+        "gf-icon-add-fill": HTMLGfIconAddFillElement;
+        "gf-icon-add-select": HTMLGfIconAddSelectElement;
+        "gf-icon-arrow-down": HTMLGfIconArrowDownElement;
         "gf-icon-arrow-left": HTMLGfIconArrowLeftElement;
         "gf-icon-arrow-right": HTMLGfIconArrowRightElement;
+        "gf-icon-arrow-up": HTMLGfIconArrowUpElement;
+        "gf-icon-calendar-fill": HTMLGfIconCalendarFillElement;
+        "gf-icon-close": HTMLGfIconCloseElement;
+        "gf-icon-falling": HTMLGfIconFallingElement;
+        "gf-icon-feeds-fill": HTMLGfIconFeedsFillElement;
+        "gf-icon-leftarrow": HTMLGfIconLeftarrowElement;
         "gf-icon-loading": HTMLGfIconLoadingElement;
+        "gf-icon-map": HTMLGfIconMapElement;
+        "gf-icon-q-rcode": HTMLGfIconQRcodeElement;
+        "gf-icon-rightarrow": HTMLGfIconRightarrowElement;
+        "gf-icon-rising": HTMLGfIconRisingElement;
+        "gf-icon-set": HTMLGfIconSetElement;
+        "gf-icon-success-fill": HTMLGfIconSuccessFillElement;
+        "gf-icon-task-management": HTMLGfIconTaskManagementElement;
     }
 }
 declare namespace LocalJSX {
+    interface GfIconAddCartFill {
+    }
+    interface GfIconAddFill {
+    }
+    interface GfIconAddSelect {
+    }
+    interface GfIconArrowDown {
+    }
     interface GfIconArrowLeft {
     }
     interface GfIconArrowRight {
     }
+    interface GfIconArrowUp {
+    }
+    interface GfIconCalendarFill {
+    }
+    interface GfIconClose {
+    }
+    interface GfIconFalling {
+    }
+    interface GfIconFeedsFill {
+    }
+    interface GfIconLeftarrow {
+    }
     interface GfIconLoading {
     }
+    interface GfIconMap {
+    }
+    interface GfIconQRcode {
+    }
+    interface GfIconRightarrow {
+    }
+    interface GfIconRising {
+    }
+    interface GfIconSet {
+    }
+    interface GfIconSuccessFill {
+    }
+    interface GfIconTaskManagement {
+    }
     interface IntrinsicElements {
+        "gf-icon-add-cart-fill": GfIconAddCartFill;
+        "gf-icon-add-fill": GfIconAddFill;
+        "gf-icon-add-select": GfIconAddSelect;
+        "gf-icon-arrow-down": GfIconArrowDown;
         "gf-icon-arrow-left": GfIconArrowLeft;
         "gf-icon-arrow-right": GfIconArrowRight;
+        "gf-icon-arrow-up": GfIconArrowUp;
+        "gf-icon-calendar-fill": GfIconCalendarFill;
+        "gf-icon-close": GfIconClose;
+        "gf-icon-falling": GfIconFalling;
+        "gf-icon-feeds-fill": GfIconFeedsFill;
+        "gf-icon-leftarrow": GfIconLeftarrow;
         "gf-icon-loading": GfIconLoading;
+        "gf-icon-map": GfIconMap;
+        "gf-icon-q-rcode": GfIconQRcode;
+        "gf-icon-rightarrow": GfIconRightarrow;
+        "gf-icon-rising": GfIconRising;
+        "gf-icon-set": GfIconSet;
+        "gf-icon-success-fill": GfIconSuccessFill;
+        "gf-icon-task-management": GfIconTaskManagement;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "gf-icon-add-cart-fill": LocalJSX.GfIconAddCartFill & JSXBase.HTMLAttributes<HTMLGfIconAddCartFillElement>;
+            "gf-icon-add-fill": LocalJSX.GfIconAddFill & JSXBase.HTMLAttributes<HTMLGfIconAddFillElement>;
+            "gf-icon-add-select": LocalJSX.GfIconAddSelect & JSXBase.HTMLAttributes<HTMLGfIconAddSelectElement>;
+            "gf-icon-arrow-down": LocalJSX.GfIconArrowDown & JSXBase.HTMLAttributes<HTMLGfIconArrowDownElement>;
             "gf-icon-arrow-left": LocalJSX.GfIconArrowLeft & JSXBase.HTMLAttributes<HTMLGfIconArrowLeftElement>;
             "gf-icon-arrow-right": LocalJSX.GfIconArrowRight & JSXBase.HTMLAttributes<HTMLGfIconArrowRightElement>;
+            "gf-icon-arrow-up": LocalJSX.GfIconArrowUp & JSXBase.HTMLAttributes<HTMLGfIconArrowUpElement>;
+            "gf-icon-calendar-fill": LocalJSX.GfIconCalendarFill & JSXBase.HTMLAttributes<HTMLGfIconCalendarFillElement>;
+            "gf-icon-close": LocalJSX.GfIconClose & JSXBase.HTMLAttributes<HTMLGfIconCloseElement>;
+            "gf-icon-falling": LocalJSX.GfIconFalling & JSXBase.HTMLAttributes<HTMLGfIconFallingElement>;
+            "gf-icon-feeds-fill": LocalJSX.GfIconFeedsFill & JSXBase.HTMLAttributes<HTMLGfIconFeedsFillElement>;
+            "gf-icon-leftarrow": LocalJSX.GfIconLeftarrow & JSXBase.HTMLAttributes<HTMLGfIconLeftarrowElement>;
             "gf-icon-loading": LocalJSX.GfIconLoading & JSXBase.HTMLAttributes<HTMLGfIconLoadingElement>;
+            "gf-icon-map": LocalJSX.GfIconMap & JSXBase.HTMLAttributes<HTMLGfIconMapElement>;
+            "gf-icon-q-rcode": LocalJSX.GfIconQRcode & JSXBase.HTMLAttributes<HTMLGfIconQRcodeElement>;
+            "gf-icon-rightarrow": LocalJSX.GfIconRightarrow & JSXBase.HTMLAttributes<HTMLGfIconRightarrowElement>;
+            "gf-icon-rising": LocalJSX.GfIconRising & JSXBase.HTMLAttributes<HTMLGfIconRisingElement>;
+            "gf-icon-set": LocalJSX.GfIconSet & JSXBase.HTMLAttributes<HTMLGfIconSetElement>;
+            "gf-icon-success-fill": LocalJSX.GfIconSuccessFill & JSXBase.HTMLAttributes<HTMLGfIconSuccessFillElement>;
+            "gf-icon-task-management": LocalJSX.GfIconTaskManagement & JSXBase.HTMLAttributes<HTMLGfIconTaskManagementElement>;
         }
     }
 }
