@@ -20,6 +20,7 @@
   "files": [
     "npm"
   ],
+  "private": true,
   "publishConfig": {
     "access": "public"
   },
@@ -30,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/huanggungfa/web-components-gf/issues"
   },
-  "gitHead": "77f63d704bda04958160802ac8bb158f70478112",
+  "gitHead": "449b50a8466a0a6a2ebecc74714d0b21caef299b",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
