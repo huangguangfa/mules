@@ -12,8 +12,16 @@ const outDirComponent = resolve(__dirname, '../src/components');
 async function clearDir() {
     const rmDirList = [outDir, outDirComponent];
     const mkdirList = [outDir, outDirComponent];
-    rmDirList.forEach(dir => fs.rmSync(dir, { recursive: true }));
-    mkdirList.forEach(dir => fs.mkdirSync(dir));
+    rmDirList.forEach(dir => {
+        if (fs.existsSync(dir)) {
+            fs.rmSync(dir, { recursive: true })
+        }
+    });
+    mkdirList.forEach(dir => {
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir)
+        }
+    });
 }
 
 /* 
