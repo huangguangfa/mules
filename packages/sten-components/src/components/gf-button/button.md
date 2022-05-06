@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil开发Tab</title>
+    <link rel="stylesheet" href="/build/sten-components.css">
+    <script type="module" src="/build/sten-components.esm.js"></script>
+    <script nomodule src="/build/sten-components.js"></script>
+</head>
+
+<body>
+    <h3 onclick="handleClick()">
+        背景颜色
+    </h3>
+    <gf-button>普通按钮</gf-button>
+    <gf-button color="primary"> 正常按钮</gf-button>
+    <gf-button id="success-btn" color="success">成功按钮</gf-button>
+    <gf-button color="info">信息按钮</gf-button>
+    <gf-button color="warning">警告按钮</gf-button>
+    <gf-button color="danger">错误按钮</gf-button>
+
+    <h3>镂空</h3>
+    <gf-button>普通按钮</gf-button>
+    <gf-button color="primary" plain>正常按钮</gf-button>
+    <gf-button color="success" plain>成功按钮</gf-button>
+    <gf-button color="info" plain>信息按钮</gf-button>
+    <gf-button color="warning" plain>警告按钮</gf-button>
+    <gf-button color="danger" plain>错误按钮</gf-button>
+
+    <h3>按钮size</h3>
+
+    <h1 style="font-size: 12px;">大号</h1>
+    <gf-button color="primary" size="large">普通按钮</gf-button>
+    <gf-button color="success" size="large">成功按钮</gf-button>
+    <gf-button color="info" size="large">信息按钮</gf-button>
+    <gf-button color="warning" size="large">警告按钮</gf-button>
+    <gf-button color="danger" size="large">错误按钮</gf-button>
+    <br>
+
+    <h1 style="font-size: 12px;">正常</h1>
+    <gf-button color="primary">普通按钮</gf-button>
+    <gf-button color="success">成功按钮</gf-button>
+    <gf-button color="info">信息按钮</gf-button>
+    <gf-button color="warning">警告按钮</gf-button>
+    <gf-button color="danger">错误按钮</gf-button>
+
+    <h1 style="font-size: 12px;">小</h1>
+    <gf-button color="primary" size="small">普通按钮</gf-button>
+    <gf-button color="success" size="small">成功按钮</gf-button>
+    <gf-button color="info" size="small">信息按钮</gf-button>
+    <gf-button color="warning" size="small">警告按钮</gf-button>
+    <gf-button color="danger" size="small">错误按钮</gf-button>
+
+    <h1 style="font-size: 12px;">超小</h1>
+    <gf-button color="primary" size="smaller">普通按钮</gf-button>
+    <gf-button color="success" size="smaller">成功按钮</gf-button>
+    <gf-button color="info" size="smaller">信息按钮</gf-button>
+    <gf-button color="warning" size="smaller">警告按钮</gf-button>
+    <gf-button color="danger" size="smaller">错误按钮</gf-button>
+
+
+    </br><br>
+    <h3>按钮禁用</h3>
+    <gf-button color="primary" disabled>普通按钮</gf-button>
+    <gf-button color="success" disabled>成功按钮</gf-button>
+    <gf-button color="info" disabled>信息按钮</gf-button>
+    <gf-button color="warning" disabled>警告按钮</gf-button>
+    <gf-button color="danger" disabled>错误按钮</gf-button>
+    <br>
+
+    <h3>自定义颜色</h3>
+    <gf-button color="#BF0060">自定义颜色</gf-button>
+    <gf-button color="#00BB00">自定义颜色</gf-button>
+    <gf-button color="#A23400">自定义颜色</gf-button>
+    <gf-button color="#EAC100">自定义颜色</gf-button>
+    <gf-button color="#5151A2">自定义颜色</gf-button>
+    <h3>自定义className</h3>
+    <gf-button class-name="aaa">自定义className</gf-button>
+    <button id="changid">change</button>
+    <button id="ant">change</button>
+</body>
+
+</html>
+
+<script>
+    const disableButton = document.getElementById("disable-btn");
+    const successButton = document.getElementById("success-btn");
+
+    document.getElementById("changid").onclick = function () {
+        // disableButton.disabled = !disableButton.disabled;
+        // disableButton.setAttribute("disabled", disableButton.getAttribute("disabled") === 'true' ? false : true)
+        disableButton._internal()
+        console.log([disableButton])
+    }
+
+    // successButton.addEventListener("on-click", (e) => {
+    //     console.log(111, e)
+    // })
+    function handleClick() {
+        console.log(1111)
+    }
+</script>
+
+
+<style>
+    /* body {
+        height: 2000px;
+    } */
+    .aaa {
+        background: blue;
+        padding: 10px 12px;
+    }
+
+    .aaa:hover {
+        background: yellow !important;
+    }
+</style>
