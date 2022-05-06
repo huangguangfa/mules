@@ -7,44 +7,164 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface GfIconAddCartFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconAddFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconAddSelect {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowDown {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowLeft {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowRight {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowUp {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconCalendarFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconClose {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconFalling {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconFeedsFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconLeftarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconLoading {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconMap {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconQRcode {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconRightarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconRising {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconSet {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconSuccessFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconTaskManagement {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
 }
 declare global {
@@ -193,44 +313,164 @@ declare global {
 }
 declare namespace LocalJSX {
     interface GfIconAddCartFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconAddFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconAddSelect {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowDown {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowLeft {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowRight {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconArrowUp {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconCalendarFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconClose {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconFalling {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconFeedsFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconLeftarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconLoading {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconMap {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconQRcode {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconRightarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconRising {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconSet {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconSuccessFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface GfIconTaskManagement {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
     }
     interface IntrinsicElements {
         "gf-icon-add-cart-fill": GfIconAddCartFill;

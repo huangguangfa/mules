@@ -60,7 +60,7 @@ async function start() {
 function generateComponent(iconName) {
     const componentName = `gf-icon-${iconName.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
     const componentsTemplate = `
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 import { Icons } from "../icon-base/index";
 import { ${iconName} as svgData } from "../icons\";
 @Component({
@@ -68,10 +68,17 @@ import { ${iconName} as svgData } from "../icons\";
     shadow: false
 })  
 export class GfIcon${iconName} {
+    @Prop() size: number | string = 25;
+    @Prop() styles?: object = {};
+    @Prop() color?: string = "#000000";
+    @Prop() rotate?: number = 0;
+    @Prop() spin?: boolean = false;
+    @Prop() opacity?: number | string = 1;
     render() {
+        const { size, styles, color, rotate, spin, opacity } = this;
         return (
             <Host>
-                <Icons {...{ svgData }}></Icons>
+                <Icons {...{ svgData, size, styles, color, rotate, spin, opacity }}></Icons>
             </Host>
         );
     }

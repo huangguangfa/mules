@@ -1,6 +1,6 @@
 import { FunctionalComponent, h } from "@stencil/core";
 import { stringify } from "svgson";
-interface IconProps {
+export interface IconProps {
     size?: number | string;
     styles?: object;
     color?: string;
@@ -10,9 +10,9 @@ interface IconProps {
     svgData?: any;
 }
 
-function getOutStyle({ color, rotate = 0, opacity = 1, size = 25 }: IconProps) {
+function getOutStyle({ color, rotate, opacity, size }: IconProps) {
     const styleConfig: any = {
-        display: "inline-block",
+        display: "inline",
         color,
         opacity,
         width: `${size}px`,
@@ -25,7 +25,7 @@ function getOutStyle({ color, rotate = 0, opacity = 1, size = 25 }: IconProps) {
 }
 
 export const Icons: FunctionalComponent<IconProps> = (props) => {
-    const { svgData, size = 25, spin } = props;
+    const { svgData, size, spin } = props;
     svgData.attributes = {
         ...svgData.attributes,
         width: size,
