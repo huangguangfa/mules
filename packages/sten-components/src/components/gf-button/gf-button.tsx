@@ -58,11 +58,9 @@ export class GfButton {
                         ${this.size && 'gf-button--' + this.size || ''}
                     `}
                     style={getButtonStyle(this.color, this.textColor)}>
-                    <span>
-                        <slot name='icon-left'></slot>
-                        <slot></slot>
-                        <slot name='icon-right'></slot>
-                    </span>
+                    <slot name='icon-left'></slot>
+                    <slot></slot>
+                    <slot name='icon-right'></slot>
                 </button>
             </Host>
         );

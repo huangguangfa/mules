@@ -10,7 +10,7 @@ interface IconProps {
     svgData?: any;
 }
 
-function getOutStyle({ color, rotate = 0, opacity = 1, size = 30 }: IconProps) {
+function getOutStyle({ color, rotate = 0, opacity = 1, size = 25 }: IconProps) {
     const styleConfig: any = {
         display: "inline-block",
         color,
@@ -25,7 +25,7 @@ function getOutStyle({ color, rotate = 0, opacity = 1, size = 30 }: IconProps) {
 }
 
 export const Icons: FunctionalComponent<IconProps> = (props) => {
-    const { svgData, size = 30, spin } = props;
+    const { svgData, size = 25, spin } = props;
     svgData.attributes = {
         ...svgData.attributes,
         width: size,

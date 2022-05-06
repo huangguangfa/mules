@@ -5,12 +5,12 @@ import { loading as svgData } from "../icons";
 @Component({
     tag: 'gf-icon-loading',
     shadow: false
-})  
+})
 export class GfIconloading {
     render() {
         return (
             <Host>
-                <Icons {...{ svgData }}></Icons>
+                <Icons {...{ svgData, spin: true }}></Icons>
             </Host>
         );
     }
