@@ -5,7 +5,7 @@ import { loading as svgData } from "../icons";
 @Component({
     tag: 'gf-icon-loading',
     shadow: false
-})
+})  
 export class GfIconloading {
     @Prop() size: number | string = 25;
     @Prop() styles?: object = {};
@@ -15,9 +15,9 @@ export class GfIconloading {
     @Prop() opacity?: number | string = 1;
     render() {
         const { size, styles, color, rotate, spin, opacity } = this;
-        const styless: any = { width: '25', height: '25' }
+        const hostStyles: any = { width: size + 'px', height: size + 'px' }
         return (
-            <Host class="reset">
+            <Host style={hostStyles}>
                 <Icons {...{ svgData, size, styles, color, rotate, spin, opacity }}></Icons>
             </Host>
         );

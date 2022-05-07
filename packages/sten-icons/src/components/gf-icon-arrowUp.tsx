@@ -15,8 +15,9 @@ export class GfIconarrowUp {
     @Prop() opacity?: number | string = 1;
     render() {
         const { size, styles, color, rotate, spin, opacity } = this;
+        const hostStyles: any = { width: size + 'px', height: size + 'px' }
         return (
-            <Host class="reset">
+            <Host style={hostStyles}>
                 <Icons {...{ svgData, size, styles, color, rotate, spin, opacity }}></Icons>
             </Host>
         );

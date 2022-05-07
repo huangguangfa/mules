@@ -12,7 +12,7 @@ export interface IconProps {
 
 function getOutStyle({ color, rotate, opacity, size }: IconProps) {
     const styleConfig: any = {
-        display: "inline",
+        display: "inline-block",
         color,
         opacity,
         width: `${size}px`,
@@ -33,7 +33,7 @@ export const Icons: FunctionalComponent<IconProps> = (props) => {
     };
     const outStyle = getOutStyle(props);
     return (
-        <div class={`svg-wrap ${spin ? 'gf-icon-loading' : ''}`} innerHTML={stringify(svgData)} style={outStyle}></div>
+        <span class={`svg-wrap ${spin ? 'gf-icon-loading' : ''}`} innerHTML={stringify(svgData)} style={outStyle}></span>
     )
 }
 
