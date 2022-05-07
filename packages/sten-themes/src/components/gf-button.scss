@@ -32,6 +32,10 @@
         border-color: $--color-primary-light-7;
         background-color: $--color-primary-light-9;
     }
+    @include when(circle) {
+        border-radius: 50%;
+        padding: $--button-padding-vertical;
+    }
 
     @include when(disabled) {
         &,
@@ -56,6 +60,7 @@
             }
         }
     }
+   
     // 类型
     @include m(primary) {
         @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
@@ -76,21 +81,21 @@
     // size
     @include m(large) {
         @include button-size($--button-large-padding-vertical, $--button-large-padding-horizontal, $--button-large-font-size, $--button-large-border-radius);
-        // @include when(circle) {
-        //     padding: $--button-large-padding-vertical;
-        // }
+        @include when(circle) {
+            padding: $--button-large-padding-vertical;
+        }
     }
     @include m(small) {
         @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);
-        // @include when(circle) {
-        //     padding: $--button-small-padding-vertical;
-        // }
+        @include when(circle) {
+            padding: $--button-small-padding-vertical;
+        }
     }
     @include m(smaller) {
         @include button-size($--button-smaller-padding-vertical, $--button-smaller-padding-horizontal, $--button-smaller-font-size, $--button-smaller-border-radius);
-        // @include when(circle) {
-        //     padding: $--button-smaller-padding-vertical;
-        // }
+        @include when(circle) {
+            padding: $--button-smaller-padding-vertical;
+        }
     }
 }
 

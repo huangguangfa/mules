@@ -13,7 +13,7 @@ export class GfButton {
     @Prop() classNames: string = "";  // 自定义类名
     @Prop() plain: boolean = false;  // 朴素按钮
     @Prop() size: ButtonSize = ""; // 大 中 小
-
+    @Prop() circle: boolean = false; // 圆形
     componentWillLoad() {
         console.log('lifecycle load')
     }
@@ -55,6 +55,7 @@ export class GfButton {
                         ${getButtonColor(this.color)} 
                         ${this.disabled ? 'is-disabled' : ''}
                         ${this.plain && "is-plain" || ''}
+                        ${this.circle && "is-circle" || ''}
                         ${this.size && 'gf-button--' + this.size || ''}
                     `}
                     style={getButtonStyle(this.color, this.textColor)}>

@@ -1,7 +1,7 @@
 /***************** 
 *   base-标记颜色  *
 ******************/
-$--color-primary: #409EFF !default;
+$--color-primary: #747bff !default;
 $--color-white: #FFFFFF !default;
 $--color-black: #000000 !default;
 $--color-success: #67C23A !default;
@@ -77,6 +77,7 @@ $--button-default-border-color:$--border-color-base !default;
 $--button-default-border-radius:$--border-radius-base;
 $--button-default-font-color:$--color-text-regular !default;
 $--button-font-weight:$--font-weight-primary !default;
+$--button-padding-vertical: 12px !default;
 
 /* button类型 */
 // primary
