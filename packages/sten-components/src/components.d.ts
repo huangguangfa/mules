@@ -17,6 +17,8 @@ export namespace Components {
         "size": ButtonSize;
         "textColor": string;
     }
+    interface GfButtonGroup {
+    }
     interface StenButton {
         /**
           * **********************     装饰器 Start     * *******************
@@ -32,6 +34,12 @@ declare global {
         prototype: HTMLGfButtonElement;
         new (): HTMLGfButtonElement;
     };
+    interface HTMLGfButtonGroupElement extends Components.GfButtonGroup, HTMLStencilElement {
+    }
+    var HTMLGfButtonGroupElement: {
+        prototype: HTMLGfButtonGroupElement;
+        new (): HTMLGfButtonGroupElement;
+    };
     interface HTMLStenButtonElement extends Components.StenButton, HTMLStencilElement {
     }
     var HTMLStenButtonElement: {
@@ -40,6 +48,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "gf-button": HTMLGfButtonElement;
+        "gf-button-group": HTMLGfButtonGroupElement;
         "sten-button": HTMLStenButtonElement;
     }
 }
@@ -54,6 +63,8 @@ declare namespace LocalJSX {
         "size"?: ButtonSize;
         "textColor"?: string;
     }
+    interface GfButtonGroup {
+    }
     interface StenButton {
         /**
           * **********************     装饰器 Start     * *******************
@@ -63,6 +74,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "gf-button": GfButton;
+        "gf-button-group": GfButtonGroup;
         "sten-button": StenButton;
     }
 }
@@ -71,6 +83,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
+            "gf-button-group": LocalJSX.GfButtonGroup & JSXBase.HTMLAttributes<HTMLGfButtonGroupElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }
     }

@@ -100,3 +100,29 @@
 }
 
 
+@include b(button-group) {
+    display: inline-block;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    &> :first-child{
+        .gf-button{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &> :last-child{
+        .gf-button{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left-color: hsla(0,0%,100%,.5);
+        }
+    }
+    & > :not(&>:first-child):not(&>:last-child) {
+        .gf-button{
+            border-radius: 0;
+            border-left-color: hsla(0,0%,100%,.5);
+        }
+    }
+}
+  
