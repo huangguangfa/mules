@@ -43,6 +43,35 @@
         <gf-button color="warning" plain class="mlr10">警告按钮</gf-button>
         <gf-button color="danger" plain class="mlr10">错误按钮</gf-button>
     </div>
+    <h3>带图标</h3>
+    <div class="flexs">
+        <gf-button color="primary" class="mlr10">
+            <gf-icon-add-fill slot="icon-left" color="white" size="16" style="margin-right: 3px;"></gf-icon-add-fill>
+            添加
+        </gf-button>
+        <gf-button color="primary" class="mlr10" size="small">
+            <gf-icon-q-rcode color="white" size="20"></gf-icon-q-rcode>
+        </gf-button>
+        <gf-button color="success" disabled class="mlr10">
+            <gf-icon-loading slot="icon-left" color="white" size="15" spin style="margin-right: 3px;"></gf-icon-loading>
+            加载中
+        </gf-button>
+        <gf-button color="success" class="mlr10" size="smaller">
+            <gf-icon-success-fill color="white" size="25"></gf-icon-success-fill>
+        </gf-button>
+    </div>
+    <h3>圆角</h3>
+    <div class="flexs">
+        <gf-button lass="mlr10" size="small" circle>
+            <gf-icon-q-rcode color="#000000" size="20"></gf-icon-q-rcode>
+        </gf-button>
+        <gf-button color="primary" class="mlr10" size="small" circle>
+            <gf-icon-q-rcode color="white" size="20"></gf-icon-q-rcode>
+        </gf-button>
+        <gf-button color="success" class="mlr10" size="smaller" circle>
+            <gf-icon-success-fill color="white" size="25"></gf-icon-success-fill>
+        </gf-button>
+    </div>
 
     <h3>按钮size</h3>
     <h1 style="font-size: 12px;">大号</h1>
@@ -108,13 +137,40 @@
 
     <h3>自定义className</h3>
     <gf-button class-name="aaa">自定义className</gf-button>
-    <button id="changid">change</button>
+
+    <h3>按钮组</h3>
+    <div class="flexs">
+        <gf-button-group>
+            <gf-button color="primary">
+                <gf-icon-arrow-left slot="icon-left" size="20" color="white"></gf-icon-arrow-left>
+                上一页
+            </gf-button>
+            <gf-button color="primary">
+                <gf-icon-arrow-right slot="icon-right" size="20" color="white"></gf-icon-arrow-right>
+                下一页
+            </gf-button>
+        </gf-button-group>
+    </div>
+
+    <div class="flexs" style="margin-top: 10px;">
+        <gf-button-group>
+            <gf-button color="primary" size="small">
+                <gf-icon-add-select color="white" size="20"></gf-icon-add-select>
+            </gf-button>
+            <gf-button color="primary" size="small">
+                <gf-icon-success-fill color="white" size="20"></gf-icon-success-fill>
+            </gf-button>
+            <gf-button color="primary" size="small">
+                <gf-icon-close color="white" size="20"></gf-icon-close>
+            </gf-button>
+        </gf-button-group>
+    </div>
+
+    <button id="changid" style="margin-bottom:100px;margin-top: 100px;">change</button>
     <button id="ant">change</button>
-    <h3>带图标</h3>
-    <gf-button color="success" disabled>
-        成功按钮
-        <gf-icon-loading slot="icon-left" color="white" size="20" spin></gf-icon-loading>
-    </gf-button>
+
+
+
 </body>
 
 </html>
