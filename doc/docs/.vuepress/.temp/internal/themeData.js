@@ -47,6 +47,10 @@ export const themeData = {
           {
             "text": "安装",
             "link": "/zh/components/install"
+          },
+          {
+            "text": "Button",
+            "link": "/zh/components/button"
           }
         ]
       }

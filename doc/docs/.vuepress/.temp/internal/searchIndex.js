@@ -21,6 +21,20 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "button",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Button",
+        "slug": "button",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/button.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "sten-icon",
     "headers": [
       {

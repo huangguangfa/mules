@@ -1,12 +1,12 @@
 export const data = {
-  "key": "v-0239b762",
-  "path": "/zh/components/install.html",
-  "title": "sten-icon",
+  "key": "v-56bebe96",
+  "path": "/zh/components/button.html",
+  "title": "button",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "sten-icon",
-    "date": "2017-12-28  // 时间格式，日期是可以填写 时分秒 的，格式为 2019-10-20 00:00:00。",
+    "title": "button",
+    "date": "2022-5-9",
     "tags": [
       "vue",
       "webpack"
@@ -17,22 +17,16 @@ export const data = {
   "headers": [
     {
       "level": 3,
-      "title": "@gf-ui/components安装",
-      "slug": "gf-ui-components安装",
+      "title": "Button",
+      "slug": "button",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1652060188000,
-    "contributors": [
-      {
-        "name": "hgf",
-        "email": "1454556135@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "zh/components/install.md"
+  "filePathRelative": "zh/components/button.md"
 }
 
 if (import.meta.webpackHot) {

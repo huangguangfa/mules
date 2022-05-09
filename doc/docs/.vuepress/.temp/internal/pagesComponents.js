@@ -5,6 +5,8 @@ export const pagesComponents = {
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/index.html.vue")),
   // path: /en/
   "v-2d0a870d": defineAsyncComponent(() => import(/* webpackChunkName: "v-2d0a870d" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/en/index.html.vue")),
+  // path: /zh/components/button.html
+  "v-56bebe96": defineAsyncComponent(() => import(/* webpackChunkName: "v-56bebe96" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/zh/components/button.html.vue")),
   // path: /zh/components/install.html
   "v-0239b762": defineAsyncComponent(() => import(/* webpackChunkName: "v-0239b762" */"/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/.temp/pages/zh/components/install.html.vue")),
   // path: /zh/sten-icon/install.html
