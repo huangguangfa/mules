@@ -1,6 +1,4 @@
 import * as componentsList from "./gf-ui";
-import Vue from "vue"
-// import { getComponents } from "../../../../packages/sten-components/dist/index";
 export function injectComponents() {
     for (const cName in componentsList) {
         const elements = componentsList[cName];
@@ -10,5 +8,4 @@ export function injectComponents() {
             .substring(1);
         customElements.define(elementsName, elements);
     }
-    // Vue.prototype.$getComponents = getComponents;
 }
