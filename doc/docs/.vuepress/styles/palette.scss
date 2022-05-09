@@ -20,3 +20,80 @@
 .colorff0066{
     color: #ff0066;
 }
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.m10{margin:10px}
+.m15{margin:15px}
+.m30{margin:30px}
+.mt0{margin: 0;}
+.mt5{margin-top:5px}
+.mt10{margin-top:10px}
+.mt15{margin-top:15px}
+.mt20{margin-top:20px}
+.mt50{margin-top:50px}
+.mt100{margin-top:100px}
+.mb5{margin-bottom:5px}
+.mb10{margin-bottom:10px}
+.mb15{margin-bottom:15px}
+.mb100{margin-bottom:100px}
+.ml5{margin-left:5px}
+.ml10{margin-left:10px}
+.ml15{margin-left:15px}
+.ml20{margin-left:20px}
+.ml30{margin-left:30px}
+.ml50{margin-left:50px}
+.ml100{margin-left:100px}
+.mr5{margin-right:5px}
+.mr10{margin-right:10px}
+.mr15{margin-right:15px}
+.mr25{margin-right:25px}
+.mr40{margin-right:40px}
+.mr50{margin-right:50px}
+.mr100{margin-right:100px}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+.p30{padding:30px;}
+.pt5{padding-top:5px}
+.pt10{padding-top:10px}
+.pt15{padding-top:15px}
+.pt20{padding-top:20px}
+.pt30{padding-top:30px}
+.pt50{padding-top:50px}
+.pb5{padding-bottom:5px}
+.pb15{padding-bottom:15px}
+.pb100{padding-bottom:100px}
+.pl5{padding-left:5px}
+.pl10{padding-left:10px}
+.pl20{padding-left:20px}
+.pl15{padding-left:15px}
+.pl50{padding-left:50px}
+.pl100{padding-left:100px}
+.pr5{padding-right:5px}
+.pr10{padding-right:10px}
+.pr15{padding-right:15px}
+.pr20{padding-right:20px}
+.pr25{padding-right:25px}
+.pr30{padding-right:30px}
+.pr100{padding-right:100px}
+
+p{
+    line-height: 1;
+}
+// md显示代码button样式
+.code-control{
+    background-color: #FAFBFC !important;
+    margin-top: 20px;
+    .control-btn{
+        font-size: 14px;
+        color: #747bff;
+        .arrow-icon{
+            border-bottom: 6px solid #747bff !important;
+        }
+    }
+}
+
+.gf-button{margin: 0 5px !important;}

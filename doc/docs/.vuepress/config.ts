@@ -35,6 +35,15 @@ export default defineUserConfig<DefaultThemeOptions>({
                     }
                 },
             }
+        ],
+        [
+            'demo-code',
+            {
+                showText: '显示代码',
+                hideText: '隐藏代码',
+                minHeight: 0,
+                styleStr: 'text-decoration: underline;',
+            }
         ]
     ],
     head: [
