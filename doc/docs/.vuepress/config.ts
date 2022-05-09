@@ -15,7 +15,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             lang: 'English',
         }
     },
-    base:"/doc/",
+    base: "/doc/",
     plugins: [
         [
             'one-click-copy', // 代码块复制按钮
@@ -37,13 +37,13 @@ export default defineUserConfig<DefaultThemeOptions>({
             },
         ]
     ],
-    head:[
+    head: [
         ['link', { rel: 'icon', href: '/images/logo.png' }],
         ['link', { rel: 'icon', href: '/css/reset.css' }]
     ],
-    bundlerConfig:{
-        viteOptions:{
-            dest:`/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/aaa`
+    bundlerConfig: {
+        viteOptions: {
+            dest: `/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/aaa`
         }
     },
     themeConfig: {
@@ -61,6 +61,10 @@ export default defineUserConfig<DefaultThemeOptions>({
             {
                 text: 'JS库',
                 children: [
+                    {
+                        text: "@gf-ui/components",
+                        link: "/zh/components/install",
+                    },
                     {
                         text: "@gf-ui/core",
                         link: "/zh/core/install/"

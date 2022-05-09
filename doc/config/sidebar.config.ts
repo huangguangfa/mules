@@ -1,5 +1,5 @@
 export default {
-    "/zh/core/":[
+    "/zh/core/": [
         {
             text: '@gf-ui/core',
             children: [
@@ -10,7 +10,16 @@ export default {
             ]
         }
     ],
-    "/zh/sten-icon/":[{
+    "/zh/components/": [{
+        text: '@gf-ui/components',
+        children: [
+            {
+                text: '安装',
+                link: '/zh/components/install',
+            }
+        ]
+    }],
+    "/zh/icon/": [{
         text: '@gf-ui/sten-icon',
         children: [
             {

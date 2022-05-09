@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "docs": "vuepress dev docs",
-    "docs:build": "vuepress build docs -d gf-ui-doc"
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs -d gf-ui-doc"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.38",

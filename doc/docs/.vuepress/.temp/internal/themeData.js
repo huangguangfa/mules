@@ -14,6 +14,10 @@ export const themeData = {
       "text": "JS库",
       "children": [
         {
+          "text": "@gf-ui/components",
+          "link": "/zh/components/install"
+        },
+        {
           "text": "@gf-ui/core",
           "link": "/zh/core/install/"
         },
@@ -36,7 +40,18 @@ export const themeData = {
         ]
       }
     ],
-    "/zh/sten-icon/": [
+    "/zh/components/": [
+      {
+        "text": "@gf-ui/components",
+        "children": [
+          {
+            "text": "安装",
+            "link": "/zh/components/install"
+          }
+        ]
+      }
+    ],
+    "/zh/icon/": [
       {
         "text": "@gf-ui/sten-icon",
         "children": [
@@ -65,4 +80,17 @@ export const themeData = {
   "editLinkText": "Edit this page",
   "lastUpdated": true,
   "contributors": true
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
 }

@@ -1,6 +1,6 @@
 export const data = {
-  "key": "v-4e0f94d9",
-  "path": "/zh/sten-icon/install.html",
+  "key": "v-0239b762",
+  "path": "/zh/components/install.html",
   "title": "sten-icon",
   "lang": "zh-CN",
   "frontmatter": {
@@ -17,22 +17,16 @@ export const data = {
   "headers": [
     {
       "level": 3,
-      "title": "@gf-ui/sten-icon安装",
-      "slug": "gf-ui-sten-icon安装",
+      "title": "@gf-ui/components安装",
+      "slug": "gf-ui-components安装",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1649583076000,
-    "contributors": [
-      {
-        "name": "hgf",
-        "email": "1454556135@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "zh/sten-icon/install.md"
+  "filePathRelative": "zh/components/install.md"
 }
 
 if (import.meta.webpackHot) {
