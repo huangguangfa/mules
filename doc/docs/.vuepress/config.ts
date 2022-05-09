@@ -34,7 +34,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                         placeholder: '搜索文档'
                     }
                 },
-            },
+            }
         ]
     ],
     head: [

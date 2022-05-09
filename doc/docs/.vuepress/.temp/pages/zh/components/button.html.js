@@ -16,15 +16,21 @@ export const data = {
   "excerpt": "",
   "headers": [
     {
-      "level": 3,
-      "title": "Button",
-      "slug": "button",
+      "level": 2,
+      "title": "基础用法",
+      "slug": "基础用法",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1652060528000,
+    "contributors": [
+      {
+        "name": "hgf",
+        "email": "1454556135@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "zh/components/button.md"
 }
