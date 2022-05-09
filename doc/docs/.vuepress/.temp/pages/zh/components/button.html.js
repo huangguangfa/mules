@@ -14,21 +14,14 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [
-    {
-      "level": 2,
-      "title": "基础用法",
-      "slug": "基础用法",
-      "children": []
-    }
-  ],
+  "headers": [],
   "git": {
-    "updatedTime": 1652104661000,
+    "updatedTime": 1652106080000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 2
+        "commits": 3
       }
     ]
   },

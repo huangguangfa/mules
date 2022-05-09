@@ -68,7 +68,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         toggleSidebar: '切换侧边栏',
         navbar: [
             {
-                text: 'JS库',
+                text: 'gf-ui系列库',
                 children: [
                     {
                         text: "@gf-ui/components",
@@ -86,7 +86,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             }
         ],
         sidebar,
-        notFound: ['您输入的URL不对、请返回首页吧'],
+        notFound: ['您当前路径不存在、请返回首页吧'],
         logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
     },
 })

@@ -24,7 +24,7 @@ export default {
         ]
     }],
     "/zh/icon/": [{
-        text: '@gf-ui/sten-icon',
+        text: '@gf-ui/icon',
         children: [
             {
                 text: '安装',

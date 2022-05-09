@@ -14,6 +14,34 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "button",
+    "headers": [
+      {
+        "level": 3,
+        "title": "基础用法",
+        "slug": "基础用法",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/button.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/components安装",
+        "slug": "gf-ui-components安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "core首页",
     "headers": [
       {
@@ -248,34 +276,6 @@ export const searchIndex = [
     ],
     "path": "/zh/core/type.html",
     "pathLocale": "/zh/core",
-    "extraFields": []
-  },
-  {
-    "title": "button",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基础用法",
-        "slug": "基础用法",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/button.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/components安装",
-        "slug": "gf-ui-components安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/install.html",
-    "pathLocale": "/",
     "extraFields": []
   },
   {
