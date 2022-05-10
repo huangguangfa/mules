@@ -103,3 +103,14 @@ h6{
 }
 
 .gf-button{margin: 0 5px !important;}
+
+.sidebar-item-children .sidebar-item-children .sidebar-item:not(.sidebar-heading).active{
+    background-color: rgba(236,242,252,0.5);
+    border-right: 2px solid #00a8d5;
+}
+.sidebar-item{
+    display: flex !important; justify-content: space-between;
+    align-items: center;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}

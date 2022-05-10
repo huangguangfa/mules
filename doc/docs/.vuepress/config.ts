@@ -93,5 +93,5 @@ export default defineUserConfig<DefaultThemeOptions>({
         sidebar,
         notFound: ['您当前路径不存在、请返回首页吧'],
         logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
-    },
+    }
 })

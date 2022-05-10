@@ -1,6 +1,6 @@
 <template>
     <div>
-        icon {{ name }}
+        {{ name }}
     </div>
 </template>
 
