@@ -17,8 +17,8 @@ export const data = {
   "headers": [
     {
       "level": 2,
-      "title": "xsaxa",
-      "slug": "xsaxa",
+      "title": "Icon",
+      "slug": "icon",
       "children": []
     }
   ],

@@ -14,7 +14,14 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "Button 按钮",
+      "slug": "button-按钮",
+      "children": []
+    }
+  ],
   "git": {
     "updatedTime": 1652159366000,
     "contributors": [

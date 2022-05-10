@@ -24,6 +24,14 @@
 .flex{
     display: flex;
     align-items: center;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    transition: .2s;
+    padding: 24px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+    }
 }
 .m10{margin:10px}
 .m15{margin:15px}
@@ -86,6 +94,8 @@ p{
 h6{
     line-height: 1;
 }
+
+
 // md显示代码button样式
 .code-control{
     background-color: #FAFBFC !important;
@@ -104,13 +114,35 @@ h6{
 
 .gf-button{margin: 0 5px !important;}
 
+
+// vuepress样式修改
 .sidebar-item-children .sidebar-item-children .sidebar-item:not(.sidebar-heading).active{
     background-color: rgba(236,242,252,0.5);
     border-right: 2px solid #00a8d5;
 }
-.sidebar-item{
-    display: flex !important; justify-content: space-between;
-    align-items: center;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+.sidebar-item-children {
+    .sidebar-item{
+        display: flex !important; justify-content: space-between;
+        align-items: center;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        font-size: 14px ;
+    }
+}
+.sidebar-item-children>li>p{
+    font-size: 16px !important;
+    border: none;
+    color: #000 !important;
+    background: none !important;
+    border: none !important;
+}
+
+.sidebar-item.active:not(p.sidebar-heading){
+    font-size: 16px !important;
+    border: none;
+    color: #000;
+}
+
+.code-control{
+    margin: 0 !important;
 }

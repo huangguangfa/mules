@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="icon-lsit">
         {{ name }}
     </div>
 </template>

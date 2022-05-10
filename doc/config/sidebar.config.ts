@@ -21,14 +21,13 @@ export default {
                 },
                 {
                     text: '基础组件',
-                    collapsible: true,
                     children: [
                         {
-                            text: 'Button',
+                            text: 'Button 按钮',
                             link: '/zh/components/button',
                         },
                         {
-                            text: 'Icon',
+                            text: 'Icon 图标',
                             link: '/zh/components/icon',
                         }
                     ]
