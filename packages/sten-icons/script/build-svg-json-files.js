@@ -8,7 +8,6 @@ const outDir = resolve(__dirname, '../src/icons');
 const HTMLPATH = resolve(__dirname, '../src/index.html');
 const outDirComponent = resolve(__dirname, '../src/components');
 
-
 async function clearDir() {
     const rmDirList = [outDir, outDirComponent];
     const mkdirList = [outDir, outDirComponent];
@@ -110,12 +109,23 @@ function generateHtml(component) {
 </html>`
     fs.writeFileSync(HTMLPATH, htmlTemplate);
 }
-/* 
+
+/*
 * 生成icon目标JSON数据
 */
 function generateIconSvgJson(fileName, content) {
     const templateCode = `export default ${JSON.stringify(content)}`;
     fs.writeFileSync(resolve(outDir, fileName), templateCode);
+}
+/*
+* 总览所有icon
+*/
+function generateAllIconJson(AllComList) {
+    const componentJsonLisFileName = 'componentJsonLisFile.js'
+    const componentJsonListTemplate = `export default {
+        list:${JSON.stringify(AllComList)}
+    }`
+    fs.writeFileSync(resolve(outDirComponent, componentJsonLisFileName), componentJsonListTemplate);
 }
 /* 
 * 生成icon里的index.js 统一导出
@@ -125,7 +135,7 @@ function generateIconIndexContent(content) {
     fs.writeFileSync(resolve(outDir, fileName), content);
 }
 
-/* 
+/*
 * 写入icon源文件、组件
 */
 function writeFiles(svgJSONList) {
@@ -142,6 +152,7 @@ function writeFiles(svgJSONList) {
     })
     generateIconIndexContent(indexFileContent);
     generateHtml(componentNameList);
+    generateAllIconJson(componentNameList);
     console.log(chalk`{rgb(103, 194, 58) 【SVG】build success}`);
 }
 

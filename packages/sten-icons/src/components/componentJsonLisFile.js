@@ -1,0 +1,3 @@
+export default {
+        list:["gf-icon-add-cart-fill","gf-icon-add-fill","gf-icon-add-select","gf-icon-arrow-down","gf-icon-arrow-left","gf-icon-arrow-right","gf-icon-arrow-up","gf-icon-calendar-fill","gf-icon-close","gf-icon-falling","gf-icon-feeds-fill","gf-icon-leftarrow","gf-icon-loading","gf-icon-map","gf-icon-q-rcode","gf-icon-rightarrow","gf-icon-rising","gf-icon-set","gf-icon-success-fill","gf-icon-task-management"]
+    }
