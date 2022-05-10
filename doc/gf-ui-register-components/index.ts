@@ -1,6 +1,5 @@
 // import * as componentsList from "./register-components";
 import "./register-components";
-import "../../packages/sten-themes/npm/index.css";
 export function injectComponents() {
     console.log('加载外部组件');
     // for (const cName in componentsList) {

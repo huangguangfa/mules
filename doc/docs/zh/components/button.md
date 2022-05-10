@@ -14,7 +14,6 @@ description: 页面的描述
 常用的操作按钮, 支持常规样貌和`定制化颜色需求`、包括`监听键盘事件`定制某些特殊场景
 
 #### 基础用法
-
 ::: demo
 <div class="flex">
   <gf-button>普通按钮</gf-button>
@@ -27,7 +26,6 @@ description: 页面的描述
 :::
 
 #### 镂空按钮
-
 ::: demo
 <div class="flex">
   <gf-button>普通按钮</gf-button>
@@ -39,11 +37,10 @@ description: 页面的描述
 </div>
 :::
 
-#### 圆角按钮
-
+#### 圆角按钮 和 Iconfont
 ::: demo
 <div class="flex">
-  <gf-button lass="mlr10" size="small" circle>
+  <gf-button size="small" circle>
     <gf-icon-q-rcode color="#000000" size="20"></gf-icon-q-rcode>
   </gf-button>
   <gf-button color="primary" size="small" circle>
@@ -52,13 +49,26 @@ description: 页面的描述
   <gf-button color="success"  size="smaller" circle>
     <gf-icon-success-fill color="white" size="25"></gf-icon-success-fill>
   </gf-button>
+
+  <gf-button color="primary">
+      <gf-icon-add-fill slot="icon-left" color="white" size="16" style="margin-right: 3px;"></gf-icon-add-fill>
+      添加
+  </gf-button>
+  <gf-button color="primary"  size="small">
+      <gf-icon-q-rcode color="white" size="20"></gf-icon-q-rcode>
+  </gf-button>
+  <gf-button color="success" disabled>
+      <gf-icon-loading slot="icon-left" color="white" size="15" spin style="margin-right: 3px;"></gf-icon-loading>
+      加载中
+  </gf-button>
+  <gf-button color="success"  size="smaller">
+      <gf-icon-success-fill color="white" size="25"></gf-icon-success-fill>
+  </gf-button>
 </div>
 :::
 
 #### 按钮大小
-
 ::: demo
-
 <div class="flex">
   <h5>超大</h5>
   <gf-button color="primary" size="large">普通按钮</gf-button>
@@ -97,7 +107,6 @@ description: 页面的描述
 :::
 
 #### 禁用按钮
-
 ::: demo
 <div class="flex">
   <gf-button disabled>普通按钮</gf-button>
@@ -110,7 +119,6 @@ description: 页面的描述
 :::
 
 #### 自定义颜色
-
 ::: demo
 <div class="flex">
   <gf-button color="#BF0060">自定义颜色</gf-button>
@@ -122,3 +130,34 @@ description: 页面的描述
 </div>
 :::
 
+
+#### 按钮组
+::: demo
+<div class="flex reset">
+  <!-- 上下页 -->
+  <gf-button-group>
+    <gf-button color="primary">
+        <gf-icon-arrow-left slot="icon-left" size="20" color="white"></gf-icon-arrow-left>
+        上一页
+    </gf-button>
+    <gf-button color="primary">
+        <gf-icon-arrow-right slot="icon-right" size="20" color="white"></gf-icon-arrow-right>
+        下一页
+    </gf-button>
+  </gf-button-group>
+  
+  <!-- 随机Icon -->
+  <gf-button-group class="ml20">
+    <gf-button color="primary">
+        <gf-icon-add-select color="white" size="20"></gf-icon-add-select>
+    </gf-button>
+    <gf-button color="primary">
+        <gf-icon-success-fill color="white" size="20"></gf-icon-success-fill>
+    </gf-button>
+    <gf-button color="primary">
+        <gf-icon-close color="white" size="20"></gf-icon-close>
+    </gf-button>
+  </gf-button-group>
+</div>
+
+:::
