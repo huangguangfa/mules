@@ -39,7 +39,7 @@ description: 页面的描述
 </div>
 :::
 
-<!-- #### 圆角按钮
+#### 圆角按钮
 
 ::: demo
 <div class="flex">
@@ -53,7 +53,7 @@ description: 页面的描述
     <gf-icon-success-fill color="white" size="25"></gf-icon-success-fill>
   </gf-button>
 </div>
-::: -->
+:::
 
 #### 按钮大小
 
