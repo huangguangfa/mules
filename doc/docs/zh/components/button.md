@@ -69,7 +69,7 @@ description: 页面的描述
 </div>
 
 <div class="flex">
-  <h5>正常</h5>
+  <h6>正常</h6>
   <gf-button color="primary">普通按钮</gf-button>
   <gf-button color="success">成功按钮</gf-button>
   <gf-button color="info">信息按钮</gf-button>
@@ -78,7 +78,7 @@ description: 页面的描述
 </div>
 
 <div class="flex">
-  <h5>小的</h5>
+  <h6>小的</h6>
   <gf-button color="primary" size="small">普通按钮</gf-button>
   <gf-button color="success" size="small">成功按钮</gf-button>
   <gf-button color="info" size="small">信息按钮</gf-button>
@@ -87,7 +87,7 @@ description: 页面的描述
 </div>
 
 <div class="flex">
-  <h5>特小</h5>
+  <h6>特小</h6>
   <gf-button color="primary" size="smaller">普通按钮</gf-button>
   <gf-button color="success" size="smaller">成功按钮</gf-button>
   <gf-button color="info" size="smaller">信息按钮</gf-button>
@@ -95,3 +95,30 @@ description: 页面的描述
   <gf-button color="danger" size="smaller">错误按钮</gf-button>
 </div>
 :::
+
+#### 禁用按钮
+
+::: demo
+<div class="flex">
+  <gf-button disabled>普通按钮</gf-button>
+  <gf-button color="primary" disabled>正常按钮</gf-button>
+  <gf-button color="success"  disabled>成功按钮</gf-button>
+  <gf-button color="info" disabled>信息按钮</gf-button>
+  <gf-button color="warning" disabled>警告按钮</gf-button>
+  <gf-button color="danger" disabled>错误按钮</gf-button>
+</div>
+:::
+
+#### 自定义颜色
+
+::: demo
+<div class="flex">
+  <gf-button color="#BF0060">自定义颜色</gf-button>
+  <gf-button color="#00BB00">自定义颜色</gf-button>
+  <gf-button color="#A23400">自定义颜色</gf-button>
+  <gf-button color="#EAC100">自定义颜色</gf-button>
+  <gf-button color="#5151A2">自定义颜色</gf-button>
+  <gf-button color="#ff9933">自定义颜色</gf-button>
+</div>
+:::
+
