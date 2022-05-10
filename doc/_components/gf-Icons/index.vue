@@ -1,0 +1,15 @@
+<template>
+    <div>
+        icon {{ name }}
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            name: "111"
+        }
+    }
+}
+</script>

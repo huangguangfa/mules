@@ -1,3 +1,5 @@
+const { path } = require('@vuepress/utils')
+
 export default [
     ['flexsearch'],
     [
@@ -5,7 +7,7 @@ export default [
         {
             apiKey: 'xasxa',
             indexName: 'xasxasxas',
-            placeholder:"搜索",
+            placeholder: "搜索",
             locales: {
                 '/': {
                     placeholder: '搜索文档',
@@ -35,3 +37,11 @@ export default [
         },
     ]
 ]
+
+export const registerInternalComponents = () => {
+    return {
+        components: {
+            gfIcons: path.resolve(__dirname, '../_components/gf-Icons/index.vue'),
+        }
+    }
+}

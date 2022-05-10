@@ -1,6 +1,8 @@
 import { defineUserConfig } from 'vuepress';
 import type { DefaultThemeOptions } from 'vuepress';
 import sidebar from "../../config/sidebar.config";
+import { registerInternalComponents } from "../../config/plugins.config"
+const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 export default defineUserConfig<DefaultThemeOptions>({
     // 站点配置
     lang: 'zh-CN',
@@ -44,7 +46,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                 minHeight: 0,
                 styleStr: 'text-decoration: underline;',
             }
-        ]
+        ],
+        registerComponentsPlugin({
+            ...registerInternalComponents()
+        })
     ],
     head: [
         ['link', { rel: 'icon', href: '/images/logo.png' }],

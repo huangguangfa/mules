@@ -20,6 +20,10 @@ export default {
             {
                 text: 'Button',
                 link: '/zh/components/button',
+            },
+            {
+                text: 'Icon',
+                link: '/zh/components/icon',
             }
         ]
     }],

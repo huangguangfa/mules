@@ -1,12 +1,12 @@
 export const data = {
-  "key": "v-56bebe96",
-  "path": "/zh/components/button.html",
+  "key": "v-238c7d6f",
+  "path": "/zh/components/icon.html",
   "title": "button",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
     "title": "button",
-    "date": "2022-5-9",
+    "date": "2022-5-10",
     "tags": [
       "vue",
       "webpack"
@@ -14,18 +14,19 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "xsaxa",
+      "slug": "xsaxa",
+      "children": []
+    }
+  ],
   "git": {
-    "updatedTime": 1652159366000,
-    "contributors": [
-      {
-        "name": "hgf",
-        "email": "1454556135@qq.com",
-        "commits": 7
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "zh/components/button.md"
+  "filePathRelative": "zh/components/icon.md"
 }
 
 if (import.meta.webpackHot) {
