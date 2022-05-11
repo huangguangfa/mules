@@ -7,7 +7,7 @@ import { rightarrow as svgData } from "../icons";
     shadow: false
 })  
 export class GfIconrightarrow {
-    @Prop() size: number | string = 25;
+    @Prop() size: number | string = 30;
     @Prop() styles?: object = {};
     @Prop() color?: string = "#000000";
     @Prop() rotate?: number = 0;

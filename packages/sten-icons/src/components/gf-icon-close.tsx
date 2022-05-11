@@ -7,7 +7,7 @@ import { close as svgData } from "../icons";
     shadow: false
 })  
 export class GfIconclose {
-    @Prop() size: number | string = 25;
+    @Prop() size: number | string = 30;
     @Prop() styles?: object = {};
     @Prop() color?: string = "#000000";
     @Prop() rotate?: number = 0;

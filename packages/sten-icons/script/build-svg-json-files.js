@@ -44,9 +44,10 @@ async function start() {
         .filter(f => extname(f) === '.svg')
         .map(async fileName => {
             const svgContent = fs.readFileSync(resolve(entryDir, fileName));
-            const svgJSON = await svgo(svgContent, fileName);
+            const { data: svgJSON, isColor } = await svgo(svgContent, fileName);
             removeAttributes(svgJSON);
             addAttributes(svgJSON, '_name', fileName.replace(/.svg/, ''))
+            addAttributes(svgJSON, '_isColor', isColor)
             return svgJSON;
         });
     const svgJSONList = await Promise.all(batches);
@@ -67,7 +68,7 @@ import { ${iconName} as svgData } from "../icons\";
     shadow: false
 })  
 export class GfIcon${iconName} {
-    @Prop() size: number | string = 25;
+    @Prop() size: number | string = 30;
     @Prop() styles?: object = {};
     @Prop() color?: string = "#000000";
     @Prop() rotate?: number = 0;
@@ -123,7 +124,8 @@ function generateIconSvgJson(fileName, content) {
 function generateAllIconJson(AllComList) {
     const componentJsonLisFileName = 'componentJsonLisFile.js'
     const componentJsonListTemplate = `export default {
-        list:${JSON.stringify(AllComList)}
+        list:${JSON.stringify(AllComList.filter(i => i.isColor === false))},
+        colorList:${JSON.stringify(AllComList.filter(i => i.isColor === true))}
     }`
     fs.writeFileSync(resolve(outDirComponent, componentJsonLisFileName), componentJsonListTemplate);
 }
@@ -148,7 +150,10 @@ function writeFiles(svgJSONList) {
         indexFileContent += `export { default as ${name} } from './${svgJsonfileName}'\n`;
         generateIconSvgJson(svgJsonfileName, svgItem);
         const componentName = generateComponent(name);
-        componentNameList.push(componentName);
+        componentNameList.push({
+            cName: componentName,
+            isColor: svgItem._isColor
+        });
     })
     generateIconIndexContent(indexFileContent);
     generateHtml(componentNameList);

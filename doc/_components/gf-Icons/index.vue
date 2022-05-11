@@ -1,10 +1,13 @@
 <template>
     <div class="icon-lsit">
         <div class="icon-blcok">
-            <h5>基础组件</h5>
+            <h5>基础Icon</h5>
             <ul v-html="iconComponents" @click="iconClick"></ul>
         </div>
-        
+        <div class="icon-blcok">
+            <h5>彩色Icon</h5>
+            <ul v-html="colorIconComponents" @click="iconClick"></ul>
+        </div>
     </div>
 </template>
 
@@ -17,15 +20,21 @@ export default {
         }
     },
     computed:{
-        iconComponents: () => {
-            return allIcon.list.map( item => {
-                const icon = `<${item}></${item}>`
-                const c = `<li class="icon-item" data-icon='${icon}' @click="aaa">${icon}</li>`
-                return c;
-            }).join('');
+        iconComponents: function() {
+            return this.filterComponents(allIcon.list)
+        },
+        colorIconComponents: function() {
+            return this.filterComponents(allIcon.colorList)
         }
     },
     methods: {
+        filterComponents(data = []){
+            return data.map( ({cName}) => {
+                const icon = `<${cName}></${cName}>`
+                const c = `<li class="icon-item" data-icon='${icon}'>${icon}</li>`
+                return c;
+            }).join('');
+        },
         iconClick(e){
             const icon = e.target.dataset.icon 
             || e.target.parentNode.parentNode.parentNode.dataset.icon 

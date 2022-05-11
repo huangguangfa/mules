@@ -39,7 +39,10 @@ function svgo(svgContent, svgFileName) {
             })
             // 彩色不执行去颜色配置
             const checkSvgColor = svgFileName.substr(-6, 2) === '-c';
-            parse(checkSvgColor ? svgContent : svgToJSON().data).then(r => resolve(r));
+            parse(checkSvgColor ? svgContent : svgToJSON().data).then(r => resolve({
+                data: r,
+                isColor: checkSvgColor
+            }));
         } catch (e) {
             reject(e)
         }
