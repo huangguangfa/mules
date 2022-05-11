@@ -29,6 +29,7 @@
     transition: .2s;
     padding: 24px;
     cursor: pointer;
+    margin-top: -1px;
     &:hover{
         box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
     }
@@ -146,3 +147,5 @@ h6{
 .code-control{
     margin: 0 !important;
 }
+
+ul,ol,menu{list-style:none}

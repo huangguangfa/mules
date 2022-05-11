@@ -1,6 +1,6 @@
 import { defineClientAppEnhance } from '@vuepress/client';
 import { injectComponents } from "../../gf-ui-register-components/index";
-
-export default defineClientAppEnhance(({ app, router, siteData }) => {
+export default defineClientAppEnhance((r) => {
+    console.log(r)
     injectComponents()
 })

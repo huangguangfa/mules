@@ -252,7 +252,14 @@ export const searchIndex = [
   },
   {
     "title": "button",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "Button 按钮",
+        "slug": "button-按钮",
+        "children": []
+      }
+    ],
     "path": "/zh/components/button.html",
     "pathLocale": "/",
     "extraFields": []
@@ -262,8 +269,8 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
-        "title": "xsaxa",
-        "slug": "xsaxa",
+        "title": "Icon",
+        "slug": "icon",
         "children": []
       }
     ],
