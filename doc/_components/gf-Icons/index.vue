@@ -41,6 +41,7 @@ export default {
             || e.target.parentNode.parentNode.parentNode.parentNode.dataset.icon;
             let x = e.pageX || e.clientX + scrollX;
             let y = e.pageY || e.clientY + scrollY;
+            if(!icon) return;
             this.copy(icon, x,y)
         },
         copy(value,x,y){
@@ -64,7 +65,10 @@ export default {
             let scrollY = document.documentElement.scrollTop || document.body.scrollTop;
             const $mes  = document.createElement('span');
             $mes.setAttribute('class','Copyspan');
-            $mes.style = `position:fixed;left:${ x-20 }px;top:${ y - 80}px;z-index:9999;font-size:12px; color:#343435; animation: Copyspan 800ms ease-in-out;`;
+            $mes.style = `
+            position:fixed;left:${ x-55 }px;top:40px;z-index:9999;font-size:12px; color:#343435; animation: Copyspan 800ms ease-in-out;
+            padding:10px 30px; border:1px solid rgb(103, 194, 58); border-radius:5px;
+            `;
             $mes.innerText = text;
             $mes.style.color = color;
             document.body.appendChild($mes);
