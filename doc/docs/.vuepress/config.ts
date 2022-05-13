@@ -4,6 +4,10 @@ import sidebar from "../../config/sidebar.config";
 import { registerInternalComponents } from "../../config/plugins.config"
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 export default defineUserConfig<DefaultThemeOptions>({
+    // bundler:viteBundler({
+    //     viteOptions: {},
+    //     vuePluginOptions: {},
+    // }),
     // 站点配置
     lang: 'zh-CN',
     title: '@gf-ui系列文档',

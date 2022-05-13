@@ -80,35 +80,3 @@ export default {
     }
 }
 </script>
-
-<style>
-    .icon-blcok>ul{
-        display: flex;flex-wrap: wrap;
-        border: 1px solid #eaeefb;
-        overflow: hidden;
-        border-radius: 4px;
-        padding-left: 0;
-    }
-    .icon-blcok>ul>.icon-item{
-        width: 16.66%;;height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-right: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        margin-right: -1px;
-        margin-bottom: -1px;
-        cursor: pointer;
-    }
-    .icon-blcok>ul> li:hover{
-        background-color: #f5f5f5;
-    }
-    @keyframes Copyspan { 
-        /* 水平抖动，核心代码 */
-        10%, 90% { transform: translate3d(-1px, 0, 0); }
-        20%, 80% { transform: translate3d(+2px, 0, 0); }
-        30%, 70% { transform: translate3d(-4px, 0, 0); }
-        40%, 60% { transform: translate3d(+4px, 0, 0); }
-        50% { transform: translate3d(-4px, 0, 0); }
-    }
-</style>

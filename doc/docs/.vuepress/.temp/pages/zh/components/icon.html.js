@@ -14,14 +14,7 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [
-    {
-      "level": 2,
-      "title": "Icon",
-      "slug": "icon",
-      "children": []
-    }
-  ],
+  "headers": [],
   "git": {
     "updatedTime": 1652362379000,
     "contributors": [
@@ -33,17 +26,4 @@ export const data = {
     ]
   },
   "filePathRelative": "zh/components/icon.md"
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
 }

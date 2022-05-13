@@ -14,62 +14,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "button",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Button 按钮",
-        "slug": "button-按钮",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/button.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "button",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Icon",
-        "slug": "icon",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/icon.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/components安装",
-        "slug": "gf-ui-components安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/install.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/sten-icon安装",
-        "slug": "gf-ui-sten-icon安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/sten-icon/install.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "core首页",
     "headers": [
       {
@@ -307,6 +251,48 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/sten-icon安装",
+        "slug": "gf-ui-sten-icon安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/sten-icon/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/zh/components/button.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "button",
+    "headers": [],
+    "path": "/zh/components/icon.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/components安装",
+        "slug": "gf-ui-components安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/404.html",
@@ -314,16 +300,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}
