@@ -14,16 +14,36 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "Icon",
+      "slug": "icon",
+      "children": []
+    }
+  ],
   "git": {
-    "updatedTime": 1652362379000,
+    "updatedTime": 1652405518000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 4
+        "commits": 5
       }
     ]
   },
   "filePathRelative": "zh/components/icon.md"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }
