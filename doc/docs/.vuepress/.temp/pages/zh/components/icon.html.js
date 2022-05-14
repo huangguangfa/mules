@@ -19,7 +19,14 @@ export const data = {
       "level": 2,
       "title": "Icon",
       "slug": "icon",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "Attributes",
+          "slug": "attributes",
+          "children": []
+        }
+      ]
     }
   ],
   "git": {

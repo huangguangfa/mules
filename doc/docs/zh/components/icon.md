@@ -21,3 +21,15 @@ description: 页面的描述
 :::
 
 <gf-Icons></gf-Icons>
+
+
+### Attributes
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| size     | 尺寸   | number  |   -          |    25    |
+| styles     | style   | Object    |  - |     —    |
+| color     | 颜色   | 16进制 / 其他    | — | #000000   |
+| rotate     | 选择角度   | string / number    | — | 0   |
+| textColor     | 文字颜色   | boolean    | — | false   |
+| spin     | 旋转动画,使用loading   | boolean    | — | false   |
+| opacity     | 透明度   | number    | — | 1   |
