@@ -66,6 +66,7 @@ export default {
     this.parent.style.background = this.originalBackground;
   },
   methods: {
+    // From: https://stackoverflow.com/a/5624139
     hexToRgb(hex) {
       let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       return result

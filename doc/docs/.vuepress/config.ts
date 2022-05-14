@@ -1,12 +1,14 @@
-import { defineUserConfig } from 'vuepress';
+import { defineUserConfig } from '@vuepress/cli';
 import sidebar from "../../config/sidebar.config";
-import { registerInternalComponents } from "../../config/plugins.config"
+import { viteBundler } from '@vuepress/bundler-vite'
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
 const { demoCodePlugin } = require("vuepress-plugin-demo-code")
 const copyCodePlugin = require("../../plugin/copy-code/index")
+import { registerInternalComponents } from "../../config/plugins.config"
+import vue from '@vitejs/plugin-vue'
 export default defineUserConfig({
     // 站点配置
     lang: 'zh-CN',
@@ -21,6 +23,20 @@ export default defineUserConfig({
         }
     },
     base: "/doc/",
+    bundler: viteBundler({
+        viteOptions: {
+            // plugins: [
+            //     vue({
+            //         template: {
+            //             compilerOptions: {
+            //                 isCustomElement: (tag) => tag.includes("gf-")
+            //             }
+            //         }
+            //     })
+            // ]
+        },
+        vuePluginOptions: {}
+    }),
     plugins: [
         searchPlugin({
             locales: {

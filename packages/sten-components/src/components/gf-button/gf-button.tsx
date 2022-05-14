@@ -14,6 +14,8 @@ export class GfButton {
     @Prop() plain: boolean = false;  // 朴素按钮
     @Prop() size: ButtonSize = ""; // 大 中 小
     @Prop() circle: boolean = false; // 圆形
+    @Prop() nativeType: string = 'button'; // 原生类型
+
     componentWillLoad() {
         console.log('lifecycle load')
     }
@@ -50,6 +52,7 @@ export class GfButton {
             <Host>
                 <button
                     onClick={this.handClick.bind(this)}
+                    type={this.nativeType}
                     class={`gf-button 
                         ${this.classNames} 
                         ${getButtonColor(this.color)} 

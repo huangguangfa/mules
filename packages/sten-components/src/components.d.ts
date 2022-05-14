@@ -13,11 +13,14 @@ export namespace Components {
         "classNames": string;
         "color": ButtonColor;
         "disabled": boolean;
+        "nativeType": string;
         "plain": boolean;
         "size": ButtonSize;
         "textColor": string;
     }
     interface GfButtonGroup {
+    }
+    interface GfInput {
     }
     interface StenButton {
         /**
@@ -40,6 +43,12 @@ declare global {
         prototype: HTMLGfButtonGroupElement;
         new (): HTMLGfButtonGroupElement;
     };
+    interface HTMLGfInputElement extends Components.GfInput, HTMLStencilElement {
+    }
+    var HTMLGfInputElement: {
+        prototype: HTMLGfInputElement;
+        new (): HTMLGfInputElement;
+    };
     interface HTMLStenButtonElement extends Components.StenButton, HTMLStencilElement {
     }
     var HTMLStenButtonElement: {
@@ -49,6 +58,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "gf-button": HTMLGfButtonElement;
         "gf-button-group": HTMLGfButtonGroupElement;
+        "gf-input": HTMLGfInputElement;
         "sten-button": HTMLStenButtonElement;
     }
 }
@@ -58,12 +68,15 @@ declare namespace LocalJSX {
         "classNames"?: string;
         "color"?: ButtonColor;
         "disabled"?: boolean;
+        "nativeType"?: string;
         "onOn-click"?: (event: CustomEvent<{ data: Object }>) => void;
         "plain"?: boolean;
         "size"?: ButtonSize;
         "textColor"?: string;
     }
     interface GfButtonGroup {
+    }
+    interface GfInput {
     }
     interface StenButton {
         /**
@@ -75,6 +88,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "gf-button": GfButton;
         "gf-button-group": GfButtonGroup;
+        "gf-input": GfInput;
         "sten-button": StenButton;
     }
 }
@@ -84,6 +98,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "gf-button-group": LocalJSX.GfButtonGroup & JSXBase.HTMLAttributes<HTMLGfButtonGroupElement>;
+            "gf-input": LocalJSX.GfInput & JSXBase.HTMLAttributes<HTMLGfInputElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }
     }

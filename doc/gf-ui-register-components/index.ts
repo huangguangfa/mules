@@ -1,5 +1,6 @@
 // import * as componentsList from "./register-components";
 import "./register-components";
+
 export function injectComponents() {
     console.log('加载外部组件');
     // for (const cName in componentsList) {

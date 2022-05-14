@@ -41,11 +41,11 @@ export default defineClientAppSetup(() => {
     update();
   });
 
-  // onUpdated(() => {
-  //   update();
-  // });
+  onUpdated(() => {
+    update();
+  });
 
-  // watch(() => page.value.path, update);
+  watch(() => page.value.path, update);
 
   return update;
 });
