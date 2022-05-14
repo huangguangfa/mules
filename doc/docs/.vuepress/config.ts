@@ -3,6 +3,10 @@ import sidebar from "../../config/sidebar.config";
 import { registerInternalComponents } from "../../config/plugins.config"
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { defaultTheme } = require('@vuepress/theme-default')
+const { searchPlugin } = require('@vuepress/plugin-search')
+const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
+const { demoCodePlugin } = require("vuepress-plugin-demo-code")
+const copyCodePlugin = require("../../plugin/copy-code/index")
 export default defineUserConfig({
     // 站点配置
     lang: 'zh-CN',
@@ -18,47 +22,30 @@ export default defineUserConfig({
     },
     base: "/doc/",
     plugins: [
-        [
-            'one-click-copy', // 代码块复制按钮
-            {
-                copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
-                copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
-                duration: 1000, // prompt message display time.
-                showInMobile: false, // whether to display on the mobile side, default: false.
+        searchPlugin({
+            locales: {
+                '/zh': {
+                    placeholder: '搜索文档'
+                }
             },
-        ],
-        [
-            '@vuepress/plugin-search',
-            {
-                locales: {
-                    '/zh': {
-                        placeholder: '搜索文档'
-                    }
-                },
-            }
-        ],
-        [
-            'demo-code',
-            {
-                showText: '显示代码',
-                hideText: '隐藏代码',
-                minHeight: 0,
-                styleStr: 'text-decoration: underline;',
-            }
-        ],
+        }),
+        mediumZoomPlugin(),
+        demoCodePlugin({
+            showText: '显示代码',
+            hideText: '隐藏代码',
+            minHeight: 0,
+            styleStr: 'text-decoration: underline;',
+            copyOptions: { align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }
+        }),
         registerComponentsPlugin({
             ...registerInternalComponents()
-        })
+        }),
+        copyCodePlugin()
     ],
     head: [
         ['link', { rel: 'icon', href: '/images/logo.png' }],
         ['link', { rel: 'icon', href: '/css/reset.css' }]
     ],
-    // bundlerConfig: {
-    //     viteOptions: {
-    //         dest: `/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/aaa`
-    //     }
-    // },
     theme: defaultTheme({
         selectLanguageText: '简体中文',
         lastUpdatedText: '上次更新',
