@@ -2,14 +2,14 @@
 <h1 id="核心类" tabindex="-1"><a class="header-anchor" href="#核心类" aria-hidden="true">#</a> 核心类</h1>
 <div class="custom-container tip"><p class="custom-container-title">数据加密、支持常用的加密方式和不常用的加密</p>
 </div>
-<h3 id="encrypt" tabindex="-1"><a class="header-anchor" href="#encrypt" aria-hidden="true">#</a> <code>encrypt</code></h3>
+<h3 id="encrypt" tabindex="-1"><a class="header-anchor" href="#encrypt" aria-hidden="true">#</a> <code v-pre>encrypt</code></h3>
 <ul>
 <li>加密方法</li>
-<li><code>参数 (data, crypto, params) =&gt; string</code>
+<li><code v-pre>参数 (data, crypto, params) =&gt; string</code>
 <ul>
-<li>data <code>加密数据</code></li>
-<li>crypto <code>加密密策略(见下方配置表）</code></li>
-<li>params <code>加密参数(见下方配置表）</code></li>
+<li>data <code v-pre>加密数据</code></li>
+<li>crypto <code v-pre>加密密策略(见下方配置表）</code></li>
+<li>params <code v-pre>加密参数(见下方配置表）</code></li>
 </ul>
 </li>
 </ul>
@@ -33,17 +33,17 @@ Crypto<span class="token punctuation">.</span><span class="token function">encry
 Crypto<span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Base64'</span><span class="token punctuation">,</span> <span class="token literal-property property">encoding</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> key<span class="token punctuation">,</span> iv <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment">// ...</span>
 Crypto<span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'DES'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> key<span class="token punctuation">,</span> iv <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 4ba7d000435c6b61db49777f9e530701</span>
 <span class="token operator">...</span><span class="token punctuation">.</span>等
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="decrypt" tabindex="-1"><a class="header-anchor" href="#decrypt" aria-hidden="true">#</a> <code>decrypt</code></h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="decrypt" tabindex="-1"><a class="header-anchor" href="#decrypt" aria-hidden="true">#</a> <code v-pre>decrypt</code></h3>
 <ul>
 <li>
 <p>解密方法<span class="colorff0066 font-bold"> <strong>【只针对对称加密算法】</strong></span></p>
 </li>
 <li>
-<p><code>参数 (data, crypto, params) =&gt; string</code></p>
+<p><code v-pre>参数 (data, crypto, params) =&gt; string</code></p>
 <ul>
-<li>data <code>加密数据</code></li>
-<li>crypto <code>加密密策略(见下方配置表）</code></li>
-<li>params <code>加密参数(见下方配置表）</code></li>
+<li>data <code v-pre>加密数据</code></li>
+<li>crypto <code v-pre>加密密策略(见下方配置表）</code></li>
+<li>params <code v-pre>加密参数(见下方配置表）</code></li>
 </ul>
 </li>
 </ul>
