@@ -20,7 +20,17 @@ export namespace Components {
     }
     interface GfButtonGroup {
     }
+    interface GfIconClear {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfInput {
+        "clear": boolean;
+        "disabled": boolean;
     }
     interface StenButton {
         /**
@@ -43,6 +53,12 @@ declare global {
         prototype: HTMLGfButtonGroupElement;
         new (): HTMLGfButtonGroupElement;
     };
+    interface HTMLGfIconClearElement extends Components.GfIconClear, HTMLStencilElement {
+    }
+    var HTMLGfIconClearElement: {
+        prototype: HTMLGfIconClearElement;
+        new (): HTMLGfIconClearElement;
+    };
     interface HTMLGfInputElement extends Components.GfInput, HTMLStencilElement {
     }
     var HTMLGfInputElement: {
@@ -58,6 +74,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "gf-button": HTMLGfButtonElement;
         "gf-button-group": HTMLGfButtonGroupElement;
+        "gf-icon-clear": HTMLGfIconClearElement;
         "gf-input": HTMLGfInputElement;
         "sten-button": HTMLStenButtonElement;
     }
@@ -76,7 +93,20 @@ declare namespace LocalJSX {
     }
     interface GfButtonGroup {
     }
+    interface GfIconClear {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfInput {
+        "clear"?: boolean;
+        "disabled"?: boolean;
+        "onBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
+        "onFocus"?: (event: CustomEvent<HTMLAreaElement>) => void;
+        "onInput"?: (event: CustomEvent<HTMLAreaElement>) => void;
     }
     interface StenButton {
         /**
@@ -88,6 +118,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "gf-button": GfButton;
         "gf-button-group": GfButtonGroup;
+        "gf-icon-clear": GfIconClear;
         "gf-input": GfInput;
         "sten-button": StenButton;
     }
@@ -98,6 +129,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "gf-button-group": LocalJSX.GfButtonGroup & JSXBase.HTMLAttributes<HTMLGfButtonGroupElement>;
+            "gf-icon-clear": LocalJSX.GfIconClear & JSXBase.HTMLAttributes<HTMLGfIconClearElement>;
             "gf-input": LocalJSX.GfInput & JSXBase.HTMLAttributes<HTMLGfInputElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }

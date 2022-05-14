@@ -10,22 +10,32 @@
     <script nomodule src="/build/sten-components.js"></script>
 
     <!-- icon -->
-    <link rel="stylesheet" href="http://localhost:3334/build/sten-icons.css">
+    <!-- <link rel="stylesheet" href="http://localhost:3334/build/sten-icons.css">
     <script type="module" src="http://localhost:3334/build/sten-icons.esm.js"></script>
-    <script nomodule src="http://localhost:3334/build/sten-icons.js"></script>
+    <script nomodule src="http://localhost:3334/build/sten-icons.js"></script> -->
 </head>
 
 <body>
     <div style="width:200px">
         <gf-input></gf-input>
     </div>
-
+    <!-- 禁用 -->
+    <div style="width:200px;margin-top: 10px;">
+        <gf-input disabled="true" value="黄光发"></gf-input>
+    </div>
+    <!-- 清除 -->
+    <div style="width:200px;margin-top: 10px;">
+        <gf-input id="inputs" clear></gf-input>
+    </div>
 </body>
 
 </html>
 
 <script>
-
+    const input = document.getElementById('inputs');
+    input.addEventListener('input', function (e) {
+        console.log('2222', e.target.value);
+    });
 </script>
 
 

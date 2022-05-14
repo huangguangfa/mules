@@ -78,6 +78,14 @@ export namespace Components {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconClear {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconClose {
         "color"?: string;
         "opacity"?: number | string;
@@ -382,6 +390,12 @@ declare global {
         prototype: HTMLGfIconChaogaoyinzhiCElement;
         new (): HTMLGfIconChaogaoyinzhiCElement;
     };
+    interface HTMLGfIconClearElement extends Components.GfIconClear, HTMLStencilElement {
+    }
+    var HTMLGfIconClearElement: {
+        prototype: HTMLGfIconClearElement;
+        new (): HTMLGfIconClearElement;
+    };
     interface HTMLGfIconCloseElement extends Components.GfIconClose, HTMLStencilElement {
     }
     var HTMLGfIconCloseElement: {
@@ -578,6 +592,7 @@ declare global {
         "gf-icon-arrow-up": HTMLGfIconArrowUpElement;
         "gf-icon-calendar-fill": HTMLGfIconCalendarFillElement;
         "gf-icon-chaogaoyinzhi-c": HTMLGfIconChaogaoyinzhiCElement;
+        "gf-icon-clear": HTMLGfIconClearElement;
         "gf-icon-close": HTMLGfIconCloseElement;
         "gf-icon-diantai-c": HTMLGfIconDiantaiCElement;
         "gf-icon-dianzan-c": HTMLGfIconDianzanCElement;
@@ -677,6 +692,14 @@ declare namespace LocalJSX {
         "styles"?: object;
     }
     interface GfIconChaogaoyinzhiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconClear {
         "color"?: string;
         "opacity"?: number | string;
         "rotate"?: number;
@@ -942,6 +965,7 @@ declare namespace LocalJSX {
         "gf-icon-arrow-up": GfIconArrowUp;
         "gf-icon-calendar-fill": GfIconCalendarFill;
         "gf-icon-chaogaoyinzhi-c": GfIconChaogaoyinzhiC;
+        "gf-icon-clear": GfIconClear;
         "gf-icon-close": GfIconClose;
         "gf-icon-diantai-c": GfIconDiantaiC;
         "gf-icon-dianzan-c": GfIconDianzanC;
@@ -988,6 +1012,7 @@ declare module "@stencil/core" {
             "gf-icon-arrow-up": LocalJSX.GfIconArrowUp & JSXBase.HTMLAttributes<HTMLGfIconArrowUpElement>;
             "gf-icon-calendar-fill": LocalJSX.GfIconCalendarFill & JSXBase.HTMLAttributes<HTMLGfIconCalendarFillElement>;
             "gf-icon-chaogaoyinzhi-c": LocalJSX.GfIconChaogaoyinzhiC & JSXBase.HTMLAttributes<HTMLGfIconChaogaoyinzhiCElement>;
+            "gf-icon-clear": LocalJSX.GfIconClear & JSXBase.HTMLAttributes<HTMLGfIconClearElement>;
             "gf-icon-close": LocalJSX.GfIconClose & JSXBase.HTMLAttributes<HTMLGfIconCloseElement>;
             "gf-icon-diantai-c": LocalJSX.GfIconDiantaiC & JSXBase.HTMLAttributes<HTMLGfIconDiantaiCElement>;
             "gf-icon-dianzan-c": LocalJSX.GfIconDianzanC & JSXBase.HTMLAttributes<HTMLGfIconDianzanCElement>;

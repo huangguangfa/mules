@@ -25,11 +25,12 @@ function getOutStyle({ color, rotate, opacity, size }: IconProps) {
 }
 
 export const Icons: FunctionalComponent<IconProps> = (props) => {
-    const { svgData, size, spin } = props;
+    const { svgData, size, spin, color } = props;
     svgData.attributes = {
         ...svgData.attributes,
         width: size,
-        height: size
+        height: size,
+        fill: color
     };
     const outStyle = getOutStyle(props);
     return (

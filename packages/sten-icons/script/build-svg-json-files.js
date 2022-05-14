@@ -104,7 +104,7 @@ function generateHtml(component) {
     </head>
 
     <body>
-        ${component.map(c => `<${c.cName}></${c}>\n`).join("")}
+        ${component.map(c => `<${c.cName}></${c.cName}>\n`).join("")}
     </body>
 
 </html>`
