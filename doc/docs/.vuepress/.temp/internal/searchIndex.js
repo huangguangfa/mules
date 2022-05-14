@@ -20,7 +20,14 @@ export const searchIndex = [
         "level": 2,
         "title": "Button 按钮",
         "slug": "button-按钮",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "Attributes",
+            "slug": "attributes",
+            "children": []
+          }
+        ]
       }
     ],
     "path": "/zh/components/button.html",
@@ -34,7 +41,14 @@ export const searchIndex = [
         "level": 2,
         "title": "Icon",
         "slug": "icon",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "Attributes",
+            "slug": "attributes",
+            "children": []
+          }
+        ]
       }
     ],
     "path": "/zh/components/icon.html",

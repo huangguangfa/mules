@@ -75,18 +75,18 @@ export default defineUserConfig({
         toggleSidebar: '切换侧边栏',
         navbar: [
             {
-                text: 'gf-ui系列库',
+                text: 'gf-ui系列',
                 children: [
                     {
-                        text: "@gf-ui/components",
+                        text: "components",
                         link: "/zh/components/install",
                     },
                     {
-                        text: "@gf-ui/core",
+                        text: "core核心库",
                         link: "/zh/core/install/"
                     },
                     {
-                        text: "@gf-ui/sten-icons",
+                        text: "sten-icons",
                         link: "/zh/sten-icon/install",
                     }
                 ]

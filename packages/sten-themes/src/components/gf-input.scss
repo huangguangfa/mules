@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "../common/var";
+@import "../mixins/mixins";
+
+@include b(input){
+    position: relative;
+    font-size: 0;
+    display: inline-block;
+    width: 100%;
+    line-height: 1.5;
+    @include e(inner) {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        color: $--color-text-primary;
+        font-size: 12px;
+        background-color: $--color-white;
+        border: 1px solid $--brand-color-light;
+        border-radius: 4px;
+        transition: border .2s;
+        outline: none;
+        box-sizing: border-box;
+        &:focus {
+            border-color: $input-border-color-focus;
+        }
+    }
+   
+}

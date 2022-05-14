@@ -1,6 +1,10 @@
 /***************** 
 *   base-标记颜色  *
 ******************/
+$--brand-color:#747bff !default;
+$--brand-color-light: #b9bdff;
+$--brand-color-dark: #346FC2;
+
 $--color-primary: #747bff !default;
 $--color-white: #FFFFFF !default;
 $--color-black: #000000 !default;
@@ -8,6 +12,8 @@ $--color-success: #67C23A !default;
 $--color-warning: #ffc82c !default;
 $--color-danger: #ff4949 !default;
 $--color-info: #909399 !default;
+
+
 
 /***************** 
 *   base-高亮颜色  *
@@ -122,3 +128,9 @@ $--button-smaller-padding-horizontal: 8px !default;
 $--button-disabled-font-color: $--color-text-placeholder !default;
 $--button-disabled-background-color: $--color-white !default;
 $--button-disabled-border-color: $--border-color-lighter !default;
+
+
+/**************** 
+*   组件 Input  *
+****************/
+$input-border-color-focus:$--brand-color;
