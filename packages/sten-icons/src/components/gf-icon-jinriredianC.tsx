@@ -9,7 +9,7 @@ import { jinriredianC as svgData } from "../icons";
 export class GfIconjinriredianC {
     @Prop() size: number | string = 30;
     @Prop() styles?: object = {};
-    @Prop() color?: string = "#000000";
+    @Prop() color?: string = "#606266";
     @Prop() rotate?: number = 0;
     @Prop() spin?: boolean = false;
     @Prop() opacity?: number | string = 1;

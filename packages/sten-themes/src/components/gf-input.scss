@@ -7,38 +7,69 @@
     font-size: 0;
     display: inline-block;
     width: 100%;
-    line-height: 1.5;
-    @include e(inner) {
+    border: 1px solid $--brand-color-light;
+    transition: border .2s;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    border-radius: $--border-radius-base;
+    box-sizing: border-box;
+    &:focus-within{
+      border-color: $input-border-color-focus;
+    }
+    &:hover{
+      border-color: $input-border-color-focus;
+      .gf-input__clear{
         display: block;
-        width: 100%;
-        padding: 6px 12px;
-        color: $--color-text-primary;
-        font-size: 12px;
-        background-color: $--color-white;
-        border: 1px solid $--brand-color-light;
-        border-radius: $--border-radius-base;
-        transition: border .2s;
-        outline: none;
-        box-sizing: border-box;
-        &:focus {
-            border-color: $input-border-color-focus;
-        }
+      }
+    }
+    & .gf-input__clear {
+      cursor: pointer;
+      z-index: 2;
+      padding-right: 6px;
+      display: none;
+    }
+    & .gf-input__maxlength{
+      color: #909399;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      
+    }
+    @include e(inner) {
+      display: block;
+      flex:1;
+      color: $--color-text-primary;
+      font-size: 12px;
+      background-color: $--color-white;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      padding: 0;
+      height: 100%;
+      border-radius: $--border-radius-base;
+      &:focus + .gf-input__clear{
+        display: block;
+      }
     }
 
     @include when(disabled) {
-        .gf-input__inner {
-          background-color: $--input-disabled-fill;
-          border-color: $--input-disabled-border;
-          color: $--input-disabled-color;
-          cursor: not-allowed;
-          &::placeholder {
-            color: $--input-disabled-placeholder-color;
-          }
-        }
-    
-        .gf-input__icon {
-          cursor: not-allowed;
+      background:  $--input-disabled-fill;
+      border-color: $--input-disabled-border;
+      .gf-input__inner {
+        background-color: $--input-disabled-fill;
+        color: $--input-disabled-color;
+        cursor: not-allowed;
+        &::placeholder {
+          color: $--input-disabled-placeholder-color;
         }
       }
+  
+      .gf-input__icon {
+        cursor: not-allowed;
+      }
+    }
    
 }

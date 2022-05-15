@@ -10,22 +10,33 @@
     <script nomodule src="/build/sten-components.js"></script>
 
     <!-- icon -->
-    <!-- <link rel="stylesheet" href="http://localhost:3334/build/sten-icons.css">
+    <link rel="stylesheet" href="http://localhost:3334/build/sten-icons.css">
     <script type="module" src="http://localhost:3334/build/sten-icons.esm.js"></script>
-    <script nomodule src="http://localhost:3334/build/sten-icons.js"></script> -->
+    <script nomodule src="http://localhost:3334/build/sten-icons.js"></script>
 </head>
 
 <body>
     <div style="width:200px">
-        <gf-input></gf-input>
+        <gf-input value="内容1" type="password"></gf-input>
     </div>
     <!-- 禁用 -->
     <div style="width:200px;margin-top: 10px;">
-        <gf-input disabled="true" value="黄光发"></gf-input>
+        <gf-input disabled="true" value="内容2"></gf-input>
     </div>
     <!-- 清除 -->
     <div style="width:200px;margin-top: 10px;">
-        <gf-input id="inputs" clear></gf-input>
+        <gf-input value="内容3" clearable></gf-input>
+    </div>
+    <!-- 限制输入长度 -->
+    <div style="width:200px;margin-top: 10px;">
+        <gf-input value="输入长度" id="inputs" maxlength="10" clearable></gf-input>
+    </div>
+    <!-- 前后slot -->
+    <div style="width:200px;margin-top: 10px;">
+        <gf-input value="内容3">
+            <gf-icon-paihangbang-c size="20" slot="before"></gf-icon-paihangbang-c>
+            <gf-icon-task-management size="20" slot="after"></gf-icon-task-management>
+        </gf-input>
     </div>
 </body>
 
@@ -33,8 +44,8 @@
 
 <script>
     const input = document.getElementById('inputs');
-    input.addEventListener('input', function (e) {
-        console.log('2222', e.target.value);
+    input.addEventListener('onInput', function (e) {
+        console.log('2222', e);
     });
 </script>
 

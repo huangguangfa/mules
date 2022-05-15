@@ -29,8 +29,11 @@ export namespace Components {
         "styles"?: object;
     }
     interface GfInput {
-        "clear": boolean;
+        "clearable": boolean;
         "disabled": boolean;
+        "maxlength"?: number;
+        "type": string;
+        "value": string;
     }
     interface StenButton {
         /**
@@ -102,11 +105,15 @@ declare namespace LocalJSX {
         "styles"?: object;
     }
     interface GfInput {
-        "clear"?: boolean;
+        "clearable"?: boolean;
         "disabled"?: boolean;
-        "onBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
-        "onFocus"?: (event: CustomEvent<HTMLAreaElement>) => void;
-        "onInput"?: (event: CustomEvent<HTMLAreaElement>) => void;
+        "maxlength"?: number;
+        "onClear"?: (event: CustomEvent<string>) => void;
+        "onOnBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
+        "onOnFocus"?: (event: CustomEvent<FocusEvent>) => void;
+        "onOnInput"?: (event: CustomEvent<string>) => void;
+        "type"?: string;
+        "value"?: string;
     }
     interface StenButton {
         /**
