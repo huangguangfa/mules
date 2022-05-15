@@ -108,8 +108,9 @@ declare namespace LocalJSX {
         "clearable"?: boolean;
         "disabled"?: boolean;
         "maxlength"?: number;
-        "onClear"?: (event: CustomEvent<string>) => void;
         "onOnBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
+        "onOnChange"?: (event: CustomEvent<string>) => void;
+        "onOnClear"?: (event: CustomEvent<string>) => void;
         "onOnFocus"?: (event: CustomEvent<FocusEvent>) => void;
         "onOnInput"?: (event: CustomEvent<string>) => void;
         "type"?: string;

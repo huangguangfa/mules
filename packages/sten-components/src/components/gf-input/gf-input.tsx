@@ -1,6 +1,5 @@
-import { Component, Host, h, Prop, State, Event, Watch, EventEmitter, Element } from '@stencil/core';
+import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
 import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear";
-import { isKorean } from "../../utils/index"
 @Component({
   tag: 'gf-input'
 })
@@ -11,7 +10,8 @@ export class GfInput {
   @Prop() type: string = 'text'; // 原生类型
   @Prop() maxlength?: number; // 输入长度限制
   @State() curentValue: string = '';
-  @State() isComposing: boolean = false;
+  private isComposing: boolean = false;
+  private nativeInput?: HTMLInputElement;
 
   @Watch('value')
   watchPropHandler(newValue: string) {
@@ -22,14 +22,22 @@ export class GfInput {
 
   componentWillLoad() {
     this.setCurrentValue(this.value)
+  }
 
-    setTimeout(() => {
-      const el = document.getElementsByClassName("gf-input__inner")[3]
-      console.log(el)
-      el.addEventListener('compositionstart', () => {
-        console.log(1111)
-      })
-    }, 3000)
+  componentDidLoad() {
+    const nativeInput = this.nativeInput;
+    if (nativeInput) {
+      nativeInput.addEventListener('compositionstart', this.handleCompositionStart);
+      nativeInput.addEventListener('compositionend', this.handleCompositionEnd);
+    }
+  }
+
+  disconnectedCallback() {
+    const nativeInput = this.nativeInput;
+    if (nativeInput) {
+      nativeInput.removeEventListener('compositionstart', this.handleCompositionStart);
+      nativeInput.removeEventListener('compositionEnd', this.handleCompositionEnd);
+    }
   }
 
   @Event() onFocus: EventEmitter<FocusEvent>
@@ -45,26 +53,21 @@ export class GfInput {
   @Event() onInput: EventEmitter<string>
   private handleInput = (e) => {
     if (this.isComposing) return;
-    // if (this.maxLength && Number(this.maxLength) === this.curentValue.length) {
-    //   this.setCurrentValue(this.curentValue)
-    //   return;
-    // }
     const value = e.target.value;
     this.onInput.emit(value)
     this.setCurrentValue(value)
   }
-  @Event({
-    eventName: "clear",
-    composed: true,
-    cancelable: true,
-    bubbles: true
-  })
-  private displayClear: EventEmitter<string>
+  @Event() onChange!: EventEmitter<string>;
+  private handleChange = (e) => {
+    this.onChange.emit(e.target.value)
+  }
+  @Event() private onClear: EventEmitter<string>
 
   private handClearClick = () => {
     this.setCurrentValue('')
-    this.displayClear.emit('')
+    this.onClear.emit('')
     this.onInput.emit('')
+    this.onChange.emit('')
   }
 
   private setCurrentValue = (value: string) => {
@@ -72,17 +75,9 @@ export class GfInput {
   }
 
   private handleCompositionStart = () => {
-    console.log('handleCompositionStart')
     this.isComposing = true;
   }
-  private handleCompositionUpdate = (e) => {
-    const text = e.target.value;
-    const lastCharacter = text[text.length - 1] || '';
-    console.log('handleCompositionUpdate', lastCharacter)
-    this.isComposing = !isKorean(lastCharacter);
-  }
   private handleCompositionEnd = (e) => {
-    console.log('handleCompositionEnd')
     if (this.isComposing) {
       this.isComposing = false;
       this.handleInput(e);
@@ -122,9 +117,8 @@ export class GfInput {
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
             onInput={this.handleInput}
-            onCompositionStart={this.handleCompositionStart}
-            onCompositionUpdate={this.handleCompositionUpdate}
-            onCompositionEnd={this.handleCompositionEnd.bind}
+            onChange={this.handleChange}
+            ref={(input) => (this.nativeInput = input)}
             onKeyDown={this.onKeydown}
           />
           {this.clearable && this.curentValue ? this.getClearInstance() : ''}
