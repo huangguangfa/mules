@@ -29,9 +29,19 @@ export namespace Components {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconSuccessFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfInput {
         "clearable": boolean;
         "disabled": boolean;
+        "iconColor": string;
+        "iconFontSize": number;
         "maxlength"?: number;
         "status": status;
         "type": string;
@@ -64,6 +74,12 @@ declare global {
         prototype: HTMLGfIconClearElement;
         new (): HTMLGfIconClearElement;
     };
+    interface HTMLGfIconSuccessFillElement extends Components.GfIconSuccessFill, HTMLStencilElement {
+    }
+    var HTMLGfIconSuccessFillElement: {
+        prototype: HTMLGfIconSuccessFillElement;
+        new (): HTMLGfIconSuccessFillElement;
+    };
     interface HTMLGfInputElement extends Components.GfInput, HTMLStencilElement {
     }
     var HTMLGfInputElement: {
@@ -80,6 +96,7 @@ declare global {
         "gf-button": HTMLGfButtonElement;
         "gf-button-group": HTMLGfButtonGroupElement;
         "gf-icon-clear": HTMLGfIconClearElement;
+        "gf-icon-success-fill": HTMLGfIconSuccessFillElement;
         "gf-input": HTMLGfInputElement;
         "sten-button": HTMLStenButtonElement;
     }
@@ -106,9 +123,19 @@ declare namespace LocalJSX {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconSuccessFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfInput {
         "clearable"?: boolean;
         "disabled"?: boolean;
+        "iconColor"?: string;
+        "iconFontSize"?: number;
         "maxlength"?: number;
         "onOnBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
         "onOnChange"?: (event: CustomEvent<string>) => void;
@@ -130,6 +157,7 @@ declare namespace LocalJSX {
         "gf-button": GfButton;
         "gf-button-group": GfButtonGroup;
         "gf-icon-clear": GfIconClear;
+        "gf-icon-success-fill": GfIconSuccessFill;
         "gf-input": GfInput;
         "sten-button": StenButton;
     }
@@ -141,6 +169,7 @@ declare module "@stencil/core" {
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "gf-button-group": LocalJSX.GfButtonGroup & JSXBase.HTMLAttributes<HTMLGfButtonGroupElement>;
             "gf-icon-clear": LocalJSX.GfIconClear & JSXBase.HTMLAttributes<HTMLGfIconClearElement>;
+            "gf-icon-success-fill": LocalJSX.GfIconSuccessFill & JSXBase.HTMLAttributes<HTMLGfIconSuccessFillElement>;
             "gf-input": LocalJSX.GfInput & JSXBase.HTMLAttributes<HTMLGfInputElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }

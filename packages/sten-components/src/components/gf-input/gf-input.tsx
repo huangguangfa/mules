@@ -1,7 +1,22 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
 import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear";
+import { GfIconsuccessFill } from "../../../../sten-icons/src/components/gf-icon-successFill";
+
 import type { status } from "../../types/var"
-const status = ["success", "info", "warning", "error"]
+const STATUS = {
+  "success": {
+    color: "#67C23A"
+  },
+  "info": {
+    color: "#346FC2"
+  },
+  "warning": {
+    color: "#ffc82c"
+  },
+  "error": {
+    color: "#ff4949"
+  }
+}
 
 @Component({
   tag: 'gf-input'
@@ -13,6 +28,8 @@ export class GfInput {
   @Prop() type: string = 'text'; // 原生类型
   @Prop() maxlength?: number; // 输入长度限制
   @Prop() status: status = ''; // 输入框状态
+  @Prop() iconFontSize: number = 20;
+  @Prop() iconColor: string = '#ccc';
   @State() curentValue: string = '';
   private isComposing: boolean = false;
   private nativeInput?: HTMLInputElement;
@@ -94,9 +111,15 @@ export class GfInput {
   }
   private getClearInstance = () => {
     return <div class="gf-input__clear">
-      <gf-icon-clear size="14" color="#ccc" onClick={this.handClearClick.bind(this)}></gf-icon-clear>
+      <gf-icon-clear size={this.iconFontSize} color={this.iconColor} onClick={this.handClearClick.bind(this)}></gf-icon-clear>
     </div>
   }
+  private getStatusInstance = () => {
+    return <div class="gf-input__status_icon">
+      <gf-icon-success-fill size={this.iconFontSize} color={STATUS[this.status as keyof typeof STATUS].color}></gf-icon-success-fill>
+    </div>
+  }
+
   private getMaxLengthInstance = () => {
     return <div class="gf-input__maxlength">
       <span>{this.curentValue.length}</span>/{this.maxlength}
@@ -127,6 +150,7 @@ export class GfInput {
           />
           {this.clearable && this.curentValue ? this.getClearInstance() : ''}
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
+          {this.status ? this.getStatusInstance() : ''}
           <slot name='after'></slot>
         </div>
       </Host>

@@ -11,6 +11,7 @@
     transition: border .2s;
     padding: 6px;
     display: flex;
+    height: 34px;
     align-items: center;
     box-sizing: border-box;
     flex-wrap: nowrap;
@@ -28,7 +29,7 @@
     & .gf-input__clear {
       cursor: pointer;
       z-index: 2;
-      padding-right: 6px;
+      padding-right: 2px;
       display: none;
     }
     & .gf-input__maxlength{
@@ -56,6 +57,18 @@
     }
     @include when(input-success) {
       border-color: $--color-success;
+    }
+    @include when(input-info) {
+      border-color: $--brand-color-dark;
+    }
+    @include when(input-success) {
+      border-color: $--color-success;
+    }
+    @include when(input-warning) {
+      border-color:$--color-warning;
+    }
+    @include when(input-error) {
+      border-color: $--color-danger;
     }
 
     @include when(disabled) {
