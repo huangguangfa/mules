@@ -54,6 +54,9 @@
         display: block;
       }
     }
+    @include when(input-success) {
+      border-color: $--color-success;
+    }
 
     @include when(disabled) {
       background:  $--input-disabled-fill;

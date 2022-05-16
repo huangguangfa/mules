@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ButtonColor, ButtonSize } from "./types/gf-button";
+import { status } from "./types/var";
 export namespace Components {
     interface GfButton {
         "_internal": () => Promise<void>;
@@ -32,6 +33,7 @@ export namespace Components {
         "clearable": boolean;
         "disabled": boolean;
         "maxlength"?: number;
+        "status": status;
         "type": string;
         "value": string;
     }
@@ -113,6 +115,7 @@ declare namespace LocalJSX {
         "onOnClear"?: (event: CustomEvent<string>) => void;
         "onOnFocus"?: (event: CustomEvent<FocusEvent>) => void;
         "onOnInput"?: (event: CustomEvent<string>) => void;
+        "status"?: status;
         "type"?: string;
         "value"?: string;
     }

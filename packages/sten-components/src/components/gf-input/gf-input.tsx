@@ -1,5 +1,8 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
 import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear";
+import type { status } from "../../types/var"
+const status = ["success", "info", "warning", "error"]
+
 @Component({
   tag: 'gf-input'
 })
@@ -9,6 +12,7 @@ export class GfInput {
   @Prop() value: string = '';
   @Prop() type: string = 'text'; // 原生类型
   @Prop() maxlength?: number; // 输入长度限制
+  @Prop() status: status = ''; // 输入框状态
   @State() curentValue: string = '';
   private isComposing: boolean = false;
   private nativeInput?: HTMLInputElement;
@@ -102,10 +106,10 @@ export class GfInput {
   render() {
     return (
       <Host>
-        <div class={{
-          'gf-input': true,
-          'is-disabled': this.disabled,
-        }}>
+        <div class={`
+          gf-input
+          ${this.disabled ? 'is-disabled' : ''}
+          ${this.status ? 'is-input-' + this.status : ''}`}>
           <slot name='before'></slot>
           <input
             type={this.type}
