@@ -38,11 +38,18 @@ export namespace Components {
         "styles"?: object;
     }
     interface GfInput {
+        "autofocus": boolean;
+        "autosize": boolean;
         "clearable": boolean;
         "disabled": boolean;
         "iconColor": string;
         "iconFontSize": number;
+        "maxRows": number | string;
         "maxlength"?: number;
+        "minRows": number | string;
+        "placeholder": string;
+        "resize": string;
+        "rows": number | string;
         "status": status;
         "type": string;
         "value": string;
@@ -132,16 +139,23 @@ declare namespace LocalJSX {
         "styles"?: object;
     }
     interface GfInput {
+        "autofocus"?: boolean;
+        "autosize"?: boolean;
         "clearable"?: boolean;
         "disabled"?: boolean;
         "iconColor"?: string;
         "iconFontSize"?: number;
+        "maxRows"?: number | string;
         "maxlength"?: number;
+        "minRows"?: number | string;
         "onOnBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
         "onOnChange"?: (event: CustomEvent<string>) => void;
         "onOnClear"?: (event: CustomEvent<string>) => void;
         "onOnFocus"?: (event: CustomEvent<FocusEvent>) => void;
         "onOnInput"?: (event: CustomEvent<string>) => void;
+        "placeholder"?: string;
+        "resize"?: string;
+        "rows"?: number | string;
         "status"?: status;
         "type"?: string;
         "value"?: string;

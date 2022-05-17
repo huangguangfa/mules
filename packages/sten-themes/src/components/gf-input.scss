@@ -2,6 +2,37 @@
 @import "../common/var";
 @import "../mixins/mixins";
 
+@include b(textarea){
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $--brand-color-light;
+  padding: 6px;
+  vertical-align: bottom;
+  transition: border .2s;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  border-radius: $--border-radius-base;
+  @include e(inner) {
+    border: none;
+    width: 100%;
+    &::placeholder {
+      color: $--input-placeholder-color;
+      font-size: 12px;
+    }
+
+    &:hover {
+      border-color: $input-border-color-focus;
+    }
+
+    &:focus {
+      outline: none;
+      border-color:  $input-border-color-focus;;
+    }
+  }
+}
 @include b(input){
     position: relative;
     font-size: 0;
@@ -13,7 +44,6 @@
     display: flex;
     height: 34px;
     align-items: center;
-    box-sizing: border-box;
     flex-wrap: nowrap;
     border-radius: $--border-radius-base;
     box-sizing: border-box;
@@ -58,6 +88,9 @@
     @include when(input-success) {
       border-color: $--color-success;
     }
+    @include when(input-success) {
+      border-color: $--color-success;
+    }
     @include when(input-info) {
       border-color: $--brand-color-dark;
     }
@@ -80,6 +113,7 @@
         cursor: not-allowed;
         &::placeholder {
           color: $--input-disabled-placeholder-color;
+          font-size: 12px;
         }
       }
   

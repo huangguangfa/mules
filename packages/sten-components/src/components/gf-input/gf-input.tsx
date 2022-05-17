@@ -1,7 +1,7 @@
-import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, State, Event, Watch, EventEmitter, Element } from '@stencil/core';
+import { calcTextareaHeight } from "./utils.js"
 import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear";
 import { GfIconsuccessFill } from "../../../../sten-icons/src/components/gf-icon-successFill";
-
 import type { status } from "../../types/var"
 const STATUS = {
   "success": {
@@ -30,9 +30,21 @@ export class GfInput {
   @Prop() status: status = ''; // 输入框状态
   @Prop() iconFontSize: number = 20;
   @Prop() iconColor: string = '#ccc';
+  @Prop() placeholder: string;
+  @Prop() autofocus: boolean = false; // 自动获取焦点
+  @Prop() resize: string = 'vertical'; // 是否缩放 none|both|horizontal|vertical;
+  @Prop() minRows: number | string;
+  @Prop() maxRows: number | string;
+  @Prop() rows: number | string = 2;
+  @Prop() autosize: boolean = false;
+
   @State() curentValue: string = '';
+  @State() calculateStyle = {
+    resize: this.resize
+  };
+
   private isComposing: boolean = false;
-  private nativeInput?: HTMLInputElement;
+  private nativeInput?: HTMLInputElement | HTMLTextAreaElement;
 
   @Watch('value')
   watchPropHandler(newValue: string) {
@@ -41,10 +53,18 @@ export class GfInput {
     }
   }
 
+  @Element() el: HTMLElement;
+
+  connectedCallback() {
+    console.log('调用了')
+  }
+  // 数据初始化
   componentWillLoad() {
     this.setCurrentValue(this.value)
+    Promise.resolve().then(() => { this.resizeTextarea() })
   }
 
+  // dom渲染完成
   componentDidLoad() {
     const nativeInput = this.nativeInput;
     if (nativeInput) {
@@ -52,7 +72,7 @@ export class GfInput {
       nativeInput.addEventListener('compositionend', this.handleCompositionEnd);
     }
   }
-
+  // 销毁
   disconnectedCallback() {
     const nativeInput = this.nativeInput;
     if (nativeInput) {
@@ -77,6 +97,7 @@ export class GfInput {
     const value = e.target.value;
     this.onInput.emit(value)
     this.setCurrentValue(value)
+    this.resizeTextarea()
   }
   @Event() onChange!: EventEmitter<string>;
   private handleChange = (e) => {
@@ -109,6 +130,14 @@ export class GfInput {
       console.log('enter')
     }
   }
+  private resizeTextarea() {
+    if (!this.autosize && !this.minRows && !this.maxRows) return
+    this.calculateStyle = {
+      ...calcTextareaHeight(this.nativeInput, this.minRows, this.maxRows),
+      resize: this.resize
+    }
+  }
+  // 获取个个元素节点
   private getClearInstance = () => {
     return <div class="gf-input__clear">
       <gf-icon-clear size={this.iconFontSize} color={this.iconColor} onClick={this.handClearClick.bind(this)}></gf-icon-clear>
@@ -119,35 +148,55 @@ export class GfInput {
       <gf-icon-success-fill size={this.iconFontSize} color={STATUS[this.status as keyof typeof STATUS].color}></gf-icon-success-fill>
     </div>
   }
-
   private getMaxLengthInstance = () => {
     return <div class="gf-input__maxlength">
       <span>{this.curentValue.length}</span>/{this.maxlength}
     </div>
+  }
+  private getInputInstance = () => {
+    return this.type !== 'textarea' ?
+      <input
+        type={this.type}
+        disabled={this.disabled}
+        class="gf-input__inner"
+        value={this.curentValue}
+        minLength={this.maxlength}
+        maxLength={this.maxlength}
+        placeholder={this.placeholder}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
+        onInput={this.handleInput}
+        onChange={this.handleChange}
+        ref={input => this.nativeInput = input}
+        onKeyDown={this.onKeydown}
+      />
+      : <textarea
+        class="gf-textarea__inner"
+        style={this.calculateStyle}
+        disabled={this.disabled}
+        value={this.curentValue}
+        autofocus={this.autofocus}
+        minLength={this.maxlength}
+        maxLength={this.maxlength}
+        placeholder={this.placeholder}
+        rows={+this.rows}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
+        onInput={this.handleInput}
+        onChange={this.handleChange}
+        ref={input => this.nativeInput = input}
+      ></textarea>
   }
 
   render() {
     return (
       <Host>
         <div class={`
-          gf-input
+          ${this.type !== 'textarea' ? 'gf-input' : 'gf-textarea'}
           ${this.disabled ? 'is-disabled' : ''}
           ${this.status ? 'is-input-' + this.status : ''}`}>
           <slot name='before'></slot>
-          <input
-            type={this.type}
-            disabled={this.disabled}
-            class="gf-input__inner"
-            value={this.curentValue}
-            minLength={this.maxlength}
-            maxLength={this.maxlength}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            onInput={this.handleInput}
-            onChange={this.handleChange}
-            ref={(input) => (this.nativeInput = input)}
-            onKeyDown={this.onKeydown}
-          />
+          {this.getInputInstance()}
           {this.clearable && this.curentValue ? this.getClearInstance() : ''}
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
