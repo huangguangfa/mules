@@ -35,6 +35,18 @@
         box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
     }
 }
+.borders{
+    border: 1px solid #ebebeb;
+    margin-top: -1px;
+    transition: .2s;
+    cursor: pointer;
+    margin-top: -1px;
+    padding: 10px;
+    border-radius: 3px;
+    &:hover{
+        box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+    }
+}
 .m10{margin:10px}
 .m15{margin:15px}
 .m30{margin:30px}
@@ -94,7 +106,7 @@ h6{
 }
 
 
-// md显示代码button样式
+// button样式
 .code-control{
     background-color: #FAFBFC !important;
     margin-top: 20px;
@@ -109,8 +121,14 @@ h6{
 .reset>.gf-button-group>gf-button > .gf-button{
     margin:0 !important;
 }
-
 .gf-button{margin: 0 5px !important;}
+
+// input样式
+.input{
+    .gf-input, .gf-textarea{
+        margin-top: 10px;
+    }
+}
 
 
 // vuepress样式修改

@@ -15,6 +15,9 @@
   flex-wrap: nowrap;
   box-sizing: border-box;
   border-radius: $--border-radius-base;
+  &:hover {
+    border-color: $input-border-color-focus;
+  }
   @include e(inner) {
     border: none;
     width: 100%;
@@ -22,14 +25,26 @@
       color: $--input-placeholder-color;
       font-size: 12px;
     }
-
-    &:hover {
-      border-color: $input-border-color-focus;
-    }
-
     &:focus {
       outline: none;
       border-color:  $input-border-color-focus;;
+    }
+  }
+  @include when(disabled) {
+    background:  $--input-disabled-fill;
+    border-color: $--input-disabled-border;
+    .gf-textarea__inner {
+      background-color: $--input-disabled-fill;
+      color: $--input-disabled-color;
+      cursor: not-allowed;
+      &::placeholder {
+        color: $--input-placeholder-color;
+        font-size: 12px;
+      }
+    }
+
+    .gf-input__icon {
+      cursor: not-allowed;
     }
   }
 }
@@ -84,6 +99,10 @@
       &:focus + .gf-input__clear{
         display: block;
       }
+      &::placeholder {
+        color: $--input-placeholder-color;
+        font-size: 12px;
+      }
     }
     @include when(input-success) {
       border-color: $--color-success;
@@ -112,7 +131,7 @@
         color: $--input-disabled-color;
         cursor: not-allowed;
         &::placeholder {
-          color: $--input-disabled-placeholder-color;
+          color: $--input-placeholder-color;
           font-size: 12px;
         }
       }

@@ -58,6 +58,10 @@ export const themeData = {
               {
                 "text": "Icon 图标",
                 "link": "/zh/components/icon"
+              },
+              {
+                "text": "Input 输入框",
+                "link": "/zh/components/input"
               }
             ]
           }
