@@ -21,6 +21,7 @@
   @include e(inner) {
     border: none;
     width: 100%;
+    padding: 5px 0px;
     &::placeholder {
       color: $--input-placeholder-color;
       font-size: 12px;
@@ -29,6 +30,16 @@
       outline: none;
       border-color:  $input-border-color-focus;;
     }
+  }
+  & .gf-input__maxlength{
+    color: #909399;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    
   }
   @include when(disabled) {
     background:  $--input-disabled-fill;

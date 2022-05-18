@@ -23,8 +23,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1652884952000,
+    "contributors": [
+      {
+        "name": "hgf",
+        "email": "1454556135@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "zh/components/input.md"
 }
