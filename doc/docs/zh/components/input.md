@@ -64,3 +64,23 @@ description: 页面的描述
   <gf-input placeholder="最少3列最大10列" type="textarea" min-rows="3" max-rows="10"></gf-input>
 </div>
 :::
+
+
+### Attributes
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| type     | 原生属性   | string  |   input / textarea           |    input     |
+| disabled     | 是否禁用   | boolean    |  true / false |     false    |
+| clearable     | 显示清除按钮   | boolean    | — | false   |
+| value     | 默认展示的值   | -    | — | -   |
+| maxlength     | 输入长度的限制   | -    | — | 无限   |
+| status     | 输入框的状态   | success / info /  warning /  error   | — | -   |
+| iconFontSize     | 默认图标的大小   | -    | — | 20   |
+| iconColor  | 图标的颜色    | -   | —   | #ccc   |
+| placeholder | 提示 | string | - | - |
+| autofocus | 设置自动获取焦点 | boolean | - | false |
+| resize | 是否支持拖拽下拉 | string |none / both / horizontal / vertical | vertical |
+| minRows | 最[小]列支持 | string / number | - | - |
+| maxRows | 最[大]列支持 | string / number | - | - |
+| rows | 定制列 | string / number | - | 2 |
+| autosize | 自动适配列表 | boolean | - | false |

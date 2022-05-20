@@ -1,6 +1,7 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter, Element } from '@stencil/core';
 import { calcTextareaHeight } from "./utils.js"
 import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear";
+import { GfIconinfo } from "../../../../sten-icons/src/components/gf-icon-info";
 import { GfIconsuccessFill } from "../../../../sten-icons/src/components/gf-icon-successFill";
 import type { status } from "../../types/var"
 const STATUS = {
@@ -145,7 +146,15 @@ export class GfInput {
   }
   private getStatusInstance = () => {
     return <div class="gf-input__status_icon">
-      <gf-icon-success-fill size={this.iconFontSize} color={STATUS[this.status as keyof typeof STATUS].color}></gf-icon-success-fill>
+      {
+        this.status === 'success' && <gf-icon-success-fill size={this.iconFontSize} color={STATUS[this.status].color}></gf-icon-success-fill>
+      }
+      {
+        ['info', 'warning'].includes(this.status) && <gf-icon-info size={this.iconFontSize} color={STATUS[this.status].color}></gf-icon-info>
+      }
+      {
+        this.status === 'error' && <gf-icon-clear size={this.iconFontSize} color={STATUS[this.status].color}></gf-icon-clear>
+      }
     </div>
   }
   private getMaxLengthInstance = () => {

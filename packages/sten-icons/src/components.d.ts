@@ -150,6 +150,14 @@ export namespace Components {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconInfo {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconJingxuanC {
         "color"?: string;
         "opacity"?: number | string;
@@ -444,6 +452,12 @@ declare global {
         prototype: HTMLGfIconHuiyuandengjiCElement;
         new (): HTMLGfIconHuiyuandengjiCElement;
     };
+    interface HTMLGfIconInfoElement extends Components.GfIconInfo, HTMLStencilElement {
+    }
+    var HTMLGfIconInfoElement: {
+        prototype: HTMLGfIconInfoElement;
+        new (): HTMLGfIconInfoElement;
+    };
     interface HTMLGfIconJingxuanCElement extends Components.GfIconJingxuanC, HTMLStencilElement {
     }
     var HTMLGfIconJingxuanCElement: {
@@ -601,6 +615,7 @@ declare global {
         "gf-icon-feeds-fill": HTMLGfIconFeedsFillElement;
         "gf-icon-fufeixiangmu-c": HTMLGfIconFufeixiangmuCElement;
         "gf-icon-huiyuandengji-c": HTMLGfIconHuiyuandengjiCElement;
+        "gf-icon-info": HTMLGfIconInfoElement;
         "gf-icon-jingxuan-c": HTMLGfIconJingxuanCElement;
         "gf-icon-jinriredian-c": HTMLGfIconJinriredianCElement;
         "gf-icon-kefu-c": HTMLGfIconKefuCElement;
@@ -764,6 +779,14 @@ declare namespace LocalJSX {
         "styles"?: object;
     }
     interface GfIconHuiyuandengjiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconInfo {
         "color"?: string;
         "opacity"?: number | string;
         "rotate"?: number;
@@ -974,6 +997,7 @@ declare namespace LocalJSX {
         "gf-icon-feeds-fill": GfIconFeedsFill;
         "gf-icon-fufeixiangmu-c": GfIconFufeixiangmuC;
         "gf-icon-huiyuandengji-c": GfIconHuiyuandengjiC;
+        "gf-icon-info": GfIconInfo;
         "gf-icon-jingxuan-c": GfIconJingxuanC;
         "gf-icon-jinriredian-c": GfIconJinriredianC;
         "gf-icon-kefu-c": GfIconKefuC;
@@ -1021,6 +1045,7 @@ declare module "@stencil/core" {
             "gf-icon-feeds-fill": LocalJSX.GfIconFeedsFill & JSXBase.HTMLAttributes<HTMLGfIconFeedsFillElement>;
             "gf-icon-fufeixiangmu-c": LocalJSX.GfIconFufeixiangmuC & JSXBase.HTMLAttributes<HTMLGfIconFufeixiangmuCElement>;
             "gf-icon-huiyuandengji-c": LocalJSX.GfIconHuiyuandengjiC & JSXBase.HTMLAttributes<HTMLGfIconHuiyuandengjiCElement>;
+            "gf-icon-info": LocalJSX.GfIconInfo & JSXBase.HTMLAttributes<HTMLGfIconInfoElement>;
             "gf-icon-jingxuan-c": LocalJSX.GfIconJingxuanC & JSXBase.HTMLAttributes<HTMLGfIconJingxuanCElement>;
             "gf-icon-jinriredian-c": LocalJSX.GfIconJinriredianC & JSXBase.HTMLAttributes<HTMLGfIconJinriredianCElement>;
             "gf-icon-kefu-c": LocalJSX.GfIconKefuC & JSXBase.HTMLAttributes<HTMLGfIconKefuCElement>;
