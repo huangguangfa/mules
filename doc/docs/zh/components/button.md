@@ -17,8 +17,8 @@ description: 页面的描述
 ::: demo
 <div class="flex">
   <gf-button>普通按钮</gf-button>
-  <gf-button color="primary"> 正常按钮</gf-button>
-  <gf-button id="success-btn" color="success">成功按钮</gf-button>
+  <gf-button color="primary">正常按钮</gf-button>
+  <gf-button color="success">成功按钮</gf-button>
   <gf-button color="info">信息按钮</gf-button>
   <gf-button color="warning">警告按钮</gf-button>
   <gf-button color="danger">错误按钮</gf-button>
@@ -163,7 +163,7 @@ description: 页面的描述
 :::
 
 
-### Attributes
+### 配置属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | size     | 尺寸   | string  |   large / small / smaller           |    —     |

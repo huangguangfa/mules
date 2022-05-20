@@ -22,31 +22,7 @@
     color: #ff0066;
 }
 
-.flex{
-    display: flex;
-    align-items: center;
-    border: 1px solid #ebebeb;
-    border-radius: 3px;
-    transition: .2s;
-    padding: 24px;
-    cursor: pointer;
-    margin-top: -1px;
-    &:hover{
-        box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
-    }
-}
-.borders{
-    border: 1px solid #ebebeb;
-    margin-top: -1px;
-    transition: .2s;
-    cursor: pointer;
-    margin-top: -1px;
-    padding: 10px;
-    border-radius: 3px;
-    &:hover{
-        box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
-    }
-}
+
 .m10{margin:10px}
 .m15{margin:15px}
 .m30{margin:30px}
@@ -106,18 +82,7 @@ h6{
 }
 
 
-// button样式
-.code-control{
-    background-color: #FAFBFC !important;
-    margin-top: 20px;
-    .control-btn{
-        font-size: 14px;
-        color: #747bff;
-        .arrow-icon{
-            border-bottom: 6px solid #747bff !important;
-        }
-    }
-}
+
 .reset>.gf-button-group>gf-button > .gf-button{
     margin:0 !important;
 }
@@ -166,9 +131,6 @@ h6{
 
 ul,ol,menu{list-style:none}
 
-.code-copy>svg>:last-child{
-    fill:#fff !important;
-}
 
 
 
@@ -204,4 +166,86 @@ ul,ol,menu{list-style:none}
 
 td{
     font-size: 14px;
+}
+
+// 白天
+.hydrated{
+    div[class*=language-]{
+        background: #F7F7F7;
+    }
+    
+    .theme-default-content pre code, .theme-default-content pre[class*=language-] code{
+        color: #3f536e;
+    }
+
+    .code-copy>svg>:last-child{
+        fill:#000 !important;
+    }
+
+    .flex{
+        display: flex;
+        align-items: center;
+        border: 1px solid #ebebeb;
+        border-radius: 3px;
+        transition: .2s;
+        padding: 24px;
+        cursor: pointer;
+        margin-top: -1px;
+        &:hover{
+            box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+        }
+    }
+    .borders{
+        border: 1px solid #ebebeb;
+        margin-top: -1px;
+        transition: .2s;
+        cursor: pointer;
+        margin-top: -1px;
+        padding: 10px;
+        border-radius: 3px;
+        &:hover{
+            box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+        }
+    }
+
+    // button样式
+    .code-control{
+        background-color: #FAFBFC !important;
+        margin-top: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        .control-btn{
+            font-size: 14px;
+            color: #747bff;
+            .arrow-icon{
+                border-bottom: 6px solid #747bff !important;
+            }
+        }
+    }
+    
+}
+// 黑夜
+.dark{
+    div[class*=language-]{
+        background: #636363;
+    }
+    .theme-default-content pre code, .theme-default-content pre[class*=language-] code{
+        color: #eee;
+    }
+
+    .code-copy>svg>:last-child{
+        fill:#fff !important;
+    }
+
+    .flex{
+        border: 1px solid #636363;
+    }
+    .code-control{
+        background-color: #636363 !important;
+        
+        
+    }
+    .demo-and-code-online-edit-wrapper > button> svg{
+        fill: #eee !important;
+    }
 }

@@ -25,7 +25,7 @@
 </div>
 </template></DemoAndCode>
 <gf-Icons></gf-Icons>
-<h3 id="attributes" tabindex="-1"><a class="header-anchor" href="#attributes" aria-hidden="true">#</a> Attributes</h3>
+<h3 id="配置属性" tabindex="-1"><a class="header-anchor" href="#配置属性" aria-hidden="true">#</a> 配置属性</h3>
 <table>
 <thead>
 <tr>

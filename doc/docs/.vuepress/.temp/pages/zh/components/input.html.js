@@ -22,20 +22,20 @@ export const data = {
       "children": [
         {
           "level": 3,
-          "title": "Attributes",
-          "slug": "attributes",
+          "title": "配置属性",
+          "slug": "配置属性",
           "children": []
         }
       ]
     }
   ],
   "git": {
-    "updatedTime": 1652890801000,
+    "updatedTime": 1653031438000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 2
+        "commits": 3
       }
     ]
   },

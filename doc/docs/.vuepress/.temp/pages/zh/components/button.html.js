@@ -22,8 +22,8 @@ export const data = {
       "children": [
         {
           "level": 3,
-          "title": "Attributes",
-          "slug": "attributes",
+          "title": "配置属性",
+          "slug": "配置属性",
           "children": []
         }
       ]

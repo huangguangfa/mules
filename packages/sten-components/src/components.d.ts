@@ -62,6 +62,8 @@ export namespace Components {
         "type": string;
         "value": string;
     }
+    interface GfTag {
+    }
     interface StenButton {
         /**
           * **********************     装饰器 Start     * *******************
@@ -107,6 +109,12 @@ declare global {
         prototype: HTMLGfInputElement;
         new (): HTMLGfInputElement;
     };
+    interface HTMLGfTagElement extends Components.GfTag, HTMLStencilElement {
+    }
+    var HTMLGfTagElement: {
+        prototype: HTMLGfTagElement;
+        new (): HTMLGfTagElement;
+    };
     interface HTMLStenButtonElement extends Components.StenButton, HTMLStencilElement {
     }
     var HTMLStenButtonElement: {
@@ -120,6 +128,7 @@ declare global {
         "gf-icon-info": HTMLGfIconInfoElement;
         "gf-icon-success-fill": HTMLGfIconSuccessFillElement;
         "gf-input": HTMLGfInputElement;
+        "gf-tag": HTMLGfTagElement;
         "sten-button": HTMLStenButtonElement;
     }
 }
@@ -183,6 +192,8 @@ declare namespace LocalJSX {
         "type"?: string;
         "value"?: string;
     }
+    interface GfTag {
+    }
     interface StenButton {
         /**
           * **********************     装饰器 Start     * *******************
@@ -197,6 +208,7 @@ declare namespace LocalJSX {
         "gf-icon-info": GfIconInfo;
         "gf-icon-success-fill": GfIconSuccessFill;
         "gf-input": GfInput;
+        "gf-tag": GfTag;
         "sten-button": StenButton;
     }
 }
@@ -210,6 +222,7 @@ declare module "@stencil/core" {
             "gf-icon-info": LocalJSX.GfIconInfo & JSXBase.HTMLAttributes<HTMLGfIconInfoElement>;
             "gf-icon-success-fill": LocalJSX.GfIconSuccessFill & JSXBase.HTMLAttributes<HTMLGfIconSuccessFillElement>;
             "gf-input": LocalJSX.GfInput & JSXBase.HTMLAttributes<HTMLGfInputElement>;
+            "gf-tag": LocalJSX.GfTag & JSXBase.HTMLAttributes<HTMLGfTagElement>;
             "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }
     }

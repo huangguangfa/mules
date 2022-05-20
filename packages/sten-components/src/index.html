@@ -16,67 +16,7 @@
 </head>
 
 <body>
-    <div style="width:200px">
-        <gf-input placeholder="输入姓名"></gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="内容1" type="password"></gf-input>
-    </div>
-    <!-- 禁用 -->
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input disabled="true" value="内容2"></gf-input>
-    </div>
-    <!-- 清除 -->
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="内容3" clearable></gf-input>
-    </div>
-    <!-- 限制输入长度 -->
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="内容测试" id="inputs" maxlength="10" clearable></gf-input>
-    </div>
-    <!-- 前后slot -->
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="内容3" slot="aaa">
-            <gf-icon-paihangbang-c size="20" slot="before"></gf-icon-paihangbang-c>
-            <gf-icon-task-management size="20" slot="after"></gf-icon-task-management>
-        </gf-input>
-    </div>
-    <!-- input状态 -->
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="成功" status="success">
-        </gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="信息" status="info" style="margin-top: 10px;">
-        </gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="警告" status="warning" style="margin-top: 10px;">
-        </gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="失败" status="error" style="margin-top: 10px;">
-        </gf-input>
-    </div>
-
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input value="内容3" type="textarea">
-            <!-- <gf-icon-paihangbang-c size="20" slot="before"></gf-icon-paihangbang-c>
-            <gf-icon-task-management size="20" slot="after"></gf-icon-task-management> -->
-        </gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input placeholder="输入审批理由" type="textarea" rows="2"></gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input placeholder="输入审批理由" type="textarea" min-rows="5" max-rows="10"></gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input placeholder="输入审批理由" type="textarea" autosize></gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input placeholder="输入审批理由" type="textarea" rows="10" resize="none"></gf-input>
-    </div>
+    <gf-tag></gf-tag>
 </body>
 
 </html>

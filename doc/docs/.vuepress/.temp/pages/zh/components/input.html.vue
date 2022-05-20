@@ -1,5 +1,5 @@
 <template><h2 id="input-按钮" tabindex="-1"><a class="header-anchor" href="#input-按钮" aria-hidden="true">#</a> Input 按钮</h2>
-<p>支持<code v-pre>input、textarea</code>两站类型输入, 支持图标+input混合, 包括支持输入框的状态、基本上定制化属性都是基于Input、而textarea定制化相对少些</p>
+<p>支持<code v-pre>input、textarea</code>两站类型输入, 支持图标+input混合, 包括支持输入框的状态、基本上定制化属性都是基于Input</p>
 <h4 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h4>
 
       <DemoAndCode
@@ -135,7 +135,7 @@
   <gf-input placeholder="最少3列最大10列" type="textarea" min-rows="3" max-rows="10"></gf-input>
 </div>
 </template></DemoAndCode>
-<h3 id="attributes" tabindex="-1"><a class="header-anchor" href="#attributes" aria-hidden="true">#</a> Attributes</h3>
+<h3 id="配置属性" tabindex="-1"><a class="header-anchor" href="#配置属性" aria-hidden="true">#</a> 配置属性</h3>
 <table>
 <thead>
 <tr>

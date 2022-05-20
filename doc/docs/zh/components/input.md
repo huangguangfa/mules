@@ -11,7 +11,7 @@ description: 页面的描述
 
 ## Input 按钮
 
-支持`input、textarea`两站类型输入, 支持图标+input混合, 包括支持输入框的状态、基本上定制化属性都是基于Input、而textarea定制化相对少些
+支持`input、textarea`两站类型输入, 支持图标+input混合, 包括支持输入框的状态、基本上定制化属性都是基于Input
 
 
 #### 基础用法
@@ -66,7 +66,7 @@ description: 页面的描述
 :::
 
 
-### Attributes
+### 配置属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | type     | 原生属性   | string  |   input / textarea           |    input     |
