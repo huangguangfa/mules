@@ -180,11 +180,11 @@ declare namespace LocalJSX {
         "maxRows"?: number | string;
         "maxlength"?: number;
         "minRows"?: number | string;
-        "onOnBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
-        "onOnChange"?: (event: CustomEvent<string>) => void;
-        "onOnClear"?: (event: CustomEvent<string>) => void;
-        "onOnFocus"?: (event: CustomEvent<FocusEvent>) => void;
-        "onOnInput"?: (event: CustomEvent<string>) => void;
+        "onEventBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
+        "onEventChange"?: (event: CustomEvent<string>) => void;
+        "onEventClear"?: (event: CustomEvent<string>) => void;
+        "onEventFocus"?: (event: CustomEvent<FocusEvent>) => void;
+        "onEventInput"?: (event: CustomEvent<string>) => void;
         "placeholder"?: string;
         "resize"?: string;
         "rows"?: number | string;

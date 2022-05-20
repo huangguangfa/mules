@@ -1,8 +1,13 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter, Element } from '@stencil/core';
 import { calcTextareaHeight } from "./utils.js"
-import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear";
-import { GfIconinfo } from "../../../../sten-icons/src/components/gf-icon-info";
-import { GfIconsuccessFill } from "../../../../sten-icons/src/components/gf-icon-successFill";
+import { injectComponents } from "../../utils"
+import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear"
+import { GfIconinfo } from "../../../../sten-icons/src/components/gf-icon-info"
+import { GfIconsuccessFill } from "../../../../sten-icons/src/components/gf-icon-successFill"
+
+injectComponents({
+  GfIconclear, GfIconinfo, GfIconsuccessFill
+});
 import type { status } from "../../types/var"
 const STATUS = {
   "success": {
@@ -53,12 +58,6 @@ export class GfInput {
       this.setCurrentValue(newValue)
     }
   }
-
-  @Element() el: HTMLElement;
-
-  connectedCallback() {
-    console.log('调用了')
-  }
   // 数据初始化
   componentWillLoad() {
     this.setCurrentValue(this.value)
@@ -82,35 +81,35 @@ export class GfInput {
     }
   }
 
-  @Event() onFocus: EventEmitter<FocusEvent>
+  @Event() eventFocus: EventEmitter<FocusEvent>
   private handleFocus = (e) => {
-    this.onFocus.emit(e)
+    this.eventFocus.emit(e)
   }
 
-  @Event() onBlur: EventEmitter<HTMLAreaElement>
+  @Event() eventBlur: EventEmitter<HTMLAreaElement>
   private handleBlur = (e) => {
-    this.onBlur.emit(e)
+    this.eventBlur.emit(e)
   }
 
-  @Event() onInput: EventEmitter<string>
+  @Event() eventInput: EventEmitter<string>
   private handleInput = (e) => {
     if (this.isComposing) return;
     const value = e.target.value;
-    this.onInput.emit(value)
+    this.eventInput.emit(value)
     this.setCurrentValue(value)
     this.resizeTextarea()
   }
-  @Event() onChange!: EventEmitter<string>;
+  @Event() eventChange!: EventEmitter<string>;
   private handleChange = (e) => {
-    this.onChange.emit(e.target.value)
+    this.eventChange.emit(e.target.value)
   }
-  @Event() private onClear: EventEmitter<string>
+  @Event() private eventClear: EventEmitter<string>
 
   private handClearClick = () => {
     this.setCurrentValue('')
-    this.onClear.emit('')
-    this.onInput.emit('')
-    this.onChange.emit('')
+    this.eventClear.emit('')
+    this.eventInput.emit('')
+    this.eventChange.emit('')
   }
 
   private setCurrentValue = (value: string) => {
