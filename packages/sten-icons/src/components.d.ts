@@ -302,6 +302,14 @@ export namespace Components {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconTest {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconXianshimianfeiC {
         "color"?: string;
         "opacity"?: number | string;
@@ -566,6 +574,12 @@ declare global {
         prototype: HTMLGfIconTaskManagementElement;
         new (): HTMLGfIconTaskManagementElement;
     };
+    interface HTMLGfIconTestElement extends Components.GfIconTest, HTMLStencilElement {
+    }
+    var HTMLGfIconTestElement: {
+        prototype: HTMLGfIconTestElement;
+        new (): HTMLGfIconTestElement;
+    };
     interface HTMLGfIconXianshimianfeiCElement extends Components.GfIconXianshimianfeiC, HTMLStencilElement {
     }
     var HTMLGfIconXianshimianfeiCElement: {
@@ -634,6 +648,7 @@ declare global {
         "gf-icon-shengri-c": HTMLGfIconShengriCElement;
         "gf-icon-success-fill": HTMLGfIconSuccessFillElement;
         "gf-icon-task-management": HTMLGfIconTaskManagementElement;
+        "gf-icon-test": HTMLGfIconTestElement;
         "gf-icon-xianshimianfei-c": HTMLGfIconXianshimianfeiCElement;
         "gf-icon-xiaoxi-c": HTMLGfIconXiaoxiCElement;
         "gf-icon-youhui-c": HTMLGfIconYouhuiCElement;
@@ -938,6 +953,14 @@ declare namespace LocalJSX {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconTest {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconXianshimianfeiC {
         "color"?: string;
         "opacity"?: number | string;
@@ -1016,6 +1039,7 @@ declare namespace LocalJSX {
         "gf-icon-shengri-c": GfIconShengriC;
         "gf-icon-success-fill": GfIconSuccessFill;
         "gf-icon-task-management": GfIconTaskManagement;
+        "gf-icon-test": GfIconTest;
         "gf-icon-xianshimianfei-c": GfIconXianshimianfeiC;
         "gf-icon-xiaoxi-c": GfIconXiaoxiC;
         "gf-icon-youhui-c": GfIconYouhuiC;
@@ -1064,6 +1088,7 @@ declare module "@stencil/core" {
             "gf-icon-shengri-c": LocalJSX.GfIconShengriC & JSXBase.HTMLAttributes<HTMLGfIconShengriCElement>;
             "gf-icon-success-fill": LocalJSX.GfIconSuccessFill & JSXBase.HTMLAttributes<HTMLGfIconSuccessFillElement>;
             "gf-icon-task-management": LocalJSX.GfIconTaskManagement & JSXBase.HTMLAttributes<HTMLGfIconTaskManagementElement>;
+            "gf-icon-test": LocalJSX.GfIconTest & JSXBase.HTMLAttributes<HTMLGfIconTestElement>;
             "gf-icon-xianshimianfei-c": LocalJSX.GfIconXianshimianfeiC & JSXBase.HTMLAttributes<HTMLGfIconXianshimianfeiCElement>;
             "gf-icon-xiaoxi-c": LocalJSX.GfIconXiaoxiC & JSXBase.HTMLAttributes<HTMLGfIconXiaoxiCElement>;
             "gf-icon-youhui-c": LocalJSX.GfIconYouhuiC & JSXBase.HTMLAttributes<HTMLGfIconYouhuiCElement>;
