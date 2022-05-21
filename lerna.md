@@ -10,7 +10,7 @@ lerna publish from-package
 ```js
 // package.json 增加配置
   "publishConfig": {
-    "access": "public"
+    "access": "public"1
   }
 ```
 
