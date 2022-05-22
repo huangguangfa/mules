@@ -8,7 +8,7 @@ const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
 const { demoCodePlugin } = require("vuepress-plugin-demo-code")
 const copyCodePlugin = require("../../plugin/copy-code/index")
 import { registerInternalComponents } from "../../config/plugins.config"
-import vue from '@vitejs/plugin-vue'
+
 export default defineUserConfig({
     // 站点配置
     lang: 'zh-CN',

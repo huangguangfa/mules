@@ -17,6 +17,7 @@
     "vuepress-plugin-demo-code": "^2.0.0-beta.1"
   },
   "dependencies": {
+    "@gf-ui/components": "^0.0.9",
     "@vuepress/plugin-register-components": "^2.0.0-beta.43"
   }
 }
