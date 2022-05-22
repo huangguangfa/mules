@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, State, Event, Watch, EventEmitter, Element } from '@stencil/core';
+import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
 import { calcTextareaHeight } from "./utils.js"
 import { injectComponents } from "../../utils"
 import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear"

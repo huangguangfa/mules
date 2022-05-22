@@ -5,19 +5,18 @@ export const config: Config = {
     namespace: 'sten-components',
     globalStyle,
     outputTargets: [
-        {
-            type: 'dist',
-            // esmLoaderPath: '../loader',
-        },
+        // 整体打包
+        // {
+        //     type: 'dist',
+        // },
+        // 按需方式打包
         {
             type: 'dist-custom-elements',
         },
-        {
-            type: 'docs-readme',
-        },
-        {
-            type: 'www',
-            serviceWorker: null, // disable service workers
-        },
+        // 网站script方式打包
+        // {
+        //     type: 'www',
+        //     serviceWorker: null
+        // },
     ]
 };

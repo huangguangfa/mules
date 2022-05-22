@@ -64,13 +64,6 @@ export namespace Components {
     }
     interface GfTag {
     }
-    interface StenButton {
-        /**
-          * **********************     装饰器 Start     * *******************
-         */
-        "name": string;
-        "show": () => Promise<void>;
-    }
 }
 declare global {
     interface HTMLGfButtonElement extends Components.GfButton, HTMLStencilElement {
@@ -115,12 +108,6 @@ declare global {
         prototype: HTMLGfTagElement;
         new (): HTMLGfTagElement;
     };
-    interface HTMLStenButtonElement extends Components.StenButton, HTMLStencilElement {
-    }
-    var HTMLStenButtonElement: {
-        prototype: HTMLStenButtonElement;
-        new (): HTMLStenButtonElement;
-    };
     interface HTMLElementTagNameMap {
         "gf-button": HTMLGfButtonElement;
         "gf-button-group": HTMLGfButtonGroupElement;
@@ -129,7 +116,6 @@ declare global {
         "gf-icon-success-fill": HTMLGfIconSuccessFillElement;
         "gf-input": HTMLGfInputElement;
         "gf-tag": HTMLGfTagElement;
-        "sten-button": HTMLStenButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -194,13 +180,6 @@ declare namespace LocalJSX {
     }
     interface GfTag {
     }
-    interface StenButton {
-        /**
-          * **********************     装饰器 Start     * *******************
-         */
-        "name"?: string;
-        "onStenButton-show"?: (event: CustomEvent<{ name: string }>) => void;
-    }
     interface IntrinsicElements {
         "gf-button": GfButton;
         "gf-button-group": GfButtonGroup;
@@ -209,7 +188,6 @@ declare namespace LocalJSX {
         "gf-icon-success-fill": GfIconSuccessFill;
         "gf-input": GfInput;
         "gf-tag": GfTag;
-        "sten-button": StenButton;
     }
 }
 export { LocalJSX as JSX };
@@ -223,7 +201,6 @@ declare module "@stencil/core" {
             "gf-icon-success-fill": LocalJSX.GfIconSuccessFill & JSXBase.HTMLAttributes<HTMLGfIconSuccessFillElement>;
             "gf-input": LocalJSX.GfInput & JSXBase.HTMLAttributes<HTMLGfInputElement>;
             "gf-tag": LocalJSX.GfTag & JSXBase.HTMLAttributes<HTMLGfTagElement>;
-            "sten-button": LocalJSX.StenButton & JSXBase.HTMLAttributes<HTMLStenButtonElement>;
         }
     }
 }
