@@ -1,3 +1,10 @@
+/*
+ * @Author: gf
+ * @Date: 2022-05-22 11:36:55
+ * @LastEditors: jixuanyu
+ * @Description: VitePress配置文件，用于配置静态页
+ */
+
 import { defineUserConfig } from '@vuepress/cli';
 import sidebar from "../../config/sidebar.config";
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -25,17 +32,15 @@ export default defineUserConfig({
     base: "/doc/",
     bundler: viteBundler({
         viteOptions: {
-            // plugins: [
-            //     vue({
-            //         template: {
-            //             compilerOptions: {
-            //                 isCustomElement: (tag) => tag.includes("gf-")
-            //             }
-            //         }
-            //     })
-            // ]
         },
-        vuePluginOptions: {}
+        vuePluginOptions: {
+            template: {
+                // 自定义元素
+                compilerOptions: {
+                    isCustomElement: tag => tag.includes('gf')
+                }
+            }
+        },
     }),
     plugins: [
         searchPlugin({
