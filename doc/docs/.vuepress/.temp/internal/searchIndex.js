@@ -260,8 +260,8 @@ export const searchIndex = [
         "children": [
           {
             "level": 3,
-            "title": "Attributes",
-            "slug": "attributes",
+            "title": "配置属性",
+            "slug": "配置属性",
             "children": []
           }
         ]
@@ -281,8 +281,8 @@ export const searchIndex = [
         "children": [
           {
             "level": 3,
-            "title": "Attributes",
-            "slug": "attributes",
+            "title": "配置属性",
+            "slug": "配置属性",
             "children": []
           }
         ]
@@ -299,7 +299,14 @@ export const searchIndex = [
         "level": 2,
         "title": "Input 按钮",
         "slug": "input-按钮",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "配置属性",
+            "slug": "配置属性",
+            "children": []
+          }
+        ]
       }
     ],
     "path": "/zh/components/input.html",
