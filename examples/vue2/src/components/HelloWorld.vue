@@ -10,6 +10,8 @@
             <button @click="buttonChange">修改button配置</button>
             <button style="margin-left: 10px" @click="mes">button通信</button>
         </div>
+
+        <gf-input></gf-input>
     </div>
 </template>
 
