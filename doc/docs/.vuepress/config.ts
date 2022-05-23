@@ -32,6 +32,10 @@ export default defineUserConfig({
     base: "/doc/",
     bundler: viteBundler({
         viteOptions: {
+            // @ts-expect-error Invalid types can be ignored
+            ssr: {
+                noExternal: ['customElements'],
+            },
         },
         vuePluginOptions: {
             template: {
