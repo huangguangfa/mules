@@ -1,4 +1,4 @@
-import "./register-components";
+// import "./register-components";
 // import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
 
 export function injectComponents() {
