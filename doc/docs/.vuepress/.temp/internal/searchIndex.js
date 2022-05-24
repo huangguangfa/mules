@@ -14,97 +14,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "button",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Button 按钮",
-        "slug": "button-按钮",
-        "children": [
-          {
-            "level": 3,
-            "title": "配置属性",
-            "slug": "配置属性",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/zh/components/button.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "button",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Icon",
-        "slug": "icon",
-        "children": [
-          {
-            "level": 3,
-            "title": "配置属性",
-            "slug": "配置属性",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/zh/components/icon.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "input",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Input 按钮",
-        "slug": "input-按钮",
-        "children": [
-          {
-            "level": 3,
-            "title": "配置属性",
-            "slug": "配置属性",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/zh/components/input.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/components安装",
-        "slug": "gf-ui-components安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/install.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/sten-icon安装",
-        "slug": "gf-ui-sten-icon安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/sten-icon/install.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "core首页",
     "headers": [
       {
@@ -339,6 +248,97 @@ export const searchIndex = [
     ],
     "path": "/zh/core/type.html",
     "pathLocale": "/zh/core",
+    "extraFields": []
+  },
+  {
+    "title": "button",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Button 按钮",
+        "slug": "button-按钮",
+        "children": [
+          {
+            "level": 3,
+            "title": "配置属性",
+            "slug": "配置属性",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/zh/components/button.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "button",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Icon",
+        "slug": "icon",
+        "children": [
+          {
+            "level": 3,
+            "title": "配置属性",
+            "slug": "配置属性",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/zh/components/icon.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "input",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Input 按钮",
+        "slug": "input-按钮",
+        "children": [
+          {
+            "level": 3,
+            "title": "配置属性",
+            "slug": "配置属性",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/zh/components/input.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/components安装",
+        "slug": "gf-ui-components安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/sten-icon安装",
+        "slug": "gf-ui-sten-icon安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/sten-icon/install.html",
+    "pathLocale": "/",
     "extraFields": []
   },
   {

@@ -1,12 +1,11 @@
-// import * as componentsList from "./register-components";
-import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
+import "./register-components";
+// import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
 
 export function injectComponents() {
-    defineCustomElements()
-        .then(() => {
-            // applyPolyfills()
-            console.log(1111)
-        })
+    // defineCustomElements()
+    //     .then(() => {
+    //         applyPolyfills()
+    //     })
     // for (const cName in componentsList) {
     //     const elements = componentsList[cName as keyof typeof componentsList];
     //     const elementsName = cName
