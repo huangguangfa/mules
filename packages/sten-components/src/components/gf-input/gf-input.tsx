@@ -1,9 +1,9 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
 import { calcTextareaHeight } from "./utils.js"
 import { injectComponents } from "../../utils"
-import { GfIconclear } from "../../../../sten-icons/src/components/gf-icon-clear"
-import { GfIconinfo } from "../../../../sten-icons/src/components/gf-icon-info"
-import { GfIconsuccessFill } from "../../../../sten-icons/src/components/gf-icon-successFill"
+import { GfIconclear } from "../gf-icon/gf-icon-clear"
+import { GfIconinfo } from "../gf-icon/gf-icon-info"
+import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
 
 injectComponents({
   GfIconclear, GfIconinfo, GfIconsuccessFill

@@ -1,4 +1,4 @@
-# gf-icon-success-fill
+# gf-icon-zunguishenfen-c
 
 
 
@@ -16,19 +16,6 @@
 | `spin`    | `spin`    |             | `boolean`          | `false`     |
 | `styles`  | --        |             | `object`           | `{}`        |
 
-
-## Dependencies
-
-### Used by
-
- - [gf-input](../../../sten-components/src/components/gf-input)
-
-### Graph
-```mermaid
-graph TD;
-  gf-input --> gf-icon-success-fill
-  style gf-icon-success-fill fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

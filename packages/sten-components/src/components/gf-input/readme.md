@@ -41,9 +41,9 @@
 
 ### Depends on
 
-- [gf-icon-clear](../../../../sten-icons/src/components)
-- [gf-icon-success-fill](../../../../sten-icons/src/components)
-- [gf-icon-info](../../../../sten-icons/src/components)
+- [gf-icon-clear](../gf-icon)
+- [gf-icon-success-fill](../gf-icon)
+- [gf-icon-info](../gf-icon)
 
 ### Graph
 ```mermaid

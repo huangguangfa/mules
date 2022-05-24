@@ -21,7 +21,143 @@ export namespace Components {
     }
     interface GfButtonGroup {
     }
+    interface GfIconAddCartFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconAddFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconAddSelect {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowDown {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowLeft {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowRight {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowUp {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconCalendarFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconChaogaoyinzhiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconClear {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconClose {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconDiantaiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconDianzanC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconDianzishuC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconFalling {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconFeedsFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconFufeixiangmuC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconHuiyuandengjiC {
         "color"?: string;
         "opacity"?: number | string;
         "rotate"?: number;
@@ -37,7 +173,191 @@ export namespace Components {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconJingxuanC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconJinriredianC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconKefuC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconLeftarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconLibaoC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconLoading {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconMap {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconPaihangbangC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconPinglunC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconQRcode {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconQiandaoC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconRemenhuatiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconRightarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconRising {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconSet {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconShengriC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconSuccessFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconTaskManagement {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconTest {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconXianshimianfeiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconXiaoxiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconYouhuiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconZhiboC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconZunguishenfenC {
         "color"?: string;
         "opacity"?: number | string;
         "rotate"?: number;
@@ -78,11 +398,113 @@ declare global {
         prototype: HTMLGfButtonGroupElement;
         new (): HTMLGfButtonGroupElement;
     };
+    interface HTMLGfIconAddCartFillElement extends Components.GfIconAddCartFill, HTMLStencilElement {
+    }
+    var HTMLGfIconAddCartFillElement: {
+        prototype: HTMLGfIconAddCartFillElement;
+        new (): HTMLGfIconAddCartFillElement;
+    };
+    interface HTMLGfIconAddFillElement extends Components.GfIconAddFill, HTMLStencilElement {
+    }
+    var HTMLGfIconAddFillElement: {
+        prototype: HTMLGfIconAddFillElement;
+        new (): HTMLGfIconAddFillElement;
+    };
+    interface HTMLGfIconAddSelectElement extends Components.GfIconAddSelect, HTMLStencilElement {
+    }
+    var HTMLGfIconAddSelectElement: {
+        prototype: HTMLGfIconAddSelectElement;
+        new (): HTMLGfIconAddSelectElement;
+    };
+    interface HTMLGfIconArrowDownElement extends Components.GfIconArrowDown, HTMLStencilElement {
+    }
+    var HTMLGfIconArrowDownElement: {
+        prototype: HTMLGfIconArrowDownElement;
+        new (): HTMLGfIconArrowDownElement;
+    };
+    interface HTMLGfIconArrowLeftElement extends Components.GfIconArrowLeft, HTMLStencilElement {
+    }
+    var HTMLGfIconArrowLeftElement: {
+        prototype: HTMLGfIconArrowLeftElement;
+        new (): HTMLGfIconArrowLeftElement;
+    };
+    interface HTMLGfIconArrowRightElement extends Components.GfIconArrowRight, HTMLStencilElement {
+    }
+    var HTMLGfIconArrowRightElement: {
+        prototype: HTMLGfIconArrowRightElement;
+        new (): HTMLGfIconArrowRightElement;
+    };
+    interface HTMLGfIconArrowUpElement extends Components.GfIconArrowUp, HTMLStencilElement {
+    }
+    var HTMLGfIconArrowUpElement: {
+        prototype: HTMLGfIconArrowUpElement;
+        new (): HTMLGfIconArrowUpElement;
+    };
+    interface HTMLGfIconCalendarFillElement extends Components.GfIconCalendarFill, HTMLStencilElement {
+    }
+    var HTMLGfIconCalendarFillElement: {
+        prototype: HTMLGfIconCalendarFillElement;
+        new (): HTMLGfIconCalendarFillElement;
+    };
+    interface HTMLGfIconChaogaoyinzhiCElement extends Components.GfIconChaogaoyinzhiC, HTMLStencilElement {
+    }
+    var HTMLGfIconChaogaoyinzhiCElement: {
+        prototype: HTMLGfIconChaogaoyinzhiCElement;
+        new (): HTMLGfIconChaogaoyinzhiCElement;
+    };
     interface HTMLGfIconClearElement extends Components.GfIconClear, HTMLStencilElement {
     }
     var HTMLGfIconClearElement: {
         prototype: HTMLGfIconClearElement;
         new (): HTMLGfIconClearElement;
+    };
+    interface HTMLGfIconCloseElement extends Components.GfIconClose, HTMLStencilElement {
+    }
+    var HTMLGfIconCloseElement: {
+        prototype: HTMLGfIconCloseElement;
+        new (): HTMLGfIconCloseElement;
+    };
+    interface HTMLGfIconDiantaiCElement extends Components.GfIconDiantaiC, HTMLStencilElement {
+    }
+    var HTMLGfIconDiantaiCElement: {
+        prototype: HTMLGfIconDiantaiCElement;
+        new (): HTMLGfIconDiantaiCElement;
+    };
+    interface HTMLGfIconDianzanCElement extends Components.GfIconDianzanC, HTMLStencilElement {
+    }
+    var HTMLGfIconDianzanCElement: {
+        prototype: HTMLGfIconDianzanCElement;
+        new (): HTMLGfIconDianzanCElement;
+    };
+    interface HTMLGfIconDianzishuCElement extends Components.GfIconDianzishuC, HTMLStencilElement {
+    }
+    var HTMLGfIconDianzishuCElement: {
+        prototype: HTMLGfIconDianzishuCElement;
+        new (): HTMLGfIconDianzishuCElement;
+    };
+    interface HTMLGfIconFallingElement extends Components.GfIconFalling, HTMLStencilElement {
+    }
+    var HTMLGfIconFallingElement: {
+        prototype: HTMLGfIconFallingElement;
+        new (): HTMLGfIconFallingElement;
+    };
+    interface HTMLGfIconFeedsFillElement extends Components.GfIconFeedsFill, HTMLStencilElement {
+    }
+    var HTMLGfIconFeedsFillElement: {
+        prototype: HTMLGfIconFeedsFillElement;
+        new (): HTMLGfIconFeedsFillElement;
+    };
+    interface HTMLGfIconFufeixiangmuCElement extends Components.GfIconFufeixiangmuC, HTMLStencilElement {
+    }
+    var HTMLGfIconFufeixiangmuCElement: {
+        prototype: HTMLGfIconFufeixiangmuCElement;
+        new (): HTMLGfIconFufeixiangmuCElement;
+    };
+    interface HTMLGfIconHuiyuandengjiCElement extends Components.GfIconHuiyuandengjiC, HTMLStencilElement {
+    }
+    var HTMLGfIconHuiyuandengjiCElement: {
+        prototype: HTMLGfIconHuiyuandengjiCElement;
+        new (): HTMLGfIconHuiyuandengjiCElement;
     };
     interface HTMLGfIconInfoElement extends Components.GfIconInfo, HTMLStencilElement {
     }
@@ -90,11 +512,149 @@ declare global {
         prototype: HTMLGfIconInfoElement;
         new (): HTMLGfIconInfoElement;
     };
+    interface HTMLGfIconJingxuanCElement extends Components.GfIconJingxuanC, HTMLStencilElement {
+    }
+    var HTMLGfIconJingxuanCElement: {
+        prototype: HTMLGfIconJingxuanCElement;
+        new (): HTMLGfIconJingxuanCElement;
+    };
+    interface HTMLGfIconJinriredianCElement extends Components.GfIconJinriredianC, HTMLStencilElement {
+    }
+    var HTMLGfIconJinriredianCElement: {
+        prototype: HTMLGfIconJinriredianCElement;
+        new (): HTMLGfIconJinriredianCElement;
+    };
+    interface HTMLGfIconKefuCElement extends Components.GfIconKefuC, HTMLStencilElement {
+    }
+    var HTMLGfIconKefuCElement: {
+        prototype: HTMLGfIconKefuCElement;
+        new (): HTMLGfIconKefuCElement;
+    };
+    interface HTMLGfIconLeftarrowElement extends Components.GfIconLeftarrow, HTMLStencilElement {
+    }
+    var HTMLGfIconLeftarrowElement: {
+        prototype: HTMLGfIconLeftarrowElement;
+        new (): HTMLGfIconLeftarrowElement;
+    };
+    interface HTMLGfIconLibaoCElement extends Components.GfIconLibaoC, HTMLStencilElement {
+    }
+    var HTMLGfIconLibaoCElement: {
+        prototype: HTMLGfIconLibaoCElement;
+        new (): HTMLGfIconLibaoCElement;
+    };
+    interface HTMLGfIconLoadingElement extends Components.GfIconLoading, HTMLStencilElement {
+    }
+    var HTMLGfIconLoadingElement: {
+        prototype: HTMLGfIconLoadingElement;
+        new (): HTMLGfIconLoadingElement;
+    };
+    interface HTMLGfIconMapElement extends Components.GfIconMap, HTMLStencilElement {
+    }
+    var HTMLGfIconMapElement: {
+        prototype: HTMLGfIconMapElement;
+        new (): HTMLGfIconMapElement;
+    };
+    interface HTMLGfIconPaihangbangCElement extends Components.GfIconPaihangbangC, HTMLStencilElement {
+    }
+    var HTMLGfIconPaihangbangCElement: {
+        prototype: HTMLGfIconPaihangbangCElement;
+        new (): HTMLGfIconPaihangbangCElement;
+    };
+    interface HTMLGfIconPinglunCElement extends Components.GfIconPinglunC, HTMLStencilElement {
+    }
+    var HTMLGfIconPinglunCElement: {
+        prototype: HTMLGfIconPinglunCElement;
+        new (): HTMLGfIconPinglunCElement;
+    };
+    interface HTMLGfIconQRcodeElement extends Components.GfIconQRcode, HTMLStencilElement {
+    }
+    var HTMLGfIconQRcodeElement: {
+        prototype: HTMLGfIconQRcodeElement;
+        new (): HTMLGfIconQRcodeElement;
+    };
+    interface HTMLGfIconQiandaoCElement extends Components.GfIconQiandaoC, HTMLStencilElement {
+    }
+    var HTMLGfIconQiandaoCElement: {
+        prototype: HTMLGfIconQiandaoCElement;
+        new (): HTMLGfIconQiandaoCElement;
+    };
+    interface HTMLGfIconRemenhuatiCElement extends Components.GfIconRemenhuatiC, HTMLStencilElement {
+    }
+    var HTMLGfIconRemenhuatiCElement: {
+        prototype: HTMLGfIconRemenhuatiCElement;
+        new (): HTMLGfIconRemenhuatiCElement;
+    };
+    interface HTMLGfIconRightarrowElement extends Components.GfIconRightarrow, HTMLStencilElement {
+    }
+    var HTMLGfIconRightarrowElement: {
+        prototype: HTMLGfIconRightarrowElement;
+        new (): HTMLGfIconRightarrowElement;
+    };
+    interface HTMLGfIconRisingElement extends Components.GfIconRising, HTMLStencilElement {
+    }
+    var HTMLGfIconRisingElement: {
+        prototype: HTMLGfIconRisingElement;
+        new (): HTMLGfIconRisingElement;
+    };
+    interface HTMLGfIconSetElement extends Components.GfIconSet, HTMLStencilElement {
+    }
+    var HTMLGfIconSetElement: {
+        prototype: HTMLGfIconSetElement;
+        new (): HTMLGfIconSetElement;
+    };
+    interface HTMLGfIconShengriCElement extends Components.GfIconShengriC, HTMLStencilElement {
+    }
+    var HTMLGfIconShengriCElement: {
+        prototype: HTMLGfIconShengriCElement;
+        new (): HTMLGfIconShengriCElement;
+    };
     interface HTMLGfIconSuccessFillElement extends Components.GfIconSuccessFill, HTMLStencilElement {
     }
     var HTMLGfIconSuccessFillElement: {
         prototype: HTMLGfIconSuccessFillElement;
         new (): HTMLGfIconSuccessFillElement;
+    };
+    interface HTMLGfIconTaskManagementElement extends Components.GfIconTaskManagement, HTMLStencilElement {
+    }
+    var HTMLGfIconTaskManagementElement: {
+        prototype: HTMLGfIconTaskManagementElement;
+        new (): HTMLGfIconTaskManagementElement;
+    };
+    interface HTMLGfIconTestElement extends Components.GfIconTest, HTMLStencilElement {
+    }
+    var HTMLGfIconTestElement: {
+        prototype: HTMLGfIconTestElement;
+        new (): HTMLGfIconTestElement;
+    };
+    interface HTMLGfIconXianshimianfeiCElement extends Components.GfIconXianshimianfeiC, HTMLStencilElement {
+    }
+    var HTMLGfIconXianshimianfeiCElement: {
+        prototype: HTMLGfIconXianshimianfeiCElement;
+        new (): HTMLGfIconXianshimianfeiCElement;
+    };
+    interface HTMLGfIconXiaoxiCElement extends Components.GfIconXiaoxiC, HTMLStencilElement {
+    }
+    var HTMLGfIconXiaoxiCElement: {
+        prototype: HTMLGfIconXiaoxiCElement;
+        new (): HTMLGfIconXiaoxiCElement;
+    };
+    interface HTMLGfIconYouhuiCElement extends Components.GfIconYouhuiC, HTMLStencilElement {
+    }
+    var HTMLGfIconYouhuiCElement: {
+        prototype: HTMLGfIconYouhuiCElement;
+        new (): HTMLGfIconYouhuiCElement;
+    };
+    interface HTMLGfIconZhiboCElement extends Components.GfIconZhiboC, HTMLStencilElement {
+    }
+    var HTMLGfIconZhiboCElement: {
+        prototype: HTMLGfIconZhiboCElement;
+        new (): HTMLGfIconZhiboCElement;
+    };
+    interface HTMLGfIconZunguishenfenCElement extends Components.GfIconZunguishenfenC, HTMLStencilElement {
+    }
+    var HTMLGfIconZunguishenfenCElement: {
+        prototype: HTMLGfIconZunguishenfenCElement;
+        new (): HTMLGfIconZunguishenfenCElement;
     };
     interface HTMLGfInputElement extends Components.GfInput, HTMLStencilElement {
     }
@@ -111,9 +671,49 @@ declare global {
     interface HTMLElementTagNameMap {
         "gf-button": HTMLGfButtonElement;
         "gf-button-group": HTMLGfButtonGroupElement;
+        "gf-icon-add-cart-fill": HTMLGfIconAddCartFillElement;
+        "gf-icon-add-fill": HTMLGfIconAddFillElement;
+        "gf-icon-add-select": HTMLGfIconAddSelectElement;
+        "gf-icon-arrow-down": HTMLGfIconArrowDownElement;
+        "gf-icon-arrow-left": HTMLGfIconArrowLeftElement;
+        "gf-icon-arrow-right": HTMLGfIconArrowRightElement;
+        "gf-icon-arrow-up": HTMLGfIconArrowUpElement;
+        "gf-icon-calendar-fill": HTMLGfIconCalendarFillElement;
+        "gf-icon-chaogaoyinzhi-c": HTMLGfIconChaogaoyinzhiCElement;
         "gf-icon-clear": HTMLGfIconClearElement;
+        "gf-icon-close": HTMLGfIconCloseElement;
+        "gf-icon-diantai-c": HTMLGfIconDiantaiCElement;
+        "gf-icon-dianzan-c": HTMLGfIconDianzanCElement;
+        "gf-icon-dianzishu-c": HTMLGfIconDianzishuCElement;
+        "gf-icon-falling": HTMLGfIconFallingElement;
+        "gf-icon-feeds-fill": HTMLGfIconFeedsFillElement;
+        "gf-icon-fufeixiangmu-c": HTMLGfIconFufeixiangmuCElement;
+        "gf-icon-huiyuandengji-c": HTMLGfIconHuiyuandengjiCElement;
         "gf-icon-info": HTMLGfIconInfoElement;
+        "gf-icon-jingxuan-c": HTMLGfIconJingxuanCElement;
+        "gf-icon-jinriredian-c": HTMLGfIconJinriredianCElement;
+        "gf-icon-kefu-c": HTMLGfIconKefuCElement;
+        "gf-icon-leftarrow": HTMLGfIconLeftarrowElement;
+        "gf-icon-libao-c": HTMLGfIconLibaoCElement;
+        "gf-icon-loading": HTMLGfIconLoadingElement;
+        "gf-icon-map": HTMLGfIconMapElement;
+        "gf-icon-paihangbang-c": HTMLGfIconPaihangbangCElement;
+        "gf-icon-pinglun-c": HTMLGfIconPinglunCElement;
+        "gf-icon-q-rcode": HTMLGfIconQRcodeElement;
+        "gf-icon-qiandao-c": HTMLGfIconQiandaoCElement;
+        "gf-icon-remenhuati-c": HTMLGfIconRemenhuatiCElement;
+        "gf-icon-rightarrow": HTMLGfIconRightarrowElement;
+        "gf-icon-rising": HTMLGfIconRisingElement;
+        "gf-icon-set": HTMLGfIconSetElement;
+        "gf-icon-shengri-c": HTMLGfIconShengriCElement;
         "gf-icon-success-fill": HTMLGfIconSuccessFillElement;
+        "gf-icon-task-management": HTMLGfIconTaskManagementElement;
+        "gf-icon-test": HTMLGfIconTestElement;
+        "gf-icon-xianshimianfei-c": HTMLGfIconXianshimianfeiCElement;
+        "gf-icon-xiaoxi-c": HTMLGfIconXiaoxiCElement;
+        "gf-icon-youhui-c": HTMLGfIconYouhuiCElement;
+        "gf-icon-zhibo-c": HTMLGfIconZhiboCElement;
+        "gf-icon-zunguishenfen-c": HTMLGfIconZunguishenfenCElement;
         "gf-input": HTMLGfInputElement;
         "gf-tag": HTMLGfTagElement;
     }
@@ -132,7 +732,143 @@ declare namespace LocalJSX {
     }
     interface GfButtonGroup {
     }
+    interface GfIconAddCartFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconAddFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconAddSelect {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowDown {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowLeft {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowRight {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconArrowUp {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconCalendarFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconChaogaoyinzhiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconClear {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconClose {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconDiantaiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconDianzanC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconDianzishuC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconFalling {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconFeedsFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconFufeixiangmuC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconHuiyuandengjiC {
         "color"?: string;
         "opacity"?: number | string;
         "rotate"?: number;
@@ -148,7 +884,191 @@ declare namespace LocalJSX {
         "spin"?: boolean;
         "styles"?: object;
     }
+    interface GfIconJingxuanC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconJinriredianC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconKefuC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconLeftarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconLibaoC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconLoading {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconMap {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconPaihangbangC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconPinglunC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconQRcode {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconQiandaoC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconRemenhuatiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconRightarrow {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconRising {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconSet {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconShengriC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface GfIconSuccessFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconTaskManagement {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconTest {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconXianshimianfeiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconXiaoxiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconYouhuiC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconZhiboC {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
+    interface GfIconZunguishenfenC {
         "color"?: string;
         "opacity"?: number | string;
         "rotate"?: number;
@@ -183,9 +1103,49 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "gf-button": GfButton;
         "gf-button-group": GfButtonGroup;
+        "gf-icon-add-cart-fill": GfIconAddCartFill;
+        "gf-icon-add-fill": GfIconAddFill;
+        "gf-icon-add-select": GfIconAddSelect;
+        "gf-icon-arrow-down": GfIconArrowDown;
+        "gf-icon-arrow-left": GfIconArrowLeft;
+        "gf-icon-arrow-right": GfIconArrowRight;
+        "gf-icon-arrow-up": GfIconArrowUp;
+        "gf-icon-calendar-fill": GfIconCalendarFill;
+        "gf-icon-chaogaoyinzhi-c": GfIconChaogaoyinzhiC;
         "gf-icon-clear": GfIconClear;
+        "gf-icon-close": GfIconClose;
+        "gf-icon-diantai-c": GfIconDiantaiC;
+        "gf-icon-dianzan-c": GfIconDianzanC;
+        "gf-icon-dianzishu-c": GfIconDianzishuC;
+        "gf-icon-falling": GfIconFalling;
+        "gf-icon-feeds-fill": GfIconFeedsFill;
+        "gf-icon-fufeixiangmu-c": GfIconFufeixiangmuC;
+        "gf-icon-huiyuandengji-c": GfIconHuiyuandengjiC;
         "gf-icon-info": GfIconInfo;
+        "gf-icon-jingxuan-c": GfIconJingxuanC;
+        "gf-icon-jinriredian-c": GfIconJinriredianC;
+        "gf-icon-kefu-c": GfIconKefuC;
+        "gf-icon-leftarrow": GfIconLeftarrow;
+        "gf-icon-libao-c": GfIconLibaoC;
+        "gf-icon-loading": GfIconLoading;
+        "gf-icon-map": GfIconMap;
+        "gf-icon-paihangbang-c": GfIconPaihangbangC;
+        "gf-icon-pinglun-c": GfIconPinglunC;
+        "gf-icon-q-rcode": GfIconQRcode;
+        "gf-icon-qiandao-c": GfIconQiandaoC;
+        "gf-icon-remenhuati-c": GfIconRemenhuatiC;
+        "gf-icon-rightarrow": GfIconRightarrow;
+        "gf-icon-rising": GfIconRising;
+        "gf-icon-set": GfIconSet;
+        "gf-icon-shengri-c": GfIconShengriC;
         "gf-icon-success-fill": GfIconSuccessFill;
+        "gf-icon-task-management": GfIconTaskManagement;
+        "gf-icon-test": GfIconTest;
+        "gf-icon-xianshimianfei-c": GfIconXianshimianfeiC;
+        "gf-icon-xiaoxi-c": GfIconXiaoxiC;
+        "gf-icon-youhui-c": GfIconYouhuiC;
+        "gf-icon-zhibo-c": GfIconZhiboC;
+        "gf-icon-zunguishenfen-c": GfIconZunguishenfenC;
         "gf-input": GfInput;
         "gf-tag": GfTag;
     }
@@ -196,9 +1156,49 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "gf-button-group": LocalJSX.GfButtonGroup & JSXBase.HTMLAttributes<HTMLGfButtonGroupElement>;
+            "gf-icon-add-cart-fill": LocalJSX.GfIconAddCartFill & JSXBase.HTMLAttributes<HTMLGfIconAddCartFillElement>;
+            "gf-icon-add-fill": LocalJSX.GfIconAddFill & JSXBase.HTMLAttributes<HTMLGfIconAddFillElement>;
+            "gf-icon-add-select": LocalJSX.GfIconAddSelect & JSXBase.HTMLAttributes<HTMLGfIconAddSelectElement>;
+            "gf-icon-arrow-down": LocalJSX.GfIconArrowDown & JSXBase.HTMLAttributes<HTMLGfIconArrowDownElement>;
+            "gf-icon-arrow-left": LocalJSX.GfIconArrowLeft & JSXBase.HTMLAttributes<HTMLGfIconArrowLeftElement>;
+            "gf-icon-arrow-right": LocalJSX.GfIconArrowRight & JSXBase.HTMLAttributes<HTMLGfIconArrowRightElement>;
+            "gf-icon-arrow-up": LocalJSX.GfIconArrowUp & JSXBase.HTMLAttributes<HTMLGfIconArrowUpElement>;
+            "gf-icon-calendar-fill": LocalJSX.GfIconCalendarFill & JSXBase.HTMLAttributes<HTMLGfIconCalendarFillElement>;
+            "gf-icon-chaogaoyinzhi-c": LocalJSX.GfIconChaogaoyinzhiC & JSXBase.HTMLAttributes<HTMLGfIconChaogaoyinzhiCElement>;
             "gf-icon-clear": LocalJSX.GfIconClear & JSXBase.HTMLAttributes<HTMLGfIconClearElement>;
+            "gf-icon-close": LocalJSX.GfIconClose & JSXBase.HTMLAttributes<HTMLGfIconCloseElement>;
+            "gf-icon-diantai-c": LocalJSX.GfIconDiantaiC & JSXBase.HTMLAttributes<HTMLGfIconDiantaiCElement>;
+            "gf-icon-dianzan-c": LocalJSX.GfIconDianzanC & JSXBase.HTMLAttributes<HTMLGfIconDianzanCElement>;
+            "gf-icon-dianzishu-c": LocalJSX.GfIconDianzishuC & JSXBase.HTMLAttributes<HTMLGfIconDianzishuCElement>;
+            "gf-icon-falling": LocalJSX.GfIconFalling & JSXBase.HTMLAttributes<HTMLGfIconFallingElement>;
+            "gf-icon-feeds-fill": LocalJSX.GfIconFeedsFill & JSXBase.HTMLAttributes<HTMLGfIconFeedsFillElement>;
+            "gf-icon-fufeixiangmu-c": LocalJSX.GfIconFufeixiangmuC & JSXBase.HTMLAttributes<HTMLGfIconFufeixiangmuCElement>;
+            "gf-icon-huiyuandengji-c": LocalJSX.GfIconHuiyuandengjiC & JSXBase.HTMLAttributes<HTMLGfIconHuiyuandengjiCElement>;
             "gf-icon-info": LocalJSX.GfIconInfo & JSXBase.HTMLAttributes<HTMLGfIconInfoElement>;
+            "gf-icon-jingxuan-c": LocalJSX.GfIconJingxuanC & JSXBase.HTMLAttributes<HTMLGfIconJingxuanCElement>;
+            "gf-icon-jinriredian-c": LocalJSX.GfIconJinriredianC & JSXBase.HTMLAttributes<HTMLGfIconJinriredianCElement>;
+            "gf-icon-kefu-c": LocalJSX.GfIconKefuC & JSXBase.HTMLAttributes<HTMLGfIconKefuCElement>;
+            "gf-icon-leftarrow": LocalJSX.GfIconLeftarrow & JSXBase.HTMLAttributes<HTMLGfIconLeftarrowElement>;
+            "gf-icon-libao-c": LocalJSX.GfIconLibaoC & JSXBase.HTMLAttributes<HTMLGfIconLibaoCElement>;
+            "gf-icon-loading": LocalJSX.GfIconLoading & JSXBase.HTMLAttributes<HTMLGfIconLoadingElement>;
+            "gf-icon-map": LocalJSX.GfIconMap & JSXBase.HTMLAttributes<HTMLGfIconMapElement>;
+            "gf-icon-paihangbang-c": LocalJSX.GfIconPaihangbangC & JSXBase.HTMLAttributes<HTMLGfIconPaihangbangCElement>;
+            "gf-icon-pinglun-c": LocalJSX.GfIconPinglunC & JSXBase.HTMLAttributes<HTMLGfIconPinglunCElement>;
+            "gf-icon-q-rcode": LocalJSX.GfIconQRcode & JSXBase.HTMLAttributes<HTMLGfIconQRcodeElement>;
+            "gf-icon-qiandao-c": LocalJSX.GfIconQiandaoC & JSXBase.HTMLAttributes<HTMLGfIconQiandaoCElement>;
+            "gf-icon-remenhuati-c": LocalJSX.GfIconRemenhuatiC & JSXBase.HTMLAttributes<HTMLGfIconRemenhuatiCElement>;
+            "gf-icon-rightarrow": LocalJSX.GfIconRightarrow & JSXBase.HTMLAttributes<HTMLGfIconRightarrowElement>;
+            "gf-icon-rising": LocalJSX.GfIconRising & JSXBase.HTMLAttributes<HTMLGfIconRisingElement>;
+            "gf-icon-set": LocalJSX.GfIconSet & JSXBase.HTMLAttributes<HTMLGfIconSetElement>;
+            "gf-icon-shengri-c": LocalJSX.GfIconShengriC & JSXBase.HTMLAttributes<HTMLGfIconShengriCElement>;
             "gf-icon-success-fill": LocalJSX.GfIconSuccessFill & JSXBase.HTMLAttributes<HTMLGfIconSuccessFillElement>;
+            "gf-icon-task-management": LocalJSX.GfIconTaskManagement & JSXBase.HTMLAttributes<HTMLGfIconTaskManagementElement>;
+            "gf-icon-test": LocalJSX.GfIconTest & JSXBase.HTMLAttributes<HTMLGfIconTestElement>;
+            "gf-icon-xianshimianfei-c": LocalJSX.GfIconXianshimianfeiC & JSXBase.HTMLAttributes<HTMLGfIconXianshimianfeiCElement>;
+            "gf-icon-xiaoxi-c": LocalJSX.GfIconXiaoxiC & JSXBase.HTMLAttributes<HTMLGfIconXiaoxiCElement>;
+            "gf-icon-youhui-c": LocalJSX.GfIconYouhuiC & JSXBase.HTMLAttributes<HTMLGfIconYouhuiCElement>;
+            "gf-icon-zhibo-c": LocalJSX.GfIconZhiboC & JSXBase.HTMLAttributes<HTMLGfIconZhiboCElement>;
+            "gf-icon-zunguishenfen-c": LocalJSX.GfIconZunguishenfenC & JSXBase.HTMLAttributes<HTMLGfIconZunguishenfenCElement>;
             "gf-input": LocalJSX.GfInput & JSXBase.HTMLAttributes<HTMLGfInputElement>;
             "gf-tag": LocalJSX.GfTag & JSXBase.HTMLAttributes<HTMLGfTagElement>;
         }

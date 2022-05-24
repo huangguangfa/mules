@@ -7,10 +7,11 @@ const entryDir = resolve(__dirname, '../src/svgs');
 const outDir = resolve(__dirname, '../src/icons');
 const HTMLPATH = resolve(__dirname, '../src/index.html');
 const outDirComponent = resolve(__dirname, '../src/components');
+const stenComponents = resolve(__dirname, "../../sten-components/src/components/gf-icon")
 
 async function clearDir() {
-    const rmDirList = [outDir, outDirComponent];
-    const mkdirList = [outDir, outDirComponent];
+    const rmDirList = [outDir, outDirComponent, stenComponents];
+    const mkdirList = [outDir, outDirComponent, stenComponents];
     rmDirList.forEach(dir => {
         if (fs.existsSync(dir)) {
             fs.rmSync(dir, { recursive: true })
@@ -57,12 +58,12 @@ async function start() {
 /* 
 * 生成icon组件
 */
-function generateComponent(iconName) {
+function generateComponent(iconName, outDirComponents = outDirComponent, iconBaseComponenPath = '../icon-base/index', iconsSvgDataPath = "../icons") {
     const componentName = `gf-icon-${iconName.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
     const componentsTemplate = `
 import { Component, Host, h, Prop } from '@stencil/core';
-import { Icons } from "../icon-base/index";
-import { ${iconName} as svgData } from "../icons\";
+import { Icons } from "${iconBaseComponenPath}";
+import { ${iconName} as svgData } from "${iconsSvgDataPath}\";
 @Component({
     tag: '${componentName}',
     shadow: false
@@ -86,7 +87,7 @@ export class GfIcon${iconName} {
 }
 `;
     const fileName = `gf-icon-${iconName}.tsx`;
-    fs.writeFileSync(resolve(outDirComponent, fileName), componentsTemplate);
+    fs.writeFileSync(resolve(outDirComponents, fileName), componentsTemplate);
     return componentName;
 }
 
@@ -150,6 +151,8 @@ function writeFiles(svgJSONList) {
         indexFileContent += `export { default as ${name} } from './${svgJsonfileName}'\n`;
         generateIconSvgJson(svgJsonfileName, svgItem);
         const componentName = generateComponent(name);
+        // 复制一份到sten-components里面
+        generateComponent(name, stenComponents, '../icons', '../../../../sten-icons/src/icons')
         componentNameList.push({
             cName: componentName,
             isColor: svgItem._isColor
