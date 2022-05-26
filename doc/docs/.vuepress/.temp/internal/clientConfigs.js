@@ -8,7 +8,8 @@ import clientConfig6 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-
 import clientConfig7 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/node_modules/@vuepress/plugin-search/lib/client/config.js'
 import clientConfig8 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
 import clientConfig9 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/plugin/demo-code/src/client/clientConfig.ts'
-import clientConfig10 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/clientConfig.ts'
+import clientConfig10 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/plugin/copy-code/clientConfig.js'
+import clientConfig11 from '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/doc/docs/.vuepress/clientConfig.ts'
 
 export const clientConfigs = [
   clientConfig0,
@@ -22,4 +23,5 @@ export const clientConfigs = [
   clientConfig8,
   clientConfig9,
   clientConfig10,
+  clientConfig11,
 ]
