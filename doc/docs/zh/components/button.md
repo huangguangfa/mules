@@ -8,14 +8,14 @@ tags:
 description: 页面的描述
 ---
 
-
 ## Button 按钮
 
 常用的操作按钮, 支持常规样貌和`定制化颜色需求`、包括`监听键盘事件`定制某些特殊场景
 
+
 #### 基础用法
 ::: demo
-<div class="flex">
+<div class="flex" v-pre>
   <gf-button>普通按钮</gf-button>
   <gf-button color="primary">正常按钮</gf-button>
   <gf-button color="success">成功按钮</gf-button>

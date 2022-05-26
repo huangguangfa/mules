@@ -2,6 +2,7 @@
  * @Author: gf
  * @Date: 2022-05-22 11:36:55
  */
+const { path } = require('@vuepress/utils')
 import { defineUserConfig } from '@vuepress/cli';
 import sidebar from "../../config/sidebar.config";
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -9,10 +10,9 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
-const { demoCodePlugin } = require("vuepress-plugin-demo-code")
+const demoCodePlugin = require("../../plugin/demo-code/src/node/index")
 const copyCodePlugin = require("../../plugin/copy-code/index")
 import { registerInternalComponents } from "../../config/plugins.config"
-
 export default defineUserConfig({
     // 站点配置
     lang: 'zh-CN',
@@ -26,6 +26,7 @@ export default defineUserConfig({
             lang: 'English',
         }
     },
+    clientConfigFile: path.resolve(__dirname, './clientConfig.ts'),
     base: "/doc/",
     bundler: viteBundler({
         viteOptions: {

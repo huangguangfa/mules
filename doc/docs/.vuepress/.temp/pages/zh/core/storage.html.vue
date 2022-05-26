@@ -1,4 +1,4 @@
-<template><h1 id="storage" tabindex="-1"><a class="header-anchor" href="#storage" aria-hidden="true">#</a> Storage</h1>
+<template><div><h1 id="storage" tabindex="-1"><a class="header-anchor" href="#storage" aria-hidden="true">#</a> Storage</h1>
 <h1 id="核心类" tabindex="-1"><a class="header-anchor" href="#核心类" aria-hidden="true">#</a> 核心类</h1>
 <div class="custom-container tip"><p class="custom-container-title">本地存储封装 【基于locaScorage、sessionStorage + Ctypto数据加密】</p>
 </div>
@@ -105,4 +105,4 @@ Storage<span class="token punctuation">.</span><span class="token function">remo
 <li>清除所有的<code v-pre>本地缓存</code>和<code v-pre>会话缓存</code></li>
 </ul>
 <div class="language-javascript ext-js"><pre v-pre class="language-javascript"><code>Storage<span class="token punctuation">.</span><span class="token function">clearAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
-</code></pre></div></template>
+</code></pre></div></div></template>

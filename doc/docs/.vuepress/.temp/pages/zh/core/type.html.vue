@@ -1,4 +1,4 @@
-<template><h1 id="type" tabindex="-1"><a class="header-anchor" href="#type" aria-hidden="true">#</a> Type</h1>
+<template><div><h1 id="type" tabindex="-1"><a class="header-anchor" href="#type" aria-hidden="true">#</a> Type</h1>
 <h1 id="核心类" tabindex="-1"><a class="header-anchor" href="#核心类" aria-hidden="true">#</a> 核心类</h1>
 <div class="custom-container tip"><p class="custom-container-title">提供数据类型判断</p>
 </div>
@@ -153,4 +153,4 @@ Type<span class="token punctuation">.</span><span class="token function">isTrueO
 Type<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// []</span>
 Type<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// {}</span>
 Type<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token string">'[{"name":"gf-ui"}]'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// [{ "name": "gf-ui" }]</span>
-</code></pre></div></template>
+</code></pre></div></div></template>

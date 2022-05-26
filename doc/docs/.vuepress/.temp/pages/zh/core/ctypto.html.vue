@@ -1,4 +1,4 @@
-<template><h1 id="crypto" tabindex="-1"><a class="header-anchor" href="#crypto" aria-hidden="true">#</a> Crypto</h1>
+<template><div><h1 id="crypto" tabindex="-1"><a class="header-anchor" href="#crypto" aria-hidden="true">#</a> Crypto</h1>
 <h1 id="核心类" tabindex="-1"><a class="header-anchor" href="#核心类" aria-hidden="true">#</a> 核心类</h1>
 <div class="custom-container tip"><p class="custom-container-title">数据加密、支持常用的加密方式和不常用的加密</p>
 </div>
@@ -79,4 +79,4 @@ Crypto<span class="token punctuation">.</span><span class="token function">decry
 <span class="token literal-property property">rabbitlegacy</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'RabbitLegacy'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token literal-property property">none</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span>
 </code></pre></div></div>
-</template>
+</div></template>

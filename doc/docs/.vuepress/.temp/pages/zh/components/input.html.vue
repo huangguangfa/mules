@@ -1,4 +1,4 @@
-<template><h2 id="input-按钮" tabindex="-1"><a class="header-anchor" href="#input-按钮" aria-hidden="true">#</a> Input 按钮</h2>
+<template><div><h2 id="input-按钮" tabindex="-1"><a class="header-anchor" href="#input-按钮" aria-hidden="true">#</a> Input 按钮</h2>
 <p>支持<code v-pre>input、textarea</code>两站类型输入, 支持图标+input混合, 包括支持输入框的状态、基本上定制化属性都是基于Input</p>
 <h4 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h4>
 
@@ -254,4 +254,4 @@
 </tr>
 </tbody>
 </table>
-</template>
+</div></template>
