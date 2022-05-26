@@ -1,4 +1,5 @@
 export const themeData = {
+  "subSidebar": "auto",
   "selectLanguageText": "简体中文",
   "lastUpdatedText": "上次更新",
   "contributorsText": "贡献者",
@@ -11,19 +12,19 @@ export const themeData = {
   "toggleSidebar": "切换侧边栏",
   "navbar": [
     {
+      "text": "首页",
+      "link": "/"
+    },
+    {
       "text": "gf-ui系列",
       "children": [
         {
-          "text": "components",
+          "text": "组件库",
           "link": "/zh/components/install"
         },
         {
-          "text": "core核心库",
+          "text": "核心库",
           "link": "/zh/core/install/"
-        },
-        {
-          "text": "sten-icons",
-          "link": "/zh/sten-icon/install"
         }
       ]
     }
@@ -31,7 +32,7 @@ export const themeData = {
   "sidebar": {
     "/zh/core/": [
       {
-        "text": "@gf-ui/core",
+        "text": "gf-ui/core",
         "children": [
           "/zh/core/install",
           "/zh/core/type",
@@ -42,7 +43,7 @@ export const themeData = {
     ],
     "/zh/components/": [
       {
-        "text": "@gf-ui/components",
+        "text": "跨框架UI库",
         "children": [
           {
             "text": "安装",
@@ -86,4 +87,17 @@ export const themeData = {
   "editLinkText": "Edit this page",
   "lastUpdated": true,
   "contributors": true
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
 }

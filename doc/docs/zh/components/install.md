@@ -13,6 +13,8 @@ description: 页面的描述
 ### @gf-ui/components安装
 
 
-```js
-yarn add @gf-ui/components
+```node
+yarn add @gf-ui/components // or
+
+npm install @gf-ui/components
 ```

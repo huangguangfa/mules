@@ -41,7 +41,7 @@ export default [
 export const registerInternalComponents = () => {
     return {
         components: {
-            gfIcons: path.resolve(__dirname, '../_components/gf-Icons/index.vue'),
+            GfIcons: path.resolve(__dirname, '../_components/gf-Icons/index.vue'),
         }
     }
 }

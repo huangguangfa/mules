@@ -6,7 +6,7 @@ export const data = {
   "frontmatter": {
     "home": true,
     "heroImage": "https://artice-code-1258339218.cos.ap-beijing.myqcloud.com/vuepress/element-index.png",
-    "heroText": "测试首页",
+    "heroText": "跨框架企业级UI库",
     "features": [
       {
         "title": "一致性 Consistency",
@@ -21,7 +21,7 @@ export const data = {
         "details": "界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。"
       }
     ],
-    "footer": "by饿了么"
+    "footer": "gf-ui"
   },
   "excerpt": "",
   "headers": [],
@@ -41,4 +41,17 @@ export const data = {
     ]
   },
   "filePathRelative": "README.md"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

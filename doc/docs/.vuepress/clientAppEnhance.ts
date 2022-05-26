@@ -15,6 +15,5 @@ export default defineClientAppEnhance(({ app }) => {
             }
         }
     })
-    console.log('加载外部组件');
     injectComponents()
 })

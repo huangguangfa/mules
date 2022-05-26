@@ -1,7 +1,7 @@
 export const siteData = {
   "base": "/doc/",
   "lang": "zh-CN",
-  "title": "@gf-ui系列文档",
+  "title": "gf-ui系列文档",
   "description": "",
   "head": [
     [
@@ -27,4 +27,17 @@ export const siteData = {
       "lang": "English"
     }
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSiteData) {
+    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ siteData }) => {
+    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
+  })
 }

@@ -1,10 +1,7 @@
 /*
  * @Author: gf
  * @Date: 2022-05-22 11:36:55
- * @LastEditors: jixuanyu
- * @Description: VitePress配置文件，用于配置静态页
  */
-
 import { defineUserConfig } from '@vuepress/cli';
 import sidebar from "../../config/sidebar.config";
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -19,7 +16,7 @@ import { registerInternalComponents } from "../../config/plugins.config"
 export default defineUserConfig({
     // 站点配置
     lang: 'zh-CN',
-    title: '@gf-ui系列文档',
+    title: 'gf-ui系列文档',
     // 主题和它的配置
     locales: {
         '/zh/core': {
@@ -47,6 +44,9 @@ export default defineUserConfig({
         },
     }),
     plugins: [
+        registerComponentsPlugin({
+            ...registerInternalComponents()
+        }),
         searchPlugin({
             locales: {
                 '/zh': {
@@ -62,9 +62,6 @@ export default defineUserConfig({
             styleStr: 'text-decoration: underline;',
             copyOptions: { align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }
         }),
-        registerComponentsPlugin({
-            ...registerInternalComponents()
-        }),
         copyCodePlugin()
     ],
     head: [
@@ -72,6 +69,7 @@ export default defineUserConfig({
         ['link', { rel: 'icon', href: '/css/reset.css' }]
     ],
     theme: defaultTheme({
+        subSidebar: 'auto',
         selectLanguageText: '简体中文',
         lastUpdatedText: '上次更新',
         contributorsText: '贡献者',
@@ -84,19 +82,19 @@ export default defineUserConfig({
         toggleSidebar: '切换侧边栏',
         navbar: [
             {
+                text: '首页',
+                link: "/",
+            },
+            {
                 text: 'gf-ui系列',
                 children: [
                     {
-                        text: "components",
+                        text: "组件库",
                         link: "/zh/components/install",
                     },
                     {
-                        text: "core核心库",
+                        text: "核心库",
                         link: "/zh/core/install/"
-                    },
-                    {
-                        text: "sten-icons",
-                        link: "/zh/sten-icon/install",
                     }
                 ]
             }
@@ -104,5 +102,10 @@ export default defineUserConfig({
         sidebar,
         notFound: ['您当前路径不存在、请返回首页吧'],
         logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
-    })
+    }),
+    markdown: {
+        code: {
+            lineNumbers: false
+        }
+    }
 })

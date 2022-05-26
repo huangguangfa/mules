@@ -20,7 +20,7 @@ description: 页面的描述
 </div>
 :::
 
-<gf-Icons></gf-Icons>
+<gf-icons></gf-icons>
 
 
 ### 配置属性

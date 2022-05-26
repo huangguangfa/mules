@@ -1,7 +1,7 @@
 export default {
     "/zh/core/": [
         {
-            text: '@gf-ui/core',
+            text: 'gf-ui/core',
             children: [
                 '/zh/core/install',
                 '/zh/core/type',
@@ -13,7 +13,7 @@ export default {
     ],
     "/zh/components/": [
         {
-            text: '@gf-ui/components',
+            text: '跨框架UI库',
             children: [
                 {
                     text: '安装',

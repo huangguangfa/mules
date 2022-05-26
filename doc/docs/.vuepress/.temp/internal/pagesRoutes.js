@@ -3,7 +3,6 @@ import { Vuepress } from '@vuepress/client'
 const routeItems = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
   ["v-2d0a870d","/en/",{"title":"title"},["/en/index.html","/en/README.md"]],
-  ["v-4e0f94d9","/zh/sten-icon/install.html",{"title":"sten-icon"},["/zh/sten-icon/install","/zh/sten-icon/install.md"]],
   ["v-2b5b6848","/zh/core/",{"title":"core首页"},["/zh/core/index.html","/zh/core/README.md"]],
   ["v-d016c4a4","/zh/core/ctypto.html",{"title":"Crypto类"},["/zh/core/ctypto","/zh/core/ctypto.md"]],
   ["v-7e1abf34","/zh/core/install.html",{"title":"安装"},["/zh/core/install","/zh/core/install.md"]],
@@ -13,6 +12,7 @@ const routeItems = [
   ["v-238c7d6f","/zh/components/icon.html",{"title":"button"},["/zh/components/icon","/zh/components/icon.md"]],
   ["v-09456080","/zh/components/input.html",{"title":"input"},["/zh/components/input","/zh/components/input.md"]],
   ["v-0239b762","/zh/components/install.html",{"title":"sten-icon"},["/zh/components/install","/zh/components/install.md"]],
+  ["v-4e0f94d9","/zh/sten-icon/install.html",{"title":"sten-icon"},["/zh/sten-icon/install","/zh/sten-icon/install.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
 ]
 
