@@ -189,12 +189,14 @@ td{
         border-radius: 3px;
         transition: .2s;
         padding: 24px;
+        padding-top:14px;
         cursor: pointer;
         margin-top: -1px;
         flex-wrap: wrap;
         &:hover{
             box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
         }
+        gf-button{margin-top: 10px;}
     }
     .borders{
         border: 1px solid #ebebeb;
