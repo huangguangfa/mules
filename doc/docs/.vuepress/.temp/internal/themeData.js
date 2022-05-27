@@ -13,7 +13,8 @@ export const themeData = {
   "navbar": [
     {
       "text": "首页",
-      "link": "/"
+      "link": "/",
+      "activeMatch": "/doc"
     },
     {
       "text": "gf-ui系列",

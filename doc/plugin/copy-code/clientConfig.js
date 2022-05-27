@@ -37,15 +37,6 @@ export default defineClientConfig({
           });
       }, 500);
     };
-
-    onMounted(() => {
-      update();
-    });
-
-    onUpdated(() => {
-      update();
-    });
-
     watch(() => page.value.path, update);
 
     return update;

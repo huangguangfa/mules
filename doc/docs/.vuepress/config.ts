@@ -10,8 +10,10 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
+const { commentPlugin } = require("vuepress-plugin-comment2");
 const demoCodePlugin = require("../../plugin/demo-code/src/node/index")
 const copyCodePlugin = require("../../plugin/copy-code/index")
+
 import { registerInternalComponents } from "../../config/plugins.config"
 export default defineUserConfig({
     // 站点配置
@@ -63,7 +65,14 @@ export default defineUserConfig({
             styleStr: 'text-decoration: underline;',
             copyOptions: { align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }
         }),
-        copyCodePlugin()
+        copyCodePlugin(),
+        commentPlugin({
+            type: "giscus",
+            repo: "huanggungfa/doc-comment",
+            repoId: "R_kgDOHZreBQ",
+            category: "General",
+            categoryId: "DIC_kwDOHZreBc4CPTz5",
+        }),
     ],
     head: [
         ['link', { rel: 'icon', href: '/images/logo.png' }],
@@ -85,6 +94,7 @@ export default defineUserConfig({
             {
                 text: '首页',
                 link: "/",
+                activeMatch: '/doc',
             },
             {
                 text: 'gf-ui系列',
