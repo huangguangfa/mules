@@ -19,6 +19,24 @@ export const data = {
       "level": 2,
       "title": "Button 按钮",
       "slug": "button-按钮",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "基础用法",
+      "slug": "基础用法",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "镂空按钮",
+      "slug": "镂空按钮",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "圆角按钮 和 Iconfont",
+      "slug": "圆角按钮-和-iconfont",
       "children": [
         {
           "level": 3,

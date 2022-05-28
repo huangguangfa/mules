@@ -1,5 +1,5 @@
 import { defineClientConfig } from '@vuepress/client'
-import { createApp, onUpdated, onMounted, watch } from "vue";
+import { createApp, watch } from "vue";
 import { usePageData } from "@vuepress/client";
 import CodeCopy from "./components/CodeCopy.vue";
 import "./theme/style.css";

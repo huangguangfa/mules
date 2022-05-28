@@ -1,6 +1,6 @@
 <template><div><h2 id="button-按钮" tabindex="-1"><a class="header-anchor" href="#button-按钮" aria-hidden="true">#</a> Button 按钮</h2>
 <p>常用的操作按钮, 支持常规样貌和<code v-pre>定制化颜色需求</code>、包括<code v-pre>监听键盘事件</code>定制某些特殊场景</p>
-<h4 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h4>
+<h2 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h2>
 
       <DemoAndCode
         htmlStr="%3Cdiv%20class%3D%22flex%22%20v-pre%3E%0A%20%20%3Cgf-button%3E%E6%99%AE%E9%80%9A%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22primary%22%3E%E6%AD%A3%E5%B8%B8%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22success%22%3E%E6%88%90%E5%8A%9F%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22info%22%3E%E4%BF%A1%E6%81%AF%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22warning%22%3E%E8%AD%A6%E5%91%8A%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22danger%22%3E%E9%94%99%E8%AF%AF%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%3C%2Fdiv%3E%0A"
@@ -26,7 +26,7 @@
   <gf-button color="danger">错误按钮</gf-button>
 </div>
 </template></DemoAndCode>
-<h4 id="镂空按钮" tabindex="-1"><a class="header-anchor" href="#镂空按钮" aria-hidden="true">#</a> 镂空按钮</h4>
+<h2 id="镂空按钮" tabindex="-1"><a class="header-anchor" href="#镂空按钮" aria-hidden="true">#</a> 镂空按钮</h2>
 
       <DemoAndCode
         htmlStr="%3Cdiv%20class%3D%22flex%22%3E%0A%20%20%3Cgf-button%3E%E6%99%AE%E9%80%9A%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22primary%22%20plain%3E%E6%AD%A3%E5%B8%B8%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22success%22%20plain%3E%E6%88%90%E5%8A%9F%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22info%22%20plain%3E%E4%BF%A1%E6%81%AF%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22warning%22%20plain%3E%E8%AD%A6%E5%91%8A%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22danger%22%20plain%3E%E9%94%99%E8%AF%AF%E6%8C%89%E9%92%AE%3C%2Fgf-button%3E%0A%3C%2Fdiv%3E%0A"
@@ -52,7 +52,7 @@
   <gf-button color="danger" plain>错误按钮</gf-button>
 </div>
 </template></DemoAndCode>
-<h4 id="圆角按钮-和-iconfont" tabindex="-1"><a class="header-anchor" href="#圆角按钮-和-iconfont" aria-hidden="true">#</a> 圆角按钮 和 Iconfont</h4>
+<h2 id="圆角按钮-和-iconfont" tabindex="-1"><a class="header-anchor" href="#圆角按钮-和-iconfont" aria-hidden="true">#</a> 圆角按钮 和 Iconfont</h2>
 
       <DemoAndCode
         htmlStr="%3Cdiv%20class%3D%22flex%22%3E%0A%20%20%3Cgf-button%20size%3D%22small%22%20circle%3E%0A%20%20%20%20%3Cgf-icon-q-rcode%20color%3D%22%23000000%22%20size%3D%2220%22%3E%3C%2Fgf-icon-q-rcode%3E%0A%20%20%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22primary%22%20size%3D%22small%22%20circle%3E%0A%20%20%20%20%3Cgf-icon-q-rcode%20color%3D%22white%22%20size%3D%2220%22%3E%3C%2Fgf-icon-q-rcode%3E%0A%20%20%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22success%22%20%20size%3D%22smaller%22%20circle%3E%0A%20%20%20%20%3Cgf-icon-success-fill%20color%3D%22white%22%20size%3D%2225%22%3E%3C%2Fgf-icon-success-fill%3E%0A%20%20%3C%2Fgf-button%3E%0A%0A%20%20%3Cgf-button%20color%3D%22primary%22%3E%0A%20%20%20%20%20%20%3Cgf-icon-add-fill%20slot%3D%22icon-left%22%20color%3D%22white%22%20size%3D%2216%22%20style%3D%22margin-right%3A%203px%3B%22%3E%3C%2Fgf-icon-add-fill%3E%0A%20%20%20%20%20%20%E6%B7%BB%E5%8A%A0%0A%20%20%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22primary%22%20%20size%3D%22small%22%3E%0A%20%20%20%20%20%20%3Cgf-icon-q-rcode%20color%3D%22white%22%20size%3D%2220%22%3E%3C%2Fgf-icon-q-rcode%3E%0A%20%20%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22success%22%20disabled%3E%0A%20%20%20%20%20%20%3Cgf-icon-loading%20slot%3D%22icon-left%22%20color%3D%22white%22%20size%3D%2215%22%20spin%20style%3D%22margin-right%3A%203px%3B%22%3E%3C%2Fgf-icon-loading%3E%0A%20%20%20%20%20%20%E5%8A%A0%E8%BD%BD%E4%B8%AD%0A%20%20%3C%2Fgf-button%3E%0A%20%20%3Cgf-button%20color%3D%22success%22%20%20size%3D%22smaller%22%3E%0A%20%20%20%20%20%20%3Cgf-icon-success-fill%20color%3D%22white%22%20size%3D%2225%22%3E%3C%2Fgf-icon-success-fill%3E%0A%20%20%3C%2Fgf-button%3E%0A%3C%2Fdiv%3E%0A"
@@ -317,4 +317,5 @@
 </tr>
 </tbody>
 </table>
+<CommentService></CommentService>
 </div></template>

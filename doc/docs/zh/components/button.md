@@ -13,7 +13,7 @@ description: 页面的描述
 常用的操作按钮, 支持常规样貌和`定制化颜色需求`、包括`监听键盘事件`定制某些特殊场景
 
 
-#### 基础用法
+## 基础用法
 ::: demo
 <div class="flex" v-pre>
   <gf-button>普通按钮</gf-button>
@@ -26,7 +26,7 @@ description: 页面的描述
 :::
 
 
-#### 镂空按钮
+## 镂空按钮
 ::: demo
 <div class="flex">
   <gf-button>普通按钮</gf-button>
@@ -38,7 +38,7 @@ description: 页面的描述
 </div>
 :::
 
-#### 圆角按钮 和 Iconfont
+## 圆角按钮 和 Iconfont
 ::: demo
 <div class="flex">
   <gf-button size="small" circle>
@@ -163,6 +163,8 @@ description: 页面的描述
 :::
 
 
+
+
 ### 配置属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
@@ -175,3 +177,6 @@ description: 页面的描述
 | circle     | 是否圆形按钮   | boolean    | — | false   |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |
 | native-type | 原生 type 属性 | string | button / submit / reset | button |
+
+
+<CommentService></CommentService>

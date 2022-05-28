@@ -10,7 +10,7 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
-const { commentPlugin } = require("vuepress-plugin-comment2");
+const commentPlugin = require("../../plugin/comment2/node/index");
 const demoCodePlugin = require("../../plugin/demo-code/src/node/index")
 const copyCodePlugin = require("../../plugin/copy-code/index")
 

@@ -91,6 +91,20 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/sten-icon安装",
+        "slug": "gf-ui-sten-icon安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/sten-icon/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "core首页",
     "headers": [
       {
@@ -325,20 +339,6 @@ export const searchIndex = [
     ],
     "path": "/zh/core/type.html",
     "pathLocale": "/zh/core",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/sten-icon安装",
-        "slug": "gf-ui-sten-icon安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/sten-icon/install.html",
-    "pathLocale": "/",
     "extraFields": []
   },
   {

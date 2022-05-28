@@ -34,3 +34,7 @@ description: 页面的描述
 | textColor     | 文字颜色   | boolean    | — | false   |
 | spin     | 旋转动画,使用loading   | boolean    | — | false   |
 | opacity     | 透明度   | number    | — | 1   |
+
+
+
+<CommentService></CommentService>

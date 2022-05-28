@@ -88,4 +88,4 @@
 </tr>
 </tbody>
 </table>
-</div></template>
+<CommentService></CommentService></div></template>
