@@ -47,8 +47,17 @@ export const themeData = {
         "text": "跨框架UI库",
         "children": [
           {
-            "text": "安装",
-            "link": "/zh/components/install"
+            "text": "快速开始",
+            "children": [
+              {
+                "text": "安装",
+                "link": "/zh/components/install"
+              },
+              {
+                "text": "使用",
+                "link": "/zh/components/use"
+              }
+            ]
           },
           {
             "text": "基础组件",

@@ -20,6 +20,24 @@ export const searchIndex = [
         "level": 2,
         "title": "Button 按钮",
         "slug": "button-按钮",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "基础用法",
+        "slug": "基础用法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "镂空按钮",
+        "slug": "镂空按钮",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "圆角按钮 和 Iconfont",
+        "slug": "圆角按钮-和-iconfont",
         "children": [
           {
             "level": 3,
@@ -92,15 +110,8 @@ export const searchIndex = [
   },
   {
     "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/sten-icon安装",
-        "slug": "gf-ui-sten-icon安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/sten-icon/install.html",
+    "headers": [],
+    "path": "/zh/components/use.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -339,6 +350,20 @@ export const searchIndex = [
     ],
     "path": "/zh/core/type.html",
     "pathLocale": "/zh/core",
+    "extraFields": []
+  },
+  {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/sten-icon安装",
+        "slug": "gf-ui-sten-icon安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/sten-icon/install.html",
+    "pathLocale": "/",
     "extraFields": []
   },
   {

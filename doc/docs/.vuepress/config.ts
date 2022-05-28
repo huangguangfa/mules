@@ -13,6 +13,7 @@ const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
 const commentPlugin = require("../../plugin/comment2/node/index");
 const demoCodePlugin = require("../../plugin/demo-code/src/node/index")
 const copyCodePlugin = require("../../plugin/copy-code/index")
+const tocPlugin = require("../../plugin/toc/index")
 
 import { registerInternalComponents } from "../../config/plugins.config"
 export default defineUserConfig({
@@ -66,6 +67,7 @@ export default defineUserConfig({
             copyOptions: { align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }
         }),
         copyCodePlugin(),
+        tocPlugin(),
         commentPlugin({
             type: "giscus",
             repo: "huanggungfa/doc-comment",
@@ -114,9 +116,21 @@ export default defineUserConfig({
         notFound: ['您当前路径不存在、请返回首页吧'],
         logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
     }),
+
     markdown: {
         code: {
-            lineNumbers: false
+            lineNumbers: true
+        },
+        toc: {
+            level: [1, 2, 3, 4, 5, 6],
+            format: (s) => {
+                // console.log(s)
+                return s + '1'
+            },
+            slugify: s => {
+                console.log(s)
+                return s
+            }
         }
     }
 })
