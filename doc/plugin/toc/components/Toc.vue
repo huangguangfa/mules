@@ -13,9 +13,10 @@ import {onMounted, reactive} from 'vue'
 import "./theme/index.css"
 const state = reactive({
     list: [],
-    show:document.body.clientWidth > 768
+    show:false
 })
 onMounted( () =>{
+    state.show = document.body.clientWidth > 768
     const tocList = document.getElementsByTagName('h4');
     state.list = Array.from(tocList).map(item => {
         return {

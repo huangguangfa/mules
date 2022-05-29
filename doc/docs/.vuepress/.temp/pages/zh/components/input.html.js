@@ -30,12 +30,12 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1653722557000,
+    "updatedTime": 1653822127000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 5
+        "commits": 6
       }
     ]
   },
@@ -44,17 +44,4 @@ export const data = {
     "minutes": 1.49,
     "words": 448
   }
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
 }
