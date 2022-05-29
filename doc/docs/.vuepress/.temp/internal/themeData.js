@@ -20,11 +20,11 @@ export const themeData = {
       "text": "gf-ui系列",
       "children": [
         {
-          "text": "组件库",
+          "text": "Components组件库",
           "link": "/zh/components/install"
         },
         {
-          "text": "核心库",
+          "text": "Core核心库",
           "link": "/zh/core/install/"
         }
       ]

@@ -35,8 +35,8 @@ export const data = {
   },
   "filePathRelative": "zh/core/ctypto.md",
   "readingTime": {
-    "minutes": 1.37,
-    "words": 411
+    "minutes": 1.38,
+    "words": 413
   }
 }
 

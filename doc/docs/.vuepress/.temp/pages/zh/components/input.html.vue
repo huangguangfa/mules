@@ -1,4 +1,4 @@
-<template><div><h2 id="input-按钮" tabindex="-1"><a class="header-anchor" href="#input-按钮" aria-hidden="true">#</a> Input 按钮</h2>
+<template><div><Toc></Toc><h2 id="input-按钮" tabindex="-1"><a class="header-anchor" href="#input-按钮" aria-hidden="true">#</a> Input 按钮</h2>
 <p>支持<code v-pre>input、textarea</code>两站类型输入, 支持图标+input混合, 包括支持输入框的状态、基本上定制化属性都是基于Input</p>
 <h4 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h4>
 
@@ -22,7 +22,7 @@
   <gf-input placeholder="请输入审批内容" type="textarea"></gf-input>
 </div>
 </template></DemoAndCode>
-<h4 id="禁用" tabindex="-1"><a class="header-anchor" href="#禁用" aria-hidden="true">#</a> 禁用</h4>
+<Toc></Toc><h4 id="禁用" tabindex="-1"><a class="header-anchor" href="#禁用" aria-hidden="true">#</a> 禁用</h4>
 
       <DemoAndCode
         htmlStr="%3Cdiv%20class%3D%22input%20borders%22%3E%0A%20%20%3Cgf-input%20placeholder%3D%22%E8%AF%B7%E8%BE%93%E5%85%A5%E5%A7%93%E5%90%8D%22%20disabled%3E%3C%2Fgf-input%3E%0A%20%20%3Cgf-input%20placeholder%3D%22%E8%AF%B7%E8%BE%93%E5%85%A5%E5%AE%A1%E6%89%B9%E5%86%85%E5%AE%B9%22%20type%3D%22textarea%22%20disabled%3E%3C%2Fgf-input%3E%0A%3C%2Fdiv%3E%0A"

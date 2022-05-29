@@ -166,8 +166,8 @@ export const data = {
   },
   "filePathRelative": "zh/core/type.md",
   "readingTime": {
-    "minutes": 1.55,
-    "words": 465
+    "minutes": 1.56,
+    "words": 467
   }
 }
 

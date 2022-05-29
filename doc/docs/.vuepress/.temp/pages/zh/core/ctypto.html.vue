@@ -79,4 +79,4 @@ Crypto<span class="token punctuation">.</span><span class="token function">decry
 <span class="token literal-property property">rabbitlegacy</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'RabbitLegacy'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token literal-property property">none</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
-</div></template>
+<CommentService></CommentService></div></template>

@@ -1,11 +1,9 @@
 <template>
     <div class="icon-lsit">
-        <div class="icon-blcok">
-            <h5>基础Icon</h5>
+        <div class="icon-blcok" v-if="type === 'base'">
             <ul v-html="iconComponents" @click="iconClick"></ul>
         </div>
-        <div class="icon-blcok">
-            <h5>彩色Icon</h5>
+        <div class="icon-blcok" v-else>
             <ul v-html="colorIconComponents" @click="iconClick"></ul>
         </div>
     </div>
@@ -14,6 +12,9 @@
 <script>
 import allIcon from "../../../packages/sten-icons/src/components/componentJsonLisFile.js"
 export default {
+    props:{
+        type:String
+    },
     data() {
         return {
             

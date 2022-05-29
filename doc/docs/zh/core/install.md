@@ -29,4 +29,4 @@ const gfcore = require("@gf-ui/core");
 
 ```
 
-
+<CommentService></CommentService>

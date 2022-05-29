@@ -105,4 +105,4 @@ Storage<span class="token punctuation">.</span><span class="token function">remo
 <li>清除所有的<code v-pre>本地缓存</code>和<code v-pre>会话缓存</code></li>
 </ul>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>Storage<span class="token punctuation">.</span><span class="token function">clearAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><CommentService></CommentService></div></template>

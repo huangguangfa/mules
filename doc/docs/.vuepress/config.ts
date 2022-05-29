@@ -104,11 +104,11 @@ export default defineUserConfig({
                 text: 'gf-ui系列',
                 children: [
                     {
-                        text: "组件库",
+                        text: "Components组件库",
                         link: "/zh/components/install",
                     },
                     {
-                        text: "核心库",
+                        text: "Core核心库",
                         link: "/zh/core/install/"
                     }
                 ]
@@ -126,7 +126,6 @@ export default defineUserConfig({
         toc: {
             level: [1, 2, 3, 4, 5, 6],
             format: (s) => {
-                // console.log(s)
                 return s + '1'
             },
             slugify: s => {

@@ -164,3 +164,6 @@ Type.json('', []) // []
 Type.json('', {}) // {}
 Type.json('[{"name":"gf-ui"}]', []) // [{ "name": "gf-ui" }]
 ```
+
+
+<CommentService></CommentService>

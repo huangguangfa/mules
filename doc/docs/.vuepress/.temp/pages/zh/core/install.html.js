@@ -22,8 +22,8 @@ export const data = {
   },
   "filePathRelative": "zh/core/install.md",
   "readingTime": {
-    "minutes": 0.55,
-    "words": 165
+    "minutes": 0.56,
+    "words": 167
   }
 }
 

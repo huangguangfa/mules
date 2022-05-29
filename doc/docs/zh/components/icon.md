@@ -8,6 +8,7 @@ tags:
 description: 页面的描述
 ---
 
+::: toc :::
 
 ## Icon
 语义化的矢量图标、图标来自阿里开源图标库, 玩法参考市面react玩法、按单个icon引入并使用,这样做的目的是为了`按需只加载`当前展示的对应图标、而不是对图标进行一个全局注入的方式, `点击图标进行icon组件复制`
@@ -21,7 +22,13 @@ description: 页面的描述
 </div>
 :::
 
-<GfIcons></GfIcons>
+#### 基础Icon
+
+<GfIcons type='base'></GfIcons>
+
+#### 彩色Icon
+
+<GfIcons type='color'></GfIcons>
 
 
 ### 配置属性

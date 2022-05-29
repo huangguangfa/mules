@@ -42,7 +42,7 @@ export const data = {
   "filePathRelative": "zh/components/input.md",
   "readingTime": {
     "minutes": 1.49,
-    "words": 447
+    "words": 448
   }
 }
 

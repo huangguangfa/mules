@@ -41,8 +41,8 @@ export const data = {
   },
   "filePathRelative": "zh/components/icon.md",
   "readingTime": {
-    "minutes": 0.71,
-    "words": 214
+    "minutes": 0.76,
+    "words": 227
   }
 }
 
