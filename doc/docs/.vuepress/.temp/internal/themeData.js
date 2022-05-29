@@ -1,4 +1,5 @@
 export const themeData = {
+  "logo": "https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png",
   "subSidebar": "auto",
   "selectLanguageText": "简体中文",
   "lastUpdatedText": "上次更新",
@@ -10,6 +11,7 @@ export const themeData = {
   "openInNewWindow": "在新窗口打开",
   "toggleDarkMode": "切换夜间模式",
   "toggleSidebar": "切换侧边栏",
+  "darkMode": false,
   "navbar": [
     {
       "text": "首页",
@@ -83,13 +85,11 @@ export const themeData = {
   "notFound": [
     "您当前路径不存在、请返回首页吧"
   ],
-  "logo": "https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png",
   "locales": {
     "/": {
       "selectLanguageName": "English"
     }
   },
-  "darkMode": true,
   "repo": null,
   "selectLanguageAriaLabel": "Select language",
   "sidebarDepth": 2,
@@ -97,4 +97,17 @@ export const themeData = {
   "editLinkText": "Edit this page",
   "lastUpdated": true,
   "contributors": true
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
 }

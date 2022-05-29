@@ -83,6 +83,7 @@ export default defineUserConfig({
         ['link', { rel: 'icon', href: '/css/reset.css' }]
     ],
     theme: defaultTheme({
+        logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
         subSidebar: 'auto',
         selectLanguageText: '简体中文',
         lastUpdatedText: '上次更新',
@@ -94,6 +95,7 @@ export default defineUserConfig({
         openInNewWindow: '在新窗口打开',
         toggleDarkMode: '切换夜间模式',
         toggleSidebar: '切换侧边栏',
+        darkMode: false,
         navbar: [
             {
                 text: '首页',
@@ -115,8 +117,7 @@ export default defineUserConfig({
             }
         ],
         sidebar,
-        notFound: ['您当前路径不存在、请返回首页吧'],
-        logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
+        notFound: ['您当前路径不存在、请返回首页吧']
     }),
 
     markdown: {
