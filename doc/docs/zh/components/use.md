@@ -7,10 +7,10 @@ tags:
 - webpack
 description: 页面的描述
 ---
-
+::: toc :::
 ## 接入不同框架和使用规则
 
-### HTML
+#### HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@ description: 页面的描述
 
 
 
-### Vue2.0
+#### Vue2
 ```js
 // 引入使用
 import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
@@ -51,7 +51,7 @@ defineCustomElements().then(() => {
 Vue.config.ignoredElements = [/gf-\w*/];
 ```
 
-### Vue3.0
+#### Vue3
 ```js
 // 引入使用
 import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
@@ -74,7 +74,7 @@ export default defineConfig({
 
 ```
 
-### React
+#### React
 ```js
 import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
 defineCustomElements().then(() => {

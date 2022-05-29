@@ -19,32 +19,7 @@ export const data = {
       "level": 2,
       "title": "接入不同框架和使用规则",
       "slug": "接入不同框架和使用规则",
-      "children": [
-        {
-          "level": 3,
-          "title": "HTML",
-          "slug": "html",
-          "children": []
-        },
-        {
-          "level": 3,
-          "title": "Vue2.0",
-          "slug": "vue2-0",
-          "children": []
-        },
-        {
-          "level": 3,
-          "title": "Vue3.0",
-          "slug": "vue3-0",
-          "children": []
-        },
-        {
-          "level": 3,
-          "title": "React",
-          "slug": "react",
-          "children": []
-        }
-      ]
+      "children": []
     }
   ],
   "git": {
@@ -59,7 +34,20 @@ export const data = {
   },
   "filePathRelative": "zh/components/use.md",
   "readingTime": {
-    "minutes": 0.81,
-    "words": 244
+    "minutes": 0.82,
+    "words": 245
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }
