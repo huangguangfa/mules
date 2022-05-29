@@ -9,7 +9,11 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {},
-  "filePathRelative": null
+  "filePathRelative": null,
+  "readingTime": {
+    "minutes": 0,
+    "words": 0
+  }
 }
 
 if (import.meta.webpackHot) {

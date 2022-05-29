@@ -39,7 +39,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/components/icon.md"
+  "filePathRelative": "zh/components/icon.md",
+  "readingTime": {
+    "minutes": 0.71,
+    "words": 214
+  }
 }
 
 if (import.meta.webpackHot) {

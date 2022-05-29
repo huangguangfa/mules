@@ -27,7 +27,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/core/README.md"
+  "filePathRelative": "zh/core/README.md",
+  "readingTime": {
+    "minutes": 0.02,
+    "words": 6
+  }
 }
 
 if (import.meta.webpackHot) {

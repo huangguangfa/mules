@@ -164,7 +164,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/core/type.md"
+  "filePathRelative": "zh/core/type.md",
+  "readingTime": {
+    "minutes": 1.55,
+    "words": 465
+  }
 }
 
 if (import.meta.webpackHot) {

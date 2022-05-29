@@ -16,3 +16,5 @@ yarn add @gf-ui/components
 // or
 npm install @gf-ui/components
 ```
+
+<CommentService></CommentService>

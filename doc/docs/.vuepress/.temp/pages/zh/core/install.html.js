@@ -20,7 +20,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/core/install.md"
+  "filePathRelative": "zh/core/install.md",
+  "readingTime": {
+    "minutes": 0.55,
+    "words": 165
+  }
 }
 
 if (import.meta.webpackHot) {

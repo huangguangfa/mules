@@ -33,7 +33,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/core/ctypto.md"
+  "filePathRelative": "zh/core/ctypto.md",
+  "readingTime": {
+    "minutes": 1.37,
+    "words": 411
+  }
 }
 
 if (import.meta.webpackHot) {

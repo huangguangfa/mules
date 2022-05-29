@@ -122,7 +122,7 @@ export default {
 
       if (!this.isShowCode) {
         this.getDomRect()
-        window.scrollTo({ top: this.scrollTop, behavior: 'smooth' })
+        // window.scrollTo({ top: this.scrollTop, behavior: 'smooth' })
       }
     },
     getDomRect () {

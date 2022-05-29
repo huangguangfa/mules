@@ -10,10 +10,11 @@ description: 页面的描述
 
 ## Button 按钮
 
+::: toc :::
+
 常用的操作按钮, 支持常规样貌和`定制化颜色需求`、包括`监听键盘事件`定制某些特殊场景
 
-
-## 基础用法
+#### 基础用法
 ::: demo
 <div class="flex" v-pre>
   <gf-button>普通按钮</gf-button>
@@ -26,7 +27,7 @@ description: 页面的描述
 :::
 
 
-## 镂空按钮
+#### 镂空按钮
 ::: demo
 <div class="flex">
   <gf-button>普通按钮</gf-button>
@@ -38,7 +39,7 @@ description: 页面的描述
 </div>
 :::
 
-## 圆角按钮 和 Iconfont
+#### 圆角按钮和Iconfont
 ::: demo
 <div class="flex">
   <gf-button size="small" circle>

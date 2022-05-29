@@ -3,19 +3,20 @@
  * @Date: 2022-05-22 11:36:55
  */
 const { path } = require('@vuepress/utils')
-import { defineUserConfig } from '@vuepress/cli';
-import sidebar from "../../config/sidebar.config";
+import { defineUserConfig } from '@vuepress/cli'
+import sidebar from "../../config/sidebar.config"
 import { viteBundler } from '@vuepress/bundler-vite'
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
-const commentPlugin = require("../../plugin/comment2/node/index");
+const commentPlugin = require("../../plugin/comment2/node/index")
 const demoCodePlugin = require("../../plugin/demo-code/src/node/index")
 const copyCodePlugin = require("../../plugin/copy-code/index")
 const tocPlugin = require("../../plugin/toc/index")
-
+const readingTimePlugin = require('../../plugin/reading-time/src/index')
 import { registerInternalComponents } from "../../config/plugins.config"
+
 export default defineUserConfig({
     // 站点配置
     lang: 'zh-CN',
@@ -66,8 +67,9 @@ export default defineUserConfig({
             styleStr: 'text-decoration: underline;',
             copyOptions: { align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }
         }),
-        copyCodePlugin(),
         tocPlugin(),
+        copyCodePlugin(),
+        readingTimePlugin(),
         commentPlugin({
             type: "giscus",
             repo: "huanggungfa/doc-comment",

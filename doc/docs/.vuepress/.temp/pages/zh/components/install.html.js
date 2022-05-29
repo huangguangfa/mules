@@ -23,16 +23,20 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1653580853000,
+    "updatedTime": 1653758070000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 3
+        "commits": 4
       }
     ]
   },
-  "filePathRelative": "zh/components/install.md"
+  "filePathRelative": "zh/components/install.md",
+  "readingTime": {
+    "minutes": 0.06,
+    "words": 19
+  }
 }
 
 if (import.meta.webpackHot) {

@@ -48,10 +48,20 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1653758070000,
+    "contributors": [
+      {
+        "name": "hgf",
+        "email": "1454556135@qq.com",
+        "commits": 1
+      }
+    ]
   },
-  "filePathRelative": "zh/components/use.md"
+  "filePathRelative": "zh/components/use.md",
+  "readingTime": {
+    "minutes": 0.81,
+    "words": 244
+  }
 }
 
 if (import.meta.webpackHot) {

@@ -2,4 +2,4 @@
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>yarn add @gf<span class="token operator">-</span>ui<span class="token operator">/</span>components 
 <span class="token comment">// or</span>
 npm install @gf<span class="token operator">-</span>ui<span class="token operator">/</span>components
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><CommentService></CommentService></div></template>

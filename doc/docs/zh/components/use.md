@@ -11,7 +11,6 @@ description: 页面的描述
 ## 接入不同框架和使用规则
 
 ### HTML
-::: tip 
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -38,11 +37,9 @@ description: 页面的描述
 </html>
 ```
 
-:::
 
 
 ### Vue2.0
-::: tip 
 ```js
 // 引入使用
 import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
@@ -53,10 +50,8 @@ defineCustomElements().then(() => {
 // main.js 过滤自定义组件、不让vue做组件解析
 Vue.config.ignoredElements = [/gf-\w*/];
 ```
-:::
 
 ### Vue3.0
-::: tip 
 ```js
 // 引入使用
 import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
@@ -78,10 +73,8 @@ export default defineConfig({
 });
 
 ```
-:::
 
 ### React
-::: tip 
 ```js
 import { defineCustomElements, applyPolyfills } from '@gf-ui/components/loader';
 defineCustomElements().then(() => {
@@ -89,4 +82,5 @@ defineCustomElements().then(() => {
 })
 
 ```
-:::
+
+<CommentService></CommentService>

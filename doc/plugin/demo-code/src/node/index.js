@@ -1,6 +1,5 @@
 const { path } = require('@vuepress/utils')
-const markdownItContainer = require('markdown-it-container')
-
+const markdownItContainer = require('./markdownItContainer')
 const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
 
 const defaults = {

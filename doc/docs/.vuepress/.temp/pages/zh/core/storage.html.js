@@ -63,7 +63,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/core/storage.md"
+  "filePathRelative": "zh/core/storage.md",
+  "readingTime": {
+    "minutes": 1.39,
+    "words": 418
+  }
 }
 
 if (import.meta.webpackHot) {

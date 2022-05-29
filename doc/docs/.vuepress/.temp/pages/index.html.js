@@ -40,7 +40,11 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "README.md"
+  "filePathRelative": "README.md",
+  "readingTime": {
+    "minutes": 0,
+    "words": 0
+  }
 }
 
 if (import.meta.webpackHot) {

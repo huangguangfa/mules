@@ -110,7 +110,39 @@ export const searchIndex = [
   },
   {
     "title": "sten-icon",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "接入不同框架和使用规则",
+        "slug": "接入不同框架和使用规则",
+        "children": [
+          {
+            "level": 3,
+            "title": "HTML",
+            "slug": "html",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Vue2.0",
+            "slug": "vue2-0",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Vue3.0",
+            "slug": "vue3-0",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "React",
+            "slug": "react",
+            "children": []
+          }
+        ]
+      }
+    ],
     "path": "/zh/components/use.html",
     "pathLocale": "/",
     "extraFields": []

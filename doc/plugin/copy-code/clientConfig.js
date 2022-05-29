@@ -35,7 +35,7 @@ export default defineClientConfig({
 
             el.classList.add("code-copy-added");
           });
-      }, 500);
+      }, 1000);
     };
     watch(() => page.value.path, update);
 
