@@ -7,15 +7,15 @@
   "license": "ISC",
   "main": "lib/gf-cli.js",
   "directories": {
-    "lib": "lib",
-    "config": "config",
-    "comand": "comand"
+    "lib": "lib"
   },
   "bin": {
     "gf-cli": "./bin/cli.js"
   },
   "files": [
-    "lib"
+    "lib",
+    "config",
+    "comand"
   ],
   "publishConfig": {
     "access": "public"
