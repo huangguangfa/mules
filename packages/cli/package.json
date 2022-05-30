@@ -10,6 +10,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
+  "bin": {
+    "gf-cli": "./bin/cli.js"
+  },
   "files": [
     "lib"
   ],
