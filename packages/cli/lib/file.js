@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const fsExtra = require('fs-extra');
+const chalk = require('chalk');
 
 
-function delDir() {
+function delDir(path) {
     let files = []
     // 判断路径是否存在文件夹
     if (fs.existsSync(path)) {

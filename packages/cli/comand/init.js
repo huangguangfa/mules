@@ -1,9 +1,12 @@
 #!/usr/bin/env node
+const path = require('path');
 const fs = require('fs')
 const prompt = require('./utils/prompt')
 const inquirer = require('inquirer')
 const { delDir, updateFile } = require('../lib/file')
 const { clone } = require('../lib/download');
+const symbols = require('log-symbols');
+const chalk = require('chalk');
 
 module.exports = function (projectName) {
     prompt().then(async (results) => {
@@ -11,10 +14,9 @@ module.exports = function (projectName) {
         if (!isOk) return;
         if (!fs.existsSync(projectName)) {
             // 1. clone git项目
-            const { clone } = require('../lib/download');
             console.log('🚀正在为您创建项目: ' + projectName);
 
-            await clone(`github.com/huanggungfa/${choice}`, projectName);
+            await clone(`github.com:huanggungfa/${choice}`, projectName);
             console.log(symbols.success, chalk.green(`项目${projectName}创建成功`));
             console.log(chalk.red('cd ' + projectName + '\nnpm install\nnpm run dev或者npm run start'))
             // 2. 同步package.json的配置.
