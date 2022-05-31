@@ -16,7 +16,8 @@ module.exports = function (projectName) {
             // 1. clone git项目
             console.log('🚀正在为您创建项目: ' + projectName);
 
-            await clone(`github.com:huanggungfa/${choice}`, projectName);
+            await clone(`https://github.com/huanggungfa/doc-comment/blob/main/doc/config/plugins.config.ts`, projectName);
+            // await clone(`github.com:huanggungfa/${choice}`, projectName);
             console.log(symbols.success, chalk.green(`项目${projectName}创建成功`));
             console.log(chalk.red('cd ' + projectName + '\nnpm install\nnpm run dev或者npm run start'))
             // 2. 同步package.json的配置.

@@ -34,7 +34,7 @@ const updateFile = (filePath, contents) => {
         const fileContent = Object.assign({}, require(filePath), contents);
         fsExtra.writeJSONSync(filePath, fileContent, { spaces: '\t' });
     } else {
-        throw new Error(chalk.red(`${filePath}不存在`));
+        chalk.red(`${filePath}不存在`);
     }
 };
 
