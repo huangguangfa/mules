@@ -45,8 +45,12 @@
     },
     "husky": {
         "hooks": {
-            "commit-msg": "commitlint -e -V"
+            "commit-msg": "commitlint -e -V",
+            "pre-commit": "node /scripts/husky/pre-commit.js"
         }
+    },
+    "lint-staged": {
+        "packages/**/*.js": "eslint"
     },
     "dependencies": {}
 }
