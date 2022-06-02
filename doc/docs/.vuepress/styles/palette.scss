@@ -144,7 +144,7 @@ h6{
     margin: 0 !important;
 }
 
-ul,ol,menu{list-style:none}
+// ul,ol,menu{list-style:none}
 
 
 
@@ -241,6 +241,13 @@ td{
         }
     }
     
+}
+.home .hero .action-button.primary:hover{
+    background-color:#747bff;
+}
+.home .hero .action-button.secondary:hover{
+    color: var(--c-bg);
+    background-color: #747bff;
 }
 // 黑夜
 .dark{

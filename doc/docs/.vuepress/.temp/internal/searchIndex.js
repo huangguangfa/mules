@@ -77,12 +77,12 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "sten-icon",
+    "title": "安装",
     "headers": [
       {
-        "level": 3,
-        "title": "@gf-ui/components安装",
-        "slug": "gf-ui-components安装",
+        "level": 2,
+        "title": "安装",
+        "slug": "安装",
         "children": []
       }
     ],
@@ -91,30 +91,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 2,
-        "title": "接入不同框架和使用规则",
-        "slug": "接入不同框架和使用规则",
-        "children": []
-      }
-    ],
+    "title": "框架集成",
+    "headers": [],
     "path": "/zh/components/use.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "sten-icon",
-    "headers": [
-      {
-        "level": 3,
-        "title": "@gf-ui/sten-icon安装",
-        "slug": "gf-ui-sten-icon安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/sten-icon/install.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -356,6 +335,20 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "sten-icon",
+    "headers": [
+      {
+        "level": 3,
+        "title": "@gf-ui/sten-icon安装",
+        "slug": "gf-ui-sten-icon安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/sten-icon/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/404.html",
@@ -363,16 +356,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

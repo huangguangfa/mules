@@ -1,5 +1,7 @@
-<template><div><Toc></Toc><h2 id="接入不同框架和使用规则" tabindex="-1"><a class="header-anchor" href="#接入不同框架和使用规则" aria-hidden="true">#</a> 接入不同框架和使用规则</h2>
-<h4 id="html" tabindex="-1"><a class="header-anchor" href="#html" aria-hidden="true">#</a> HTML</h4>
+<template><div><Toc></Toc><div class="custom-container tip"><p class="custom-container-title">接入不同框架和使用规则</p>
+<p>集成的方式有两种分别是: <code v-pre>按需</code> 与 <code v-pre>加载全部</code>, 在传统的框架技术里面都用按需打包技术、所以作者也是建议您在使用此库的时候可以选择按需的模式引入组件, 这样有助与您可以减少项目的体积大小, 提高性能 😊</p>
+</div>
+<Toc></Toc><h4 id="html" tabindex="-1"><a class="header-anchor" href="#html" aria-hidden="true">#</a> HTML</h4>
 <div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 
@@ -58,4 +60,4 @@ Vue<span class="token punctuation">.</span>config<span class="token punctuation"
     <span class="token function">applyPolyfills</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><CommentService></CommentService><Toc></Toc></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><CommentService></CommentService></div></template>

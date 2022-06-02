@@ -7,21 +7,33 @@ export const data = {
     "home": true,
     "heroImage": "https://artice-code-1258339218.cos.ap-beijing.myqcloud.com/vuepress/element-index.png",
     "heroText": "跨框架企业级UI库",
-    "features": [
+    "tagline": "解决不同框架UI库选择问题、做到一套UI适配 vue, react, html, angular",
+    "actions": [
       {
-        "title": "一致性 Consistency",
-        "details": "与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念"
+        "text": "快速上手",
+        "link": "/zh/components/install.html",
+        "type": "primary"
       },
       {
-        "title": "反馈 Feedback",
-        "details": "通过界面样式和交互动效让用户可以清晰的感知自己的操作"
-      },
-      {
-        "title": "效率 Efficiency",
-        "details": "界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。"
+        "text": "项目简介",
+        "link": "/zh/components/install.html",
+        "type": "secondary"
       }
     ],
-    "footer": "gf-ui"
+    "features": [
+      {
+        "title": "建设中",
+        "details": "建设中"
+      },
+      {
+        "title": "建设中",
+        "details": "建设中"
+      },
+      {
+        "title": "建设中",
+        "details": "建设中"
+      }
+    ]
   },
   "excerpt": "",
   "headers": [],
@@ -45,17 +57,4 @@ export const data = {
     "minutes": 0,
     "words": 0
   }
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
 }
