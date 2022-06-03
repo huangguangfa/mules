@@ -1,5 +1,4 @@
 export const themeData = {
-  "logo": "https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png",
   "subSidebar": "auto",
   "selectLanguageText": "简体中文",
   "lastUpdatedText": "上次更新",
@@ -83,13 +82,14 @@ export const themeData = {
     ]
   },
   "notFound": [
-    "您当前路径不存在、请返回首页吧"
+    "您当前路径不存在、返回首页吧"
   ],
   "locales": {
     "/": {
       "selectLanguageName": "English"
     }
   },
+  "logo": null,
   "repo": null,
   "selectLanguageAriaLabel": "Select language",
   "sidebarDepth": 2,

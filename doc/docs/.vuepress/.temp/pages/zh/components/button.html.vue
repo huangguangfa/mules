@@ -1,5 +1,5 @@
-<template><div><h2 id="button-按钮" tabindex="-1"><a class="header-anchor" href="#button-按钮" aria-hidden="true">#</a> Button 按钮</h2>
-<Toc></Toc><p>常用的操作按钮, 支持常规样貌和<code v-pre>定制化颜色需求</code>、包括<code v-pre>监听键盘事件</code>定制某些特殊场景</p>
+<template><div><Toc></Toc><h2 id="button-按钮" tabindex="-1"><a class="header-anchor" href="#button-按钮" aria-hidden="true">#</a> Button 按钮</h2>
+<p>常用的操作按钮, 支持常规样貌和<code v-pre>定制化颜色需求</code>、包括<code v-pre>监听键盘事件</code>定制某些特殊场景</p>
 <h4 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h4>
 
       <DemoAndCode

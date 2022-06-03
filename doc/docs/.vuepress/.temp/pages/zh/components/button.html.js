@@ -6,12 +6,7 @@ export const data = {
   "frontmatter": {
     "lang": "zh-CN",
     "title": "button",
-    "date": "2022-5-9",
-    "tags": [
-      "vue",
-      "webpack"
-    ],
-    "description": "页面的描述"
+    "date": "2022-5-9"
   },
   "excerpt": "",
   "headers": [

@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: button
+title: icon
 date: 2022-5-10 
 tags:
 - vue
@@ -21,6 +21,7 @@ description: 页面的描述
     <gf-icon-arrow-down class="m15"></gf-icon-arrow-down>
 </div>
 :::
+
 
 #### 基础Icon
 

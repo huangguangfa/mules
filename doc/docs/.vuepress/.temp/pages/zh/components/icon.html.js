@@ -1,11 +1,11 @@
 export const data = {
   "key": "v-238c7d6f",
   "path": "/zh/components/icon.html",
-  "title": "button",
+  "title": "icon",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "button",
+    "title": "icon",
     "date": "2022-5-10",
     "tags": [
       "vue",

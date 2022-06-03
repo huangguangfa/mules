@@ -65,7 +65,7 @@ export default {
     highlightCodeStr: { type: String, default: '' },
     minHeight: {
       type: Number,
-      default: 200,
+      default: 0,
       validator: val => val >= 0,
     },
   },
@@ -73,10 +73,10 @@ export default {
     return {
       scrollTop: 0,
       platforms: PLATFORMS,
-      codeHeight: 9999,
+      codeHeight: 500,
       navbarHeight: 0,
 
-      isShowCode: true,
+      isShowCode: false,
       isShowControl: true,
     }
   },
@@ -91,9 +91,11 @@ export default {
       transform: vm.isShowCode ? 'rotate(0)' : 'rotate(-180deg)',
     }),
     // animation
-    codeWrapperStyle: (vm) => ({
-      'max-height': vm.isShowCode ? `${vm.codeHeight}px` : `${vm.minHeight}px`,
-    }),
+    codeWrapperStyle: (vm) => {
+      return {
+        'max-height': vm.isShowCode ? `${vm.codeHeight}px` : `${vm.minHeight}px`,
+      }
+    },
     // sticky
     codeControlStyle: (vm) => ({
       top: vm.isShowCode ? `${vm.navbarHeight}px` : '0',
@@ -141,12 +143,12 @@ export default {
   },
 
   mounted () {
-    this.getDomRect()
-    this.isShowCode = false
+    // this.getDomRect()
+    // this.isShowCode = false
 
-    if (this.codeHeight < this.minHeight) {
-      this.isShowControl = false
-    }
+    // if (this.codeHeight < this.minHeight) {
+    //   this.isShowControl = false
+    // }
   },
 }
 </script>

@@ -49,9 +49,6 @@ export default defineUserConfig({
         },
     }),
     plugins: [
-        registerComponentsPlugin({
-            ...registerInternalComponents()
-        }),
         searchPlugin({
             locales: {
                 '/zh': {
@@ -77,13 +74,16 @@ export default defineUserConfig({
             category: "General",
             categoryId: "DIC_kwDOHZreBc4CPTz5",
         }),
+        registerComponentsPlugin({
+            ...registerInternalComponents()
+        }),
     ],
     head: [
-        ['link', { rel: 'icon', href: '/images/logo.png' }],
+        ['link', { rel: 'icon', href: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png' }],
         ['link', { rel: 'icon', href: '/css/reset.css' }]
     ],
     theme: defaultTheme({
-        logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
+        // logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
         subSidebar: 'auto',
         selectLanguageText: '简体中文',
         lastUpdatedText: '上次更新',
@@ -117,22 +117,12 @@ export default defineUserConfig({
             }
         ],
         sidebar,
-        notFound: ['您当前路径不存在、请返回首页吧']
+        notFound: ['您当前路径不存在、返回首页吧']
     }),
 
     markdown: {
         code: {
             lineNumbers: true
-        },
-        toc: {
-            level: [1, 2, 3, 4, 5, 6],
-            format: (s) => {
-                return s + '1'
-            },
-            slugify: s => {
-                console.log(s)
-                return s
-            }
         }
     }
 })

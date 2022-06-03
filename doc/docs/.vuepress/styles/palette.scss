@@ -234,11 +234,17 @@ td{
         border-bottom-right-radius: 10px;
         .control-btn{
             font-size: 14px;
-            color: #747bff;
+            color: rgba(116,123,255,.5);
             .arrow-icon{
-                border-bottom: 6px solid #747bff !important;
+                border-bottom: 6px solid rgba(116,123,255,.5) !important;
             }
         }
+    }
+    .code-control:hover .control-btn{
+        color: rgba(116,123,255,1);
+    }
+    .code-control:hover .control-btn>.arrow-icon{
+        border-bottom: 6px solid rgba(116,123,255,1) !important;
     }
     
 }

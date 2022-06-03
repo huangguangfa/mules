@@ -8,7 +8,7 @@ export const siteData = {
       "link",
       {
         "rel": "icon",
-        "href": "/images/logo.png"
+        "href": "https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png"
       }
     ],
     [

@@ -24,12 +24,12 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1653820910000,
+    "updatedTime": 1654175120000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 5
+        "commits": 6
       }
     ]
   },

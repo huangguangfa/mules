@@ -2,15 +2,11 @@
 lang: zh-CN
 title: button
 date: 2022-5-9  
-tags:
-- vue
-- webpack
-description: 页面的描述
 ---
 
-## Button 按钮
-
 ::: toc :::
+
+## Button 按钮
 
 常用的操作按钮, 支持常规样貌和`定制化颜色需求`、包括`监听键盘事件`定制某些特殊场景
 
