@@ -25,18 +25,18 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1653820910000,
+    "updatedTime": 1654256003000,
     "contributors": [
       {
         "name": "hgf",
         "email": "1454556135@qq.com",
-        "commits": 18
+        "commits": 19
       }
     ]
   },
   "filePathRelative": "zh/components/button.md",
   "readingTime": {
-    "minutes": 3.32,
-    "words": 997
+    "minutes": 3.3,
+    "words": 991
   }
 }

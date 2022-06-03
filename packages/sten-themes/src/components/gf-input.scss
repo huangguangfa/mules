@@ -21,7 +21,7 @@
   @include e(inner) {
     border: none;
     width: 100%;
-    padding: 5px 0px;
+    padding: 0;
     &::placeholder {
       color: $--input-placeholder-color;
       font-size: 12px;

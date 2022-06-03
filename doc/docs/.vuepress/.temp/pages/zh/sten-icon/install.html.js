@@ -32,9 +32,5 @@ export const data = {
       }
     ]
   },
-  "filePathRelative": "zh/sten-icon/install.md",
-  "readingTime": {
-    "minutes": 0.04,
-    "words": 13
-  }
+  "filePathRelative": "zh/sten-icon/install.md"
 }

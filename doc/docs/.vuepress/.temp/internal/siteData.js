@@ -17,6 +17,20 @@ export const siteData = {
         "rel": "icon",
         "href": "/css/reset.css"
       }
+    ],
+    [
+      "script",
+      {
+        "type": "module",
+        "src": "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.esm.js"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "stylesheet",
+        "href": "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.css"
+      }
     ]
   ],
   "locales": {

@@ -10,6 +10,7 @@ date: 2022-5-9
 
 常用的操作按钮, 支持常规样貌和`定制化颜色需求`、包括`监听键盘事件`定制某些特殊场景
 
+
 #### 基础用法
 ::: demo
 <div class="flex" v-pre>
@@ -132,7 +133,6 @@ date: 2022-5-9
 #### 按钮组
 ::: demo
 <div class="flex reset">
-  <!-- 上下页 -->
   <gf-button-group>
     <gf-button color="primary">
         <gf-icon-arrow-left slot="icon-left" size="20" color="white"></gf-icon-arrow-left>
@@ -144,7 +144,6 @@ date: 2022-5-9
     </gf-button>
   </gf-button-group>
   
-  <!-- 随机Icon -->
   <gf-button-group class="ml20">
     <gf-button color="primary">
         <gf-icon-add-select color="white" size="20"></gf-icon-add-select>

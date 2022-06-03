@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.18.3.tgz#39e99c7b0c4c56cef4d1eed8de9f506411c2ebc2"
   integrity sha512-rL50YcEuHbbauAFAysNsJA4/f89fGTOBRNs9P81sniKnKAr4xULe5AecolcsKbi88xu0ByWYDj/S1AJ3FSFuSQ==
 
-"@gf-ui/components@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@gf-ui/components/-/components-0.0.9.tgz#832aa2c745e9d9f642ab4457bbd4b88034954df7"
-  integrity sha512-cw0gOJOUUJzVmu3fE7K6dYWKi4nR4KYCS9PsXAs14tqp/sUs91o7h5JK/N8GEUSOABhUDCWruGNJmoTObFrC4w==
+"@gf-ui/components@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@gf-ui/components/-/components-0.0.11.tgz#083a5c802b130fe2b543d42f1cc141eb3ea00a12"
+  integrity sha512-cJN3LXF78rxUuJN+4A1eIthynDszfPIZZE1Das/azACu4KdCAD7HddXrbPyNBsIStmDAEb4M0hEYWdnvCbYJWg==
   dependencies:
     "@stencil/core" "^2.15.1"
 

@@ -205,7 +205,7 @@ export class GfInput {
           ${this.status ? 'is-input-' + this.status : ''}`}>
           <slot name='before'></slot>
           {this.getInputInstance()}
-          {this.clearable && this.curentValue ? this.getClearInstance() : ''}
+          {this.type !== 'textarea' && this.clearable && this.curentValue ? this.getClearInstance() : ''}
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
           <slot name='after'></slot>

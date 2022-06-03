@@ -80,7 +80,9 @@ export default defineUserConfig({
     ],
     head: [
         ['link', { rel: 'icon', href: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png' }],
-        ['link', { rel: 'icon', href: '/css/reset.css' }]
+        ['link', { rel: 'icon', href: '/css/reset.css' }],
+        ['script', { type: 'module', src: 'https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.esm.js' }],
+        ['link', { rel: 'stylesheet', href: 'https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.css' }],
     ],
     theme: defaultTheme({
         // logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
