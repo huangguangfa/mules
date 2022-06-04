@@ -1,5 +1,4 @@
-<template><div><h1 id="crypto" tabindex="-1"><a class="header-anchor" href="#crypto" aria-hidden="true">#</a> Crypto</h1>
-<h1 id="核心类" tabindex="-1"><a class="header-anchor" href="#核心类" aria-hidden="true">#</a> 核心类</h1>
+<template><div><h2 id="crypto" tabindex="-1"><a class="header-anchor" href="#crypto" aria-hidden="true">#</a> Crypto</h2>
 <div class="custom-container tip"><p class="custom-container-title">数据加密、支持常用的加密方式和不常用的加密</p>
 </div>
 <h3 id="encrypt" tabindex="-1"><a class="header-anchor" href="#encrypt" aria-hidden="true">#</a> <code v-pre>encrypt</code></h3>

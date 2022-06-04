@@ -1,11 +1,11 @@
 export const data = {
   "key": "v-11de8e97",
   "path": "/zh/core/type.html",
-  "title": "Type类",
+  "title": "类型检查",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "Type类",
+    "title": "类型检查",
     "description": "页面的描述"
   },
   "excerpt": "",
@@ -166,8 +166,8 @@ export const data = {
   },
   "filePathRelative": "zh/core/type.md",
   "readingTime": {
-    "minutes": 1.56,
-    "words": 467
+    "minutes": 1.54,
+    "words": 463
   }
 }
 

@@ -17,16 +17,15 @@ export const data = {
   "headers": [
     {
       "level": 2,
-      "title": "Icon",
-      "slug": "icon",
-      "children": [
-        {
-          "level": 3,
-          "title": "配置属性",
-          "slug": "配置属性",
-          "children": []
-        }
-      ]
+      "title": "Icon图标",
+      "slug": "icon图标",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "配置属性",
+      "slug": "配置属性",
+      "children": []
     }
   ],
   "git": {
@@ -42,7 +41,7 @@ export const data = {
   "filePathRelative": "zh/components/icon.md",
   "readingTime": {
     "minutes": 0.76,
-    "words": 227
+    "words": 229
   }
 }
 

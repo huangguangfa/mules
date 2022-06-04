@@ -14,14 +14,13 @@ export const data = {
       "level": 2,
       "title": "Button 按钮",
       "slug": "button-按钮",
-      "children": [
-        {
-          "level": 3,
-          "title": "配置属性",
-          "slug": "配置属性",
-          "children": []
-        }
-      ]
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "配置属性",
+      "slug": "配置属性",
+      "children": []
     }
   ],
   "git": {

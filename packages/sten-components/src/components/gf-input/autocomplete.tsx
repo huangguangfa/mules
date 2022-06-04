@@ -5,6 +5,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class GfAutocomplete {
     @Prop() show: Boolean = false;
+
     render() {
         return (
             <Host>

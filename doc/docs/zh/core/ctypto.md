@@ -1,11 +1,10 @@
 ---
 lang: zh-CN
-title: Crypto类
+title: 数据加密
 description: 页面的描述
 ---
 
-# Crypto
-# 核心类
+## Crypto
 ::: tip 数据加密、支持常用的加密方式和不常用的加密
 :::
 

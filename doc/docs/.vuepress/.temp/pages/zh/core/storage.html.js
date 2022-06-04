@@ -1,11 +1,11 @@
 export const data = {
   "key": "v-7d1f8f86",
   "path": "/zh/core/storage.html",
-  "title": "Storage类",
+  "title": "本地存储",
   "lang": "zh-CN",
   "frontmatter": {
     "lang": "zh-CN",
-    "title": "Storage类",
+    "title": "本地存储",
     "description": "页面的描述"
   },
   "excerpt": "",

@@ -1,6 +1,4 @@
-<template><div><h1 id="type" tabindex="-1"><a class="header-anchor" href="#type" aria-hidden="true">#</a> Type</h1>
-<h1 id="核心类" tabindex="-1"><a class="header-anchor" href="#核心类" aria-hidden="true">#</a> 核心类</h1>
-<div class="custom-container tip"><p class="custom-container-title">提供数据类型判断</p>
+<template><div><div class="custom-container tip"><p class="custom-container-title">提供数据类型判断</p>
 </div>
 <h3 id="isobject" tabindex="-1"><a class="header-anchor" href="#isobject" aria-hidden="true">#</a> <code v-pre>isObject</code></h3>
 <ul>

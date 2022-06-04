@@ -304,3 +304,20 @@ table tr:hover{
     background: #fbf8e9;
     transition: all .1s ease-in-out;
 }
+
+
+h2{
+    position: relative;
+    display: inline-block;
+    &::after{
+        background-color: rgb(76, 72, 255);
+        bottom: 0;
+        display: inline;
+        content: '';
+        height: 50%;
+        left: 0;
+        opacity: 0.25;
+        position: absolute;
+        width: 100%;
+    }
+}

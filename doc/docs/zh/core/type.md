@@ -1,11 +1,9 @@
 ---
 lang: zh-CN
-title: Type类
+title: 类型检查
 description: 页面的描述
 ---
 
-# Type
-# 核心类
 ::: tip 提供数据类型判断
 :::
 

@@ -9,7 +9,14 @@ export const data = {
     "description": "页面的描述"
   },
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "使用与安装",
+      "slug": "使用与安装",
+      "children": []
+    }
+  ],
   "git": {
     "updatedTime": 1653822127000,
     "contributors": [
@@ -22,8 +29,8 @@ export const data = {
   },
   "filePathRelative": "zh/core/install.md",
   "readingTime": {
-    "minutes": 0.56,
-    "words": 167
+    "minutes": 0.57,
+    "words": 170
   }
 }
 

@@ -44,6 +44,7 @@ export class GfInput {
   @Prop() maxRows: number | string;
   @Prop() rows: number | string = 2;
   @Prop() autosize: boolean = false;
+  @Prop() arrays: {}[] = []
 
   @State() curentValue: string = '';
   @State() autocompleteState: Boolean = true;

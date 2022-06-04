@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: Storage类
+title: 本地存储
 description: 页面的描述
 ---
 
