@@ -8,13 +8,13 @@ export function isKorean(text) {
 
 
 export function injectComponents(componentsList) {
-    console.log(componentsList)
     for (const cName in componentsList) {
         const elements = componentsList[cName];
         const elementsName = cName
             .replace(/([A-Z])/g, "-$1")
             .toLowerCase()
             .substring(1);
+        console.log(elementsName)
         customElements.define(elementsName, elements);
     }
 }

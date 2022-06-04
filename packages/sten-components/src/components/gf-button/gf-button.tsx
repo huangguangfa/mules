@@ -1,9 +1,9 @@
-import { Component, Host, h, Prop, Watch, Method, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, Watch, Method, Event, EventEmitter, Element } from '@stencil/core';
 import { ButtonColor, ButtonSize } from "../../types/gf-button";
 import { getButtonColor, getButtonStyle } from "./_button";
+
 @Component({
-    tag: 'gf-button',
-    shadow: false
+    tag: 'gf-button'
 })
 
 export class GfButton {
@@ -15,20 +15,9 @@ export class GfButton {
     @Prop() size: ButtonSize = ""; // 大 中 小
     @Prop() circle: boolean = false; // 圆形
     @Prop() nativeType: string = 'button'; // 原生类型
+    @Element() host: HTMLElement;
 
-    componentWillLoad() {
-        console.log('lifecycle load')
-    }
-
-    @Watch("disabled")
-    changeDisabled(newValue: boolean, oldValue: boolean) {
-        console.log('[watch]--改变disabled状态', newValue, oldValue)
-    }
-
-    @Method()
-    async _internal() {
-        console.log('外部调用内部方法');
-    }
+    button
 
     @Event({
         eventName: "on-click",
@@ -53,6 +42,7 @@ export class GfButton {
                 <button
                     onClick={this.handClick.bind(this)}
                     type={this.nativeType}
+                    ref={el => this.button = el}
                     class={`gf-button 
                         ${this.classNames} 
                         ${getButtonColor(this.color)} 

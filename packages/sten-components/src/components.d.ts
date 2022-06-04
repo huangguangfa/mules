@@ -8,8 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ButtonColor, ButtonSize } from "./types/gf-button";
 import { status } from "./types/var";
 export namespace Components {
+    interface GfAutocomplete {
+    }
     interface GfButton {
-        "_internal": () => Promise<void>;
         "circle": boolean;
         "classNames": string;
         "color": ButtonColor;
@@ -386,6 +387,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLGfAutocompleteElement extends Components.GfAutocomplete, HTMLStencilElement {
+    }
+    var HTMLGfAutocompleteElement: {
+        prototype: HTMLGfAutocompleteElement;
+        new (): HTMLGfAutocompleteElement;
+    };
     interface HTMLGfButtonElement extends Components.GfButton, HTMLStencilElement {
     }
     var HTMLGfButtonElement: {
@@ -669,6 +676,7 @@ declare global {
         new (): HTMLGfTagElement;
     };
     interface HTMLElementTagNameMap {
+        "gf-autocomplete": HTMLGfAutocompleteElement;
         "gf-button": HTMLGfButtonElement;
         "gf-button-group": HTMLGfButtonGroupElement;
         "gf-icon-add-cart-fill": HTMLGfIconAddCartFillElement;
@@ -719,6 +727,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface GfAutocomplete {
+    }
     interface GfButton {
         "circle"?: boolean;
         "classNames"?: string;
@@ -1089,6 +1099,7 @@ declare namespace LocalJSX {
         "onEventBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
         "onEventChange"?: (event: CustomEvent<string>) => void;
         "onEventClear"?: (event: CustomEvent<string>) => void;
+        "onEventEnter"?: (event: CustomEvent<string>) => void;
         "onEventFocus"?: (event: CustomEvent<FocusEvent>) => void;
         "onEventInput"?: (event: CustomEvent<string>) => void;
         "placeholder"?: string;
@@ -1101,6 +1112,7 @@ declare namespace LocalJSX {
     interface GfTag {
     }
     interface IntrinsicElements {
+        "gf-autocomplete": GfAutocomplete;
         "gf-button": GfButton;
         "gf-button-group": GfButtonGroup;
         "gf-icon-add-cart-fill": GfIconAddCartFill;
@@ -1154,6 +1166,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "gf-autocomplete": LocalJSX.GfAutocomplete & JSXBase.HTMLAttributes<HTMLGfAutocompleteElement>;
             "gf-button": LocalJSX.GfButton & JSXBase.HTMLAttributes<HTMLGfButtonElement>;
             "gf-button-group": LocalJSX.GfButtonGroup & JSXBase.HTMLAttributes<HTMLGfButtonGroupElement>;
             "gf-icon-add-cart-fill": LocalJSX.GfIconAddCartFill & JSXBase.HTMLAttributes<HTMLGfIconAddCartFillElement>;

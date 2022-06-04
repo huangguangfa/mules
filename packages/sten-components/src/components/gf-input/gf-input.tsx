@@ -4,10 +4,11 @@ import { injectComponents } from "../../utils"
 import { GfIconclear } from "../gf-icon/gf-icon-clear"
 import { GfIconinfo } from "../gf-icon/gf-icon-info"
 import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
+import { GfAutocomplete } from "./autocomplete"
 
-injectComponents({
-  GfIconclear, GfIconinfo, GfIconsuccessFill
-});
+// injectComponents({
+//   GfIconclear, GfIconinfo, GfIconsuccessFill
+// });
 import type { status } from "../../types/var"
 const STATUS = {
   "success": {
@@ -104,6 +105,7 @@ export class GfInput {
     this.eventChange.emit(e.target.value)
   }
   @Event() private eventClear: EventEmitter<string>
+  @Event() private eventEnter: EventEmitter<string>
 
   private handClearClick = () => {
     this.setCurrentValue('')
@@ -127,7 +129,7 @@ export class GfInput {
   }
   private onKeydown = (ev: KeyboardEvent) => {
     if (ev.key === 'Enter') {
-      console.log('enter')
+      this.eventEnter.emit(this.curentValue)
     }
   }
   private resizeTextarea() {
@@ -192,6 +194,7 @@ export class GfInput {
         onBlur={this.handleBlur}
         onInput={this.handleInput}
         onChange={this.handleChange}
+        onKeyDown={this.onKeydown}
         ref={input => this.nativeInput = input}
       ></textarea>
   }
@@ -209,6 +212,7 @@ export class GfInput {
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
           <slot name='after'></slot>
+          <gf-autocomplete></gf-autocomplete>
         </div>
       </Host>
     );

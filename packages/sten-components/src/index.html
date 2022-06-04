@@ -12,24 +12,26 @@
 </head>
 
 <body>
-    <div style="width:200px;margin-top: 10px;">
+
+    <!-- <div style="width:200px;margin-top: 10px;">
         <gf-input placeholder="输入审批理由" clearable></gf-input>
     </div>
-    <div style="width:200px;margin-top: 10px;">
+    <div style="width:200px;margin-top: 10px;" id="inputs">
         <gf-input placeholder="输入审批理由" clearable type="textarea" rows="2"></gf-input>
+    </div> -->
+
+    <div style="width:200px;margin-top: 10px;" id="inputs">
+        <gf-input></gf-input>
     </div>
+
+
 </body>
 
 </html>
 
 <script>
-    // const input = document.getElementById('inputs');
-    // input.addEventListener('onInput', function (e) {
-    //     console.log('2222', e);
-    // });
+    const input = document.getElementById('inputs');
+    input.addEventListener('eventEnter', function (e) {
+        console.log('2222', e);
+    });
 </script>
-
-
-<style>
-
-</style>
