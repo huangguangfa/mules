@@ -46,6 +46,7 @@ export class GfInput {
   @Prop() autosize: boolean = false;
 
   @State() curentValue: string = '';
+  @State() autocompleteState: Boolean = true;
   @State() calculateStyle = {
     resize: this.resize
   };
@@ -85,11 +86,13 @@ export class GfInput {
   @Event() eventFocus: EventEmitter<FocusEvent>
   private handleFocus = (e) => {
     this.eventFocus.emit(e)
+    this.autocompleteState = true;
   }
 
   @Event() eventBlur: EventEmitter<HTMLAreaElement>
   private handleBlur = (e) => {
     this.eventBlur.emit(e)
+    this.autocompleteState = false;
   }
 
   @Event() eventInput: EventEmitter<string>
@@ -212,7 +215,7 @@ export class GfInput {
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
           <slot name='after'></slot>
-          <gf-autocomplete></gf-autocomplete>
+          <gf-autocomplete show={this.autocompleteState}></gf-autocomplete>
         </div>
       </Host>
     );

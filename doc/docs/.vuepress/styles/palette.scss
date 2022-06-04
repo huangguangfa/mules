@@ -295,3 +295,12 @@ td{
 div[class*=language-].line-numbers-mode::after{
     border-right: transparent;
 }
+
+th{
+    background-color: #dce9f9 !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#ebf3fc),to(#dce9f9));
+}
+table tr:hover{
+    background: #fbf8e9;
+    transition: all .1s ease-in-out;
+}

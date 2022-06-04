@@ -40,7 +40,7 @@ export default defineComponent({
       repoId: giscusOption.repoId,
       category: giscusOption.category,
       categoryId: giscusOption.categoryId,
-      lang: 'zh-CN',
+      lang: 'en',
       theme: props.darkmode ? "dark" : "light",
       mapping: (giscusOption.mapping || "specific"),
       term: withBase(route.path),

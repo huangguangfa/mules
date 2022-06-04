@@ -9,6 +9,7 @@ import { ButtonColor, ButtonSize } from "./types/gf-button";
 import { status } from "./types/var";
 export namespace Components {
     interface GfAutocomplete {
+        "show": Boolean;
     }
     interface GfButton {
         "circle": boolean;
@@ -728,6 +729,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface GfAutocomplete {
+        "show"?: Boolean;
     }
     interface GfButton {
         "circle"?: boolean;

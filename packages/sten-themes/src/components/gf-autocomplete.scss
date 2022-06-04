@@ -6,11 +6,9 @@
 @include b(autocomplete){
     position: absolute;
     border-radius: 4px;
-    border: 1px solid #e4e7ed;
     box-sizing: border-box;
     background-color: #fff;
     width: 100%;
-    height: 200px;
     left: 0;
     bottom:-10px;
     transform: translateY(100%);
@@ -21,6 +19,11 @@
         width: 100%;
         font-size: 12px;
         margin: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .5s;
+        will-change:max-height;
+        transform-origin: center top;
         @include e(option){
             display: inline-block;
             max-width: 100%;
@@ -32,8 +35,6 @@
             line-height: 1.5;
             text-align: left;
             white-space: nowrap;
-            -webkit-transition: all .3s;
-            transition: all .3s;
             overflow: hidden;
             cursor: pointer;
             box-sizing: border-box;
@@ -41,6 +42,10 @@
                 background: $--brand-color-light2;
             }
         }
+    }
+    @include e(show){
+        max-height: 200px;
+        border: 1px solid #e4e7ed;
     }
     @include e(arrow) {
         width: 0;
@@ -52,7 +57,7 @@
         border-top-width: 0;
         border-bottom-color: #ebeef5;
         border-width: 6px;
-        top: -13px;
+        top: -12px;
         left: 20%;
         filter: drop-shadow(0 2px 12px rgba(0,0,0,.03));
         &::after{
@@ -70,6 +75,5 @@
             border-style: solid;
         }
     }
-    
-   
 }
+
