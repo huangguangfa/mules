@@ -20,14 +20,13 @@ export const searchIndex = [
         "level": 2,
         "title": "Button 按钮",
         "slug": "button-按钮",
-        "children": [
-          {
-            "level": 3,
-            "title": "配置属性",
-            "slug": "配置属性",
-            "children": []
-          }
-        ]
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置属性",
+        "slug": "配置属性",
+        "children": []
       }
     ],
     "path": "/zh/components/button.html",
@@ -39,16 +38,15 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
-        "title": "Icon",
-        "slug": "icon",
-        "children": [
-          {
-            "level": 3,
-            "title": "配置属性",
-            "slug": "配置属性",
-            "children": []
-          }
-        ]
+        "title": "Icon图标",
+        "slug": "icon图标",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置属性",
+        "slug": "配置属性",
+        "children": []
       }
     ],
     "path": "/zh/components/icon.html",
@@ -62,14 +60,13 @@ export const searchIndex = [
         "level": 2,
         "title": "Input 按钮",
         "slug": "input-按钮",
-        "children": [
-          {
-            "level": 3,
-            "title": "配置属性",
-            "slug": "配置属性",
-            "children": []
-          }
-        ]
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置属性",
+        "slug": "配置属性",
+        "children": []
       }
     ],
     "path": "/zh/components/input.html",
@@ -112,19 +109,26 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Crypto类",
+    "title": "数据加密",
     "headers": [
       {
-        "level": 3,
-        "title": "encrypt",
-        "slug": "encrypt",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "decrypt",
-        "slug": "decrypt",
-        "children": []
+        "level": 2,
+        "title": "Crypto",
+        "slug": "crypto",
+        "children": [
+          {
+            "level": 3,
+            "title": "encrypt",
+            "slug": "encrypt",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "decrypt",
+            "slug": "decrypt",
+            "children": []
+          }
+        ]
       }
     ],
     "path": "/zh/core/ctypto.html",
@@ -133,13 +137,20 @@ export const searchIndex = [
   },
   {
     "title": "安装",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "使用与安装",
+        "slug": "使用与安装",
+        "children": []
+      }
+    ],
     "path": "/zh/core/install.html",
     "pathLocale": "/zh/core",
     "extraFields": []
   },
   {
-    "title": "Storage类",
+    "title": "本地存储",
     "headers": [
       {
         "level": 3,
@@ -189,7 +200,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Type类",
+    "title": "类型检查",
     "headers": [
       {
         "level": 3,
@@ -342,16 +353,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}
