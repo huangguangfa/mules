@@ -3,11 +3,11 @@ module.exports = {
     parserPreset: {
         parserOpts: {
             headerPattern: /^(.*?)\((.*?)\):\s?(.*)$/,
-            headerCorrespondence: ['type', 'scope', 'subject'],
+            headerCorrespondence: [],
         },
     },
     rules: {
-        'type-empty': [2, 'never'],
-        'subject-empty': [2, 'never'],
+        // 'type-empty': [2, 'never'],
+        // 'subject-empty': [2, 'never'],
     }
 };

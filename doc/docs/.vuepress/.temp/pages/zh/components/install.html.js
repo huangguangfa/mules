@@ -35,7 +35,20 @@ export const data = {
   },
   "filePathRelative": "zh/components/install.md",
   "readingTime": {
-    "minutes": 0.65,
-    "words": 196
+    "minutes": 0.69,
+    "words": 207
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

@@ -28,10 +28,20 @@ description: 页面的描述
 ## 安装
 
 
-```js
+<CodeGroup>
+  <CodeGroupItem title="yarn">
+
+```npm
 yarn add @gf-ui/components 
-// or
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="npm" active>
+
+```js
 npm install @gf-ui/components
 ```
+</CodeGroupItem>
+</CodeGroup>
 
 <CommentService></CommentService>

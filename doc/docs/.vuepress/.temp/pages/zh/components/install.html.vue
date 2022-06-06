@@ -9,7 +9,12 @@
 <li>吸取了市面上不同UI框架的优缺点、包括功能与样式</li>
 </ul>
 <h2 id="安装" tabindex="-1"><a class="header-anchor" href="#安装" aria-hidden="true">#</a> 安装</h2>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>yarn add @gf<span class="token operator">-</span>ui<span class="token operator">/</span>components 
-<span class="token comment">// or</span>
-npm install @gf<span class="token operator">-</span>ui<span class="token operator">/</span>components
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><CommentService></CommentService></div></template>
+<CodeGroup>
+  <CodeGroupItem title="yarn">
+<div class="language-npm ext-npm line-numbers-mode"><pre v-pre class="language-npm"><code>yarn add @gf-ui/components 
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></CodeGroupItem>
+<CodeGroupItem title="npm" active>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>npm install @gf<span class="token operator">-</span>ui<span class="token operator">/</span>components
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></CodeGroupItem>
+</CodeGroup>
+<CommentService></CommentService></div></template>
