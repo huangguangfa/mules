@@ -3,6 +3,9 @@ import { defineClientConfig } from '@vuepress/client'
 export default defineClientConfig({
     enhance({ app, router, siteData }) {
         app.mixin({
+            created() {
+                console.log(111)
+            },
             mounted() {
 
             }
