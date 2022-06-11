@@ -5,8 +5,8 @@
   </div>
 </template>
 
-<script setip lang="ts">
-
+<script setup lang="ts">
+  
 </script>
 
 <style lang="scss" scoped>
