@@ -16,6 +16,7 @@
         "./src/*"
       ]
     },
+    "strict": true,
     "isolatedModules": false
   },
 }
