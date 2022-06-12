@@ -1,10 +1,14 @@
 <script setup lang="ts">
-
+import useVueRouter from "@/hooks/global/useVueRouter";
+const { routerPush } = useVueRouter()
 </script>
 
 <template>
   <header>
-    <div class="wrapper">xsaxasx</div>
+    <div class="wrapper">
+      app content
+      <button @click="routerPush('demo')">to demo</button>
+    </div>
   </header>
 
   <RouterView />

@@ -1,5 +1,10 @@
-export const initGlobalComponent = function (app) {
-    let compnentsList = [
+import type { App, Component } from 'vue'
+type CompnentsList = Array<{
+    name: string,
+    compnent: Component
+}>
+export const initGlobalComponent = function (app: App) {
+    let compnentsList: CompnentsList = [
 
     ];
     for (let i = 0, len = compnentsList.length; i < len; i++) {

@@ -16,7 +16,9 @@ export default ({ command, mode }: { [key: string]: string }) => {
                 'types': fileURLToPath(new URL('./types', import.meta.url)),
             }
         },
-
+        server: {
+            host: '0.0.0.0'
+        }
     })
 
 }

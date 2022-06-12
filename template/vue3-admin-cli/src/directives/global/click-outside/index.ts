@@ -39,7 +39,6 @@ function createDocumentHandler(
     if (Array.isArray(binding.arg)) {
         excludes = binding.arg
     } else if (isElement(binding.arg)) {
-        // due to current implementation on binding type is wrong the type casting is necessary here
         excludes.push(binding.arg as unknown as HTMLElement)
     }
     return function (mouseup, mousedown) {

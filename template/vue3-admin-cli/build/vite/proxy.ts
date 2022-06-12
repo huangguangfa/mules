@@ -1,0 +1,1 @@
+import { ProxyOptions } from 'vite'

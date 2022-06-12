@@ -6,8 +6,7 @@ const useVueRouterExample = function () {
             return JSON.parse(route.value.query.params)
         }
     }
-    // vue router
-    const routerPush = (name: string, params) => {
+    const routerPush = (name: string, params?: object) => {
         let data = {}
         if (params) {
             data = {
@@ -21,7 +20,7 @@ const useVueRouterExample = function () {
             query: data
         })
     }
-    const routerReplace = (name: string, params) => {
+    const routerReplace = (name: string, params?: object) => {
         let data = {}
         if (params) {
             data = {
