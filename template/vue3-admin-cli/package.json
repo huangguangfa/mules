@@ -2,7 +2,9 @@
   "name": "vue3-admin-cli",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
+    "test": "vite --mode test",
+    "prod": "vite --mode prod",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
