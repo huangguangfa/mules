@@ -17,13 +17,13 @@ function getBaseUrl(base: string) {
 
 function getUrl(url: string, base: string) {
     const baseUrl = getBaseUrl(base);
-    return `${baseUrl}/${url}`
+    return `${baseUrl}${url}`
 }
 
 export const getInstance = (interceptor: AxiosInterceptorOptions, config: ExtendAxiosRequestConfig) => {
     const { loading, headers, timeout, request, response, reject, retry } = { ...DEFAULT_REQUEST_OPTIONS, ...config }
     const instance: ExtendAxiosInstance = axios.create({
-        withCredentials: true,
+        // withCredentials: true,
         timeout
     })
     for (let [key, val] of Object.entries(headers)) {

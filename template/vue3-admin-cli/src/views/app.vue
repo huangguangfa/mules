@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useVueRouter from "@/hooks/global/useVueRouter";
+import useVueRouter from "@/hooks/useRouter";
 const { routerPush } = useVueRouter()
 </script>
 

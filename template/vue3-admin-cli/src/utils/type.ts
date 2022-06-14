@@ -1,5 +1,5 @@
 
-export const toString = Object.toString
+export const toString = Object.prototype.toString
 /**
   * 一个内部方法、用作公共抽离
   */
