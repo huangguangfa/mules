@@ -1,67 +1,38 @@
 import axios from 'axios'
-import qs from 'qs'
+import { querystring } from '@/utils/util'
 import { isString, isEmptyFunction, isEmptyArray, isObject, isArray, isEmptyObject } from '@/utils/type'
-import { globalKey, querystring, download } from '../util'
-import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD } from '../config'
+import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD } from '@/config'
 
-export const getBaseUrl = (base, key, app) => {
-    if (isString(base)) return base
-    const globalBaseKey = globalKey(app, key ? key + '_base' : 'base')
-    let baseUrl = window[globalBaseKey]
-    if (baseUrl) return baseUrl
+import type { AxiosResponse, AxiosRequestConfig, AxiosInterceptorOptions } from "axios"
+import type { HttpClient } from "./index"
+import type { ExtendAxiosRequestConfig, ExtendAxiosInstance, UserAxiosConfig, HandleMergeOptions } from "./types"
 
-    if (base) {
-        if (base.url) {
-            if (isString(base.url)) {
-                baseUrl = base.url
-            } else if (key) {
-                baseUrl = base.url[key]
-            }
-            window[globalBaseKey] = baseUrl
-        } else if (base.env) {
-            let prop = ''
-            if (isString(base.env)) {
-                prop = base.env
-            } else if (key) {
-                prop = base.env[key]
-            }
-            baseUrl = process.env[`VUE_APP_${prop}`] || process.env[`REACT_APP_${prop}`]
-            window[globalBaseKey] = baseUrl
-        }
+function getBaseUrl(base: string) {
+    if (isString(base)) {
+        return base
+    } else {
+        return '/'
     }
-    return baseUrl || ''
 }
 
-export const getUrl = (url, base, config) => {
-    let baseUrl = getBaseUrl(base, config.base, config.app)
-    if (baseUrl.endsWith('/')) {
-        baseUrl = baseUrl.slice(-1)
-    }
-    if (url.startsWith('/')) {
-        url = url.substr(1)
-    }
+function getUrl(url: string, base: string) {
+    const baseUrl = getBaseUrl(base);
     return `${baseUrl}/${url}`
 }
 
-export const getInstance = (interceptor, config) => {
-    const { loading, headers, timeout, retry, delay, request, response, reject } = { ...DEFAULT_REQUEST_OPTIONS, ...config }
-    const instance = axios.create({
+export const getInstance = (interceptor: AxiosInterceptorOptions, config: ExtendAxiosRequestConfig) => {
+    const { loading, headers, timeout, request, response, reject, retry } = { ...DEFAULT_REQUEST_OPTIONS, ...config }
+    const instance: ExtendAxiosInstance = axios.create({
         withCredentials: true,
-        crossDomain: true,
         timeout
     })
-    // 默认配置
-    if (retry > 0) {
-        instance.defaults.retry = retry
-        instance.defaults.retryDelay = delay
-    }
     for (let [key, val] of Object.entries(headers)) {
-        instance.defaults.headers.common[key] = val
+        instance.defaults.headers.common[key] = val as string
     }
     // axios默认使用encodeURI进行编码，会造成参数中带有敏感字符，所以需要使用encodeURIComponent进行编码
     instance.defaults.paramsSerializer = params => {
         return Object.entries(params).reduce((res, [key, val]) => {
-            const value = (isObject(val) || isArray(val)) ? JSON.stringify(val) : val
+            const value: string = (isObject(val) || isArray(val)) ? JSON.stringify(val) : val as string
             res += `${encodeURIComponent(key)}=${encodeURIComponent(value)}&`
             return res
         }, '').slice(0, -1)
@@ -100,7 +71,7 @@ export const getInstance = (interceptor, config) => {
             // Create new promise to handle exponential backoff
             const backoff = new Promise((resolve) => {
                 setTimeout(() => {
-                    resolve()
+                    resolve('')
                 }, config.retryDelay)
             })
             // Return the promise in which recalls axios to retry the request
@@ -112,46 +83,46 @@ export const getInstance = (interceptor, config) => {
     return instance
 }
 
-export const getRequest = (instance, url, method, param, config) => {
-    if (instance.config && instance.config.app) {
-        config.app = instance.config.app
-    }
-    url = getUrl(url, instance.base, config)
+export const getRequest = (instance: HttpClient, url: string, method: string, param: Record<string, any>, config: AxiosRequestConfig) => {
+    url = getUrl(url, instance.base)
     const { _param, _config } = handleParam(param, { ...instance.config, config })
     const { loading, origin, responseType, showLoading, hideLoading } = _config
     const options = handleOptions(instance, url, method, _param, _config)
     return new Promise((resolve, reject) => {
         loading && showLoading()
-        instance.http(options).then(res => {
-            if (res && res.status === 200) {
-                // 处理文件下载
-                if (responseType === 'blob') {
-                    const content = res.headers['content-disposition']
-                    const filename = /fileName=([\w\W]+(\.\w+));/gi.test(content.endsWith(';') ? content : content + ';') && file ? `${file}${RegExp.$2}` : RegExp.$1
-                    download(res.data, decodeURIComponent(filename))
-                    resolve({ blob: true })
-                } else {
-                    resolve(origin ? res : res.data)
-                }
-            } else {
-                reject(res)
-            }
+        instance.http(options).then((res: AxiosResponse) => {
+            console.log(1, res)
+            resolve(origin ? res : res.data)
+            // if (res && res.status === 200) {
+            //     // 处理文件下载
+            //     if (responseType === 'blob') {
+            //         const content = res.headers['content-disposition']
+            //         const filename = /fileName=([\w\W]+(\.\w+));/gi.test(content.endsWith(';') ? content : content + ';') && file ? `${file}${RegExp.$2}` : RegExp.$1
+            //         download(res.data, decodeURIComponent(filename))
+            //         resolve({ blob: true })
+            //     } else {
+            //         resolve(origin ? res : res.data)
+            //     }
+            // } else {
+            //     reject(res)
+            // }
         }).catch(reject).finally(() => loading && hideLoading())
     })
 }
 
-export const getMergeRequest = (instance, options = EMPTY_ARRAY) => {
+export const getMergeRequest = (instance: HttpClient, options = EMPTY_ARRAY) => {
     const mergeOptions = handleMergeOptions(instance, options)
     if (isEmptyArray(mergeOptions)) return
-    const loading = options.some(item => item && item.config && item.config.loading)
-    const { showLoading, hideLoading } = instance
+    // const loading = options.some((item: { config: ExtendAxiosRequestConfig }) => item && item.config && item.config.loading)
+    // const { showLoading, hideLoading } = instance
     return new Promise((resolve, reject) => {
-        loading && showLoading()
-        Promise.all(mergeOptions).then(resolve).catch(reject).finally(() => loading && hideLoading())
+        // loading && showLoading && showLoading()
+        Promise.all(mergeOptions).then(resolve).catch(reject)
+        // .finally(() => loading && hideLoading && hideLoading())
     })
 }
 
-export const handleParam = (param, config) => {
+export const handleParam = (param: Record<string, any>, config: any) => {
     let _param = param
     let _config = config
     if (!config) {
@@ -162,8 +133,14 @@ export const handleParam = (param, config) => {
     return { _param, _config }
 }
 
-export const handleOptions = (instance, url, method, param, config) => {
-    const options = {}
+export const handleOptions = (instance: HttpClient, url: string, method: string, param: Record<string, any>, config: UserAxiosConfig) => {
+    const options: {
+        url?: string,
+        params?: any,
+        data?: object,
+        cancelToken?: any,
+        method?: string,
+    } = {}
     // 处理输入参数
     if (method === REQUEST_METHOD.get) {
         options.url = url
@@ -179,12 +156,12 @@ export const handleOptions = (instance, url, method, param, config) => {
         // 处理ContentType
         switch (config.headers['Content-Type']) {
             case CONTENT_TYPE.encoded:
-                options.data = qs.stringify(param, { arrayFormat: 'brackets' })
+                options.data = param
                 break
-            case CONTENT_TYPE.formdata:
+            case CONTENT_TYPE.form:
                 const formData = new FormData()
                 for (let [key, val] of Object.entries(param)) {
-                    formData.append(key, val)
+                    formData.append(key, val as string)
                 }
                 options.data = formData
                 break
@@ -198,13 +175,15 @@ export const handleOptions = (instance, url, method, param, config) => {
     return options
 }
 
-export const handleMergeOptions = (instance, options) => {
+
+export const handleMergeOptions = (instance: HttpClient, options: Array<HandleMergeOptions>) => {
     if (isEmptyArray(options)) return []
-    return options.reduce((r, s) => {
+    return options.reduce((r: Array<Promise<any>>, s: HandleMergeOptions) => {
         if (!isEmptyObject(s) && isString(s.url) && isObject(s.config)) {
             const { method, param, config } = s.config
             r.push(getRequest(instance, s.url, method, param, config))
             return r
         }
+        return r;
     }, [])
 }
