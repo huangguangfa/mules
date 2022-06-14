@@ -1,5 +1,5 @@
 import { exception } from "@/utils/util"
-import useEvents from "@/hooks/global/useEvents"
+import useEvents from "@/hooks/useEvents"
 export function checkNetwork() {
     const { $emit } = useEvents();
     try {

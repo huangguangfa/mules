@@ -73,7 +73,7 @@ export default class Type {
     * @param item 检测当前类型
     * @returns { Boolean } 如果是空函数则返回true、否则返回false
     */
-    static isEmptyFuction(item: Function): boolean {
+    static isEmptyFunction(item: Function): boolean {
         if (!item) return true;
         const str = item.toString().replace(/\s/g, '');
         return Type.isFunction(item) && (str === 'functionEMPTY_FUNC(){}' || str === 'function(){}' || str === '()=>{}')
@@ -174,7 +174,7 @@ export default class Type {
     * @param pattern 当前检测的正则匹配表达式（默认值：DATA_REGEX_PATTERN.email）
     * @returns { Boolean } 如果是正确邮箱返回true、否则返回false
     */
-    static isEmail(item:string, pattern: string = DATA_REGEX_PATTERN.email) {
+    static isEmail(item: string, pattern: string = DATA_REGEX_PATTERN.email) {
         return match(item, pattern)
     }
 
@@ -217,7 +217,7 @@ export default class Type {
     * @param item 检测当前类型
     * @returns { Boolean } 如果是0或者true条件返回true、否则返回false
     */
-    static isTrueOrZero(item:string | number): boolean {
+    static isTrueOrZero(item: string | number): boolean {
         return !!item || item === 0 || item === '0'
     }
 
@@ -226,7 +226,7 @@ export default class Type {
     * @param item 检测当前类型
     * @returns { Boolean } 如果是0或者true条件返回true、否则返回false
     */
-    static def(item:any, defs:any) {
+    static def(item: any, defs: any) {
         return (item === undefined || item === null) ? defs : item
     }
 
@@ -236,7 +236,7 @@ export default class Type {
     * @param defs 默认值
     * @returns {Object|Array} 如果当前数据可以转化成功则转化，否则将返回默认值
     */
-    static json(item:string, defs:any) {
+    static json(item: string, defs: any) {
         try {
             return JSON.parse(item)
         } catch (e) {
