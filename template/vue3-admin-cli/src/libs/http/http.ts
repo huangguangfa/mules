@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { querystring } from '@/utils/util'
+import { querystring, exception } from '@/utils/util'
 import { isString, isEmptyFunction, isEmptyArray, isObject, isArray, isEmptyObject } from '@/utils/type'
 import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD } from '@/config'
 
@@ -8,10 +8,10 @@ import type { HttpClient } from "./index"
 import type { ExtendAxiosRequestConfig, ExtendAxiosInstance, UserAxiosConfig, HandleMergeOptions } from "./types"
 
 function getBaseUrl(base: string) {
-    if (isString(base)) {
+    if (base && isString(base)) {
         return base
     } else {
-        return '/'
+        exception('请求基础baseUrl未设置')
     }
 }
 
@@ -85,13 +85,13 @@ export const getInstance = (interceptor: AxiosInterceptorOptions, config: Extend
 
 export const getRequest = (instance: HttpClient, url: string, method: string, param: Record<string, any>, config: AxiosRequestConfig) => {
     url = getUrl(url, instance.base)
-    const { _param, _config } = handleParam(param, { ...instance.config, config })
+    const { _param, _config } = handleParam(param, { ...instance.config, ...config })
     const { loading, origin, responseType, showLoading, hideLoading } = _config
     const options = handleOptions(instance, url, method, _param, _config)
     return new Promise((resolve, reject) => {
         loading && showLoading()
+        console.log('111', options)
         instance.http(options).then((res: AxiosResponse) => {
-            console.log(1, res)
             resolve(origin ? res : res.data)
             // if (res && res.status === 200) {
             //     // 处理文件下载
@@ -172,7 +172,11 @@ export const handleOptions = (instance: HttpClient, url: string, method: string,
     }
     // 处理取消请求
     config.cancel && (options.cancelToken = instance.source.token)
-    return options
+    return {
+        url,
+        method,
+        ...options
+    }
 }
 
 
