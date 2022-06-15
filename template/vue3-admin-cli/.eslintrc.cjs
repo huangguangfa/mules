@@ -1,21 +1,14 @@
 /* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
-  extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/eslint-config-typescript/recommended",
-    "@vue/eslint-config-prettier",
-  ],
+  extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/eslint-config-typescript/recommended', '@vue/eslint-config-prettier', 'prettier'],
   env: {
-    "vue/setup-compiler-macros": true,
+    'vue/setup-compiler-macros': true,
   },
   rules: {
-    "space-before-function-paren": "off",
-    "vue/multi-word-component-names": ["error", {
-      "ignores": ["index"]
-    }]
+    '@typescript-eslint/no-explicit-any': ['off'],
+    'vue/multi-word-component-names': 'off',
   },
-};
+}

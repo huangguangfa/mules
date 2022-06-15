@@ -1,12 +1,12 @@
-import { isString } from "./type"
+import { isString } from './type'
 /**
-  * 错误提示
-  * @param  text 提示内容
-  * @param  error 实际代码报错信息
-  */
+ * 错误提示
+ * @param  text 提示内容
+ * @param  error 实际代码报错信息
+ */
 export function exception(text: string, error?: any) {
-    if (!text) return
-    console.log(`%c${text}`, 'color:red', error)
+  if (!text) return
+  console.log(`%c${text}`, 'color:red', error)
 }
 
 /**
@@ -15,11 +15,11 @@ export function exception(text: string, error?: any) {
  * @returns {Object} 查询字符串对象
  */
 export const querystring = (str: any) => {
-    if (!str || !isString(str) || str.indexOf('?') === -1) return
-    const arr = str.split('?')[1].split('&')
-    return arr.reduce((res: object, item: string) => {
-        const query = item.split('=')
-        res = { ...res, [query[0]]: encodeURIComponent(query[1]) }
-        return res
-    }, {})
+  if (!str || !isString(str) || str.indexOf('?') === -1) return
+  const arr = str.split('?')[1].split('&')
+  return arr.reduce((res: object, item: string) => {
+    const query = item.split('=')
+    res = { ...res, [query[0]]: encodeURIComponent(query[1]) }
+    return res
+  }, {})
 }

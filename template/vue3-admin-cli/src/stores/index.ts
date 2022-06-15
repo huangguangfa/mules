@@ -1,5 +1,3 @@
-import { createPinia } from 'pinia';
-// import { useSystemStore } from './modules/system';
-// export { useSystemStore };
+import { createPinia } from 'pinia'
 
-export default createPinia();
+export default createPinia()

@@ -1,13 +1,14 @@
-import { createApp } from 'vue';
-import piniaStore from "./stores";
-import App from './views/app.vue';
-import routes from "./router/index";
-import { initGlobalMethods } from "./plugins/index";
+import { createApp } from 'vue'
+import App from './views/app.vue'
+import router from './router'
+import piniaStore from '@/stores'
+import { initGlobalMethods } from '@/plugins/index'
 
 function bootstrap() {
-    const app = createApp(App);
-    app.use(routes).use(piniaStore).mount('#app');
-    initGlobalMethods(app);
+  const app = createApp(App)
+  app.use(router).use(piniaStore).mount('#app')
+
+  initGlobalMethods(app)
 }
 
 bootstrap()

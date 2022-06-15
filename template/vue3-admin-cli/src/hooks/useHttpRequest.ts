@@ -1,30 +1,24 @@
-import httpInstance from "@/libs/http";
-import { CONTENT_TYPE } from "@/config/index"
+import initHttpInstance from '@/libs/http'
 /**
  * 初始化http
- * @param data 当前入参描述
- * @returns {type: Number} {0: 不展示， 1: 激活状态, 2：置灰状态}
+ * @param base 公共请求部分
  */
-const http = httpInstance({
-    base: "https://www.huangguangfa.cn/blogs"
-});
-
+//  http://open-dev.kyepm.com/router/rest/?kuasheng.kyeGeneralManagerOffice.indexSearch
+const { get, post, put, patch, del, all, cancel } = initHttpInstance({
+  base: 'http://10.32.49.245:3000',
+  config: {
+    retry: 6,
+  },
+})
 
 export default function useHttpRequest() {
-    const post = (url: string, param?: Record<string, any>, config = {
-        headers: {
-            'Content-Type': CONTENT_TYPE.json
-        }
-    }) => {
-        return http.post(url, param, config)
-    }
-    return {
-        $get: http.get,
-        $post: post,
-        $put: http.put,
-        $patch: http.patch,
-        $del: http.del,
-        $all: http.all,
-        $cancel: http.cancel,
-    }
+  return {
+    $get: get,
+    $post: post,
+    $put: put,
+    $patch: patch,
+    $del: del,
+    $all: all,
+    $cancel: cancel,
+  }
 }
