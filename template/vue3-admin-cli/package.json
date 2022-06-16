@@ -58,7 +58,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "node build/demo.js",
+            "pre-commit": "yarn lint",
             "commit-msg": "commitlint -e -V"
         }
     }

@@ -8,3 +8,5 @@ function getName() {
 }
 
 getName()
+
+const a = "11111";

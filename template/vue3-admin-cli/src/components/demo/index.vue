@@ -2,11 +2,11 @@
 import useRouter from '@/hooks/useRouter'
 import useCrypto from '@/hooks/useCrypto'
 import useEventBus from '@/hooks/useEvents'
-import { startRequest } from './hooks/http.ts'
+import { startRequest } from './hooks/http'
 const { $on } = useEventBus()
 const { routerPush } = useRouter()
 const { decrypt, encrypt } = useCrypto()
-function to(name) {
+function to(name: string) {
   routerPush(name, {
     formName: 'demo',
   })
