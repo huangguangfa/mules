@@ -88,7 +88,6 @@ export const getRequest = (instance: HttpClient, url: string, method: string, pa
   })
   const { loading, origin, showLoading = '', hideLoading = '' } = _config
   const options = handleOptions(instance, url, method, _param, _config)
-  console.log('config', options)
   return new Promise((resolve, reject) => {
     loading && typeof showLoading === 'function' && showLoading()
     instance
@@ -178,7 +177,7 @@ export const handleOptions = (instance: HttpClient, url: string, method: string,
 
 export const handleMergeOptions = (instance: HttpClient, options: Array<HandleMergeOptions>) => {
   if (isEmptyArray(options)) return []
-  return options.reduce((r: Array<Promise<any>>, s: HandleMergeOptions) => {
+  return options.reduce((r: Array<Promise<unknown>>, s: HandleMergeOptions) => {
     if (!isEmptyObject(s) && isString(s.url) && isObject(s.config)) {
       const { method, param, config } = s.config
       r.push(getRequest(instance, s.url, method, param, config))

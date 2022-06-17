@@ -1,11 +1,11 @@
 interface Events {
-  [key: string]: Fn<any>[]
+  [key: string]: Fn[]
 }
-type Fn<T> = (options?: T) => void
+type Fn = (options?: unknown) => void
 
 class EventBus {
   static events: Events = {}
-  static $on<T>(name: string, fn: Fn<T>): void {
+  static $on(name: string, fn: Fn): void {
     if (!EventBus.events[name]) {
       EventBus.events[name] = []
     }
@@ -15,11 +15,11 @@ class EventBus {
     if (!EventBus.events[name]) return
     EventBus.events[name].forEach((fn) => fn(...args))
   }
-  static $off<T>(name: string, fn: Fn<T>): void {
+  static $off(name: string, fn: Fn): void {
     if (!EventBus.events[name]) return
     EventBus.events[name] = EventBus.events[name].filter((f) => f !== fn)
   }
-  static $once<T>(name: string, fn: Fn<T>): void {
+  static $once(name: string, fn: Fn): void {
     const once = (...args: any[]) => {
       fn(...args)
       EventBus.$off(name, once)
