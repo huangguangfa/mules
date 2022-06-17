@@ -1,6 +1,5 @@
 import type { ModuleRouters, RouteRecordRawList } from './types'
-const pcRouter = import.meta.globEager('./pc/*.ts')
-const mobileRouter = import.meta.globEager('./mobile/*.ts')
+const modulesRouter = import.meta.globEager('./modules/*.ts')
 const commonRouter = import.meta.globEager('./common/*.ts')
 import { exception } from '@/utils/util'
 
@@ -16,8 +15,7 @@ export function routerModuleList(): RouteRecordRawList {
     }, [])
   }
   return _getRouterModule({
-    ...pcRouter,
-    ...mobileRouter,
+    ...modulesRouter,
     ...commonRouter,
   })
 }

@@ -5,8 +5,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default ({ mode }: { mode: string }) => {
   mode = mode === 'development' ? 'dev' : mode
-  const { VITE_API } = loadEnv(mode || 'dev', process.cwd())
-  console.log(`请求代理到: ${VITE_API}`)
+  const env = loadEnv(mode || 'dev', './env')
+  console.log('环境信息', env)
   return defineConfig({
     plugins: [vue(), vueJsx()],
     resolve: {
@@ -14,15 +14,24 @@ export default ({ mode }: { mode: string }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: ['@import "@/themes/index.scss";'].join('\n'),
+          javascriptEnabled: true,
+        },
+      },
+    },
+    envDir: './env',
     server: {
       port: 3007,
       host: '0.0.0.0',
-      // proxy: {
-      //     '/router': {
-      //         target: VITE_API,
-      //         changeOrigin: true
-      //     }
-      // }
+      proxy: {
+        '/router': {
+          target: env.VITE_API,
+          changeOrigin: true,
+        },
+      },
     },
   })
 }

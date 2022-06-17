@@ -25,13 +25,13 @@ export default class Crypto {
    * @param iv 矢量(来自应用配置)
    * @returns {String} 加密之后的密文字符串
    */
-
   static encrypt(data: string, crypto: cryptoConfig, { key = '', iv = '' } = {}): string {
     if (!crypto || !crypto.name) exception('当前加密类型参数没有')
     const context = getCryptoContext(crypto.name)
     if (!context) return data
     return context.symmetric ? context.encrypt(data, key, iv) : context.encrypt(data, key)
   }
+
   /**
    * @method 解密当前的数据
    * @param data 需要解密的数据

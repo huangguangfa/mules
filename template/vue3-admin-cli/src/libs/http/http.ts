@@ -1,6 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
-import { querystring } from '@/utils/util'
+import { KsHeaders } from './util'
 import { isString, isEmptyFunction, isEmptyArray, isObject, isArray, isEmptyObject } from '@/utils/type'
 import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD, EMPTY_OBJECT } from '@/config'
 
@@ -82,15 +82,15 @@ export const getInstance = (interceptor?: AxiosInterceptorOptions, config?: Exte
 }
 
 export const getRequest = (instance: HttpClient, url: string, method: string, param?: Params, config?: AxiosRequestConfig) => {
-  url = getUrl(url, instance.base)
   const { _param, _config } = handleParam(param, {
     ...instance.config,
     ...config,
   })
-  const { loading, origin, showLoading, hideLoading } = _config
+  const { loading, origin, showLoading = '', hideLoading = '' } = _config
   const options = handleOptions(instance, url, method, _param, _config)
+  console.log('config', options)
   return new Promise((resolve, reject) => {
-    loading && showLoading()
+    loading && typeof showLoading === 'function' && showLoading()
     instance
       .http(options)
       .then((res: AxiosResponse) => {
@@ -101,7 +101,7 @@ export const getRequest = (instance: HttpClient, url: string, method: string, pa
         }
       })
       .catch(reject)
-      .finally(() => loading && hideLoading())
+      .finally(() => loading && typeof hideLoading === 'function' && hideLoading())
   })
 }
 
@@ -113,11 +113,19 @@ export const getMergeRequest = (instance: HttpClient, options: Array<HandleMerge
   })
 }
 
-export const handleParam = (param?: Params, config?: Params) => {
-  let _param = param || EMPTY_OBJECT
+export const handleParam = (
+  param?: Params,
+  config?: Params
+): {
+  _param: any
+  _config: any
+} => {
+  let _param: {
+    [key: string]: any
+  } = param || EMPTY_OBJECT
   let _config = config || EMPTY_OBJECT
   if (!config) {
-    const { param, ...rest } = _param
+    const { param, ...rest } = _param || EMPTY_OBJECT
     _param = param
     _config = rest
   }
@@ -134,16 +142,8 @@ export const handleOptions = (instance: HttpClient, url: string, method: string,
   } = {}
   // 处理输入参数
   if (method === REQUEST_METHOD.get) {
-    options.url = url
     options.params = param
   } else {
-    if (config.query) {
-      const query = querystring(url)
-      if (query) {
-        options.url = url.substr(0, url.indexOf('?'))
-        options.params = query
-      }
-    }
     // 处理ContentType
     switch (config.headers && config.headers['Content-Type']) {
       case CONTENT_TYPE.encoded:
@@ -164,9 +164,14 @@ export const handleOptions = (instance: HttpClient, url: string, method: string,
   }
   // 处理取消请求
   config.cancel && (options.cancelToken = instance.source.token)
+
   return {
+    url: getUrl(url, config.base ? config.base : instance.base),
     method,
-    url,
+    headers: {
+      ...KsHeaders(url),
+      ...(config.headers || {}),
+    },
     ...options,
   }
 }

@@ -7,7 +7,6 @@ import { initGlobalMethods } from '@/plugins/index'
 function bootstrap() {
   const app = createApp(App)
   app.use(router).use(piniaStore).mount('#app')
-
   initGlobalMethods(app)
 }
 

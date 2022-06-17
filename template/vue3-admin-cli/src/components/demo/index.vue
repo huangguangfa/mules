@@ -14,9 +14,11 @@ function to(name: string) {
 $on('connectionNetwork', (e) => {
   console.log('网络变化', e)
 })
-
-let vi = null
-function cryptos(type) {
+$on('datas', (data) => {
+  console.log(data)
+})
+let vi: any = null
+function cryptos(type: string) {
   let res
   const data = JSON.stringify({
     name: '张三',
@@ -31,6 +33,14 @@ function cryptos(type) {
   }
   console.log(res)
 }
+
+function getName(name: string) {
+  console.log('获取名称', name)
+}
+
+setTimeout(() => {
+  getName('z')
+}, 2000)
 </script>
 
 <template>
@@ -43,7 +53,7 @@ function cryptos(type) {
     <button @click="cryptos('decrypt')">解密</button>
 
     <div style="margin-top: 10px">
-      <button @click="startRequest">发请求</button>
+      <button @click="startRequest('get')">发请求</button>
       <button @click="startRequest('get')">get请求</button>
       <button @click="startRequest('post')">post请求</button>
       <button @click="startRequest('all')">请求多个</button>
@@ -55,6 +65,7 @@ function cryptos(type) {
 .demo {
   span {
     color: red;
+    z-index: $--index-popper;
   }
 }
 </style>

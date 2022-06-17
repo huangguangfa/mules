@@ -15,6 +15,7 @@ export interface UserAxiosConfig extends AxiosRequestConfig {
   query?: Params
   headers?: Params
   cancel?: boolean
+  base?: string
 }
 
 export type HandleMergeOptions = {

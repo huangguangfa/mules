@@ -1,6 +1,5 @@
 import router from '@/router'
 import { isPrimitiveObject } from '@/utils/type'
-
 const userRouterExample = function () {
   const route: any = router.currentRoute
   const queryParams = (params?: object) => {

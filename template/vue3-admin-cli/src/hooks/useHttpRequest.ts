@@ -4,7 +4,7 @@ import initHttpInstance from '@/libs/http'
  * @param base 公共请求部分
  */
 const { get, post, put, patch, del, all, cancel } = initHttpInstance({
-  base: 'http://10.32.49.245:3000',
+  base: '/router/rest',
   config: {
     retry: 6,
   },

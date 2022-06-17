@@ -1,14 +1,11 @@
 export const toString = Object.prototype.toString
-/**
- * 一个内部方法、用作公共抽离
- */
+/** 一个内部方法、用作公共抽离 */
 const { is } = (function _internal() {
   const is = (type: string, primitive?: boolean) => {
     return function (obj: any): boolean {
       return primitive ? typeof obj === type.toLowerCase() : toString.call(obj) === `[object ${type}]`
     }
   }
-
   return { is }
 })()
 
@@ -30,7 +27,7 @@ export const isClient = typeof window !== 'undefined'
  * 判断是对象
  * @returns {type: Boolean}
  */
-export const isPrimitiveObject = (item: any): boolean => {
+export const isPrimitiveObject = (item: unknown): boolean => {
   return is('Object', true)(item)
 }
 
@@ -39,7 +36,7 @@ export const isPrimitiveObject = (item: any): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是对象则返回true、否则返回false
  */
-export const isObject = (item: object | any): boolean => {
+export const isObject = (item: unknown): boolean => {
   return is('Object')(item)
 }
 /**
@@ -47,7 +44,7 @@ export const isObject = (item: object | any): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果为空的对象则返回true、否则返回false
  */
-export const isEmptyObject = (item: object | any): boolean => {
+export const isEmptyObject = (item: object): boolean => {
   return isObject(item) && Object.keys(item).length === 0
 }
 /**
@@ -55,7 +52,7 @@ export const isEmptyObject = (item: object | any): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是0或者true条件返回true、否则返回false
  */
-export const def = (item: any, defs: any) => {
+export const def = (item: unknown, defs: unknown) => {
   return item === undefined || item === null ? defs : item
 }
 
@@ -73,7 +70,7 @@ export const isString = (item: string): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是函数则返回true、否则返回false
  */
-export const isFunction = (item: () => any): boolean => {
+export const isFunction = (item: () => unknown): boolean => {
   return is('Function')(item)
 }
 

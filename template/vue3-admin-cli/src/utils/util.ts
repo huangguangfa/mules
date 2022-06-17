@@ -23,3 +23,16 @@ export const querystring = (str: any) => {
     return res
   }, {})
 }
+
+/**
+ * @method token的设置与获取
+ * @returns {string}
+ */
+export const getToken = () => {
+  return sessionStorage.getItem('ks_token') || ''
+}
+
+export const setToken = (token: string) => {
+  token = token || ''
+  sessionStorage.setItem('ks_token', token)
+}

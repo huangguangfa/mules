@@ -1,6 +1,5 @@
 import useHttpRequest from '@/hooks/useHttpRequest'
-const { $get, $post, $all, $patch, $cancel, $del, $put } = useHttpRequest()
-import { CONTENT_TYPE } from '@/config'
+const { $get, $post, $all } = useHttpRequest()
 export function startRequest(type = 'get') {
   const map = new Map()
   map.set('get', getRequest)
@@ -10,22 +9,19 @@ export function startRequest(type = 'get') {
 }
 
 function getRequest() {
-  $get('/info').then((res) => {
+  $get(
+    '/info',
+    {},
+    {
+      base: 'http://www.baidu.com',
+    }
+  ).then((res) => {
     console.log('结果', res)
   })
 }
 
 function postRequest() {
-  const config = {}
-  $post(
-    '/essay/find/1111',
-    {
-      currentPage: 1,
-      currentSize: 100,
-      title: '1'
-    },
-    config
-  )
+  $post('kuasheng.kyeGeneralManagerOfficeCategory.index')
     .then((res) => {
       console.log('结果', res)
     })
@@ -42,9 +38,9 @@ function allRequest() {
         method: 'get',
         param: {
           size: 1,
-          page: 2
-        }
-      }
+          page: 2,
+        },
+      },
     },
     {
       url: '/user/list',
@@ -52,10 +48,10 @@ function allRequest() {
         method: 'post',
         param: {
           size: 1,
-          page: 2
-        }
-      }
-    }
+          page: 2,
+        },
+      },
+    },
   ]
   $all(options).then((res) => {
     console.log('结果', res)

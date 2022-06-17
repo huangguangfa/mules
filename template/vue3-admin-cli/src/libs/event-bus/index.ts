@@ -1,23 +1,27 @@
-import type { AnyFunction } from '@/types/index'
+interface Events {
+  [key: string]: Fn<any>[]
+}
+type Fn<T> = (options?: T) => void
+
 class EventBus {
-  static events: { [key: string]: Array<AnyFunction> } = {}
-  static $on(name: string, fn: AnyFunction): void {
+  static events: Events = {}
+  static $on<T>(name: string, fn: Fn<T>): void {
     if (!EventBus.events[name]) {
       EventBus.events[name] = []
     }
     EventBus.events[name].push(fn)
   }
-  static $emit(name: string, ...args: any[]): void {
+  static $emit<T>(name: string, ...args: T[]): void {
     if (!EventBus.events[name]) return
-    EventBus.events[name].forEach((fn: AnyFunction) => fn([...args]))
+    EventBus.events[name].forEach((fn) => fn(...args))
   }
-  static $off(name: string, fn: AnyFunction): void {
+  static $off<T>(name: string, fn: Fn<T>): void {
     if (!EventBus.events[name]) return
     EventBus.events[name] = EventBus.events[name].filter((f) => f !== fn)
   }
-  static $once(name: string, fn: AnyFunction): void {
+  static $once<T>(name: string, fn: Fn<T>): void {
     const once = (...args: any[]) => {
-      fn([...args])
+      fn(...args)
       EventBus.$off(name, once)
     }
     EventBus.$on(name, once)
