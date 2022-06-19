@@ -20,7 +20,7 @@ class EventBus {
     EventBus.events[name] = EventBus.events[name].filter((f) => f !== fn)
   }
   static $once(name: string, fn: Fn): void {
-    const once = (...args: any[]) => {
+    const once = (...args: unknown[]) => {
       fn(...args)
       EventBus.$off(name, once)
     }
