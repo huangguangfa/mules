@@ -2,13 +2,16 @@ import type { AxiosRequestConfig, AxiosInstance } from 'axios'
 
 export interface ExtendAxiosRequestConfig {
   clone(animal: AxiosRequestConfig): AxiosRequestConfig
-  loading?: any
+  loading?: {
+    show: () => void
+    hide: () => void
+  }
   retry?: number
 }
 
 export type ExtendAxiosInstance = AxiosInstance & {
-  showLoading?: (options: any) => void
-  hideLoading?: (options: any) => void
+  showLoading?: (options: unknown) => void
+  hideLoading?: (options: unknown) => void
 }
 
 export interface UserAxiosConfig extends AxiosRequestConfig {

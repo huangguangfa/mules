@@ -44,8 +44,8 @@ export const getInstance = (interceptor?: AxiosInterceptorOptions, config?: Exte
   }
   // 加载器配置
   if (!isEmptyFunction(loading)) {
-    instance.showLoading = loading.show
-    instance.hideLoading = loading.hide
+    instance.showLoading = (loading as any).show
+    instance.hideLoading = (loading as any).hide
   }
   // 拦截器配置
   if (!isEmptyFunction(request)) {

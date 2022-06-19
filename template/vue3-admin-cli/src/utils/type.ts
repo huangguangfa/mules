@@ -70,7 +70,7 @@ export const isString = (item: string): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是函数则返回true、否则返回false
  */
-export const isFunction = (item: () => unknown): boolean => {
+export const isFunction = (item: unknown): boolean => {
   return is('Function')(item)
 }
 
@@ -79,7 +79,7 @@ export const isFunction = (item: () => unknown): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是空函数则返回true、否则返回false
  */
-export const isEmptyFunction = (item: () => void): boolean => {
+export const isEmptyFunction = (item: unknown): boolean => {
   if (!item) return true
   const str = item.toString().replace(/\s/g, '')
   return isFunction(item) && (str === 'functionEMPTY_FUNC(){}' || str === 'function(){}' || str === '()=>{}')

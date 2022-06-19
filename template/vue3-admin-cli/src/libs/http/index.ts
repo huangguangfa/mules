@@ -4,13 +4,14 @@ import { getInstance, getRequest, getMergeRequest } from './http'
 const CancelToken = axios.CancelToken
 import type { AxiosInterceptorOptions, AxiosInstance, CancelTokenSource } from 'axios'
 import type { ExtendAxiosRequestConfig, HandleMergeOptions, Params, UserAxiosConfig } from './types'
+
 export class HttpClient {
   base: string
   config: ExtendAxiosRequestConfig | undefined
   http: AxiosInstance
   source: CancelTokenSource
-  request: (url: string, method: string, param?: Params, config?: UserAxiosConfig) => Promise<any>
-  mergeRequest: (options: Array<HandleMergeOptions>) => Promise<any>
+  request: (url: string, method: string, param?: Params, config?: UserAxiosConfig) => Promise<unknown>
+  mergeRequest: (options: Array<HandleMergeOptions>) => Promise<unknown>
   constructor(base: string, interceptor?: AxiosInterceptorOptions, config?: ExtendAxiosRequestConfig) {
     this.base = base
     this.config = config

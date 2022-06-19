@@ -3,16 +3,16 @@ import { Vuepress } from '@vuepress/client'
 const routeItems = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
   ["v-2d0a870d","/en/",{"title":"title"},["/en/index.html","/en/README.md"]],
-  ["v-56bebe96","/zh/components/button.html",{"title":"button"},["/zh/components/button","/zh/components/button.md"]],
-  ["v-238c7d6f","/zh/components/icon.html",{"title":"icon"},["/zh/components/icon","/zh/components/icon.md"]],
-  ["v-09456080","/zh/components/input.html",{"title":"input"},["/zh/components/input","/zh/components/input.md"]],
-  ["v-0239b762","/zh/components/install.html",{"title":"安装"},["/zh/components/install","/zh/components/install.md"]],
-  ["v-7cb45863","/zh/components/use.html",{"title":"框架集成"},["/zh/components/use","/zh/components/use.md"]],
   ["v-2b5b6848","/zh/core/",{"title":"core首页"},["/zh/core/index.html","/zh/core/README.md"]],
   ["v-d016c4a4","/zh/core/ctypto.html",{"title":"数据加密"},["/zh/core/ctypto","/zh/core/ctypto.md"]],
   ["v-7e1abf34","/zh/core/install.html",{"title":"安装"},["/zh/core/install","/zh/core/install.md"]],
   ["v-7d1f8f86","/zh/core/storage.html",{"title":"本地存储"},["/zh/core/storage","/zh/core/storage.md"]],
   ["v-11de8e97","/zh/core/type.html",{"title":"类型检查"},["/zh/core/type","/zh/core/type.md"]],
+  ["v-56bebe96","/zh/components/button.html",{"title":"button"},["/zh/components/button","/zh/components/button.md"]],
+  ["v-238c7d6f","/zh/components/icon.html",{"title":"icon"},["/zh/components/icon","/zh/components/icon.md"]],
+  ["v-09456080","/zh/components/input.html",{"title":"input"},["/zh/components/input","/zh/components/input.md"]],
+  ["v-0239b762","/zh/components/install.html",{"title":"安装"},["/zh/components/install","/zh/components/install.md"]],
+  ["v-7cb45863","/zh/components/use.html",{"title":"框架集成"},["/zh/components/use","/zh/components/use.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
 ]
 
