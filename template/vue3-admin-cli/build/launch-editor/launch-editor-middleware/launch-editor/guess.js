@@ -17,6 +17,7 @@ export default function guessEditor(specifiedEditor) {
   // `ps x` on macOS and Linux
   // `Get-Process` on Windows
   try {
+    // eslint-disable-next-line no-undef
     if (process.platform === 'darwin') {
       const output = childProcess.execSync('ps x').toString()
       const processNames = Object.keys(COMMON_EDITORS_OSX)
@@ -26,6 +27,7 @@ export default function guessEditor(specifiedEditor) {
           return [COMMON_EDITORS_OSX[processName]]
         }
       }
+      // eslint-disable-next-line no-undef
     } else if (process.platform === 'win32') {
       const output = childProcess
         .execSync('powershell -Command "Get-Process | Select-Object Path"', {
@@ -46,6 +48,7 @@ export default function guessEditor(specifiedEditor) {
           return [fullProcessPath]
         }
       }
+      // eslint-disable-next-line no-undef
     } else if (process.platform === 'linux') {
       // --no-heading No header line
       // x List all processes owned by you
@@ -64,9 +67,13 @@ export default function guessEditor(specifiedEditor) {
   }
 
   // Last resort, use old skool env vars
+  // eslint-disable-next-line no-undef
   if (process.env.VISUAL) {
+    // eslint-disable-next-line no-undef
     return [process.env.VISUAL]
+    // eslint-disable-next-line no-undef
   } else if (process.env.EDITOR) {
+    // eslint-disable-next-line no-undef
     return [process.env.EDITOR]
   }
 

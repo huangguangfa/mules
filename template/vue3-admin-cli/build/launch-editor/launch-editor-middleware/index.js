@@ -13,9 +13,10 @@ export default function (specifiedEditor, srcRoot, onErrorCallback) {
     srcRoot = undefined
   }
 
+  // eslint-disable-next-line no-undef
   srcRoot = srcRoot || process.cwd() // 获取当前路径
 
-  return function launchEditorMiddleware(req, res, next) {
+  return function launchEditorMiddleware(req, res) {
     const { file } = url.parse(req.url, true).query || {}
     if (!file) {
       res.statusCode = 500

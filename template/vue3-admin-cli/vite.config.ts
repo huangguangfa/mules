@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'url'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-
+import openInEditor from './build/launch-editor/launch-editor-middleware'
 const customServicePlugin = () => {
   return {
     name: 'customServicePlugin',
@@ -11,7 +11,8 @@ const customServicePlugin = () => {
         const url = req.originalUrl
         console.log(url)
         if (url.includes('__open-in-editor')) {
-          return 'xxx'
+          const openInEditors = openInEditor('code')
+          return openInEditors(req, res)
         } else {
           next()
         }

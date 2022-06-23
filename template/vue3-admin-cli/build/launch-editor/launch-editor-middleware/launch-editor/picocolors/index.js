@@ -1,7 +1,9 @@
 import tty from 'tty'
 
 let isColorSupported =
+  // eslint-disable-next-line no-undef
   !('NO_COLOR' in process.env || process.argv.includes('--no-color')) &&
+  // eslint-disable-next-line no-undef
   ('FORCE_COLOR' in process.env || process.argv.includes('--color') || process.platform === 'win32' || (tty.isatty(1) && process.env.TERM !== 'dumb') || 'CI' in process.env)
 
 let formatter =

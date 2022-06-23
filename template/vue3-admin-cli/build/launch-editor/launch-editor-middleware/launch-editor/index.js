@@ -68,7 +68,9 @@ export default function launchEditor(file, specifiedEditor, onErrorCallback) {
     onErrorCallback(fileName, null)
     return
   }
+
   // 判断环境
+  // eslint-disable-next-line no-undef
   if (process.platform === 'linux' && fileName.startsWith('/mnt/') && /Microsoft/i.test(os.release())) {
     // Assume WSL / "Bash on Ubuntu on Windows" is being used, and
     // that the file exists on the Windows file system.
@@ -92,7 +94,7 @@ export default function launchEditor(file, specifiedEditor, onErrorCallback) {
     // instances attach to the stdin/stdout which gets confusing.
     _childProcess.kill('SIGKILL')
   }
-
+  // eslint-disable-next-line no-undef
   if (process.platform === 'win32') {
     // On Windows, launch the editor in a shell because spawn can only
     // launch .exe files.

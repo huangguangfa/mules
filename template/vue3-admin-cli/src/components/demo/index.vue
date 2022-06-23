@@ -41,6 +41,13 @@ function getName(name: string) {
 setTimeout(() => {
   getName('z')
 }, 2000)
+
+function openCode() {
+  const path = '/Users/guangfa/Desktop/guangfaMac/guangfa/gfCode/web-components-gf/template/vue3-admin-cli/src/components/global/error/index.vue'
+  const url = `${location.origin}/__open-in-editor?file=${path}`
+  fetch(url)
+  console.log(111)
+}
 </script>
 
 <template>
@@ -57,6 +64,7 @@ setTimeout(() => {
       <button @click="startRequest('get')">get请求</button>
       <button @click="startRequest('post')">post请求</button>
       <button @click="startRequest('all')">请求多个</button>
+      <button @click="openCode">打开编辑器</button>
     </div>
   </div>
 </template>
