@@ -9,7 +9,6 @@ const customServicePlugin = () => {
     configureServer(server: any) {
       server.middlewares.use((req: any, res: any, next: any) => {
         const url = req.originalUrl
-        console.log(url)
         if (url.includes('__open-in-editor')) {
           const openInEditors = openInEditor('code')
           return openInEditors(req, res)
