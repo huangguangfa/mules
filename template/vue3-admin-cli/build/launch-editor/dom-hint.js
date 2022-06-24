@@ -23,6 +23,7 @@ const DomHint = {
       mounted() {
         const { $el } = this
         let name = this.$options.__file || this.$options.name
+        console.log(name)
         const path = name && name.endsWith('.vue') ? name : false
         if (path) {
           $el.addEventListener(
