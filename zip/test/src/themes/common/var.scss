@@ -1,0 +1,22 @@
+/* 全局变量定义处 */
+
+
+/* FontSize
+-------------------------- */
+$--font-size-base: 14px !default;
+
+/* Color
+-------------------------- */
+$--color-white: #FFFFFF !default;
+
+/* Border
+-------------------------- */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+
+
+/* z-index
+-------------------------- */
+$--index-normal: 1 !default;
+$--index-top: 1000 !default;
+$--index-popper: 2000 !default;
