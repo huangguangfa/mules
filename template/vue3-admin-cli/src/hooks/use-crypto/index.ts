@@ -1,7 +1,7 @@
 import Crypto from '@/libs/crypto'
 
 // 加密例子可在__test__目录查看
-export default function useCrypto() {
+export function useCrypto() {
   return {
     /**
      * @method 加密当前的数据

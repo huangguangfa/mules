@@ -2,7 +2,7 @@ export const toString = Object.prototype.toString
 /** 一个内部方法、用作公共抽离 */
 const { is } = (function _internal() {
   const is = (type: string, primitive?: boolean) => {
-    return function (obj: any): boolean {
+    return function (obj: unknown): boolean {
       return primitive ? typeof obj === type.toLowerCase() : toString.call(obj) === `[object ${type}]`
     }
   }
@@ -79,7 +79,7 @@ export const isFunction = (item: unknown): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是空函数则返回true、否则返回false
  */
-export const isEmptyFunction = (item: unknown): boolean => {
+export const isEmptyFunction = (item: () => void | unknown): boolean => {
   if (!item) return true
   const str = item.toString().replace(/\s/g, '')
   return isFunction(item) && (str === 'functionEMPTY_FUNC(){}' || str === 'function(){}' || str === '()=>{}')
@@ -90,7 +90,7 @@ export const isEmptyFunction = (item: unknown): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是数组则返回true、否则返回false
  */
-export const isArray = (item: Array<any> | any): boolean => {
+export const isArray = (item: Array<unknown> | unknown): boolean => {
   return Array.isArray(item) || is('Array')(item)
 }
 
@@ -99,6 +99,6 @@ export const isArray = (item: Array<any> | any): boolean => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果为空数组则返回true、否则返回false
  */
-export const isEmptyArray = (item: Array<any>): boolean => {
-  return isArray(item) && item.length === 0
+export const isEmptyArray = (item: Array<unknown> | unknown): boolean => {
+  return isArray(item) && (item as unknown[]).length === 0
 }

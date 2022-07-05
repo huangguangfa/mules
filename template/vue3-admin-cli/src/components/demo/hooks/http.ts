@@ -1,5 +1,5 @@
-import useHttpRequest from '@/hooks/useHttpRequest'
-const { $get, $post, $all } = useHttpRequest()
+import { useHttp } from '@/hooks'
+const { $get, $post, $all } = useHttp()
 export function startRequest(type = 'get') {
   const map = new Map()
   map.set('get', getRequest)

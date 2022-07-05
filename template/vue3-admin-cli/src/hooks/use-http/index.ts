@@ -9,8 +9,8 @@ const { get, post, put, patch, del, all, cancel } = initHttpInstance({
     retry: 6,
   },
 })
-
-export default function useHttpRequest() {
+// useHttpRequest
+export function useHttp() {
   return {
     $get: get,
     $post: post,

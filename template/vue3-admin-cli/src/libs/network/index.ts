@@ -1,4 +1,4 @@
-import useEvents from '@/hooks/useEvents'
+import { useEvents } from '@/hooks'
 export function checkNetwork() {
   const { $emit } = useEvents()
   function updateOnline() {

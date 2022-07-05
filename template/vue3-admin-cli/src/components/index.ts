@@ -1,5 +1,5 @@
 import type { App, Component } from 'vue'
-import { exception } from '@/utils/util'
+import { throwError } from '@/utils/util'
 
 export function initGlobalComponent(app: App) {
   try {
@@ -12,6 +12,6 @@ export function initGlobalComponent(app: App) {
       app.component(name, component)
     }
   } catch (e) {
-    exception('全局组件注册失败', e)
+    throwError('全局组件注册失败', e)
   }
 }

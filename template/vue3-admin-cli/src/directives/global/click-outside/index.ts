@@ -47,7 +47,7 @@ function createDocumentHandler(el: HTMLElement, binding: DirectiveBinding): Docu
     const isContainedByEl = el.contains(mouseUpTarget) || el.contains(mouseDownTarget)
     const isSelf = el === mouseUpTarget
 
-    const isTargetExcluded = (excludes.length && excludes.some((item) => item?.contains(mouseUpTarget))) || (excludes.length && excludes.includes(mouseDownTarget as HTMLElement))
+    const isTargetExcluded = (excludes.length && excludes.some(item => item?.contains(mouseUpTarget))) || (excludes.length && excludes.includes(mouseDownTarget as HTMLElement))
     const isContainedByPopper = popperRef && (popperRef.contains(mouseUpTarget) || popperRef.contains(mouseDownTarget))
     if (isBound || isTargetExists || isContainedByEl || isSelf || isTargetExcluded || isContainedByPopper) {
       return
@@ -74,7 +74,7 @@ const ClickOutside: ObjectDirective = {
     }
 
     const handlers = nodeList.get(el)
-    const oldHandlerIndex = handlers?.findIndex((item) => item.bindingFn === binding.oldValue) || -1
+    const oldHandlerIndex = handlers?.findIndex(item => item.bindingFn === binding.oldValue) || -1
     const newHandler = {
       documentHandler: createDocumentHandler(el, binding),
       bindingFn: binding.value,

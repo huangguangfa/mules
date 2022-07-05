@@ -1,10 +1,13 @@
-import { isString } from './type'
+import { isString, isFunction } from './type'
+import { DATA_REGEX_PATTERN } from '@/config'
+import type { BasicTarget, TargetType, TargetValue } from '@/types/dom/dom-target'
+
 /**
  * 错误提示
  * @param  text 提示内容
  * @param  error 实际代码报错信息
  */
-export function exception(text: string, error?: any) {
+export function throwError(text: string, error?: unknown) {
   if (!text) return
   console.log(`%c${text}`, 'color:red', error)
 }
@@ -14,7 +17,7 @@ export function exception(text: string, error?: any) {
  * @param {String} str 当前url字符串
  * @returns {Object} 查询字符串对象
  */
-export const querystring = (str: any) => {
+export const querystring = (str: string) => {
   if (!str || !isString(str) || str.indexOf('?') === -1) return
   const arr = str.split('?')[1].split('&')
   return arr.reduce((res: object, item: string) => {
@@ -35,4 +38,39 @@ export const getToken = () => {
 export const setToken = (token: string) => {
   token = token || ''
   sessionStorage.setItem('ks_token', token)
+}
+
+/**
+ * @method 高亮显示文本(常用于关键字搜索)
+ * @param {String} str 当前url字符串
+ * @returns {Object} 查询字符串对象
+ */
+export const highlight = (str: string, keyword: string, color = '#7972FE') => {
+  const transform = keyword.replace(DATA_REGEX_PATTERN.highlight, '\\$&')
+  const reg = new RegExp(transform, 'gi')
+  if (str) {
+    return str.replace(reg, (text) => `<span style="color:${color}">${text}</span>`)
+  }
+}
+
+/**
+ * @method 获取目标元素
+ * @param  target 目标元素或方法
+ * @param defaultElement 默认元素
+ * @returns {Element} 元素
+ */
+export function getTargetElement<T extends TargetType>(target: BasicTarget<T>, defaultElement?: T): HTMLElement {
+  if (!target) {
+    return defaultElement as HTMLElement
+  }
+  let targetElement: TargetValue<T>
+  if (isFunction(target)) {
+    targetElement = (target as () => TargetValue<T>)()
+  } else if ('value' in target) {
+    targetElement = target['value'] as TargetValue<T>
+  } else {
+    targetElement = target as TargetValue<T>
+  }
+
+  return targetElement as HTMLElement
 }

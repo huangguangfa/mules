@@ -42,9 +42,9 @@ export default ({ mode }: { mode: string }) => {
     envDir: './env',
     server: {
       port: 3007,
-      host: '0.0.0.0',
+      host: true,
       proxy: {
-        '/router': {
+        '/xxxx': {
           target: env.VITE_API,
           changeOrigin: true,
         },

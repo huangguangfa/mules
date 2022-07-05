@@ -95,9 +95,9 @@ yarn stg // stg
     |    |    |── mobile
     |    |    |── app.vue
     ├    ├── main.ts
-    ├── .env.dev  dev环境配置文件
-    ├── .env.stg  stg环境配置文件
-    ├── .env.uat  uat环境配置文件
+    ├── .env.dev   dev环境配置文件
+    ├── .env.test  test环境配置文件
+    ├── .env.prod  prod环境配置文件
     ├── .eslintrc.cjs
     ├── vite.config.ts
 

@@ -1,7 +1,7 @@
 import type { ModuleRouters, RouteRecordRawList } from './types'
 const modulesRouter = import.meta.globEager('./modules/*.ts')
 const commonRouter = import.meta.globEager('./common/*.ts')
-import { exception } from '@/utils/util'
+import { throwError } from '@/utils/util'
 
 export function routerModuleList(): RouteRecordRawList {
   const _getRouterModule = (moduleRouters: ModuleRouters) => {
@@ -9,7 +9,7 @@ export function routerModuleList(): RouteRecordRawList {
       const moduleRouter = moduleRouters[cur].default
       moduleRouter && r.push(...moduleRouter)
       if (!moduleRouter) {
-        exception(`${cur}路由配置错误`)
+        throwError(`${cur}路由配置错误`)
       }
       return r
     }, [])

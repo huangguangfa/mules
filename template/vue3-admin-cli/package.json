@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode dev",
-    "stg ": "vite --mode stg",
-    "uat ": "vite --mode uat",
+    "test": "vite --mode test",
+    "prod": "vite --mode prod",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "commit": "git cz",
-    "build-only": "vite build",
+    "build-only": "vite build --mode prod",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },

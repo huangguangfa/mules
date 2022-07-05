@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import useRouter from '@/hooks/useRouter'
-import useCrypto from '@/hooks/useCrypto'
-import useEventBus from '@/hooks/useEvents'
+import { useRouter, useCrypto, useEvents } from '@/hooks'
 import { startRequest } from './hooks/http'
-const { $on } = useEventBus()
+const { $on } = useEvents()
 const { routerPush } = useRouter()
 const { decrypt, encrypt } = useCrypto()
 function to(name: string) {

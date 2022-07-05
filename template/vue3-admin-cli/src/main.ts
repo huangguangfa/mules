@@ -9,5 +9,4 @@ function bootstrap() {
   app.use(router).use(piniaStore).mount('#app')
   initGlobalMethods(app)
 }
-
 bootstrap()

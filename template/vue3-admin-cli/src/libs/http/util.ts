@@ -1,5 +1,5 @@
 import { getToken } from '@/utils/util'
-import useCrypto from '@/hooks/useCrypto'
+import { useCrypto } from '@/hooks'
 import { ASYMMETRIC_CRYPTO_TYPE } from '@/config'
 const { encrypt } = useCrypto()
 export function KsHeaders(url: string, appkey = '10184', body: object = {}) {
