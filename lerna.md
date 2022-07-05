@@ -1,6 +1,6 @@
  lerna version -m "feat(组件): lerna publish"
 
- ### 常见错误
+ ### 常见错误1
  > Current HEAD is already released
 ```js
 lerna publish from-package
