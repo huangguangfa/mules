@@ -55,9 +55,7 @@ function compress() {
   const tarStream = new compressing.zip.Stream();
   tarStream.addEntry("../../../template/vue3-admin-cli");
   const destStream = fs.createWriteStream("../../../zip/vue3-cli.zip");
-  pump(tarStream, destStream, function () {
-    console.log("压缩完成");
-  });
+  pump(tarStream, destStream, function () {});
 }
 
 // compress();

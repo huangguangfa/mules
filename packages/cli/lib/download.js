@@ -10,11 +10,10 @@ const { unCompress } = require("../lib/compressing");
  * @param { string } projectName 项目名称
  */
 const clone = async function (tempInfo, projectName) {
-  console.log(tempInfo, projectName);
   //包装为promise方法
   const download = promisify(downloadGitRepo);
   //显示下载进度
-  const snip = ora("正在拉取模板，🍵...");
+  const snip = ora("正在拉取模板，🚗🚗🚗🚗🚗🚗...");
   snip.start();
   try {
     const { type, repositories } = tempInfo;

@@ -64,10 +64,7 @@
 			"commit-msg": "commitlint -e -V"
 		}
 	},
-	"author": "测试作者",
-	"description": "描述测试",
-	"repository": {
-		"type": "git",
-		"url": "测试github地址"
-	}
+	"author": "",
+	"description": "",
+	"repository": {}
 }
