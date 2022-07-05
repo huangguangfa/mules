@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const { promisify } = require("util");
+const downloadGitRepo = require("download-git-repo");
 const ora = require("ora");
 const chalk = require("chalk");
 const { unCompress } = require("../lib/compressing");
-const downloadGitRepo = require("download-git-repo");
 /**
  * 从git仓库上下载项目到本地
  * @param { string } repo git仓库地址

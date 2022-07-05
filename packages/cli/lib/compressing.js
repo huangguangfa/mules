@@ -1,9 +1,9 @@
-const fs = require("fs");
 const compressing = require("compressing");
 const pump = require("pump");
 const download = require("download");
-const path = require("path");
 const chalk = require("chalk");
+const path = require("path");
+const fs = require("fs");
 
 async function unCompress(url, projectName) {
   return new Promise(async (resove, reject) => {
