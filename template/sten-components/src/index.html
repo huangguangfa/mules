@@ -11,10 +11,25 @@
 </head>
 
 <body>
-  <my-button text="gf">
+  <my-button text="gf" id="myButton">
     <span style="color: red;">我是默认插槽内容</span>
     <span slot="header" style="color: blue;">我是header插槽内容</span>
   </my-button>
 </body>
 
 </html>
+
+<script>
+  // 监听方法
+  const button = document.getElementById('myButton')
+  button.addEventListener('on-click', (e) => {
+    console.log(e.detail)
+  })
+
+  // 外部调用
+  setTimeout(async () => {
+    const res = await button.showPrompt();
+    console.log(res)
+  }, 1000)
+
+</script>

@@ -47,7 +47,7 @@ declare namespace LocalJSX {
         /**
           * *** 定义组件元素派发的事件 start *********
          */
-        "onOn-click"?: (event: MyButtonCustomEvent<{ data: { mes: string } }>) => void;
+        "onOn-click"?: (event: MyButtonCustomEvent<{ data: { mes: string, el: HTMLElement } }>) => void;
         /**
           * *** props定义接受一个text start *********
          */
