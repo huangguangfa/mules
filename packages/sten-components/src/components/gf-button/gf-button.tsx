@@ -18,14 +18,13 @@ export class GfButton {
     @Element() host: HTMLElement;
 
     button
-
     @Event({
         eventName: "on-click",
         composed: true,
         cancelable: true,
         bubbles: true
     })
-    displayOnClick: EventEmitter<{ data: Object }>
+    displayOnClick: EventEmitter<{ data: { eventName: string, componentsName:string } }>
     handClick(): void {
         if (this.disabled) return;
         this.displayOnClick.emit({
