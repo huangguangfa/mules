@@ -1,1 +1,1 @@
-export { default as addCartFill } from './addCartFill.js'
+exports.addCartFill = require('./addCartFill').default;

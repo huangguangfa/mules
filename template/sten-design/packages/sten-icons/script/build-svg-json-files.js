@@ -3,8 +3,20 @@ const chalk = require("chalk");
 const { resolve, extname } = require("path");
 const svgo = require("./transform-svg-json");
 
+const buildConfig = [
+  {
+    name: "ES",
+    folder: resolve(__dirname, "../icons_esm"),
+    indexContent: "",
+  },
+  {
+    name: "commonJS",
+    folder: resolve(__dirname, "../icons"),
+    indexContent: "",
+  },
+];
+
 const entryDir = resolve(__dirname, "../svgs");
-const outDir = resolve(__dirname, "../icons");
 const HTMLPATH = resolve(__dirname, "../index.html");
 const outDirComponent = resolve(
   __dirname,
@@ -16,8 +28,8 @@ const stenComponents = resolve(
 );
 
 async function clearDir() {
-  const rmDirList = [outDir];
-  const mkdirList = [outDir];
+  const rmDirList = [...buildConfig.map((i) => i.folder)];
+  const mkdirList = [...buildConfig.map((i) => i.folder)];
   rmDirList.forEach((dir) => {
     if (fs.existsSync(dir)) {
       fs.rmSync(dir, { recursive: true });
@@ -131,8 +143,17 @@ function generateHtml(component) {
  * 生成icon目标JSON数据
  */
 function generateIconSvgJson(fileName, content) {
-  const templateCode = `export default ${JSON.stringify(content)}`;
-  fs.writeFileSync(resolve(outDir, fileName), templateCode);
+  const [ES, commonJS] = buildConfig;
+  const svgJSONTemplate_es = `export default ${JSON.stringify(content)}`;
+  const svgJSONTemplate_commonJS = `exports.default = ${JSON.stringify(
+    content
+  )}`;
+
+  fs.writeFileSync(resolve(ES.folder, fileName), svgJSONTemplate_es);
+  fs.writeFileSync(
+    resolve(commonJS.folder, fileName),
+    svgJSONTemplate_commonJS
+  );
 }
 /*
  * 总览所有icon
@@ -153,16 +174,18 @@ function generateAllIconJson(AllComList) {
 /*
  * 生成icon里的index.js 统一导出
  */
-function generateIconIndexContent(content) {
+function generateIconIndexContent(writeFilePath, content) {
   const fileName = "index.js";
-  fs.writeFileSync(resolve(outDir, fileName), content);
+  fs.writeFileSync(resolve(writeFilePath, fileName), content);
 }
 
 /*
  * 写入icon源文件、组件
  */
 function writeFiles(svgJSONList) {
-  let indexFileContent = "";
+  const [ES, commonJS] = buildConfig;
+  // let indexIconsEsmFileContent = "";
+  // let indexCommonJSFileContent = "";
   let componentNameList = [];
   svgJSONList.forEach((svgItem) => {
     const name = svgItem._name.replace(
@@ -171,7 +194,8 @@ function writeFiles(svgJSONList) {
     );
     const jsonSuffix = ".js";
     const svgJsonfileName = `${name}${jsonSuffix}`;
-    indexFileContent += `export { default as ${name} } from './${svgJsonfileName}'\n`;
+    ES.indexContent += `export { default as ${name} } from './${svgJsonfileName}'\n`;
+    commonJS.indexContent += `exports.${name} = require('./${name}').default;\n`;
     // 写入svg json数据
     generateIconSvgJson(svgJsonfileName, svgItem);
     // 生成组件
@@ -182,7 +206,10 @@ function writeFiles(svgJSONList) {
       isColor: svgItem._isColor,
     });
   });
-  generateIconIndexContent(indexFileContent);
+  // 写入index统一导出
+  buildConfig.forEach((i) =>
+    generateIconIndexContent(i.folder, i.indexContent)
+  );
   // generateHtml(componentNameList);
   // generateAllIconJson(componentNameList);
   console.log(chalk`{rgb(103, 194, 58) 【SVG】build success}`);
