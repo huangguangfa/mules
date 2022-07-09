@@ -51,6 +51,5 @@
     },
     "lint-staged": {
         "packages/**/*.js": "eslint"
-    },
-    "dependencies": {}
+    }
 }

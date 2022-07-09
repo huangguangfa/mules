@@ -1,0 +1,14 @@
+{
+  "version": "independent",
+  "command": {
+    "punlish": {
+      "ignoreChanges": ["ignored-file", "*.md", "package.json"]
+    },
+    "version": {
+      "message": "feat(npm包): lerna publish"
+    }
+  },
+  "packages": ["packages/*"],
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

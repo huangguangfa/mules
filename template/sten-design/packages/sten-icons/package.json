@@ -1,0 +1,14 @@
+{
+  "name": "@sten-ui/icons",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "icons/index.js",
+  "module": "icons_esm/index.js",
+  "scripts": {
+    "build": "node script/build-svg-json-files.js"
+  },
+  "dependencies": {
+    "svgo": "^2.8.0",
+    "svgson": "^5.2.1"
+  }
+}

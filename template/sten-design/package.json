@@ -1,0 +1,24 @@
+{
+  "name": "sten-design",
+  "private": true,
+  "scripts": {
+    "i": "lerna bootstrap",
+    "commit": "git cz",
+    "release": "standard-version"
+  },
+  "devDependencies": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.js": "eslint"
+  },
+  "dependencies": {
+    "lerna": "^5.1.8"
+  }
+}
