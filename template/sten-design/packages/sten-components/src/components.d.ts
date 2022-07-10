@@ -6,6 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface IconAddCartFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size": number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface MyButton {
         /**
           * *** 定义外部通过节点调用内部的方法 start *********
@@ -22,6 +30,12 @@ export interface MyButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLMyButtonElement;
 }
 declare global {
+    interface HTMLIconAddCartFillElement extends Components.IconAddCartFill, HTMLStencilElement {
+    }
+    var HTMLIconAddCartFillElement: {
+        prototype: HTMLIconAddCartFillElement;
+        new (): HTMLIconAddCartFillElement;
+    };
     interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
     }
     var HTMLMyButtonElement: {
@@ -29,10 +43,19 @@ declare global {
         new (): HTMLMyButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "icon-add-cart-fill": HTMLIconAddCartFillElement;
         "my-button": HTMLMyButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface IconAddCartFill {
+        "color"?: string;
+        "opacity"?: number | string;
+        "rotate"?: number;
+        "size"?: number | string;
+        "spin"?: boolean;
+        "styles"?: object;
+    }
     interface MyButton {
         /**
           * *** 定义组件元素派发的事件 start *********
@@ -44,6 +67,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "icon-add-cart-fill": IconAddCartFill;
         "my-button": MyButton;
     }
 }
@@ -51,6 +75,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "icon-add-cart-fill": LocalJSX.IconAddCartFill & JSXBase.HTMLAttributes<HTMLIconAddCartFillElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
         }
     }

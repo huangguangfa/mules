@@ -118,27 +118,6 @@ export class Icon${iconName} {
   return componentName;
 }
 
-function generateHtml(component) {
-  const htmlTemplate = `
-<!DOCTYPE html>
-    <html dir="ltr" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-        <title>Icon</title>
-        <link rel="stylesheet" href="/build/sten-icons.css">
-        <script type="module" src="/build/sten-icons.esm.js"></script>
-        <script nomodule src="/build/sten-icons.js"></script>
-    </head>
-
-    <body>
-        ${component.map((c) => `<${c.cName}></${c.cName}>\n`).join("")}
-    </body>
-
-</html>`;
-  fs.writeFileSync(HTMLPATH, htmlTemplate);
-}
-
 /*
  * 生成icon目标JSON数据
  */
@@ -155,22 +134,7 @@ function generateIconSvgJson(fileName, content) {
     svgJSONTemplate_commonJS
   );
 }
-/*
- * 总览所有icon
- */
-function generateAllIconJson(AllComList) {
-  const componentJsonLisFileName = "componentJsonLisFile.js";
-  const componentJsonListTemplate = `export default {
-        list:${JSON.stringify(AllComList.filter((i) => i.isColor === false))},
-        colorList:${JSON.stringify(
-          AllComList.filter((i) => i.isColor === true)
-        )}
-    }`;
-  fs.writeFileSync(
-    resolve(outDirComponent, componentJsonLisFileName),
-    componentJsonListTemplate
-  );
-}
+
 /*
  * 生成icon里的index.js 统一导出
  */
@@ -210,8 +174,6 @@ function writeFiles(svgJSONList) {
   buildConfig.forEach((i) =>
     generateIconIndexContent(i.folder, i.indexContent)
   );
-  // generateHtml(componentNameList);
-  // generateAllIconJson(componentNameList);
   console.log(chalk`{rgb(103, 194, 58) 【SVG】build success}`);
 }
 

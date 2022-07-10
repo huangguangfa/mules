@@ -1,7 +1,9 @@
 import { Config } from '@stencil/core';
-
+const path = require('path');
+const globalStyle = path.resolve('../sten-themes', 'npm/index.css');
 export const config: Config = {
   namespace: 'sten-components',
+  globalStyle,
   outputTargets: [
     // 整体打包
     {

@@ -2,7 +2,7 @@ import { Component, Host, h, Prop, Event, EventEmitter, State, Watch, Method, El
 
 @Component({
   tag: 'my-button',   // 组件名称
-  styleUrl: 'my-button.css', // 组件样式
+  // styleUrl: 'my-button.css', // 组件样式
   shadow: false,  // 是否开启沙盒模式
 })
 export class MyButton {
@@ -106,7 +106,7 @@ export class MyButton {
     console.log('[lifecycle 4] render')
     return (
       <Host>
-        <div>
+        <div class="my-button">
           <button onClick={ this.handClick.bind(this) }>往外部抛事件</button>
           {/* slot接收 */}
           <slot></slot>
