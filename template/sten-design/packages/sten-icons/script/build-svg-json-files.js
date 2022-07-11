@@ -148,8 +148,6 @@ function generateIconIndexContent(writeFilePath, content) {
  */
 function writeFiles(svgJSONList) {
   const [ES, commonJS] = buildConfig;
-  // let indexIconsEsmFileContent = "";
-  // let indexCommonJSFileContent = "";
   let componentNameList = [];
   svgJSONList.forEach((svgItem) => {
     const name = svgItem._name.replace(

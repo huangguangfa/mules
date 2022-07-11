@@ -16,4 +16,11 @@ module.exports = [
     desc: "企业级应用框架,基于vue3+TS",
     author: "gf",
   },
+  {
+    name: "sten-design",
+    type: "zip",
+    repositories: zipUrl + "sten-design.zip",
+    desc: "企业级跨框架UI框架,基于Stencil+TS+Lerna",
+    author: "gf",
+  },
 ];
