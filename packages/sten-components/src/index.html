@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/build/sten-components.css">
     <script type="module" src="/build/sten-components.esm.js"></script>
     <script nomodule src="/build/sten-components.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 
 <body>
@@ -20,18 +20,28 @@
         <gf-input placeholder="输入审批理由" clearable type="textarea" rows="2"></gf-input>
     </div> -->
 
-    <div style="width:200px;margin-top: 10px;" id="inputs">
-        <gf-input></gf-input>
-    </div>
 
+    <div id="app" style="width: 200px">
+        <gf-input :arrays="list"></gf-input>
+    </div>
 
 </body>
 
 </html>
 
 <script>
-    const input = document.getElementById('inputs');
-    input.addEventListener('eventEnter', function (e) {
-        console.log('2222', e);
-    });
+    // const input = document.getElementById('inputs');
+    // input.addEventListener('eventEnter', function (e) {
+    //     console.log('2222', e);
+    // });
+</script>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list: [{ name: "张三" }]
+        }
+    })
 </script>

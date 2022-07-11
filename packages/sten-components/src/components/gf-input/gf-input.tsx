@@ -6,9 +6,9 @@ import { GfIconinfo } from "../gf-icon/gf-icon-info"
 import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
 import { GfAutocomplete } from "./autocomplete"
 
-// injectComponents({
-//   GfIconclear, GfIconinfo, GfIconsuccessFill
-// });
+injectComponents({
+  GfIconclear, GfIconinfo, GfIconsuccessFill
+});
 import type { status } from "../../types/var"
 const STATUS = {
   "success": {
@@ -44,7 +44,7 @@ export class GfInput {
   @Prop() maxRows: number | string;
   @Prop() rows: number | string = 2;
   @Prop() autosize: boolean = false;
-  @Prop() arrays: {}[] = []
+  @Prop() arrays: Array<Record<string,unknown>> = []
 
   @State() curentValue: string = '';
   @State() autocompleteState: Boolean = true;

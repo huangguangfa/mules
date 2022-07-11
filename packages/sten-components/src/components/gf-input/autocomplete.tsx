@@ -3,6 +3,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 @Component({
     tag: 'gf-autocomplete'
 })
+
 export class GfAutocomplete {
     @Prop() show: Boolean = false;
 
