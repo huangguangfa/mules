@@ -22,19 +22,13 @@
 
 
     <div id="app" style="width: 200px">
-        <gf-input :arrays="list"></gf-input>
+        <!-- <gf-input id="inputs" :arrays.prop="list"></gf-input> -->
+        <gf-input id="inputs"></gf-input>
     </div>
 
 </body>
 
 </html>
-
-<script>
-    // const input = document.getElementById('inputs');
-    // input.addEventListener('eventEnter', function (e) {
-    //     console.log('2222', e);
-    // });
-</script>
 
 
 <script>
@@ -44,4 +38,17 @@
             list: [{ name: "张三" }]
         }
     })
+
+    let input = document.getElementById('inputs')
+    input.arrays = [{ name: 'test' }]
+    // const cmp = document.querySelector('gf-input');
+    console.log(input.arrays);
+    // setTimeout(() => {
+    //     const cmp = document.querySelector('gf-input');
+    //     cmp.arrays = [{ name: 'test' }]
+    //     // const cmp = document.querySelector('gf-input');
+    //     console.log(cmp.arrays);
+    //     // console.log(input.getAttribute('testa'))
+    //     // console.log(input.arrays)
+    // })
 </script>
