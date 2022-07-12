@@ -86,7 +86,6 @@ export class GfInput {
 
   @Event() eventFocus: EventEmitter<FocusEvent>
   private handleFocus = (e) => {
-    console.log('222',this.arrays)
     this.eventFocus.emit(e)
     this.autocompleteState = true;
   }
@@ -126,7 +125,7 @@ export class GfInput {
   private handleCompositionStart = () => {
     this.isComposing = true;
   }
-  private handleCompositionEnd = (e) => {
+  private handleCompositionEnd = (e: Event) => {
     if (this.isComposing) {
       this.isComposing = false;
       this.handleInput(e);

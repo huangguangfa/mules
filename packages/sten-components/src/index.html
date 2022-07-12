@@ -12,18 +12,9 @@
 </head>
 
 <body>
-
-    <!-- <div style="width:200px;margin-top: 10px;">
-        <gf-input placeholder="输入审批理由" clearable></gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;" id="inputs">
-        <gf-input placeholder="输入审批理由" clearable type="textarea" rows="2"></gf-input>
-    </div> -->
-
-
     <div id="app" style="width: 200px">
-        <!-- <gf-input id="inputs" :arrays.prop="list"></gf-input> -->
-        <gf-input id="inputs"></gf-input>
+        <gf-input id="inputs" :arrays.prop="list"></gf-input>
+        <!-- <gf-input id="inputs"></gf-input> -->
     </div>
 
 </body>
@@ -38,17 +29,4 @@
             list: [{ name: "张三" }]
         }
     })
-
-    let input = document.getElementById('inputs')
-    input.arrays = [{ name: 'test' }]
-    // const cmp = document.querySelector('gf-input');
-    console.log(input.arrays);
-    // setTimeout(() => {
-    //     const cmp = document.querySelector('gf-input');
-    //     cmp.arrays = [{ name: 'test' }]
-    //     // const cmp = document.querySelector('gf-input');
-    //     console.log(cmp.arrays);
-    //     // console.log(input.getAttribute('testa'))
-    //     // console.log(input.arrays)
-    // })
 </script>
