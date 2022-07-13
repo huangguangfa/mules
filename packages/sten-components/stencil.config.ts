@@ -1,9 +1,13 @@
 import { Config } from '@stencil/core';
-const path = require("path");
+const path = require('path');
 const globalStyle = path.resolve('../sten-themes', 'npm/index.css');
 export const config: Config = {
     namespace: 'sten-components',
     globalStyle,
+    invisiblePrehydration: false,
+    devServer: {
+        openBrowser: false,
+    },
     outputTargets: [
         // 整体打包
         {
@@ -16,7 +20,7 @@ export const config: Config = {
         // 网站script方式打包
         {
             type: 'www',
-            serviceWorker: null
-        }
-    ]
+            serviceWorker: null,
+        },
+    ],
 };
