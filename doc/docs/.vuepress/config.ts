@@ -50,6 +50,7 @@ export default defineUserConfig({
       },
     },
   }),
+
   plugins: [
     searchPlugin({
       locales: {
@@ -108,7 +109,6 @@ export default defineUserConfig({
     ],
   ],
   theme: defaultTheme({
-    // logo: 'https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/tabbar-navigation/blogs.png',
     subSidebar: "auto",
     selectLanguageText: "简体中文",
     lastUpdatedText: "上次更新",

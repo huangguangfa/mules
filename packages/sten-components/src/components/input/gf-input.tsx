@@ -7,7 +7,7 @@ import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
 import { GfAutocomplete } from "./autocomplete"
 
 injectComponents({
-  GfIconclear, GfIconinfo, GfIconsuccessFill
+  GfIconclear, GfIconinfo, GfIconsuccessFill,GfAutocomplete
 });
 import type { status } from "../../types/var"
 const STATUS = {

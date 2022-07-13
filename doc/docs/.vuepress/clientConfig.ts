@@ -1,10 +1,12 @@
 import { defineClientConfig } from "@vuepress/client";
-
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
     app.mixin({
-      created() {},
-      mounted() {},
+      created() {
+        // router.replace(router.currentRoute.value.path);
+        console.log(siteData);
+      },
+      // mounted() {},
     });
   },
   setup() {

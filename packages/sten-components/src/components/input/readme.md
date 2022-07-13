@@ -9,6 +9,7 @@
 
 | Property       | Attribute        | Description | Type                                                | Default      |
 | -------------- | ---------------- | ----------- | --------------------------------------------------- | ------------ |
+| `arrays`       | --               |             | `Record<string, unknown>[]`                         | `[]`         |
 | `autofocus`    | `autofocus`      |             | `boolean`                                           | `false`      |
 | `autosize`     | `autosize`       |             | `boolean`                                           | `false`      |
 | `clearable`    | `clearable`      |             | `boolean`                                           | `false`      |
@@ -33,6 +34,7 @@
 | `eventBlur`   |             | `CustomEvent<HTMLAreaElement>` |
 | `eventChange` |             | `CustomEvent<string>`          |
 | `eventClear`  |             | `CustomEvent<string>`          |
+| `eventEnter`  |             | `CustomEvent<string>`          |
 | `eventFocus`  |             | `CustomEvent<FocusEvent>`      |
 | `eventInput`  |             | `CustomEvent<string>`          |
 
@@ -44,6 +46,7 @@
 - [gf-icon-clear](../gf-icon)
 - [gf-icon-success-fill](../gf-icon)
 - [gf-icon-info](../gf-icon)
+- [gf-autocomplete](.)
 
 ### Graph
 ```mermaid
@@ -51,6 +54,7 @@ graph TD;
   gf-input --> gf-icon-clear
   gf-input --> gf-icon-success-fill
   gf-input --> gf-icon-info
+  gf-input --> gf-autocomplete
   style gf-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
