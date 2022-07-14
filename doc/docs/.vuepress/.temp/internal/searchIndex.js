@@ -14,87 +14,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "button",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Button 按钮",
-        "slug": "button-按钮",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "配置属性",
-        "slug": "配置属性",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/button.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "icon",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Icon图标",
-        "slug": "icon图标",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "配置属性",
-        "slug": "配置属性",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/icon.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "input",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Input 按钮",
-        "slug": "input-按钮",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "配置属性",
-        "slug": "配置属性",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/input.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "安装",
-    "headers": [
-      {
-        "level": 2,
-        "title": "安装",
-        "slug": "安装",
-        "children": []
-      }
-    ],
-    "path": "/zh/components/install.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "框架集成",
-    "headers": [],
-    "path": "/zh/components/use.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "core首页",
     "headers": [
       {
@@ -346,6 +265,87 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "button",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Button 按钮",
+        "slug": "button-按钮",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置属性",
+        "slug": "配置属性",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/button.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "icon",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Icon图标",
+        "slug": "icon图标",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置属性",
+        "slug": "配置属性",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/icon.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "input",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Input 按钮",
+        "slug": "input-按钮",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置属性",
+        "slug": "配置属性",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/input.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "安装",
+    "headers": [
+      {
+        "level": 2,
+        "title": "安装",
+        "slug": "安装",
+        "children": []
+      }
+    ],
+    "path": "/zh/components/install.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "框架集成",
+    "headers": [],
+    "path": "/zh/components/use.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/404.html",
@@ -353,16 +353,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

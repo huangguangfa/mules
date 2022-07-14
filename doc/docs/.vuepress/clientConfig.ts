@@ -1,12 +1,23 @@
 import { defineClientConfig } from "@vuepress/client";
+
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
+    router.beforeEach((to) => {
+      // let page = document.getElementsByClassName("theme-default-content")[0];
+      // setTimeout(() => {
+      //   console.log("路由切换");
+      //   page.style.display = "none";
+      //   setTimeout(() => {
+      //     page.style.display = "block";
+      //   });
+      // }, 200);
+    });
     app.mixin({
       created() {
         // router.replace(router.currentRoute.value.path);
-        console.log(siteData);
+        // console.log(siteData);
       },
-      // mounted() {},
+      mounted() {},
     });
   },
   setup() {

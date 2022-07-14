@@ -32,15 +32,20 @@ export default defineUserConfig({
       lang: "English",
     },
   },
+  // bundler: webpackBundler({
+  //   vue: {
+  //     compilerOptions: {
+  //       isCustomElement: (tag) => {
+  //         let status = tag.includes("gf") || tag.includes("Toc");
+  //         console.log(status);
+  //         return status;
+  //       },
+  //     },
+  //   },
+  // }),
   clientConfigFile: path.resolve(__dirname, "./clientConfig.ts"),
   base: "/doc/",
   bundler: viteBundler({
-    viteOptions: {
-      // @ts-expect-error Invalid types can be ignored
-      ssr: {
-        noExternal: ["customElements"],
-      },
-    },
     vuePluginOptions: {
       template: {
         // 自定义元素

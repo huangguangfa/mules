@@ -313,6 +313,8 @@ table tr:hover{
 h2{
     position: relative;
     display: inline-block;
+    padding-top: 0 !important;
+    margin-top: 1.5em !important;
     &::after{
         background-color: rgb(76, 72, 255);
         bottom: 0;
