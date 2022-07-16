@@ -1,55 +1,60 @@
 {
-    "name": "root",
-    "private": true,
-    "scripts": {
-        "i": "lerna bootstrap",
-        "commit": "git cz",
-        "release": "standard-version",
-        "start:c": "lerna run start --scope @gf-ui/components",
-        "build:npm": "node ./scripts/rollup/build.js --mode",
-        "start:npm": "node ./scripts/rollup/build.js --watch",
-        "jest": "jest --verbose --runInBand --coverage"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.17.8",
-        "@babel/plugin-transform-modules-commonjs": "^7.17.7",
-        "@babel/plugin-transform-runtime": "^7.17.0",
-        "@babel/preset-env": "^7.16.11",
-        "@babel/preset-typescript": "^7.16.7",
-        "@commitlint/cli": "^16.2.3",
-        "@rollup/plugin-babel": "^5.3.1",
-        "@rollup/plugin-commonjs": "^21.0.3",
-        "@rollup/plugin-node-resolve": "^13.1.3",
-        "@types/jest": "^27.4.1",
-        "@types/node": "^17.0.23",
-        "commitizen": "^4.2.4",
-        "commitlint-config-cz": "^0.13.3",
-        "cz-customizable": "^6.3.0",
-        "husky": "^1.2.0",
-        "jest": "^27.5.1",
-        "lerna": "^4.0.0",
-        "rollup": "^2.70.1",
-        "rollup-plugin-uglify": "^6.0.4",
-        "standard-version": "^9.3.2",
-        "ts-jest": "^27.1.4",
-        "typescript": "^4.6.3",
-        "yorkie": "^2.0.0"
-    },
-    "workspaces": [
-        "packages/*"
-    ],
-    "config": {
-        "commitizen": {
-            "path": "cz-customizable"
-        }
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -e -V",
-            "pre-commit": "node scripts/husky/pre-commit.js"
-        }
-    },
-    "lint-staged": {
-        "packages/**/*.js": "eslint"
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "i": "lerna bootstrap",
+    "commit": "git cz",
+    "release": "standard-version",
+    "start:c": "lerna run start --scope @gf-ui/components",
+    "build:npm": "node ./scripts/rollup/build.js --mode",
+    "start:npm": "node ./scripts/rollup/build.js --watch",
+    "docs:dev": "lerna run dev --scope @gf-ui/docs",
+    "jest": "jest --verbose --runInBand --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@commitlint/cli": "^16.2.3",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.23",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-customizable": "^6.3.0",
+    "husky": "^1.2.0",
+    "jest": "^27.5.1",
+    "lerna": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "standard-version": "^9.3.2",
+    "ts-jest": "^27.1.4",
+    "tsx": "^3.8.0",
+    "typescript": "^4.6.3",
+    "yorkie": "^2.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "docs",
+    "internal/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
     }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e -V",
+      "pre-commit": "node scripts/husky/pre-commit.js"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.js": "eslint"
+  }
 }
