@@ -2,8 +2,10 @@ import { Component, Host, h, Prop, Event, EventEmitter, Element } from '@stencil
 import { ButtonColor, ButtonSize } from "../../types/gf-button";
 import { getButtonColor, getButtonStyle } from "./_button";
 import { setEventName } from '../.internal/config'
+
 @Component({
-    tag: 'gf-button'
+    tag: 'gf-button',
+    scoped:true
 })
 
 export class GfButton {

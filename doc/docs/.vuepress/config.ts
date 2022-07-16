@@ -98,20 +98,20 @@ export default defineUserConfig({
       },
     ],
     ["link", { rel: "icon", href: "/css/reset.css" }],
-    [
-      "script",
-      {
-        type: "module",
-        src: "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.esm.js",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.css",
-      },
-    ],
+    // [
+    //   "script",
+    //   {
+    //     type: "module",
+    //     src: "/doc/build/sten-components.esm.js",
+    //   },
+    // ],
+    // [
+    //   "link",
+    //   {
+    //     rel: "stylesheet",
+    //     href: "/doc/build/sten-components.css",
+    //   },
+    // ],
   ],
   theme: defaultTheme({
     subSidebar: "auto",
@@ -147,7 +147,7 @@ export default defineUserConfig({
       },
     ],
     sidebar,
-    notFound: ["您当前路径不存在、返回首页吧"],
+    notFound: ["您当前路径不存在、返回首页?"],
   }),
 
   markdown: {
