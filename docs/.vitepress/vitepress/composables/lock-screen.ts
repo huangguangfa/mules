@@ -6,7 +6,7 @@ import {
   getStyle,
   hasClass,
   removeClass,
-} from "../../utils/ele-utils";
+} from "../../utils/utils";
 
 export const useLockScreen = () => {
   let scrollBarWidth = 0;

@@ -3,10 +3,10 @@ import "normalize.css";
 
 // for dev
 // reset
-// import '../../../packages/theme-chalk/src/reset.scss'
-// import '../../../packages/theme-chalk/src/index.scss'
+import "../theme-chalk/src/reset.scss";
+import "..//theme-chalk/src/index.scss";
 // for dark mode
-// import '../../../packages/theme-chalk/src/dark/css-vars.scss'
+import "../theme-chalk/src/dark/css-vars.scss";
 
 import "./styles/css-vars.scss";
 import "./styles/app.scss";

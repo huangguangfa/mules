@@ -1,32 +1,31 @@
 <script setup lang="ts">
-import '@docsearch/css'
-import { getCurrentInstance, onMounted, watch } from 'vue'
-import { useRoute, useRouter } from 'vitepress'
-import docsearch from '@docsearch/js'
-import { isClient } from '@vueuse/core'
+import { getCurrentInstance, onMounted, watch } from "vue";
+import { useRoute, useRouter } from "vitepress";
+import docsearch from "@docsearch/js";
+import { isClient } from "@vueuse/core";
 // import { useLang } from '../../composables/lang'
 // import type { DefaultTheme } from '../config'
-import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
+import type { DocSearchHit } from "@docsearch/react/dist/esm/types";
 
 const props = defineProps<{
-  options: any
-  multilang?: boolean
-}>()
+  options: any;
+  multilang?: boolean;
+}>();
 
-const vm = getCurrentInstance()
-const route = useRoute()
-const router = useRouter()
+const vm = getCurrentInstance();
+const route = useRoute();
+const router = useRouter();
 
 watch(
   () => props.options,
   (value) => {
-    update(value)
+    update(value);
   }
-)
+);
 
 onMounted(() => {
-  initialize(props.options)
-})
+  initialize(props.options);
+});
 
 function isSpecialClick(event: MouseEvent) {
   return (
@@ -35,20 +34,20 @@ function isSpecialClick(event: MouseEvent) {
     event.ctrlKey ||
     event.metaKey ||
     event.shiftKey
-  )
+  );
 }
 
 function getRelativePath(absoluteUrl: string) {
-  const { pathname, hash } = new URL(absoluteUrl)
+  const { pathname, hash } = new URL(absoluteUrl);
 
-  return pathname + hash
+  return pathname + hash;
 }
 
 function update(options: any) {
   if (vm && vm.vnode.el) {
     vm.vnode.el.innerHTML =
-      '<div class="algolia-search-box" id="docsearch"></div>'
-    initialize(options)
+      '<div class="algolia-search-box" id="docsearch"></div>';
+    initialize(options);
   }
 }
 
@@ -61,8 +60,8 @@ function initialize(userOptions: any) {
 
   docsearch(
     Object.assign({}, userOptions, {
-      container: '#docsearch',
-      indexName: 'element-plus',
+      container: "#docsearch",
+      indexName: "element-plus",
       // searchParameters: Object.assign({}, userOptions.searchParameters, {
       //   // pass a custom lang facetFilter to allow multiple language search
       //   // https://github.com/algolia/docsearch-configs/pull/3942
@@ -73,18 +72,18 @@ function initialize(userOptions: any) {
 
       navigator: {
         navigate: ({ suggestionUrl }: { suggestionUrl: string }) => {
-          if (!isClient) return
+          if (!isClient) return;
 
           const { pathname: hitPathname } = new URL(
             window.location.origin + suggestionUrl
-          )
+          );
 
           // Router doesn't handle same-page navigation so we use the native
           // browser location API for anchor navigation
           if (route.path === hitPathname) {
-            window.location.assign(window.location.origin + suggestionUrl)
+            window.location.assign(window.location.origin + suggestionUrl);
           } else {
-            router.go(suggestionUrl)
+            router.go(suggestionUrl);
           }
         },
       },
@@ -93,23 +92,23 @@ function initialize(userOptions: any) {
         return items.map((item) => {
           return Object.assign({}, item, {
             url: getRelativePath(item.url),
-          })
-        })
+          });
+        });
       },
 
       hitComponent: ({
         hit,
         children,
       }: {
-        hit: DocSearchHit
-        children: any
+        hit: DocSearchHit;
+        children: any;
       }) => {
-        const relativeHit = hit.url.startsWith('http')
+        const relativeHit = hit.url.startsWith("http")
           ? getRelativePath(hit.url as string)
-          : hit.url
+          : hit.url;
 
         return {
-          type: 'a',
+          type: "a",
           ref: undefined,
           constructor: undefined,
           key: undefined,
@@ -117,31 +116,31 @@ function initialize(userOptions: any) {
             href: hit.url,
             onClick: (event: MouseEvent) => {
               if (isSpecialClick(event)) {
-                return
+                return;
               }
 
               // we rely on the native link scrolling when user is already on
               // the right anchor because Router doesn't support duplicated
               // history entries
               if (route.path === relativeHit) {
-                return
+                return;
               }
 
               // if the hits goes to another page, we prevent the native link
               // behavior to leverage the Router loading feature
               if (route.path !== relativeHit) {
-                event.preventDefault()
+                event.preventDefault();
               }
 
-              router.go(relativeHit)
+              router.go(relativeHit);
             },
             children,
           },
           __v: null,
-        }
+        };
       },
     })
-  )
+  );
 }
 </script>
 
@@ -150,7 +149,7 @@ function initialize(userOptions: any) {
 </template>
 
 <style lang="scss">
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
 .algolia-search-box {
   // display: flex;
   // align-items: center;
@@ -163,7 +162,7 @@ function initialize(userOptions: any) {
   //   display: flex;
   // }
 
-  @include respond-to('md') {
+  @include respond-to("md") {
     min-width: 176.3px;
   }
 }
@@ -210,7 +209,7 @@ function initialize(userOptions: any) {
 
   background-color: transparent;
 
-  @include respond-to('md') {
+  @include respond-to("md") {
     background-color: var(--docsearch-searchbox-background);
   }
 }
