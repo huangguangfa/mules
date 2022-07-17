@@ -56,5 +56,8 @@
   },
   "lint-staged": {
     "packages/**/*.js": "eslint"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.3"
   }
 }
