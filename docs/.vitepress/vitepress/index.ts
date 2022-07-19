@@ -4,7 +4,8 @@ import "normalize.css";
 // for dev
 // reset
 import "../theme-chalk/src/reset.scss";
-import "..//theme-chalk/src/index.scss";
+
+import "../theme-chalk/src/index.scss";
 // for dark mode
 import "../theme-chalk/src/dark/css-vars.scss";
 
