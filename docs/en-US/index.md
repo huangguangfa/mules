@@ -7,5 +7,3 @@ lang: en-US
 <ClientOnly>
   <ParallaxHome />
 </ClientOnly>
-
-222

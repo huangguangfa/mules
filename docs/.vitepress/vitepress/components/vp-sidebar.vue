@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { useSidebar } from '../composables/sidebar'
+import { useSidebar } from "../composables/sidebar";
 
-import VPSidebarLink from './sidebar/vp-sidebar-link.vue'
+import VPSidebarLink from "./sidebar/vp-sidebar-link.vue";
 
-defineProps<{ open: boolean }>()
-defineEmits(['close'])
+defineProps<{ open: boolean }>();
+defineEmits(["close"]);
 
 // const isHome = useIsHome()
-const { sidebars, hasSidebar } = useSidebar()
+const { sidebars, hasSidebar } = useSidebar();
 </script>
 
 <template>

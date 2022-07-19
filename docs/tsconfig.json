@@ -12,10 +12,7 @@
     "skipLibCheck": true,
     "lib": ["WebWorker"],
     "paths": {
-      "element-plus": ["../packages/element-plus"],
-      "~/*": ["./.vitepress/vitepress/*"]
     },
-    "types": ["../typings/components"],
     "jsx": "preserve"
   },
   "include": ["**/*", ".vitepress/**/*"],

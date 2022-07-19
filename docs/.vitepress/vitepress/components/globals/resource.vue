@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { useLang } from '../../composables/lang'
-import resourceLocale from '../../../i18n/pages/resource.json'
-import { sendEvent } from '../../../config/analytics'
-const lang = useLang()
-const resourceLang = computed(() => resourceLocale[lang.value])
+import { computed } from "vue";
+import { useLang } from "../../composables/lang";
+import resourceLocale from "../../../i18n/pages/resource.json";
+import { sendEvent } from "../../../config/analytics";
+const lang = useLang();
+const resourceLang = computed(() => resourceLocale[lang.value]);
 const onClick = (item: string) => {
-  sendEvent('resource_download', item)
-}
+  sendEvent("resource_download", item);
+};
 </script>
 
 <template>
   <div class="page-resource">
-    <h1>{{ resourceLang.title }}</h1>
+    <h1>{{ resourceLang.title }}1111</h1>
     <p>{{ resourceLang.lineOne }}</p>
     <p v-html="resourceLang.lineTwo" />
     <div class="flex flex-wrap justify-center mt-32px">

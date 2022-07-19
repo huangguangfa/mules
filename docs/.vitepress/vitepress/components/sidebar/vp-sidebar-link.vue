@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { useRoute } from 'vitepress'
-import { isActive } from '../../utils'
+import { useRoute } from "vitepress";
+import { isActive } from "../../utils";
 
-import type { Link } from '../../types'
+import type { Link } from "../../types";
 
 defineProps<{
-  item: Link
-}>()
+  item: Link;
+}>();
 
-defineEmits(['close'])
+defineEmits(["close"]);
 
-const route = useRoute()
+const route = useRoute();
 </script>
 
 <template>

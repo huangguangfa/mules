@@ -1,6 +1,6 @@
 <template>
   <el-row class="mb-4">
-    <el-button>Default</el-button>
+    <el-button>Default1</el-button>
     <el-button type="primary">Primary</el-button>
     <el-button type="success">Success</el-button>
     <el-button type="info">Info</el-button>
@@ -8,6 +8,15 @@
     <el-button type="danger">Danger</el-button>
     <el-button>中文</el-button>
   </el-row>
+
+  <div class="flex" style="margin: 11px 0">
+    <gf-button>普通按钮</gf-button>
+    <gf-button color="primary">正常按钮</gf-button>
+    <gf-button color="success">成功按钮</gf-button>
+    <gf-button color="info">信息按钮</gf-button>
+    <gf-button color="warning">警告按钮</gf-button>
+    <gf-button color="danger">错误按钮</gf-button>
+  </div>
 
   <el-row class="mb-4">
     <el-button plain>Plain</el-button>
