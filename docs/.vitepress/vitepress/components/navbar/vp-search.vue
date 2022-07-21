@@ -151,16 +151,16 @@ function initialize(userOptions: any) {
 <style lang="scss">
 @use "../../styles/mixins" as *;
 .algolia-search-box {
-  // display: flex;
-  // align-items: center;
-  // line-height: var(--header-height);
-  // padding-left: 0.5rem;
-  // padding-top: 1px;
-  // margin-right: 12px;
-  // .search-box-placeholder,
-  // .search-box-key {
-  //   display: flex;
-  // }
+  display: flex;
+  align-items: center;
+  line-height: var(--header-height);
+  padding-left: 0.5rem;
+  padding-top: 1px;
+  margin-right: 12px;
+  .search-box-placeholder,
+  .search-box-key {
+    display: flex;
+  }
 
   @include respond-to("md") {
     min-width: 176.3px;

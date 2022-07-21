@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { inBrowser, useData } from 'vitepress'
+import { computed } from "vue";
+import { inBrowser, useData } from "vitepress";
 
-import VPNavbarSearch from './navbar/vp-search.vue'
-import VPNavbarMenu from './navbar/vp-menu.vue'
-import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
-import VPNavbarTranslation from './navbar/vp-translation.vue'
-import VPNavbarSocialLinks from './navbar/vp-social-links.vue'
-import VPNavbarHamburger from './navbar/vp-hamburger.vue'
+import VPNavbarSearch from "./navbar/vp-search.vue";
+import VPNavbarMenu from "./navbar/vp-menu.vue";
+import VPNavbarThemeToggler from "./navbar/vp-theme-toggler.vue";
+import VPNavbarTranslation from "./navbar/vp-translation.vue";
+import VPNavbarSocialLinks from "./navbar/vp-social-links.vue";
+import VPNavbarHamburger from "./navbar/vp-hamburger.vue";
 
 defineProps<{
-  fullScreen: boolean
-}>()
+  fullScreen: boolean;
+}>();
 
-defineEmits(['toggle'])
+defineEmits(["toggle"]);
 
-const { theme, page } = useData()
+const { theme, page } = useData();
 
 const currentLink = computed(() => {
   if (!inBrowser) {
-    return `/${page.value?.frontmatter?.lang || ''}/`
+    return `/${page.value?.frontmatter?.lang || ""}/`;
   }
   const existLangIndex = theme.value.langs.findIndex((lang) =>
     window?.location?.pathname.startsWith(`/${lang}`)
-  )
+  );
 
-  return existLangIndex === -1 ? '/' : `/${theme.value.langs[existLangIndex]}/`
-})
+  return existLangIndex === -1 ? "/" : `/${theme.value.langs[existLangIndex]}/`;
+});
 </script>
 
 <template>

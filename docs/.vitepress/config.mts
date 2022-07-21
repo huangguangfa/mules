@@ -70,9 +70,7 @@ export const config: UserConfig = {
     features,
     langs: languages,
   },
-
   locales,
-
   markdown: {
     config: (md) => mdPlugin(md),
   },

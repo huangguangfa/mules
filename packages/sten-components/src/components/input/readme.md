@@ -46,7 +46,6 @@
 - [gf-icon-clear](../gf-icon)
 - [gf-icon-success-fill](../gf-icon)
 - [gf-icon-info](../gf-icon)
-- [gf-autocomplete](.)
 
 ### Graph
 ```mermaid
@@ -54,7 +53,6 @@ graph TD;
   gf-input --> gf-icon-clear
   gf-input --> gf-icon-success-fill
   gf-input --> gf-icon-info
-  gf-input --> gf-autocomplete
   style gf-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
