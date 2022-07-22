@@ -1,7 +1,7 @@
 {
   "intro": {
     "text": "基础",
-    "children": [
+    "items": [
       {
         "text": "Design",
         "link": "/guide/design"

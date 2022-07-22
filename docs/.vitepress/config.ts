@@ -1,6 +1,4 @@
 import consola from "consola";
-import { REPO_BRANCH, REPO_PATH } from "@gf-ui/build-constants";
-import { docsDirName } from "@gf-ui/build-utils";
 import { languages } from "./utils/lang";
 import { head } from "./config/head";
 import { sidebars } from "./config/sidebars";
@@ -44,21 +42,15 @@ languages.forEach((lang) => {
     lang,
   };
 });
-
 export const config: UserConfig = {
   title: "Element Plus",
   description: "a Vue 3 based component library for designers and developers",
   lastUpdated: true,
   head,
   themeConfig: {
-    repo: REPO_PATH,
-    docsBranch: REPO_BRANCH,
-    docsDir: docsDirName,
-
     editLinks: true,
     editLinkText: "Edit this page on GitHub",
     lastUpdated: "Last Updated",
-
     logo: "/images/element-plus-logo.svg",
     logoSmall: "/images/element-plus-logo-small.svg",
     sidebars,
@@ -74,7 +66,6 @@ export const config: UserConfig = {
   markdown: {
     config: (md) => mdPlugin(md),
   },
-
   vue: {
     template: {
       ssr: true,

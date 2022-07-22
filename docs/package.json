@@ -1,7 +1,8 @@
 {
   "name": "@gf-ui/docs",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "pnpm gen-locale && vitepress dev .",
+    "dev": "pnpm gen-locale && vitepress dev",
     "build": "cross-env NODE_ENV=production && vitepress build . && tsx .vitepress/build/rebuild-pwa.ts",
     "serve": "cross-env NODE_ENV=production vitepress serve . --port 5001",
     "gen-locale": "rimraf .vitepress/i18n && tsx .vitepress/build/crowdin-generate.ts",
@@ -49,6 +50,6 @@
     "vite-plugin-inspect": "^0.5.0",
     "vite-plugin-mkcert": "^1.7.2",
     "vite-plugin-pwa": "^0.12.0",
-    "vitepress": "^0.22.4"
+    "vitepress": "^1.0.0-alpha.4"
   }
 }

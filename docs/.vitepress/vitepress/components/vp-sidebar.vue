@@ -6,7 +6,6 @@ import VPSidebarLink from "./sidebar/vp-sidebar-link.vue";
 defineProps<{ open: boolean }>();
 defineEmits(["close"]);
 
-// const isHome = useIsHome()
 const { sidebars, hasSidebar } = useSidebar();
 </script>
 

@@ -64,7 +64,10 @@ export const head: HeadConfig[] = [
     `const script = document.createElement("script");
     script.src = "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.esm.js";
     script.type = "module";
-    document.body.appendChild(script);`,
+    setTimeout( () => {
+      document.body.appendChild(script);
+    },1000)
+    `,
   ],
   [
     "link",

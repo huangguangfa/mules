@@ -1,10 +1,14 @@
 {
   "basic": {
     "text": "基础",
-    "children": [
+    "items": [
       {
         "link": "/button",
         "text": "Button"
+      },
+      {
+        "link": "/test",
+        "text": "Test"
       }
     ]
   }
