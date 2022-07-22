@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "@docsearch/css";
 import { getCurrentInstance, onMounted, watch } from "vue";
 import { useRoute, useRouter } from "vitepress";
 import docsearch from "@docsearch/js";
@@ -145,26 +146,26 @@ function initialize(userOptions: any) {
 </script>
 
 <template>
-  <div id="docsearch" class="algolia-search-box" />
+  <div id="docsearch" class="algolia-search-box"></div>
 </template>
 
 <style lang="scss">
 @use "../../styles/mixins" as *;
 .algolia-search-box {
-  display: flex;
-  align-items: center;
-  line-height: var(--header-height);
-  padding-left: 0.5rem;
-  padding-top: 1px;
-  margin-right: 12px;
-  .search-box-placeholder,
-  .search-box-key {
-    display: flex;
-  }
+  // display: flex;
+  // align-items: center;
+  // line-height: var(--header-height);
+  // padding-left: 0.5rem;
+  // padding-top: 1px;
+  // margin-right: 12px;
+  // .search-box-placeholder,
+  // .search-box-key {
+  //   display: flex;
+  // }
 
-  @include respond-to("md") {
-    min-width: 176.3px;
-  }
+  // @include respond-to("md") {
+  //   min-width: 176.3px;
+  // }
 }
 
 .DocSearch {
