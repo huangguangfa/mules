@@ -37,6 +37,7 @@
     "cross-env": "^7.0.3",
     "escape-html": "^1.0.3",
     "fast-glob": "^3.2.11",
+    "giscus": "^1.1.1",
     "markdown-it-container": "^3.0.0",
     "octokit": "^2.0.3",
     "prismjs": "^1.28.0",

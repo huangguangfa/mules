@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useSocialLinks } from '../../composables/social-links'
-import VPSocialLink from './vp-social-link.vue'
+import { useSocialLinks } from "../../composables/social-links";
+import VPSocialLink from "./vp-social-link.vue";
 
-const links = useSocialLinks()
+const links = useSocialLinks();
 </script>
 
 <template>

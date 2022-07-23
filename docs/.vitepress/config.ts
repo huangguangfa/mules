@@ -43,7 +43,7 @@ languages.forEach((lang) => {
   };
 });
 export const config: UserConfig = {
-  title: "Element Plus",
+  title: "Design",
   description: "a Vue 3 based component library for designers and developers",
   lastUpdated: true,
   head,
@@ -51,8 +51,8 @@ export const config: UserConfig = {
     editLinks: true,
     editLinkText: "Edit this page on GitHub",
     lastUpdated: "Last Updated",
-    logo: "/images/element-plus-logo.svg",
-    logoSmall: "/images/element-plus-logo-small.svg",
+    logo: "/images/gf-ui-logo.png",
+    logoSmall: "/images/gf-ui-logo.png",
     sidebars,
     nav,
     agolia: {

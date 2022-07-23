@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useToc } from '../../composables/use-toc'
-import { useActiveSidebarLinks } from '../../composables/active-bar'
+import { computed, ref } from "vue";
+import { useToc } from "../../composables/use-toc";
+import { useActiveSidebarLinks } from "../../composables/active-bar";
 
-import sponsorLocale from '../../../i18n/component/sponsor.json'
-import { useLang } from '../../composables/lang'
-import SponsorsButton from '../sponsors/sponsors-button.vue'
-import SponsorRightTextList from '../sponsors/right-richtext-list.vue'
-import SponsorRightLogoSmallList from '../sponsors/right-logo-small-list.vue'
+import sponsorLocale from "../../../i18n/component/sponsor.json";
+import { useLang } from "../../composables/lang";
+import SponsorsButton from "../sponsors/sponsors-button.vue";
+import SponsorRightTextList from "../sponsors/right-richtext-list.vue";
+import SponsorRightLogoSmallList from "../sponsors/right-logo-small-list.vue";
 // import SponsorLarge from '../vp-sponsor-large.vue'
 
-const headers = useToc()
-const marker = ref()
-const container = ref()
-const useActiveSidebarLinksResult = useActiveSidebarLinks(container, marker)
+const headers = useToc();
+const marker = ref();
+const container = ref();
+const useActiveSidebarLinksResult = useActiveSidebarLinks(container, marker);
 
 const manualLink = (hash: string) => {
-  useActiveSidebarLinksResult && useActiveSidebarLinksResult.manualLink(hash)
-}
+  useActiveSidebarLinksResult && useActiveSidebarLinksResult.manualLink(hash);
+};
 
-const lang = useLang()
-const sponsor = computed(() => sponsorLocale[lang.value])
+const lang = useLang();
+const sponsor = computed(() => sponsorLocale[lang.value]);
 </script>
 
 <template>

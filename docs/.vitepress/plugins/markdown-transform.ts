@@ -119,7 +119,12 @@ ${linksText}
 <Contributors id="${componentId}" />
 `;
 
-  append.footers.push(sourceSection, isComponent ? contributorsSection : "");
+  const GiscusComment = `<GiscusComment></GiscusComment>`;
+  append.footers.push(
+    sourceSection,
+    isComponent ? contributorsSection : "",
+    GiscusComment
+  );
 
   return code;
 };

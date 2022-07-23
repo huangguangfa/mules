@@ -1,11 +1,11 @@
-import GitHubIcon from '~icons/ri/github-fill'
+import GitHubIcon from "~icons/ri/github-fill";
 
 export const useSocialLinks = () => {
   return [
     {
-      link: 'https://github.com/element-plus/element-plus',
+      link: "https://github.com/huanggungfa",
       icon: GitHubIcon,
-      text: 'GitHub',
+      text: "GitHub",
     },
-  ]
-}
+  ];
+};
