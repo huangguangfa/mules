@@ -55,10 +55,10 @@ export const config: UserConfig = {
     logoSmall: "/images/element-plus-logo-small.svg",
     sidebars,
     nav,
-    // agolia: {
-    //   apiKey: "377f2b647a96d9b1d62e4780f2344da2",
-    //   appId: "BH4D9OD16A",
-    // },
+    agolia: {
+      apiKey: "377f2b647a96d9b1d62e4780f2344da2",
+      appId: "BH4D9OD16A",
+    },
     features,
     langs: languages,
   },
@@ -71,6 +71,7 @@ export const config: UserConfig = {
       ssr: true,
       compilerOptions: {
         directiveTransforms: buildTransformers(),
+        // isCustomElement: (tag) => tag.includes("gf-"),
       },
     },
   },

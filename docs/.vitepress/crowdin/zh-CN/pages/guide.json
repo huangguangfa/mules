@@ -1,9 +1,9 @@
 {
   "intro": {
-    "text": "Basics",
+    "text": "基础",
     "items": [
       {
-        "text": "Design",
+        "text": "设计",
         "link": "/guide/design"
       }
     ]

@@ -1,8 +1,4 @@
-<script setup lang="ts">
-// for now el-switch does not support customized icon in the dot
-// we will implement a simple version of el-switch then update the switch
-// component for this feature
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="switch" role="switch">

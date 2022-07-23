@@ -2,11 +2,13 @@ import fs from "fs";
 import path from "path";
 import glob from "fast-glob";
 import { docRoot, docsDirName, projRoot } from "@gf-ui/build-utils";
-import { REPO_BRANCH, REPO_PATH } from "@gf-ui/build-constants";
 import { getLang, languages } from "../utils/lang";
 import footerLocale from "../i18n/component/footer.json";
 
 import type { Plugin } from "vite";
+
+const REPO_BRANCH = "dev";
+const REPO_PATH = "aaa";
 
 type Append = Record<"headers" | "footers" | "scriptSetups", string[]>;
 

@@ -1,3 +1,5 @@
+import { Type } from "@gf-ui/core";
+const { isNumber, isString } = Type;
 export const hashRE = /#.*$/;
 export const extRE = /(index)?\.(md|html)$/;
 export const outboundRE = /^[a-z]+:/i;
@@ -178,4 +180,13 @@ export function insertTableWrapper(contentRef: any) {
     table.parentNode!.removeChild(table);
     wrapper.appendChild(table);
   });
+}
+
+export function addUnit(value?: string | number, defaultUnit = "px") {
+  if (!value) return "";
+  if (isString(value)) {
+    return value;
+  } else if (isNumber(value)) {
+    return `${value}${defaultUnit}`;
+  }
 }

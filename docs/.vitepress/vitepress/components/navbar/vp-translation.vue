@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import VPLink from '../common/vp-link.vue'
-import { useTranslation } from '../../composables/translation'
+import VPLink from "../common/vp-link.vue";
+import { useTranslation } from "../../composables/translation";
 
-const { switchLang, languageMap, langs, lang, helpTranslate } = useTranslation()
+const { switchLang, languageMap, langs, lang, helpTranslate } =
+  useTranslation();
 </script>
 
 <template>
@@ -37,13 +38,13 @@ const { switchLang, languageMap, langs, lang, helpTranslate } = useTranslation()
 </template>
 
 <style lang="scss" scoped>
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
 .translation-container {
   display: none;
   height: 24px;
   padding: 0 12px;
 
-  @include respond-to('md') {
+  @include respond-to("md") {
     display: block;
   }
 
