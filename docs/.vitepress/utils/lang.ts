@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { docRoot } from "@gf-ui/build-utils";
+import { docRoot } from "../build/config";
 
 export const languages = fs.readdirSync(path.resolve(__dirname, "../crowdin"));
 

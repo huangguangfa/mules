@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import glob from "fast-glob";
-import { docRoot, docsDirName, projRoot } from "@gf-ui/build-utils";
+import { docRoot, docsDirName, projRoot } from "../build/config";
 import { getLang, languages } from "../utils/lang";
 import footerLocale from "../i18n/component/footer.json";
 

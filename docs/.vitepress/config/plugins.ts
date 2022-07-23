@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 import MarkdownIt from "markdown-it";
 import mdContainer from "markdown-it-container";
-import { docRoot } from "@gf-ui/build-utils";
+import { docRoot } from "../build/config";
 import { highlight } from "../utils/highlight";
 import type Token from "markdown-it/lib/token";
 import type Renderer from "markdown-it/lib/renderer";

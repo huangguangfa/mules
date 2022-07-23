@@ -2,13 +2,13 @@ import path from "path";
 import fs from "fs/promises";
 import chalk from "chalk";
 import consola from "consola";
-import { docRoot, errorAndExit } from "@gf-ui/build-utils";
+import { docRoot } from "./config";
 
 const credentialPlaceholder = "API_TOKEN_PLACEHOLDER";
 
 const CREDENTIAL = process.env.CROWDIN_TOKEN;
 if (!CREDENTIAL) {
-  errorAndExit(new Error("Environment variable CROWDIN_TOKEN cannot be empty"));
+  throw new Error("error");
 }
 
 (async () => {
@@ -24,6 +24,6 @@ if (!CREDENTIAL) {
     );
     consola.success(chalk.green("Crowdin credential update successfully"));
   } catch (e: any) {
-    errorAndExit(e);
+    throw new Error("error");
   }
 })();

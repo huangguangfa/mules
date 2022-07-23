@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { vpRoot } from "@gf-ui/build-utils";
+import { vpRoot } from "../build/config";
 import { languages } from "../utils/lang";
 
 import type { HeadConfig } from "vitepress";
