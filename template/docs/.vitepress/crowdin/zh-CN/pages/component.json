@@ -1,0 +1,15 @@
+{
+  "basic": {
+    "text": "Basic 基础组件",
+    "items": [
+      {
+        "link": "/button",
+        "text": "Button 按钮"
+      },
+      {
+        "link": "/test",
+        "text": "测试"
+      }
+    ]
+  }
+}

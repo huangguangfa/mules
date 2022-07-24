@@ -1,0 +1,11 @@
+{
+  "intro": {
+    "text": "Basics",
+    "items": [
+      {
+        "text": "Design",
+        "link": "/guide/design"
+      }
+    ]
+  }
+}

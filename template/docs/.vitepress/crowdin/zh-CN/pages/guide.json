@@ -1,0 +1,11 @@
+{
+  "intro": {
+    "text": "基础",
+    "items": [
+      {
+        "text": "设计",
+        "link": "/guide/design"
+      }
+    ]
+  }
+}
