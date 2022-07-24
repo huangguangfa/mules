@@ -23,4 +23,11 @@ module.exports = [
     desc: "企业级跨框架UI框架,基于Stencil+TS+Lerna",
     author: "gf",
   },
+  {
+    name: "vitePress",
+    type: "zip",
+    repositories: zipUrl + "vitePress.zip",
+    desc: "文档cli、基于vitePress+TS, 开箱即用",
+    author: "gf",
+  },
 ];

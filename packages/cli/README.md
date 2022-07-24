@@ -6,6 +6,7 @@
 
 - Vue3+TS
 - Stencil+TS+Lerna
+- VitePress + 自定义主题
 
 ### `全局安装`
 ```js
