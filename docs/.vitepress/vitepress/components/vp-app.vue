@@ -14,7 +14,6 @@ import VPSponsors from "./vp-sponsors.vue";
 
 const [isSidebarOpen, toggleSidebar] = useToggle(false);
 const { hasSidebar } = useSidebar();
-
 useToggleWidgets(isSidebarOpen, () => {
   if (!isClient) return;
   if (window.outerWidth >= breakpoints.lg) {

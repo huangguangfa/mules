@@ -1,12 +1,25 @@
 import { ensureLang } from "../utils/lang";
 import guideLocale from "../i18n/pages/guide.json";
 import componentLocale from "../i18n/pages/component.json";
+import coreLocale from "../i18n/pages/core.json";
 
 function getGuideSidebar() {
   return Object.fromEntries(
     Object.entries(guideLocale).map(([lang, val]) => [
       lang,
       Object.values(val).map((item) => mapPrefix(item, lang)),
+    ])
+  );
+}
+
+function getcoreSideBar() {
+  return Object.fromEntries(
+    Object.entries(coreLocale).map(([lang, val]) => [
+      lang,
+      Object.values(val).map((item) => {
+        const r = mapPrefix(item, lang, "/core");
+        return r;
+      }),
     ])
   );
 }
@@ -28,6 +41,7 @@ function getComponentsSideBar() {
 const getSidebars = () => {
   return {
     "/guide/": getGuideSidebar(),
+    "/core/": getcoreSideBar(),
     "/component/": getComponentsSideBar(),
   };
 };

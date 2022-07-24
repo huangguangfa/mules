@@ -1,0 +1,11 @@
+{
+  "basic": {
+    "text": "Basic 基础组件",
+    "items": [
+      {
+        "link": "/install",
+        "text": "安装"
+      }
+    ]
+  }
+}

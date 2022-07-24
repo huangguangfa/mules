@@ -1,0 +1,23 @@
+{
+  "basic": {
+    "text": "Core核心库",
+    "items": [
+      {
+        "link": "/install",
+        "text": "安装"
+      },
+      {
+        "link": "/type",
+        "text": "Type"
+      },
+      {
+        "link": "/storage",
+        "text": "Storage"
+      },
+      {
+        "link": "/ctypto",
+        "text": "Ctypto"
+      }
+    ]
+  }
+}
