@@ -7,3 +7,15 @@
 @use './scrollbar.scss';
 @use './tooltip.scss';
 @use './popper.scss';
+
+.flex{
+    gf-button{
+        margin: 0 3px;
+    }
+}
+.reset{
+    gf-button{
+        margin: 0;
+    }
+}
+.mt10{margin-top: 10px;}

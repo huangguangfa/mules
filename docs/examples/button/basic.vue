@@ -1,5 +1,5 @@
 <template>
-  <div class="flex" style="margin: 11px 0">
+  <div class="flex">
     <gf-button>普通按钮</gf-button>
     <gf-button color="primary">正常按钮</gf-button>
     <gf-button color="success">成功按钮</gf-button>
