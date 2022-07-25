@@ -7,6 +7,10 @@
         "text": "Button 按钮"
       },
       {
+        "link": "/input",
+        "text": "Input 输入框"
+      },
+      {
         "link": "/icon",
         "text": "Icon 图标"
       }

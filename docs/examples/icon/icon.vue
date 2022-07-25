@@ -49,8 +49,6 @@ function copy(value, x, y) {
 }
 function addelement(text, color, x, y) {
   //获取鼠标位置
-  let scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
-  let scrollY = document.documentElement.scrollTop || document.body.scrollTop;
   const $mes = document.createElement("span");
   $mes.setAttribute("class", "Copyspan");
   $mes.style = `
