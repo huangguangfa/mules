@@ -29,7 +29,7 @@ input/clearable
 
 ## Input 显示输出长度
 
-:::demo 您可以使用 `maxlength` 约束按钮最大输入的个数
+:::demo 您可以使用 `maxlength` 约束最大输入的长度
 
 input/length
 
