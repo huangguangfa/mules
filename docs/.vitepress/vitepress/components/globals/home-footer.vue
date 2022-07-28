@@ -1,74 +1,74 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { useLang } from '../../composables/lang'
-import homeLocale from '../../../i18n/pages/home.json'
-const lang = useLang()
-const homeLang = computed(() => homeLocale[lang.value])
+import { computed } from "vue";
+import { useLang } from "../../composables/lang";
+import homeLocale from "../../../i18n/pages/home.json";
+const lang = useLang();
+const homeLang = computed(() => homeLocale[lang.value]);
 </script>
 
 <template>
   <footer class="footer">
     <div class="footer-main">
-      <h4>{{ homeLang['10'] }}</h4>
+      <h4>{{ homeLang["10"] }}</h4>
       <a
-        href="https://github.com/element-plus/element-plus"
+        href="https://github.com/huanggungfa"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['11'] }}
+        {{ homeLang["11"] }}
       </a>
       <a
-        href="https://github.com/element-plus/element-plus/releases"
+        href="https://github.com/huanggungfa"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['12'] }}
+        {{ homeLang["12"] }}
       </a>
       <a
         href="https://element.eleme.io/"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['13'] }}
+        {{ homeLang["13"] }}
       </a>
       <a
         :href="`/${lang}/guide/theming`"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['14'] }}
+        {{ homeLang["14"] }}
       </a>
     </div>
 
     <div class="footer-main">
-      <h4>{{ homeLang['19'] }}</h4>
+      <h4>{{ homeLang["19"] }}</h4>
       <a
-        href="https://gitter.im/element-en/Lobby"
+        href="https://github.com/huanggungfa"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['15'] }}
+        {{ homeLang["15"] }}
       </a>
       <a
-        href="https://github.com/element-plus/element-plus/issues"
+        href="https://github.com/huanggungfa"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['16'] }}
+        {{ homeLang["16"] }}
       </a>
       <a
-        href="https://github.com/element-plus/element-plus/blob/dev/.github/CONTRIBUTING.en-US.md"
+        href="https://github.com/huanggungfa"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['17'] }}
+        {{ homeLang["17"] }}
       </a>
       <a
-        href="https://segmentfault.com/t/element-plus"
+        href="https://github.com/huanggungfa"
         class="footer-main-link"
         target="_blank"
       >
-        {{ homeLang['18'] }}
+        {{ homeLang["18"] }}
       </a>
     </div>
   </footer>

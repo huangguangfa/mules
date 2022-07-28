@@ -16,10 +16,10 @@
     <p class="mt-1">
       Made with ❤️ by
       <a
-        href="https://github.com/element-plus"
+        href="https://github.com/huanggungfa"
         target="_blank"
         rel="noopener noreferer"
-        >Element Plus</a
+        >@gf-ui 系列库</a
       >
     </p>
   </div>

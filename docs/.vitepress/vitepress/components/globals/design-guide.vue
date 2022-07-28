@@ -55,4 +55,10 @@
     padding-bottom: 8px;
   }
 }
+.cards {
+  display: flex;
+  .el-col {
+    flex: 1;
+  }
+}
 </style>
