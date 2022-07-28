@@ -110,7 +110,6 @@ const transformComponentMarkdown = (
   const sourceSection = `
 ## ${footerLocale[lang].source}
 
-${linksText}
 `;
 
   const contributorsSection = `
@@ -120,6 +119,7 @@ ${linksText}
 `;
 
   const GiscusComment = `<GiscusComment></GiscusComment>`;
+
   append.footers.push(
     sourceSection,
     isComponent ? contributorsSection : "",

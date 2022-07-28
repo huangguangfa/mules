@@ -36,9 +36,10 @@ const currentLink = computed(() => {
         <a :href="currentLink">
           <img
             class="logo"
-            src="/images/element-plus-logo.svg"
+            src="/images/gf-ui-logo.png"
             alt="Element Plus Logo"
           />
+          <span class="logo-text">gf-ui系列</span>
         </a>
       </div>
       <div class="content">
@@ -65,6 +66,13 @@ const currentLink = computed(() => {
   > a {
     height: 28px;
     width: 128px;
+    display: flex;
+    align-items: center;
+    .logo-text {
+      font-size: 18px;
+      margin-left: 10px;
+      color: #4597e2;
+    }
   }
   .logo {
     position: relative;

@@ -37,6 +37,9 @@ export default defineConfig(async ({ mode }): Promise<any> => {
     resolve: {
       alias,
     },
+    build: {
+      outDir: "gf-ui-doc",
+    },
     plugins: [
       vueJsx(),
       DefineOptions(),

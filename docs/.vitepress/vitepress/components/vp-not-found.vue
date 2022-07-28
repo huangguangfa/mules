@@ -1,23 +1,24 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { isClient } from '@vueuse/core'
-import { useLang } from '../composables/lang'
-import localeData from '../../i18n/pages/not-found.json'
+import { computed } from "vue";
+import { isClient } from "@vueuse/core";
+import { useLang } from "../composables/lang";
+import localeData from "../../i18n/pages/not-found.json";
 
-const lang = useLang()
+const lang = useLang();
 
-const locale = computed(() => localeData[lang.value])
+const locale = computed(() => localeData[lang.value]);
 
 const goHome = () => {
-  if (!isClient) return
-  window.location.href = `/${lang.value}/`
-}
+  if (!isClient) return;
+  console.log("locale", lang);
+  // window.location.href = `/${lang.value}/`
+};
 </script>
 
 <template>
   <el-result icon="error" :title="locale.title" :sub-title="locale.desc">
     <template #extra>
-      <el-button @click="goHome">{{ locale['button-title'] }}</el-button>
+      <el-button @click="goHome">{{ locale["button-title"] }}</el-button>
     </template>
   </el-result>
 </template>
