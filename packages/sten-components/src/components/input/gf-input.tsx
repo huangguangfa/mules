@@ -4,8 +4,6 @@ import { injectComponents } from "../../utils"
 import { GfIconclear } from "../gf-icon/gf-icon-clear"
 import { GfIconinfo } from "../gf-icon/gf-icon-info"
 import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
-// import { GfAutocomplete } from "./autocomplete"
-
 injectComponents({
   GfIconclear, GfIconinfo, GfIconsuccessFill
 });
@@ -167,6 +165,7 @@ export class GfInput {
       <span>{this.curentValue.length}</span>/{this.maxlength}
     </div>
   }
+
   private getInputInstance = () => {
     return this.type !== 'textarea' ?
       <input
@@ -216,7 +215,6 @@ export class GfInput {
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
           <slot name='after'></slot>
-          {/* <gf-autocomplete show={this.autocompleteState}></gf-autocomplete> */}
         </div>
       </Host>
     );

@@ -2,13 +2,12 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "i": "lerna bootstrap",
     "commit": "git cz",
     "release": "standard-version",
-    "start:c": "lerna run start --scope @gf-ui/components",
+    "start:stencom": "pnpm --filter @gf-ui/components start",
     "build:npm": "node ./scripts/rollup/build.js --mode",
     "start:npm": "node ./scripts/rollup/build.js --watch",
-    "docs:dev": "lerna run dev --scope @gf-ui/docs",
+    "start:doc": "pnpm --filter @gf-ui/docs dev",
     "jest": "jest --verbose --runInBand --coverage"
   },
   "devDependencies": {
@@ -28,7 +27,6 @@
     "cz-customizable": "^6.3.0",
     "husky": "^1.2.0",
     "jest": "^27.5.1",
-    "lerna": "^4.0.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-uglify": "^6.0.4",
@@ -38,11 +36,6 @@
     "typescript": "^4.6.3",
     "yorkie": "^2.0.0"
   },
-  "workspaces": [
-    "packages/*",
-    "docs",
-    "internal/*"
-  ],
   "config": {
     "commitizen": {
       "path": "cz-customizable"
