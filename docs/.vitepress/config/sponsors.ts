@@ -18,11 +18,11 @@ export const rightRichTextSponsors = [
 export const rightLogoSmallSponsors = [
   {
     name: "BuildAdmin",
-    img: "/images/sponsors/buildadmin.png",
-    imgL: "/images/sponsors/buildadmin-l.png",
-    url: "https://wonderful-code.gitee.io/?from=element-plus",
-    slogan: "Vue3 opensource admin system",
-    slogan_cn: "Vue3企业级开源后台管理系统",
+    img: "/images/sponsors/blogs.png",
+    imgL: "/images/sponsors/blogs.png",
+    url: "https://www.huangguangfa.cn",
+    slogan: "blogs",
+    slogan_cn: "个人博客网站",
   },
 ];
 

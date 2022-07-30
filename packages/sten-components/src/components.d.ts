@@ -388,6 +388,14 @@ export namespace Components {
     interface GfTag {
     }
 }
+export interface GfButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGfButtonElement;
+}
+export interface GfInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGfInputElement;
+}
 declare global {
     interface HTMLGfAutocompleteElement extends Components.GfAutocomplete, HTMLStencilElement {
     }
@@ -738,7 +746,7 @@ declare namespace LocalJSX {
         "color"?: ButtonColor;
         "disabled"?: boolean;
         "nativeType"?: string;
-        "onDisplayOnClick"?: (event: CustomEvent<any>) => void;
+        "onDisplayOnClick"?: (event: GfButtonCustomEvent<any>) => void;
         "plain"?: boolean;
         "size"?: ButtonSize;
         "textColor"?: string;
@@ -1100,12 +1108,12 @@ declare namespace LocalJSX {
         "maxRows"?: number | string;
         "maxlength"?: number;
         "minRows"?: number | string;
-        "onEventBlur"?: (event: CustomEvent<HTMLAreaElement>) => void;
-        "onEventChange"?: (event: CustomEvent<string>) => void;
-        "onEventClear"?: (event: CustomEvent<string>) => void;
-        "onEventEnter"?: (event: CustomEvent<string>) => void;
-        "onEventFocus"?: (event: CustomEvent<FocusEvent>) => void;
-        "onEventInput"?: (event: CustomEvent<string>) => void;
+        "onEventBlur"?: (event: GfInputCustomEvent<HTMLAreaElement>) => void;
+        "onEventChange"?: (event: GfInputCustomEvent<string>) => void;
+        "onEventClear"?: (event: GfInputCustomEvent<string>) => void;
+        "onEventEnter"?: (event: GfInputCustomEvent<string>) => void;
+        "onEventFocus"?: (event: GfInputCustomEvent<FocusEvent>) => void;
+        "onEventInput"?: (event: GfInputCustomEvent<string>) => void;
         "placeholder"?: string;
         "resize"?: string;
         "rows"?: number | string;

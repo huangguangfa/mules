@@ -41,7 +41,8 @@
         "classnames": "^2.3.1",
         "jest": "^27.4.5",
         "jest-cli": "^27.4.5",
-        "puppeteer": "^10.0.0"
+        "puppeteer": "^10.0.0",
+        "svgson": "^5.2.1"
     },
     "license": "MIT",
     "gitHead": "449b50a8466a0a6a2ebecc74714d0b21caef299b"

@@ -5,10 +5,12 @@
     "commit": "git cz",
     "release": "standard-version",
     "start:stencom": "pnpm --filter @gf-ui/components start",
-    "build:npm": "node ./scripts/rollup/build.js --mode",
     "start:npm": "node ./scripts/rollup/build.js --watch",
     "start:doc": "pnpm --filter @gf-ui/docs dev",
-    "jest": "jest --verbose --runInBand --coverage"
+    "start:style": "pnpm --filter @gf-ui/themes start",
+    "build:npm": "node ./scripts/rollup/build.js --mode",
+    "jest": "jest --verbose --runInBand --coverage",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -22,29 +24,24 @@
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
+    "chalk": "^4.1.2",
     "commitizen": "^4.2.4",
     "commitlint-config-cz": "^0.13.3",
     "cz-customizable": "^6.3.0",
-    "husky": "^1.2.0",
+    "husky": "^8.0.1",
     "jest": "^27.5.1",
+    "minimist": "^1.2.6",
     "rimraf": "^3.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-uglify": "^6.0.4",
     "standard-version": "^9.3.2",
     "ts-jest": "^27.1.4",
     "tsx": "^3.8.0",
-    "typescript": "^4.6.3",
-    "yorkie": "^2.0.0"
+    "typescript": "^4.6.3"
   },
   "config": {
     "commitizen": {
       "path": "cz-customizable"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e -V",
-      "pre-commit": "node scripts/husky/pre-commit.js"
     }
   },
   "lint-staged": {
