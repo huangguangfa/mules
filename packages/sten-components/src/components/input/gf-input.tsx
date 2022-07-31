@@ -1,37 +1,22 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
-import { calcTextareaHeight } from "./utils.js"
+import { useNamespace } from '../../utils'
+
+import { calcTextareaHeight } from "./utils"
 import { injectComponents } from "../../utils"
 import { GfIconclear } from "../gf-icon/gf-icon-clear"
 import { GfIconinfo } from "../gf-icon/gf-icon-info"
 import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
 import type { status } from "../../types/var"
+import { STATUS, disabledIconColor } from './config'
 
-import { useNamespace } from '../../utils/css-namespace'
+
 const ns = useNamespace('input')
 const nsTextarea = useNamespace('textarea')
-
-const disabledIconColor = '#E4E7ED'
-
-console.log(ns.e('ns'))
 
 injectComponents({
   GfIconclear, GfIconinfo, GfIconsuccessFill
 });
 
-const STATUS = {
-  "success": {
-    color: "#67C23A"
-  },
-  "info": {
-    color: "#346FC2"
-  },
-  "warning": {
-    color: "#ffc82c"
-  },
-  "error": {
-    color: "#ff4949"
-  }
-}
 
 @Component({
   tag: 'gf-input'
@@ -52,7 +37,7 @@ export class GfInput {
   @Prop() maxRows: number | string;
   @Prop() rows: number | string = 2;
   @Prop() autosize: boolean = false;
-  @Prop() arrays: Array<Record<string,unknown>> = []
+  @Prop() arrays: Array<Record<string,any>> = []
 
   @State() curentValue: string = '';
   @State() autocompleteState: Boolean = true;
@@ -147,7 +132,7 @@ export class GfInput {
   private resizeTextarea() {
     if (!this.autosize && !this.minRows && !this.maxRows) return
     this.calculateStyle = {
-      ...calcTextareaHeight(this.nativeInput, this.minRows, this.maxRows),
+      ...calcTextareaHeight(this.nativeInput, this.minRows as number, this.maxRows),
       resize: this.resize
     }
   }

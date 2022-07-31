@@ -368,7 +368,7 @@ export namespace Components {
         "styles"?: object;
     }
     interface GfInput {
-        "arrays": Array<Record<string,unknown>>;
+        "arrays": Array<Record<string,any>>;
         "autofocus": boolean;
         "autosize": boolean;
         "clearable": boolean;
@@ -1098,7 +1098,7 @@ declare namespace LocalJSX {
         "styles"?: object;
     }
     interface GfInput {
-        "arrays"?: Array<Record<string,unknown>>;
+        "arrays"?: Array<Record<string,any>>;
         "autofocus"?: boolean;
         "autosize"?: boolean;
         "clearable"?: boolean;

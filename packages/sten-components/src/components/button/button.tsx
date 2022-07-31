@@ -2,7 +2,7 @@ import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 import { ButtonColor, ButtonSize } from "../../types/gf-button";
 import { getButtonColor, getButtonStyle } from "./_button";
 import { setEventName } from '../.internal/config'
-import { useNamespace } from '../../utils/css-namespace'
+import { useNamespace } from '../../utils'
 const ns = useNamespace('button')
 
 @Component({
