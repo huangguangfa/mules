@@ -4,10 +4,20 @@ import { injectComponents } from "../../utils"
 import { GfIconclear } from "../gf-icon/gf-icon-clear"
 import { GfIconinfo } from "../gf-icon/gf-icon-info"
 import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
+import type { status } from "../../types/var"
+
+import { useNamespace } from '../../utils/css-namespace'
+const ns = useNamespace('input')
+const nsTextarea = useNamespace('textarea')
+
+const disabledIconColor = '#E4E7ED'
+
+console.log(ns.e('ns'))
+
 injectComponents({
   GfIconclear, GfIconinfo, GfIconsuccessFill
 });
-import type { status } from "../../types/var"
+
 const STATUS = {
   "success": {
     color: "#67C23A"
@@ -143,25 +153,25 @@ export class GfInput {
   }
   // 获取个个元素节点
   private getClearInstance = () => {
-    return <div class="gf-input__clear">
+    return <div class={ns.e('clear')}>
       <gf-icon-clear size={this.iconFontSize} color={this.iconColor} onClick={this.handClearClick.bind(this)}></gf-icon-clear>
     </div>
   }
   private getStatusInstance = () => {
-    return <div class="gf-input__status_icon">
+    return <div class={ns.e('status') + '_icon' }>
       {
-        this.status === 'success' && <gf-icon-success-fill size={this.iconFontSize} color={STATUS[this.status].color}></gf-icon-success-fill>
+        this.status === 'success' && <gf-icon-success-fill size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-success-fill>
       }
       {
-        ['info', 'warning'].includes(this.status) && <gf-icon-info size={this.iconFontSize} color={STATUS[this.status].color}></gf-icon-info>
+        ['info', 'warning'].includes(this.status) && <gf-icon-info size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-info>
       }
       {
-        this.status === 'error' && <gf-icon-clear size={this.iconFontSize} color={STATUS[this.status].color}></gf-icon-clear>
+        this.status === 'error' && <gf-icon-clear size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-clear>
       }
     </div>
   }
   private getMaxLengthInstance = () => {
-    return <div class="gf-input__maxlength">
+    return <div class={ns.e('maxlength')}>
       <span>{this.curentValue.length}</span>/{this.maxlength}
     </div>
   }
@@ -171,7 +181,7 @@ export class GfInput {
       <input
         type={this.type}
         disabled={this.disabled}
-        class="gf-input__inner"
+        class={ns.e('inner')}
         value={this.curentValue}
         minLength={this.maxlength}
         maxLength={this.maxlength}
@@ -184,7 +194,7 @@ export class GfInput {
         onKeyDown={this.onKeydown}
       />
       : <textarea
-        class="gf-textarea__inner"
+        class={nsTextarea.e('inner')}
         style={this.calculateStyle}
         disabled={this.disabled}
         value={this.curentValue}
@@ -205,10 +215,11 @@ export class GfInput {
   render() {
     return (
       <Host>
-        <div class={`
-          ${this.type !== 'textarea' ? 'gf-input' : 'gf-textarea'}
-          ${this.disabled ? 'is-disabled' : ''}
-          ${this.status ? 'is-input-' + this.status : ''}`}>
+        <div class={[
+          this.type !== 'textarea' ? ns.b() : nsTextarea.b(),
+          ns.is('disabled', this.disabled),
+          ns.is(`input-${this.status}`, !!this.status),
+        ].join(" ") }>
           <slot name='before'></slot>
           {this.getInputInstance()}
           {this.type !== 'textarea' && this.clearable && this.curentValue ? this.getClearInstance() : ''}
