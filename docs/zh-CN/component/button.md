@@ -69,7 +69,7 @@ button/group
 | color     | 按钮颜色   | string    |  primary / success / info / warning / danger / error / 自定义 |     —    |
 | plain     | 是否朴素按钮   | boolean    | — | false   |
 | circle     | 是否圆角按钮   | boolean    | — | false   |
-| textColor     | 文字颜色   | boolean    | — | false   |
+| textColor     | 文字颜色(仅支持按钮颜色定制化时`生效`)   | boolean    | — | false   |
 | classNames     | 自定义className   | boolean    | — | false   |
 | circle     | 是否圆形按钮   | boolean    | — | false   |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |

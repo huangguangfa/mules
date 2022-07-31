@@ -8,18 +8,13 @@
     <link rel="stylesheet" href="/build/sten-components.css">
     <script type="module" src="/build/sten-components.esm.js"></script>
     <script nomodule src="/build/sten-components.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
-
-    <div style="width:200px;margin-top: 10px;">
-        <gf-input placeholder="输入审批理由" type="password" clearable>
-            <gf-icon-map slot="before" size="20" style="border-right: 1px solid #eee;"></gf-icon-map>
-        </gf-input>
-    </div>
-    <div style="width:200px;margin-top: 10px;" id="inputs">
-        <gf-input placeholder="输入审批理由" clearable type="textarea" rows="2"></gf-input>
+    <div id="app">
+        {{ message }}
+        <gf-button color="primary" textColor="red">测试按钮</gf-button>
     </div>
 
 </body>
@@ -31,23 +26,13 @@
     var app = new Vue({
         el: '#app',
         data: {
-            list: [{ name: "张三" }]
+            message: 'Hello Vue!',
+            disabled: false
+        },
+        created() {
+            setTimeout(() => {
+                this.disabled = true
+            }, 2000)
         }
     })
-
-    let input = document.getElementById('inputs')
-    // input.arrays = [{ name: 'test' }]
-    // const cmp = document.querySelector('gf-input');
-    // console.log(input.arrays);
-    input.addEventListener("@click", (e) => {
-        console.log(222, e)
-    })
-    // setTimeout(() => {
-    //     const cmp = document.querySelector('gf-input');
-    //     cmp.arrays = [{ name: 'test' }]
-    //     // const cmp = document.querySelector('gf-input');
-    //     console.log(cmp.arrays);
-    //     // console.log(input.getAttribute('testa'))
-    //     // console.log(input.arrays)
-    // })
 </script>

@@ -1,6 +1,9 @@
-import { Config } from '@stencil/core';
+import alias from '@rollup/plugin-alias';
 const path = require('path');
+
+import type { Config } from '@stencil/core';
 const globalStyle = path.resolve('../sten-themes', 'npm/index.css');
+
 export const config: Config = {
     namespace: 'sten-components',
     globalStyle,
@@ -8,6 +11,11 @@ export const config: Config = {
     devServer: {
         openBrowser: false,
     },
+    plugins: [
+        alias({
+            entries: [{ find: '@', replacement: path.resolve(__dirname, './src') }],
+        }),
+    ],
     outputTargets: [
         // 整体打包
         {

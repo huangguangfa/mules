@@ -6,15 +6,14 @@ export function isKorean(text) {
     return reg.test(text);
 }
 
-
 export function injectComponents(componentsList) {
     for (const cName in componentsList) {
         const elements = componentsList[cName];
         const elementsName = cName
-            .replace(/([A-Z])/g, "-$1")
+            .replace(/([A-Z])/g, '-$1')
             .toLowerCase()
             .substring(1);
-        console.log(elementsName)
+        console.log(elementsName);
         customElements.define(elementsName, elements);
     }
 }

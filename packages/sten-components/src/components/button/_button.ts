@@ -1,7 +1,7 @@
-import { setStyleSheet, color16ToRgb } from "../../utils/index";
+import { setStyleSheet, color16ToRgb } from '../../utils/index';
 let tepId = 0;
 function checkInternalColor(color: string): boolean {
-    const defaultColor: Array<string> = ["default", "primary", "success", "info", "warning", "danger"];
+    const defaultColor: Array<string> = ['default', 'primary', 'success', 'info', 'warning', 'danger'];
     return defaultColor.includes(color);
 }
 
@@ -22,6 +22,6 @@ export function getButtonStyle(color: string, textColor: string): Record<string,
     [classActive, classHover].forEach(css => setStyleSheet(css));
     return {
         background: color,
-        color: textColor
-    }
+        color: textColor,
+    };
 }

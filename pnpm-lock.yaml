@@ -173,6 +173,7 @@ importers:
 
   packages/sten-components:
     specifiers:
+      '@rollup/plugin-alias': ^3.1.9
       '@stencil/core': ^2.15.1
       '@types/jest': ^27.0.3
       classnames: ^2.3.1
@@ -183,6 +184,7 @@ importers:
     dependencies:
       '@stencil/core': 2.17.1
     devDependencies:
+      '@rollup/plugin-alias': 3.1.9
       '@types/jest': 27.5.2
       classnames: 2.3.1
       jest: 27.5.1
@@ -2482,6 +2484,15 @@ packages:
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: true
+
+  /@rollup/plugin-alias/3.1.9:
+    resolution: {integrity: sha512-QI5fsEvm9bDzt32k39wpOwZhVzRcL5ydcffUHMyLVaVaLeC70I8TJZ17F1z1eMoLu4E/UOcH9BWVkKpIKdrfiw==}
+    engines: {node: '>=8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      slash: 3.0.0
     dev: true
 
   /@rollup/plugin-babel/5.3.1_oqwheajkaay7jaqpswtfouael4:

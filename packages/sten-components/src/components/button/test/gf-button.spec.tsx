@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GfButton } from '../gf-button';
+import { GfButton } from '../button';
 
 describe('gf-button', () => {
   it('renders', async () => {

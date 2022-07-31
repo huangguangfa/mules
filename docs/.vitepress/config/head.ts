@@ -58,22 +58,38 @@ export const head: HeadConfig[] = [
       window.supportedLangs = ${JSON.stringify(languages)}
     })()`,
   ],
+
+  // [
+  //   "script",
+  //   {},
+  //   `const script = document.createElement("script");
+  //   script.src = "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.esm.js";
+  //   script.type = "module";
+  //   setTimeout( () => {
+  //     document.body.appendChild(script);
+  //   },1000)
+  //   `,
+  // ],
+  // [
+  //   "link",
+  //   {
+  //     rel: "stylesheet",
+  //     href: "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.css",
+  //   },
+  // ],
   [
     "script",
-    {},
-    `const script = document.createElement("script");
-    script.src = "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.esm.js";
-    script.type = "module";
-    setTimeout( () => {
-      document.body.appendChild(script);
-    },1000)
-    `,
+    {
+      async: "true",
+      type: "module",
+      src: "http://localhost:3338/build/sten-components.esm.js",
+    },
   ],
   [
     "link",
     {
       rel: "stylesheet",
-      href: "https://unpkg.com/@gf-ui/components@0.0.11/dist/sten-components/sten-components.css",
+      href: "http://localhost:3338/build/sten-components.css",
     },
   ],
   ["script", {}, fs.readFileSync(path.resolve(vpRoot, "lang.js"), "utf-8")],
