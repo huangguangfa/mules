@@ -5,13 +5,7 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class GfTag {
-
   render() {
-    return (
-      <Host>
-        tag
-      </Host>
-    );
+    return <Host>tag</Host>;
   }
-
 }

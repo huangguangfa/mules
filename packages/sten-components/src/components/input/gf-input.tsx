@@ -1,29 +1,29 @@
 import { Component, Host, h, Prop, State, Event, Watch, EventEmitter } from '@stencil/core';
-import { useNamespace } from '../../utils'
+import { useNamespace } from '../../utils';
 
-import { calcTextareaHeight } from "./utils"
-import { injectComponents } from "../../utils"
-import { GfIconclear } from "../gf-icon/gf-icon-clear"
-import { GfIconinfo } from "../gf-icon/gf-icon-info"
-import { GfIconsuccessFill } from "../gf-icon/gf-icon-successFill"
-import type { status } from "../../types/var"
-import { STATUS, disabledIconColor } from './config'
+import { calcTextareaHeight } from './utils';
+import { injectComponents } from '../../utils';
+import { GfIconclear } from '../gf-icon/gf-icon-clear';
+import { GfIconinfo } from '../gf-icon/gf-icon-info';
+import { GfIconsuccessFill } from '../gf-icon/gf-icon-successFill';
+import type { status } from '../../types/var';
+import { STATUS, disabledIconColor } from './config';
 
-
-const ns = useNamespace('input')
-const nsTextarea = useNamespace('textarea')
+const ns = useNamespace('input');
+const nsTextarea = useNamespace('textarea');
 
 injectComponents({
-  GfIconclear, GfIconinfo, GfIconsuccessFill
+  GfIconclear,
+  GfIconinfo,
+  GfIconsuccessFill,
 });
 
-
 @Component({
-  tag: 'gf-input'
+  tag: 'gf-input',
 })
 export class GfInput {
-  @Prop() disabled: boolean = false;  //禁用
-  @Prop() clearable: boolean = false;  //清除
+  @Prop() disabled: boolean = false; //禁用
+  @Prop() clearable: boolean = false; //清除
   @Prop() value: string = '';
   @Prop() type: string = 'text'; // 原生类型
   @Prop() maxlength?: number; // 输入长度限制
@@ -37,12 +37,12 @@ export class GfInput {
   @Prop() maxRows: number | string;
   @Prop() rows: number | string = 2;
   @Prop() autosize: boolean = false;
-  @Prop() arrays: Array<Record<string,any>> = []
+  @Prop() arrays: Array<Record<string, any>> = [];
 
   @State() curentValue: string = '';
   @State() autocompleteState: Boolean = true;
   @State() calculateStyle = {
-    resize: this.resize
+    resize: this.resize,
   };
 
   private isComposing: boolean = false;
@@ -51,13 +51,15 @@ export class GfInput {
   @Watch('value')
   watchPropHandler(newValue: string) {
     if (newValue !== this.curentValue) {
-      this.setCurrentValue(newValue)
+      this.setCurrentValue(newValue);
     }
   }
   // 数据初始化
   componentWillLoad() {
-    this.setCurrentValue(this.value)
-    Promise.resolve().then(() => { this.resizeTextarea() })
+    this.setCurrentValue(this.value);
+    Promise.resolve().then(() => {
+      this.resizeTextarea();
+    });
   }
 
   // dom渲染完成
@@ -77,92 +79,92 @@ export class GfInput {
     }
   }
 
-  @Event() eventFocus: EventEmitter<FocusEvent>
-  private handleFocus = (e) => {
-    this.eventFocus.emit(e)
+  @Event() eventFocus: EventEmitter<FocusEvent>;
+  private handleFocus = e => {
+    this.eventFocus.emit(e);
     this.autocompleteState = true;
-  }
+  };
 
-  @Event() eventBlur: EventEmitter<HTMLAreaElement>
-  private handleBlur = (e) => {
-    this.eventBlur.emit(e)
+  @Event() eventBlur: EventEmitter<HTMLAreaElement>;
+  private handleBlur = e => {
+    this.eventBlur.emit(e);
     this.autocompleteState = false;
-  }
+  };
 
-  @Event() eventInput: EventEmitter<string>
-  private handleInput = (e) => {
+  @Event() eventInput: EventEmitter<string>;
+  private handleInput = e => {
     if (this.isComposing) return;
     const value = e.target.value;
-    this.eventInput.emit(value)
-    this.setCurrentValue(value)
-    this.resizeTextarea()
-  }
+    this.eventInput.emit(value);
+    this.setCurrentValue(value);
+    this.resizeTextarea();
+  };
   @Event() eventChange!: EventEmitter<string>;
-  private handleChange = (e) => {
-    this.eventChange.emit(e.target.value)
-  }
-  @Event() private eventClear: EventEmitter<string>
-  @Event() private eventEnter: EventEmitter<string>
+  private handleChange = e => {
+    this.eventChange.emit(e.target.value);
+  };
+  @Event() private eventClear: EventEmitter<string>;
+  @Event() private eventEnter: EventEmitter<string>;
 
   private handClearClick = () => {
-    this.setCurrentValue('')
-    this.eventClear.emit('')
-    this.eventInput.emit('')
-    this.eventChange.emit('')
-  }
+    this.setCurrentValue('');
+    this.eventClear.emit('');
+    this.eventInput.emit('');
+    this.eventChange.emit('');
+  };
 
   private setCurrentValue = (value: string) => {
     this.curentValue = value;
-  }
+  };
 
   private handleCompositionStart = () => {
     this.isComposing = true;
-  }
+  };
   private handleCompositionEnd = (e: Event) => {
     if (this.isComposing) {
       this.isComposing = false;
       this.handleInput(e);
     }
-  }
+  };
   private onKeydown = (ev: KeyboardEvent) => {
     if (ev.key === 'Enter') {
-      this.eventEnter.emit(this.curentValue)
+      this.eventEnter.emit(this.curentValue);
     }
-  }
+  };
   private resizeTextarea() {
-    if (!this.autosize && !this.minRows && !this.maxRows) return
+    if (!this.autosize && !this.minRows && !this.maxRows) return;
     this.calculateStyle = {
       ...calcTextareaHeight(this.nativeInput, this.minRows as number, this.maxRows),
-      resize: this.resize
-    }
+      resize: this.resize,
+    };
   }
   // 获取个个元素节点
   private getClearInstance = () => {
-    return <div class={ns.e('clear')}>
-      <gf-icon-clear size={this.iconFontSize} color={this.iconColor} onClick={this.handClearClick.bind(this)}></gf-icon-clear>
-    </div>
-  }
+    return (
+      <div class={ns.e('clear')}>
+        <gf-icon-clear size={this.iconFontSize} color={this.iconColor} onClick={this.handClearClick.bind(this)}></gf-icon-clear>
+      </div>
+    );
+  };
   private getStatusInstance = () => {
-    return <div class={ns.e('status') + '_icon' }>
-      {
-        this.status === 'success' && <gf-icon-success-fill size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-success-fill>
-      }
-      {
-        ['info', 'warning'].includes(this.status) && <gf-icon-info size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-info>
-      }
-      {
-        this.status === 'error' && <gf-icon-clear size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-clear>
-      }
-    </div>
-  }
+    return (
+      <div class={ns.e('status') + '_icon'}>
+        {this.status === 'success' && <gf-icon-success-fill size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-success-fill>}
+        {['info', 'warning'].includes(this.status) && <gf-icon-info size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-info>}
+        {this.status === 'error' && <gf-icon-clear size={this.iconFontSize} color={this.disabled ? disabledIconColor : STATUS[this.status].color}></gf-icon-clear>}
+      </div>
+    );
+  };
   private getMaxLengthInstance = () => {
-    return <div class={ns.e('maxlength')}>
-      <span>{this.curentValue.length}</span>/{this.maxlength}
-    </div>
-  }
+    return (
+      <div class={ns.e('maxlength')}>
+        <span>{this.curentValue.length}</span>/{this.maxlength}
+      </div>
+    );
+  };
 
   private getInputInstance = () => {
-    return this.type !== 'textarea' ?
+    return this.type !== 'textarea' ? (
       <input
         type={this.type}
         disabled={this.disabled}
@@ -175,10 +177,11 @@ export class GfInput {
         onBlur={this.handleBlur}
         onInput={this.handleInput}
         onChange={this.handleChange}
-        ref={input => this.nativeInput = input}
+        ref={input => (this.nativeInput = input)}
         onKeyDown={this.onKeydown}
       />
-      : <textarea
+    ) : (
+      <textarea
         class={nsTextarea.e('inner')}
         style={this.calculateStyle}
         disabled={this.disabled}
@@ -193,24 +196,21 @@ export class GfInput {
         onInput={this.handleInput}
         onChange={this.handleChange}
         onKeyDown={this.onKeydown}
-        ref={input => this.nativeInput = input}
+        ref={input => (this.nativeInput = input)}
       ></textarea>
-  }
+    );
+  };
 
   render() {
     return (
       <Host>
-        <div class={[
-          this.type !== 'textarea' ? ns.b() : nsTextarea.b(),
-          ns.is('disabled', this.disabled),
-          ns.is(`input-${this.status}`, !!this.status),
-        ].join(" ") }>
-          <slot name='before'></slot>
+        <div class={[this.type !== 'textarea' ? ns.b() : nsTextarea.b(), ns.is('disabled', this.disabled), ns.is(`input-${this.status}`, !!this.status)].join(' ')}>
+          <slot name="before"></slot>
           {this.getInputInstance()}
           {this.type !== 'textarea' && this.clearable && this.curentValue ? this.getClearInstance() : ''}
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
-          <slot name='after'></slot>
+          <slot name="after"></slot>
         </div>
       </Host>
     );

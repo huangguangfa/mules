@@ -1,10 +1,11 @@
 {
   "name": "root",
+  "packageManager": "pnpm@7.6.0",
   "private": true,
   "scripts": {
     "commit": "git cz",
     "release": "standard-version",
-    "start:stencom": "pnpm --filter @gf-ui/components start",
+    "start:ui": "pnpm --filter @gf-ui/components start",
     "start:npm": "node ./scripts/rollup/build.js --watch",
     "start:doc": "pnpm --filter @gf-ui/docs dev",
     "start:style": "pnpm --filter @gf-ui/themes start",
@@ -43,6 +44,9 @@
     "commitizen": {
       "path": "cz-customizable"
     }
+  },
+  "engines": {
+    "node": ">= 16"
   },
   "lint-staged": {
     "packages/**/*.js": "eslint"
