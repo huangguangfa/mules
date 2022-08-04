@@ -1,41 +1,34 @@
 #!/usr/bin/env node
-const path = require("path");
-const fs = require("fs");
-const prompt = require("./utils/prompt");
-const inquirer = require("inquirer");
-const { delDir, updateFile } = require("../lib/file");
-const { clone } = require("../lib/download");
-const templates = require("../config/template");
-const symbols = require("log-symbols");
-const chalk = require("chalk");
+const path = require('path');
+const fs = require('fs');
+const prompt = require('./utils/prompt');
+const inquirer = require('inquirer');
+const { delDir, updateFile } = require('../lib/file');
+const { clone } = require('../lib/download');
+const templates = require('../config/template');
+const symbols = require('log-symbols');
+const chalk = require('chalk');
 
 module.exports = function (projectName) {
-  prompt().then(async (results) => {
+  prompt().then(async results => {
     const { author, repository, name, isOk, description } = results;
     if (!isOk) return;
     if (!fs.existsSync(projectName)) {
       // 1. clone git项目
-      console.log("🚀正在为您创建项目: " + projectName);
-      const tempInfo = templates.find((item) => item.name === name);
+      console.log('🚀正在为您创建项目: ' + projectName);
+      const tempInfo = templates.find(item => item.name === name);
       if (!tempInfo) return chalk.red(`项目${projectName}创建异常`);
       // 开始下载
       await clone(tempInfo, projectName, { clone: true });
       // 创建成功
       console.log(symbols.success, chalk.green(`项目${projectName}创建成功`));
-      console.log(
-        chalk.blue(
-          "cd " + projectName + "\nnpm install\nnpm run dev或者npm run start"
-        )
-      );
+      console.log(chalk.blue('cd ' + projectName + '\nnpm install\nnpm run dev或者npm run start'));
       try {
         // 2. 同步package.json的配置
-        const packageJson = path.join(
-          path.resolve(projectName),
-          "package.json"
-        );
+        const packageJson = path.join(path.resolve(projectName), 'package.json');
         const repositoryObj = repository
           ? {
-              type: "git",
+              type: 'git',
               url: repository,
             }
           : {};
@@ -51,12 +44,12 @@ module.exports = function (projectName) {
       inquirer
         .prompt([
           {
-            type: "confirm",
-            name: "isOk",
-            message: "是否删除该文件夹?",
+            type: 'confirm',
+            name: 'isOk',
+            message: '是否删除该文件夹?',
           },
         ])
-        .then((ans) => {
+        .then(ans => {
           if (ans.isOk) {
             delDir(path.resolve(projectName));
             console.log(chalk.green(`删除成功`));
