@@ -3,8 +3,8 @@
  * @file Type
  * @description 数据类型判断类
  */
-import { is, match } from "../.internal/type";
-import { DATA_REGEX_PATTERN } from "../config";
+import { is, match } from '../.internal/type';
+import { DATA_REGEX_PATTERN } from '../config';
 
 export default class Type {
   /**
@@ -12,8 +12,8 @@ export default class Type {
    * @param item 检测当前类型
    * @returns { Boolean } 如果是对象则返回true、否则返回false
    */
-  static isObject(item: object | any): boolean {
-    return is("Object")(item);
+  static isObject(item: unknown): boolean {
+    return is('Object')(item);
   }
 
   /**
@@ -21,8 +21,8 @@ export default class Type {
    * @param item 检测当前类型
    * @returns { Boolean } 如果是普通对象则返回true、否则返回false
    */
-  static isPlainObject(item: object): boolean {
-    if (typeof item !== "object" || item === null) return false;
+  static isPlainObject(item: unknown): boolean {
+    if (typeof item !== 'object' || item === null) return false;
     let proto = item;
     while (Object.getPrototypeOf(proto) !== null) {
       proto = Object.getPrototypeOf(proto);
@@ -36,8 +36,8 @@ export default class Type {
    * @param item 检测当前类型
    * @returns { Boolean } 如果为空的对象则返回true、否则返回false
    */
-  static isEmptyObject(item: object | any): boolean {
-    return Type.isObject(item) && Object.keys(item).length === 0;
+  static isEmptyObject(item: unknown): boolean {
+    return Type.isObject(item) && Object.keys(item as Object).length === 0;
   }
 
   /**
@@ -46,7 +46,7 @@ export default class Type {
    * @returns { Boolean } 如果是数组则返回true、否则返回false
    */
   static isArray(item: Array<any> | any): boolean {
-    return Array.isArray(item) || is("Array")(item);
+    return Array.isArray(item) || is('Array')(item);
   }
 
   /**
@@ -64,7 +64,7 @@ export default class Type {
    * @returns { Boolean } 如果是函数则返回true、否则返回false
    */
   static isFunction(item: Function): boolean {
-    return is("Function")(item);
+    return is('Function')(item);
   }
 
   /**
@@ -74,13 +74,8 @@ export default class Type {
    */
   static isEmptyFunction(item: Function): boolean {
     if (!item) return true;
-    const str = item.toString().replace(/\s/g, "");
-    return (
-      Type.isFunction(item) &&
-      (str === "functionEMPTY_FUNC(){}" ||
-        str === "function(){}" ||
-        str === "()=>{}")
-    );
+    const str = item.toString().replace(/\s/g, '');
+    return Type.isFunction(item) && (str === 'functionEMPTY_FUNC(){}' || str === 'function(){}' || str === '()=>{}');
   }
 
   /**
@@ -89,7 +84,7 @@ export default class Type {
    * @returns { Boolean } 如果是字符串则返回true、否则返回false
    */
   static isString(item: unknown): boolean {
-    return is("String", true)(item);
+    return is('String', true)(item);
   }
 
   /**
@@ -98,7 +93,7 @@ export default class Type {
    * @returns { Boolean } 如果是空字符串则返回true、否则返回false
    */
   static isEmptyString(item: string): boolean {
-    return is("String", true)(item) && item.trim().length === 0;
+    return is('String', true)(item) && item.trim().length === 0;
   }
 
   /**
@@ -108,7 +103,7 @@ export default class Type {
    */
   static isJsonString(item: string): boolean | any {
     try {
-      if (typeof JSON.parse(item) === "object") return true;
+      if (typeof JSON.parse(item) === 'object') return true;
     } catch {
       return false;
     }
@@ -120,7 +115,7 @@ export default class Type {
    * @returns { Boolean } 如果是数字则返回true、否则返回false
    */
   static isNumber(item: any): boolean {
-    return is("Number", true)(item);
+    return is('Number', true)(item);
   }
 
   /**
@@ -129,7 +124,7 @@ export default class Type {
    * @returns { Boolean } 如果是布尔则返回true、否则返回false
    */
   static isBoolean(item: boolean): boolean {
-    return is("Boolean", true)(item);
+    return is('Boolean', true)(item);
   }
 
   /**
@@ -139,7 +134,7 @@ export default class Type {
    * @returns { Boolean } 如果是Guid对象返回true、否则返回false
    */
   static isGuid(item: string, pattern: string = DATA_REGEX_PATTERN.guid) {
-    return match(item, pattern, "i");
+    return match(item, pattern, 'i');
   }
 
   /**
@@ -148,10 +143,7 @@ export default class Type {
    * @param pattern 当前检测的正则匹配表达式（默认值：DATA_REGEX_PATTERN.mobile）
    * @returns { Boolean } 如果是为正确的手机号返回true、否则返回false
    */
-  static isMobilePhone(
-    item: string | number,
-    pattern: string = DATA_REGEX_PATTERN.mobile
-  ): boolean {
+  static isMobilePhone(item: string | number, pattern: string = DATA_REGEX_PATTERN.mobile): boolean {
     return match(item, pattern);
   }
 
@@ -161,10 +153,7 @@ export default class Type {
    * @param pattern 当前检测的正则匹配表达式（默认值：DATA_REGEX_PATTERN.Tel
    * @returns { Boolean } 如果是座机号返回true、否则返回false
    */
-  static isTelPhone(
-    item: string | number,
-    pattern: string = DATA_REGEX_PATTERN.tel
-  ): boolean {
+  static isTelPhone(item: string | number, pattern: string = DATA_REGEX_PATTERN.tel): boolean {
     return match(item, pattern);
   }
 
@@ -174,10 +163,7 @@ export default class Type {
    * @param {Object} {mobile,tel} 当前检测手机和座机的正则匹配表达式（默认值：DATA_REGEX_PATTERN.mobile和DATA_REGEX_PATTERN.tel）
    * @returns { Boolean } 如果是座机号返回true、否则返回false
    */
-  static isPhone(
-    item: string | number,
-    { mobile = DATA_REGEX_PATTERN.mobile, tel = DATA_REGEX_PATTERN.tel } = {}
-  ): boolean {
+  static isPhone(item: string | number, { mobile = DATA_REGEX_PATTERN.mobile, tel = DATA_REGEX_PATTERN.tel } = {}): boolean {
     return Type.isMobilePhone(item, mobile) || Type.isTelPhone(item, tel);
   }
 
@@ -197,10 +183,7 @@ export default class Type {
    * @param pattern 当前检测的正则匹配表达式（默认值：DATA_REGEX_PATTERN.idcard）
    * @returns { Boolean } 如果是正确身份证返回true、否则返回false
    */
-  static isIdCard(
-    item: string | number,
-    pattern: string = DATA_REGEX_PATTERN.idcard
-  ): boolean {
+  static isIdCard(item: string | number, pattern: string = DATA_REGEX_PATTERN.idcard): boolean {
     return match(item, pattern);
   }
 
@@ -220,10 +203,7 @@ export default class Type {
       ..._default,
       ...options,
     };
-    return match(
-      item,
-      _options.pattern.replace(`{min,max}`, `{${_options.min},${_options.max}}`)
-    );
+    return match(item, _options.pattern.replace(`{min,max}`, `{${_options.min},${_options.max}}`));
   }
 
   /**
@@ -241,7 +221,7 @@ export default class Type {
    * @returns { Boolean } 如果是0或者true条件返回true、否则返回false
    */
   static isTrueOrZero(item: string | number): boolean {
-    return !!item || item === 0 || item === "0";
+    return !!item || item === 0 || item === '0';
   }
 
   /**

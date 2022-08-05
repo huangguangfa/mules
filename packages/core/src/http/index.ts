@@ -3,7 +3,7 @@ import { REQUEST_METHOD } from '../config';
 import { getInstance, getRequest, getMergeRequest } from '../.internal/http';
 const CancelToken = axios.CancelToken;
 import type { AxiosInterceptorOptions, AxiosInstance, CancelTokenSource } from 'axios';
-import type { ExtendAxiosRequestConfig, HandleMergeOptions, Params, UserAxiosConfig } from '../.internal/types/types';
+import type { ExtendAxiosRequestConfig, HandleMergeOptions, Params, UserAxiosConfig } from '../.internal/types/http.type';
 export class HttpClient {
   base: string;
   config: ExtendAxiosRequestConfig | undefined;

@@ -1,12 +1,12 @@
 import axios from 'axios';
 import qs from 'qs';
-import { KsHeaders } from './util';
-import { isString, isEmptyFunction, isEmptyArray, isObject, isArray, isEmptyObject } from '@/utils/type';
-import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD, EMPTY_OBJECT } from '@/config';
+import Type from '../type';
+import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD, EMPTY_OBJECT } from '../config';
 
+const { isString, isEmptyFunction, isEmptyArray, isObject, isArray, isEmptyObject } = Type;
 import type { AxiosResponse, AxiosRequestConfig, AxiosInterceptorOptions, CancelToken } from 'axios';
-import type { HttpClient } from './types/types';
-import type { ExtendAxiosRequestConfig, ExtendAxiosInstance, UserAxiosConfig, HandleMergeOptions, Params, Loading } from './types';
+import type { HttpClient } from '../http';
+import type { ExtendAxiosRequestConfig, ExtendAxiosInstance, UserAxiosConfig, HandleMergeOptions, Params, Loading } from './types/http.type';
 
 function getBaseUrl(base: string) {
   if (isString(base)) {
@@ -33,7 +33,7 @@ export const getInstance = (interceptor?: AxiosInterceptorOptions, config?: Exte
     instance.defaults.headers.common[key] = val as string;
   }
   // axios默认使用encodeURI进行编码，会造成参数中带有敏感字符，所以需要使用encodeURIComponent进行编码
-  instance.defaults.paramsSerializer = params => {
+  instance.defaults.paramsSerializer = (params: { [s: string]: unknown } | ArrayLike<unknown>) => {
     return Object.entries(params)
       .reduce((res, [key, val]) => {
         const value: string = isObject(val) || isArray(val) ? JSON.stringify(val) : (val as string);
@@ -56,7 +56,7 @@ export const getInstance = (interceptor?: AxiosInterceptorOptions, config?: Exte
   }
   // 处理重试逻辑
   if (retry > 0) {
-    instance.interceptors.response.use(undefined, err => {
+    instance.interceptors.response.use(undefined, (err: { config: any; failure: boolean; message: string }) => {
       const config = err.config;
       if (!config || !config.retry) {
         return Promise.reject(err);
@@ -165,7 +165,6 @@ export const handleOptions = (instance: HttpClient, url: string, method: string,
     url: getUrl(url, config.base ? config.base : instance.base),
     method,
     headers: {
-      ...KsHeaders(url),
       ...(config.headers || {}),
     },
     ...options,
