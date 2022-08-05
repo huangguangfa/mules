@@ -165,8 +165,10 @@ importers:
   packages/core:
     specifiers:
       '@types/crypto-js': ^4.1.1
+      axios: ^0.27.2
       crypto-js: ^4.1.1
     dependencies:
+      axios: 0.27.2
       crypto-js: 4.1.1
     devDependencies:
       '@types/crypto-js': 4.1.1
