@@ -160,7 +160,7 @@ export const handleOptions = (instance: HttpClient, url: string, method: string,
     }
   }
   // 处理取消请求
-  config.cancel && (options.cancelToken = instance.source.token);
+  // config.cancel && (options.cancelToken = instance.source.token);
   return {
     url: getUrl(url, config.base ? config.base : instance.base),
     method,
