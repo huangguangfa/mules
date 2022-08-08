@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@gf-ui/core": "workspace:*",
     "vue": "^3.2.33"
   },
   "devDependencies": {

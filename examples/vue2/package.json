@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@gf-ui/components": "workspace:*",
+    "@gf-ui/core": "workspace:*",
     "vue": "^2.6.11"
   },
   "devDependencies": {

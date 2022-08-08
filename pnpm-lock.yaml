@@ -317,7 +317,8 @@ importers:
 
   examples/vue2:
     specifiers:
-      '@gf-ui/components': workspace:^0.0.11
+      '@gf-ui/components': workspace:*
+      '@gf-ui/core': workspace:^0.1.4
       '@vue/cli-plugin-babel': ~4.5.15
       '@vue/cli-plugin-eslint': ~4.5.15
       '@vue/cli-service': ~4.5.15
@@ -332,6 +333,7 @@ importers:
       vue-template-compiler: ^2.6.11
     dependencies:
       '@gf-ui/components': link:../../packages/sten-components
+      '@gf-ui/core': link:../../packages/core
       vue: 2.7.8
     devDependencies:
       '@vue/cli-plugin-babel': 4.5.19_co5okxmme2qz3y7hmlytk6mv5a
@@ -348,6 +350,7 @@ importers:
 
   examples/vue3:
     specifiers:
+      '@gf-ui/core': workspace:^0.1.4
       '@rushstack/eslint-patch': ^1.1.0
       '@types/node': ^16.11.27
       '@vitejs/plugin-vue': ^2.3.1
@@ -362,6 +365,7 @@ importers:
       vue: ^3.2.33
       vue-tsc: ^0.34.7
     dependencies:
+      '@gf-ui/core': link:../../packages/core
       vue: 3.2.37
     devDependencies:
       '@rushstack/eslint-patch': 1.1.4

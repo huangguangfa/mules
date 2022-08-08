@@ -4,8 +4,12 @@ import "../../../packages/sten-themes/npm/index.css";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { injectComponents } from "./plugins/index";
-injectComponents();
+
+import http from '../../../packages/core/src/http'
+
+console.log('http',http)
+// import { injectComponents } from "./plugins/index";
+// injectComponents();
 
 declare global {
   interface PxhRouter {

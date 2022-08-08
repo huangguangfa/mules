@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { REQUEST_METHOD } from '../config';
 import { getInstance, getRequest, getMergeRequest } from '../.internal/http';
+
 const CancelToken = axios.CancelToken;
 
 import type { AxiosInterceptorOptions, AxiosInstance, CancelTokenSource } from 'axios';
