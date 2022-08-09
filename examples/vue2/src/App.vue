@@ -6,7 +6,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-import { Type } from '../../../packages/core/npm/core.es.js';
+import { Http } from '@gf-ui/core';
 
 export default {
   name: 'App',
@@ -14,7 +14,10 @@ export default {
     HelloWorld,
   },
   created() {
-    console.log(Type);
+    const http = Http({
+      base: 'api',
+    });
+    console.log(http);
   },
 };
 </script>
