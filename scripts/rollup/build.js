@@ -37,7 +37,7 @@ function getRollupPlugins() {
 function getRollupOutputOptions(outputPath, outputDir, format, globalName, globals) {
   const config = {
     name: globalName,
-    sourcemap: false,
+    sourcemap: true,
     globals,
     plugins: [],
   };

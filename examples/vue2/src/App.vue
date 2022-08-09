@@ -6,7 +6,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-import core from '@gf-ui/core';
+import { Type } from '../../../packages/core/npm/core.es.js';
 
 export default {
   name: 'App',
@@ -14,7 +14,7 @@ export default {
     HelloWorld,
   },
   created() {
-    console.log(core);
+    console.log(Type);
   },
 };
 </script>

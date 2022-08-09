@@ -318,7 +318,6 @@ importers:
   examples/vue2:
     specifiers:
       '@gf-ui/components': workspace:*
-      '@gf-ui/core': workspace:^0.1.4
       '@vue/cli-plugin-babel': ~4.5.15
       '@vue/cli-plugin-eslint': ~4.5.15
       '@vue/cli-service': ~4.5.15
@@ -333,7 +332,6 @@ importers:
       vue-template-compiler: ^2.6.11
     dependencies:
       '@gf-ui/components': link:../../packages/sten-components
-      '@gf-ui/core': link:../../packages/core
       vue: 2.7.8
     devDependencies:
       '@vue/cli-plugin-babel': 4.5.19_co5okxmme2qz3y7hmlytk6mv5a

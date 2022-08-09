@@ -8,8 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@gf-ui/components": "workspace:*",
-    "@gf-ui/core": "workspace:*",
+    "@gf-ui/core": "^0.1.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
