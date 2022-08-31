@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { Http } from '@gf-ui/core';
+// import { Http } from '@gf-ui/core';
 import HelloWorld from './components/HelloWorld.vue'
 
-const http = Http({
-  base: 'api',
-  
-})
-console.log('http', http);
+// const http = Http({
+//   base: 'api',
+
+// })
+// console.log('http', http);
+
 </script>
 
 <template>

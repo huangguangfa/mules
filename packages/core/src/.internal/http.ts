@@ -22,7 +22,6 @@ function getUrl(url: string, base: string) {
 }
 
 export const getInstance = (interceptor?: AxiosInterceptorOptions, config?: ExtendAxiosRequestConfig) => {
-  debugger;
   const { loading, headers, timeout, request, response, reject, retry } = {
     ...DEFAULT_REQUEST_OPTIONS,
     ...config,

@@ -16,6 +16,7 @@ const buildMode = (typeof argv.mode === 'string' && argv.mode.split(' ')) || bun
 function resolveEntryFork(resolvedEntry) {
   return require.resolve(`../../packages/${resolvedEntry}/index.ts`);
 }
+
 // 后缀
 const extensions = ['.js', '.ts', '.tsx', '.json', '.node'];
 function getRollupPlugins() {
