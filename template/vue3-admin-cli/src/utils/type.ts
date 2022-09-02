@@ -61,7 +61,7 @@ export const def = (item: unknown, defs: unknown) => {
  * @param item 检测当前类型
  * @returns { Boolean } 如果是字符串则返回true、否则返回false
  */
-export const isString = (item: string): boolean => {
+export const isString = (item: unknown): boolean => {
   return is('String', true)(item)
 }
 
