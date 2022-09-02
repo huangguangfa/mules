@@ -1,11 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { routerModuleList } from './router-module'
+import { getRouterModuleList } from './utils'
+
+const modulesRouter = import.meta.globEager('./modules/*.ts')
+const commonRouter = import.meta.globEager('./common/*.ts')
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: '',
+      name: 'home',
       component: () => import('@/views/index/index.vue'),
     },
     {
@@ -13,7 +17,10 @@ const router = createRouter({
       name: 'demo',
       component: () => import('@/components/demo/index.vue'),
     },
-    ...routerModuleList(),
+    ...getRouterModuleList({
+      ...modulesRouter,
+      ...commonRouter,
+    }),
   ],
 })
 

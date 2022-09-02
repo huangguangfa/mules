@@ -2,6 +2,7 @@ import { initGlobalComponent } from '@/components/index'
 import { initGlobalDirectives } from '@/directives/index'
 import platformCheck from './platform-check'
 import { startLocaDevConfig } from './local-serve/dev'
+import '@/router/router-interceptors'
 import type { App } from 'vue'
 export function initGlobalMethods(app: App) {
   // 项目监测
