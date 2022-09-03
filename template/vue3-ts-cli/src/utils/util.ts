@@ -60,7 +60,7 @@ export const highlight = (str: string, keyword: string, color = '#7972FE') => {
   const transform = keyword.replace(DATA_REGEX_PATTERN.highlight, '\\$&')
   const reg = new RegExp(transform, 'gi')
   if (str) {
-    return str.replace(reg, text => `<span style="color:${color}">${text}</span>`)
+    return str.replace(reg, (text) => `<span style="color:${color}">${text}</span>`)
   }
 }
 

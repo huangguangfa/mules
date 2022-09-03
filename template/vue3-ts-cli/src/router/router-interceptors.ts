@@ -4,14 +4,14 @@ import { useTitle } from '@/hooks'
 // import appStore from '@/stores'
 import type { RouteLocationNormalized } from 'vue-router'
 
-let userStore: any & { signin: (token: string) => void; setUserStore: (key: string, val: unknown) => void }
+const userStore: any = {}
 const loginName = 'login'
 let fromNameFlag = ''
 
 function interceptorsRule(to: RouteLocationNormalized, from: RouteLocationNormalized) {
   const { name: toName, fullPath: toFullPath } = to
   const { name: fromName } = from
-  const { isSignin } = userStore
+  const isSignin = false
   const rules = [
     {
       // 登录后不允许通过自定义路由返回login
@@ -27,16 +27,16 @@ function interceptorsRule(to: RouteLocationNormalized, from: RouteLocationNormal
         return loginName
       },
     },
-    {
-      // 重定向到上一个页面
-      match: () => fromName === loginName && fromNameFlag,
-      action: () => {
-        userStore.setUserStore('isUserGesture', false)
-        const pathName = fromNameFlag
-        fromNameFlag = ''
-        return pathName
-      },
-    },
+    // {
+    //   // 重定向到上一个页面
+    //   match: () => fromName === loginName && fromNameFlag,
+    //   action: () => {
+    //     userStore.setUserStore('isUserGesture', false)
+    //     const pathName = fromNameFlag
+    //     fromNameFlag = ''
+    //     return pathName
+    //   },
+    // },
   ]
   for (let i = 0; i < rules.length; i++) {
     if (rules[i].match()) {
@@ -56,12 +56,12 @@ router.beforeEach((to, from, next) => {
     userStore.signin(token as string)
   }
 
-  if (to.name === loginName) {
-    // 保存身份自动过期后的地址、用于登陆成功重定向
-    if (!userStore.isUserGesture && from.name !== undefined) {
-      fromNameFlag = from.fullPath as string
-    }
-  }
+  // if (to.name === loginName) {
+  //   // 保存身份自动过期后的地址、用于登陆成功重定向
+  //   if (!userStore.isUserGesture && from.name !== undefined) {
+  //     fromNameFlag = from.fullPath as string
+  //   }
+  // }
   // 设置导航栏title
   title && useTitle(title as string)
 

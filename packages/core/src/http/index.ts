@@ -29,14 +29,17 @@ export class HttpClient {
   patch = (url: string, param?: Params, config?: UserAxiosConfig) => this.request(url, REQUEST_METHOD.patch, param, config);
   del = (url: string, param?: Params, config?: UserAxiosConfig) => this.request(url, REQUEST_METHOD.del, param, config);
   all = (options: HandleMergeOptions[]) => this.mergeRequest(options);
-  cancel = (message: string) => this.source.cancel(message);
+  cancel = (message: string) => {
+    this.source.cancel(message);
+    this.source = CancelToken.source();
+  };
 }
 
 export default (function () {
   let instance: HttpClient;
-  return function ({ base = '', interceptor = {}, config = {} } = {}) {
+  return function ({ base = '', interceptor = {}, config = {} }: any = {}) {
     if (!instance) {
-      instance = new HttpClient(base, interceptor, config as ExtendAxiosRequestConfig);
+      instance = new HttpClient(base, interceptor, config);
     }
     return instance;
   };
