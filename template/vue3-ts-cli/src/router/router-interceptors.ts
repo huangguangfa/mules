@@ -27,16 +27,16 @@ function interceptorsRule(to: RouteLocationNormalized, from: RouteLocationNormal
         return loginName
       },
     },
-    // {
-    //   // 重定向到上一个页面
-    //   match: () => fromName === loginName && fromNameFlag,
-    //   action: () => {
-    //     userStore.setUserStore('isUserGesture', false)
-    //     const pathName = fromNameFlag
-    //     fromNameFlag = ''
-    //     return pathName
-    //   },
-    // },
+    {
+      // 重定向到上一个页面
+      match: () => fromName === loginName && fromNameFlag,
+      action: () => {
+        userStore.setUserStore('isUserGesture', false)
+        const pathName = fromNameFlag
+        fromNameFlag = ''
+        return pathName
+      },
+    },
   ]
   for (let i = 0; i < rules.length; i++) {
     if (rules[i].match()) {
@@ -46,15 +46,8 @@ function interceptorsRule(to: RouteLocationNormalized, from: RouteLocationNormal
 }
 
 router.beforeEach((to, from, next) => {
-  // if (!userStore) userStore = appStore.useUserStore as any
-  const { query, meta } = to
+  const { meta } = to
   const { title } = meta
-  const { token } = query
-
-  // 第三方登陆跳转
-  if (token) {
-    userStore.signin(token as string)
-  }
 
   // if (to.name === loginName) {
   //   // 保存身份自动过期后的地址、用于登陆成功重定向
@@ -66,7 +59,7 @@ router.beforeEach((to, from, next) => {
   title && useTitle(title as string)
 
   // 拦截规则
-  const pathName = interceptorsRule(to, from)
-  if (pathName) return next(pathName as string)
+  // const pathName = interceptorsRule(to, from)
+  // if (pathName) return next(pathName as string)
   next()
 })

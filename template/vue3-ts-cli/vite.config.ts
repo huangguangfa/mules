@@ -24,7 +24,7 @@ export default ({ mode }: { mode: string }) => {
     },
     envDir: './env',
     server: {
-      port: 3007,
+      port: 3009,
       host: true,
       proxy: {
         '/xxxx': {

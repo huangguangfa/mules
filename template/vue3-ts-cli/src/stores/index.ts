@@ -1,3 +1,14 @@
-import { createPinia } from 'pinia'
+import { useUserStore } from './modules/user'
 
-export default createPinia()
+export interface AppStore {
+  useUserStore: ReturnType<typeof useUserStore>
+}
+
+const appStore: AppStore = {} as AppStore
+
+// 注册 状态库
+export const registerStore = () => {
+  appStore.useUserStore = useUserStore()
+}
+
+export default appStore
