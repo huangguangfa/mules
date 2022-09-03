@@ -1,42 +1,47 @@
 {
   "name": "@gf-ui/cli",
-  "version": "1.0.9",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsup && esno scripts/build.ts",
+    "dev": "tsup --watch src",
+    "lint": "eslint"
+  },
+  "keywords": [],
   "description": "个人全局管理包工具",
   "author": "hgf <1454556135@qq.com>",
-  "homepage": "https://github.com/huanggungfa/web-components-gf#readme",
   "license": "ISC",
-  "main": "lib/gf-cli.js",
-  "directories": {
-    "lib": "lib"
-  },
   "bin": {
-    "gf-cli": "./bin/cli.js"
+    "gf-cli": "./dist/index.js"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "files": [
-    "lib",
-    "config",
-    "comand"
+    "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/huanggungfa/web-components-gf.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/huanggungfa/web-components-gf/issues"
+  "devDependencies": {
+    "@swc/core": "^1.2.246",
+    "@types/download": "^8.0.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.1",
+    "@types/node": "^18.7.14",
+    "@types/pump": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.11",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.2"
   },
   "dependencies": {
-    "@gf-ui/cli": "^1.0.5",
     "commander": "^9.3.0",
     "compressing": "^1.6.0",
     "download": "^8.0.0",
     "download-git-repo": "^3.0.2",
     "fs-extra": "^10.1.0",
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "log-symbols": "^5.1.0",
+    "ora": "^6.1.2",
+    "pump": "^3.0.0"
   }
 }
