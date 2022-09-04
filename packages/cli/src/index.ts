@@ -22,6 +22,13 @@ function start() {
       alias: 'ls',
       action: list,
     },
+    {
+      name: '启动项目',
+      command: 'run <ScriptName>',
+      description: '用于启动项目、自动切换当前项目正确版本',
+      alias: 'r',
+      action: run,
+    },
   ];
   for (let i = 0; i < commandMap.length; i++) {
     const { command, description, alias, action } = commandMap[i];

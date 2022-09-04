@@ -6,6 +6,7 @@
   "scripts": {
     "v": "gf-cli -v",
     "l": "gf-cli list",
+    "r": "gf-cli run dev",
     "gfinit": "gf-cli init myVue3"
   },
   "keywords": [],
