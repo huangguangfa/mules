@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import { list, init, run } from './comand';
+import { list, init, run } from './command';
 import packageInfo from '../package.json';
 
-/*  查询当前cli版本 */
+/* 查询当前cli版本 */
 program.version(packageInfo.version, '-v, --version');
 
 function start() {
