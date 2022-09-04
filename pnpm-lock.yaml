@@ -430,24 +430,6 @@ importers:
       tsup: 6.2.3_u6t6qvzjlbgnx4q2mzsjhro7ey
       typescript: 4.8.2
 
-  packages/clis:
-    specifiers:
-      '@gf-ui/cli': ^1.0.5
-      commander: ^9.3.0
-      compressing: ^1.6.0
-      download: ^8.0.0
-      download-git-repo: ^3.0.2
-      fs-extra: ^10.1.0
-      inquirer: ^8.2.4
-    dependencies:
-      '@gf-ui/cli': 'link:'
-      commander: 9.4.0
-      compressing: 1.6.2
-      download: 8.0.0
-      download-git-repo: 3.0.2
-      fs-extra: 10.1.0
-      inquirer: 8.2.4
-
   packages/core:
     specifiers:
       '@types/crypto-js': ^4.1.1
