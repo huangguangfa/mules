@@ -1,0 +1,17 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "v": "gf-cli -v",
+    "l": "gf-cli list",
+    "gfinit": "gf-cli init myVue3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@gf-ui/cli": "workspace:*"
+  }
+}

@@ -23,7 +23,7 @@ export function init(projectName: string) {
       await clone(tempInfo, projectName);
       // 创建成功
       console.log(symbols.success, chalk.green(`项目${projectName}创建成功`));
-      console.log(chalk.blue('cd ' + projectName + '\nnpm install\nnpm run dev或者npm run start'));
+      console.log(chalk.blue('cd ' + projectName + '\nyarn install\nyrn run dev 或者 yarn run start'));
       try {
         // 2. 同步package.json的配置
         const packageJson = path.join(path.resolve(projectName), 'package.json');

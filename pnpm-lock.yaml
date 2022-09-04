@@ -195,6 +195,12 @@ importers:
       karma-jasmine-html-reporter: 1.7.0_hmebq5lwkw4tdptkw7fxmrit24
       typescript: 4.6.4
 
+  examples/demo:
+    specifiers:
+      '@gf-ui/cli': workspace:*
+    devDependencies:
+      '@gf-ui/cli': link:../../packages/cli
+
   examples/react-ts:
     specifiers:
       '@babel/core': ^7.16.0
