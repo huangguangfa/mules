@@ -7,7 +7,7 @@
     "x": "gf-cli -v",
     "l": "gf-cli list",
     "r": "gf-cli run dev",
-    "gfinit": "gf-cli init myVue3"
+    "gfinit": "gf-cli init libs"
   },
   "keywords": [],
   "author": "",

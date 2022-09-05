@@ -25,6 +25,13 @@ export default [
     author: 'gf',
   },
   {
+    name: 'ts-libs',
+    type: 'zip',
+    repositories: zipUrl + 'ts-libs.zip',
+    desc: '快速创建ts构建libs模块',
+    author: 'gf',
+  },
+  {
     name: 'sten-design',
     type: 'zip',
     repositories: zipUrl + 'sten-design.zip',

@@ -1,6 +1,6 @@
 {
-  "name": "@gf-ui/cli",
-  "version": "1.0.0",
+  "name": "@mules/cli",
+  "version": "0.0.1",
   "scripts": {
     "build": "tsup && esno scripts/build.ts",
     "dev": "tsup --watch src",
@@ -12,6 +12,9 @@
   "license": "ISC",
   "bin": {
     "gf-cli": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
