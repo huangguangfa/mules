@@ -201,6 +201,12 @@ importers:
     devDependencies:
       '@gf-ui/cli': link:../../packages/cli
 
+  examples/eslint-demo:
+    specifiers:
+      '@mules/eslint-config-basic': workspace:^0.0.1
+    dependencies:
+      '@mules/eslint-config-basic': link:../../packages/eslint-config
+
   examples/react-ts:
     specifiers:
       '@babel/core': ^7.16.0
