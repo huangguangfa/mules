@@ -22,6 +22,7 @@ function compile() {
 // }
 
 function watchFile() {
+    compile()
     return watch(['./src/*.scss', './src/components/*.scss', './src/common/*.scss', './src/mixins/*.scss'], function (cb) {
         compile()
         cb();
