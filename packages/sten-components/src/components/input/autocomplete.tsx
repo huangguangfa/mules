@@ -1,10 +1,10 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core'
 
 @Component({
   tag: 'gf-autocomplete',
 })
 export class GfAutocomplete {
-  @Prop() show: Boolean = false;
+  @Prop() show: Boolean = false
 
   render() {
     return (
@@ -20,6 +20,6 @@ export class GfAutocomplete {
           <div class={`gf-autocomplete__arrow ${this.show ? 'display-block' : 'display-none'}`}></div>
         </div>
       </Host>
-    );
+    )
   }
 }

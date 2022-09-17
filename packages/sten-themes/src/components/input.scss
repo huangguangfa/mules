@@ -1,15 +1,15 @@
 @charset "UTF-8";
-@import "../common/var";
-@import "../mixins/mixins";
+@import '../common/var';
+@import '../mixins/mixins';
 
-@include b(textarea){
+@include b(textarea) {
   position: relative;
   display: inline-block;
   width: 100%;
   border: 1px solid $--brand-color-light;
   padding: 6px;
   vertical-align: bottom;
-  transition: border .2s;
+  transition: border 0.2s;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -28,10 +28,10 @@
     }
     &:focus {
       outline: none;
-      border-color:  $input-border-color-focus;;
+      border-color: $input-border-color-focus;
     }
   }
-  & .gf-input__maxlength{
+  & .gf-input__maxlength {
     color: #909399;
     display: flex;
     align-items: center;
@@ -39,10 +39,9 @@
     position: absolute;
     right: 15px;
     bottom: 10px;
-    
   }
   @include when(disabled) {
-    background:  $--input-disabled-fill;
+    background: $--input-disabled-fill;
     border-color: $--input-disabled-border;
     .gf-textarea__inner {
       background-color: $--input-disabled-fill;
@@ -59,97 +58,98 @@
     }
   }
 }
-@include b(input){
-    position: relative;
-    font-size: 0;
-    display: inline-block;
-    width: 100%;
-    border: 1px solid $--brand-color-light;
-    transition: border .2s;
-    padding: 6px;
-    display: flex;
-    height: 34px;
-    align-items: center;
-    flex-wrap: nowrap;
-    border-radius: $--border-radius-base;
-    box-sizing: border-box;
-    &:focus-within{
-      border-color: $input-border-color-focus;
-    }
-    &:hover{
-      border-color: $input-border-color-focus;
-      .gf-input__clear{
-        display: block;
-      }
-    }
-    & .gf-input__clear {
-      cursor: pointer;
-      z-index: 2;
-      padding-right: 2px;
-      display: none;
-    }
-    & .gf-input__maxlength{
-      color: #909399;
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      
-    }
-    @include e(inner) {
+@include b(input) {
+  position: relative;
+  font-size: 0;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $--brand-color-light;
+  transition: border 0.2s;
+  padding: 6px;
+  display: flex;
+  height: 34px;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: $--border-radius-base;
+  box-sizing: border-box;
+  :-internal-autofill-selected {
+    transition: background-color 50000s ease-in-out 0s;
+  }
+  &:focus-within {
+    border-color: $input-border-color-focus;
+  }
+  &:hover {
+    border-color: $input-border-color-focus;
+    .gf-input__clear {
       display: block;
-      flex:1;
-      color: $--color-text-primary;
+    }
+  }
+  & .gf-input__clear {
+    cursor: pointer;
+    z-index: 2;
+    padding-right: 2px;
+    display: none;
+  }
+  & .gf-input__maxlength {
+    color: #909399;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  @include e(inner) {
+    display: block;
+    flex: 1;
+    color: $--color-text-primary;
+    font-size: 12px;
+    background-color: $--color-white;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    height: 100%;
+    border-radius: $--border-radius-base;
+    &:focus + .gf-input__clear {
+      display: block;
+    }
+    &::placeholder {
+      color: $--input-placeholder-color;
       font-size: 12px;
-      background-color: $--color-white;
-      border: none;
-      outline: none;
-      box-sizing: border-box;
-      padding: 0;
-      height: 100%;
-      border-radius: $--border-radius-base;
-      &:focus + .gf-input__clear{
-        display: block;
-      }
+    }
+  }
+  @include when(input-success) {
+    border-color: $--color-success;
+  }
+  @include when(input-success) {
+    border-color: $--color-success;
+  }
+  @include when(input-info) {
+    border-color: $--brand-color-dark;
+  }
+  @include when(input-success) {
+    border-color: $--color-success;
+  }
+  @include when(input-warning) {
+    border-color: $--color-warning;
+  }
+  @include when(input-error) {
+    border-color: $--color-danger;
+  }
+
+  @include when(disabled) {
+    background: $--input-disabled-fill;
+    border-color: $--input-disabled-border;
+    .gf-input__inner {
+      background-color: $--input-disabled-fill;
+      color: $--input-disabled-color;
+      cursor: not-allowed;
       &::placeholder {
         color: $--input-placeholder-color;
         font-size: 12px;
       }
     }
-    @include when(input-success) {
-      border-color: $--color-success;
-    }
-    @include when(input-success) {
-      border-color: $--color-success;
-    }
-    @include when(input-info) {
-      border-color: $--brand-color-dark;
-    }
-    @include when(input-success) {
-      border-color: $--color-success;
-    }
-    @include when(input-warning) {
-      border-color:$--color-warning;
-    }
-    @include when(input-error) {
-      border-color: $--color-danger;
-    }
 
-    @include when(disabled) {
-      background:  $--input-disabled-fill;
-      border-color: $--input-disabled-border;
-      .gf-input__inner {
-        background-color: $--input-disabled-fill;
-        color: $--input-disabled-color;
-        cursor: not-allowed;
-        &::placeholder {
-          color: $--input-placeholder-color;
-          font-size: 12px;
-        }
-      }
-  
-      .gf-input__icon {
-        cursor: not-allowed;
-      }
+    .gf-input__icon {
+      cursor: not-allowed;
     }
-   
+  }
 }

@@ -376,7 +376,7 @@ export namespace Components {
         "iconColor": string;
         "iconFontSize": number;
         "maxRows": number | string;
-        "maxlength"?: number;
+        "maxlength": number;
         "minRows": number | string;
         "placeholder": string;
         "resize": string;

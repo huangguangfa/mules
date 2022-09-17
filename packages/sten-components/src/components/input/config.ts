@@ -11,6 +11,6 @@ export const STATUS = {
   error: {
     color: '#ff4949',
   },
-};
+}
 
-export const disabledIconColor = '#E4E7ED';
+export const disabledIconColor = '#E4E7ED'
