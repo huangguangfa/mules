@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -12,8 +13,11 @@
     "skipLibCheck": true,
     "lib": ["WebWorker"],
     "paths": {
+      "react": ["./stub/types__react"]
     },
     "jsx": "preserve"
+    
   },
   "include": [".vitepress/**/*", "vite.config.ts"],
+  "exclude": ["**/*.stories.ts"]
 }

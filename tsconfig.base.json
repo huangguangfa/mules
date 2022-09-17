@@ -15,7 +15,6 @@
     "removeComments": false,
     "rootDir": ".",
     "types": [],
-    "paths": {
-    }
+    "paths": {}
   },
 }
