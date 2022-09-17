@@ -1,58 +1,57 @@
-import fs from "fs";
-import path from "path";
-import { vpRoot } from "../build/config";
-import { languages } from "../utils/lang";
+import fs from 'fs';
+import path from 'path';
+import { vpRoot } from '../build/config';
+import { languages } from '../utils/lang';
 
-import type { HeadConfig } from "vitepress";
+import type { HeadConfig } from 'vitepress';
 
 export const head: HeadConfig[] = [
   [
-    "link",
+    'link',
     {
-      rel: "icon",
-      href: "/images/gf-ui-logo.png",
-      // type: "image/svg+xm",
+      rel: 'icon',
+      href: '/images/gf-ui-logo.png',
     },
   ],
   [
-    "link",
+    'link',
     {
-      rel: "apple-touch-icon",
-      href: "/apple-touch-icon.png",
-      sizes: "180x180",
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180',
     },
   ],
   [
-    "link",
+    'link',
     {
-      rel: "mask-icon",
-      href: "/safari-pinned-tab.svg",
-      color: "#5bbad5",
+      rel: 'mask-icon',
+      href: '/safari-pinned-tab.svg',
+      color: '#5bbad5',
     },
   ],
   [
-    "meta",
+    'meta',
     {
-      name: "theme-color",
-      content: "#ffffff",
+      name: 'theme-color',
+      content: '#ffffff',
     },
   ],
   [
-    "meta",
+    'meta',
     {
-      name: "msapplication-TileColor",
-      content: "#409eff",
+      name: 'msapplication-TileColor',
+      content: '#409eff',
     },
   ],
   [
-    "meta",
+    'meta',
     {
-      name: "msapplication-config",
-      content: "/browserconfig.xml",
+      name: 'msapplication-config',
+      content: '/browserconfig.xml',
     },
   ],
   [
-    "script",
+    'script',
     {},
     `;(() => {
       window.supportedLangs = ${JSON.stringify(languages)}
@@ -78,30 +77,30 @@ export const head: HeadConfig[] = [
   //   },
   // ],
   [
-    "script",
+    'script',
     {
-      async: "true",
-      type: "module",
-      src: "http://localhost:3338/build/sten-components.esm.js",
+      async: 'true',
+      type: 'module',
+      src: 'http://localhost:3334/build/sten-components.esm.js',
     },
   ],
   [
-    "link",
+    'link',
     {
-      rel: "stylesheet",
-      href: "http://localhost:3338/build/sten-components.css",
+      rel: 'stylesheet',
+      href: 'http://localhost:3334/build/sten-components.css',
     },
   ],
-  ["script", {}, fs.readFileSync(path.resolve(vpRoot, "lang.js"), "utf-8")],
+  ['script', {}, fs.readFileSync(path.resolve(vpRoot, 'lang.js'), 'utf-8')],
   [
-    "script",
+    'script',
     {
-      async: "true",
-      src: "https://www.googletagmanager.com/gtag/js?id=UA-175337989-1",
+      async: 'true',
+      src: 'https://www.googletagmanager.com/gtag/js?id=UA-175337989-1',
     },
   ],
   [
-    "script",
+    'script',
     {},
     `if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -115,9 +114,9 @@ export const head: HeadConfig[] = [
     }`,
   ],
   [
-    "script",
+    'script',
     {
-      async: "true",
+      async: 'true',
     },
     `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -125,14 +124,14 @@ gtag('js', new Date());
 gtag('config', 'UA-175337989-1');`,
   ],
   [
-    "script",
+    'script',
     {
-      async: "true",
-      src: "https://www.googletagmanager.com/gtag/js?id=G-M74ZHEQ1M1",
+      async: 'true',
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-M74ZHEQ1M1',
     },
   ],
   [
-    "script",
+    'script',
     {},
     `
       window.dataLayer = window.dataLayer || [];
@@ -143,7 +142,7 @@ gtag('config', 'UA-175337989-1');`,
     `,
   ],
   [
-    "script",
+    'script',
     {},
     `(function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -155,9 +154,9 @@ gtag('config', 'UA-175337989-1');`,
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
   ],
   [
-    "script",
+    'script',
     {
-      async: "true",
+      async: 'true',
     },
     `
   var resource = document.createElement('link');
@@ -170,8 +169,4 @@ gtag('config', 'UA-175337989-1');`,
   ],
 ];
 
-head.push([
-  "script",
-  {},
-  fs.readFileSync(path.resolve(vpRoot, "dark-mode.js"), "utf-8"),
-]);
+head.push(['script', {}, fs.readFileSync(path.resolve(vpRoot, 'dark-mode.js'), 'utf-8')]);

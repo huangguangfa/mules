@@ -8,7 +8,7 @@
     "start:ui": "pnpm --filter @gf-ui/components start",
     "start:npm": "node ./scripts/rollup/build.js --watch",
     "start:doc": "pnpm --filter @gf-ui/docs dev",
-    "start:style": "pnpm --filter @gf-ui/themes start",
+    "start:themes": "pnpm --filter @gf-ui/themes start",
     "build:npm": "node ./scripts/rollup/build.js --mode",
     "jest": "jest --verbose --runInBand --coverage",
     "prepare": "husky install"
