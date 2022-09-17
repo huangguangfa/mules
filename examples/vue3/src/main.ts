@@ -8,6 +8,7 @@ import App from "./App.vue";
 // injectComponents();
 // import "../../../packages/sten-themes/npm/index.css";
 
+
 const app = createApp(App);
 
 app.mount("#app");

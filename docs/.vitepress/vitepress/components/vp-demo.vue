@@ -1,69 +1,66 @@
 <script setup lang="ts">
-import { computed, getCurrentInstance, toRef } from 'vue'
-import { isClient, useClipboard, useToggle } from '@vueuse/core'
-import { CaretTop } from '@element-plus/icons-vue'
-import { useLang } from '../composables/lang'
-import { useSourceCode } from '../composables/source-code'
-import { usePlayground } from '../composables/use-playground'
+import { computed, getCurrentInstance, toRef } from 'vue';
+import { isClient, useClipboard, useToggle } from '@vueuse/core';
+import { CaretTop } from '@element-plus/icons-vue';
+import { useLang } from '../composables/lang';
+import { useSourceCode } from '../composables/source-code';
+import { usePlayground } from '../composables/use-playground';
 
-import demoBlockLocale from '../../i18n/component/demo-block.json'
+import demoBlockLocale from '../../i18n/component/demo-block.json';
 
-import Example from './demo/vp-example.vue'
-import SourceCode from './demo/vp-source-code.vue'
+import Example from './demo/vp-example.vue';
+import SourceCode from './demo/vp-source-code.vue';
 
 const props = defineProps<{
-  demos: object
-  source: string
-  path: string
-  rawSource: string
-  description?: string
-}>()
+  demos: object;
+  source: string;
+  path: string;
+  rawSource: string;
+  description?: string;
+}>();
 
-const vm = getCurrentInstance()!
+const vm = getCurrentInstance()!;
 
 const { copy, isSupported } = useClipboard({
   source: decodeURIComponent(props.rawSource),
   read: false,
-})
+});
 
-const [sourceVisible, toggleSourceVisible] = useToggle()
-const lang = useLang()
-const demoSourceUrl = useSourceCode(toRef(props, 'path'))
+const [sourceVisible, toggleSourceVisible] = useToggle();
+const lang = useLang();
+const demoSourceUrl = useSourceCode(toRef(props, 'path'));
 
 const formatPathDemos = computed(() => {
-  const demos = {}
+  const demos = {};
 
-  Object.keys(props.demos).forEach((key) => {
-    demos[key.replace('../../examples/', '').replace('.vue', '')] =
-      props.demos[key].default
-  })
+  Object.keys(props.demos).forEach(key => {
+    demos[key.replace('../../examples/', '').replace('.vue', '')] = props.demos[key].default;
+  });
 
-  return demos
-})
+  return demos;
+});
 
-const locale = computed(() => demoBlockLocale[lang.value])
-const decodedDescription = computed(() =>
-  decodeURIComponent(props.description!)
-)
+const locale = computed(() => demoBlockLocale[lang.value]);
+const decodedDescription = computed(() => decodeURIComponent(props.description!));
 
 const onPlaygroundClick = () => {
-  const { link } = usePlayground(props.rawSource)
-  if (!isClient) return
-  window.open(link)
-}
+  const { link } = usePlayground(props.rawSource);
+  if (!isClient) return;
+  window.open(link);
+};
 
 const copyCode = async () => {
-  const { $message } = vm.appContext.config.globalProperties
+  const { $message } = vm.appContext.config.globalProperties;
   if (!isSupported) {
-    $message.error(locale.value['copy-error'])
+    $message.error(locale.value['copy-error']);
   }
   try {
-    await copy()
-    $message.success(locale.value['copy-success'])
+    await copy();
+    $message.success(locale.value['copy-success']);
   } catch (e: any) {
-    $message.error(e.message)
+    $message.error(e.message);
   }
-}
+};
 </script>
 
 <template>
@@ -83,11 +80,7 @@ const copyCode = async () => {
           </ElIcon>
         </ElTooltip>
         <ElTooltip :content="locale['edit-on-github']" :show-arrow="false">
-          <ElIcon
-            :size="16"
-            class="op-btn github"
-            style="color: var(--text-color-light)"
-          >
+          <ElIcon :size="16" class="op-btn github" style="color: var(--text-color-light)">
             <a :href="demoSourceUrl" rel="noreferrer noopener" target="_blank">
               <i-ri-github-line />
             </a>
@@ -110,11 +103,7 @@ const copyCode = async () => {
       </ElCollapseTransition>
 
       <Transition name="el-fade-in-linear">
-        <div
-          v-show="sourceVisible"
-          class="example-float-control"
-          @click="toggleSourceVisible(false)"
-        >
+        <div class="example-float-control" v-show="sourceVisible" @click="toggleSourceVisible(false)">
           <ElIcon :size="16">
             <CaretTop />
           </ElIcon>
@@ -127,7 +116,7 @@ const copyCode = async () => {
 
 <style scoped lang="scss">
 .example {
-  border: 1px solid var(--border-color);
+  border: 1px solid #eee;
   border-radius: var(--el-border-radius-base);
 
   .op-btns {

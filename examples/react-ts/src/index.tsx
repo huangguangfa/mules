@@ -16,9 +16,9 @@ declare global {
     path: string
   }
   namespace JSX {
-    interface IntrinsicElements {
-      "gf-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
-    }
+    // interface IntrinsicElements {
+    //   "gf-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+    // }
   }
 }
 

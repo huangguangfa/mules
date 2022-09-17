@@ -9,6 +9,7 @@ const ns = useNamespace('button');
   tag: 'gf-button',
   scoped: true,
 })
+
 export class GfButton {
   @Prop() color: ButtonColor = 'default'; // 按钮颜色
   @Prop() disabled: boolean = false; // 禁用
