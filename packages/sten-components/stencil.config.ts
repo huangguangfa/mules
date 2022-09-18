@@ -10,10 +10,11 @@ export const config: Config = {
   invisiblePrehydration: false,
   devServer: {
     openBrowser: false,
+    port: 3334,
   },
   plugins: [
     alias({
-      entries: [{ find: '@', replacement: path.resolve(__dirname, './src') }],
+      entries: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
     }),
   ],
   outputTargets: [

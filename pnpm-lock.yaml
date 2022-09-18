@@ -464,6 +464,7 @@ importers:
 
   packages/sten-components:
     specifiers:
+      '@mules/core': workspace:^0.0.1
       '@rollup/plugin-alias': ^3.1.9
       '@stencil/core': ^2.15.1
       '@types/jest': ^27.0.3
@@ -475,6 +476,7 @@ importers:
     dependencies:
       '@stencil/core': 2.17.1
     devDependencies:
+      '@mules/core': link:../core
       '@rollup/plugin-alias': 3.1.9
       '@types/jest': 27.5.2
       classnames: 2.3.1

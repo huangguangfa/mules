@@ -1,20 +1,26 @@
-.display-block{
-    display: block;
+.display-block {
+  display: block;
 }
-.display-none{
-    display: none;
+.display-none {
+  display: none;
 }
 
-.gf-icon-loading {
-    animation: rotating 2s linear infinite;
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-icon-loading {
+  animation: rotating 2s linear infinite;
 }
 
 @keyframes rotating {
-    0% {
-        transform: rotateZ(0deg);
-    }
+  0% {
+    transform: rotateZ(0deg);
+  }
 
-    100% {
-        transform: rotateZ(360deg);
-    }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }

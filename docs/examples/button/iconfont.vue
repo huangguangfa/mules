@@ -6,7 +6,7 @@
     <gf-button color="primary" size="small" circle>
       <gf-icon-q-rcode color="white" size="20"></gf-icon-q-rcode>
     </gf-button>
-    <gf-button color="success" size="smaller" circle>
+    <gf-button color="success" size="small" circle>
       <gf-icon-success-fill color="white" size="20"></gf-icon-success-fill>
     </gf-button>
 

@@ -1,3 +1,4 @@
+import { defaultNamespace } from '../../utils/index'
 import { FunctionalComponent, h } from '@stencil/core'
 import { stringify } from 'svgson'
 export interface IconProps {
@@ -31,7 +32,8 @@ export const Icons: FunctionalComponent<IconProps> = props => {
     width: size,
     height: size,
     fill: color,
+    preserveAspectRatio: 'none meet',
   }
   const outStyle = getOutStyle(props)
-  return <span class={`svg-wrap ${spin ? 'gf-icon-loading' : ''}`} innerHTML={stringify(svgData)} style={outStyle}></span>
+  return <span class={`svg-wrap ${spin ? `${defaultNamespace}-icon-loading` : ''}`} innerHTML={stringify(svgData)} style={outStyle}></span>
 }

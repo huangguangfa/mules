@@ -37,6 +37,7 @@
     "@stencil/core": "^2.15.1"
   },
   "devDependencies": {
+    "@mules/core": "workspace:*",
     "@rollup/plugin-alias": "^3.1.9",
     "@types/jest": "^27.0.3",
     "classnames": "^2.3.1",

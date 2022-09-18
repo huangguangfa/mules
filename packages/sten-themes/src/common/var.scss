@@ -97,6 +97,7 @@ $--button-default-font-color: $--color-text-regular !default;
 $--button-font-weight: $--font-weight-primary !default;
 $--button-padding-vertical: 12px !default;
 $--button-border-radius-round: 20px;
+$--button-size: 32px;
 /* button类型 */
 // primary
 $--button-primary-border-color: $--color-primary !default;
@@ -132,7 +133,7 @@ $--button-small-padding-horizontal: 10px !default;
 
 $--button-smaller-font-size: $--font-size-extra-smaller !default;
 $--button-smaller-border-radius: $--border-radius-base !default;
-$--button-smaller-padding-vertical: 0px !default;
+$--button-smaller-padding-vertical: 3px !default;
 $--button-smaller-padding-horizontal: 8px !default;
 
 // disable
