@@ -18,6 +18,7 @@ export namespace Components {
         "disabled": boolean;
         "nativeType": string;
         "plain": boolean;
+        "round": boolean;
         "size": ButtonSize;
         "textColor": string;
     }
@@ -748,6 +749,7 @@ declare namespace LocalJSX {
         "nativeType"?: string;
         "onDisplayOnClick"?: (event: GfButtonCustomEvent<any>) => void;
         "plain"?: boolean;
+        "round"?: boolean;
         "size"?: ButtonSize;
         "textColor"?: string;
     }

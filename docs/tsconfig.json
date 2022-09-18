@@ -11,13 +11,14 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "lib": ["WebWorker"],
+    "types": [
+      "vite/client", 
+    ],
+    "jsx": "preserve",
     "paths": {
       "react": ["./stub/types__react"]
     },
-    "jsx": "preserve"
-    
   },
-  "include": [".vitepress/**/*", "vite.config.ts"],
-  "exclude": ["**/*.stories.ts"]
+  "include": [".vitepress/**/*", "vite.config.ts", "examples"],
+  "exclude": ["**/*.stories.ts", ]
 }

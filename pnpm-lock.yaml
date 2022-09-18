@@ -114,7 +114,7 @@ importers:
       '@vueuse/core': 8.9.4_vue@3.2.37
       axios: 0.27.2
       clipboard-copy: 4.0.1
-      element-plus: 2.2.16_vue@3.2.37
+      element-plus: 2.2.17_vue@3.2.37
       markdown-it: 13.0.1
       normalize.css: 8.0.1
       nprogress: 0.2.0
@@ -199,13 +199,13 @@ importers:
 
   examples/demo:
     specifiers:
-      '@gf-ui/cli': workspace:*
+      '@mules/cli': workspace:*
     devDependencies:
-      '@gf-ui/cli': link:../../packages/cli
+      '@mules/cli': link:../../packages/cli
 
   examples/eslint-demo:
     specifiers:
-      '@mules/eslint-config-basic': workspace:^0.0.1
+      '@mules/eslint-config-basic': workspace:*
     dependencies:
       '@mules/eslint-config-basic': link:../../packages/eslint-config
 
@@ -458,6 +458,9 @@ importers:
     devDependencies:
       '@types/crypto-js': 4.1.1
       '@types/qs': 6.9.7
+
+  packages/eslint-config:
+    specifiers: {}
 
   packages/sten-components:
     specifiers:
@@ -11009,8 +11012,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /element-plus/2.2.16_vue@3.2.37:
-    resolution: {integrity: sha512-rvaTMFIujec9YDC5lyaiQv2XVUCHuhVDq2k+9vQxP78N8Wd07iEOGa9pvEVOO2uYc75l4rSl2RE/IWPH/6Mdzw==}
+  /element-plus/2.2.17_vue@3.2.37:
+    resolution: {integrity: sha512-MGwMIE/q+FFD3kgS23x8HIe5043tmD1cTRwjhIX9o6fim1avFnUkrsfYRvybbz4CkyqSb185EheZS5AUPpXh2g==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:

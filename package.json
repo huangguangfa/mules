@@ -11,7 +11,8 @@
     "start:themes": "pnpm --filter @gf-ui/themes start",
     "build:npm": "node ./scripts/rollup/build.js --mode",
     "jest": "jest --verbose --runInBand --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "rm -rf ./node_modules/@types/react"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

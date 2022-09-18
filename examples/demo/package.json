@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@gf-ui/cli": "workspace:*"
+    "@mules/cli": "workspace:*"
   }
 }

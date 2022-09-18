@@ -1,129 +1,134 @@
 @charset "UTF-8";
-@import "../common/var";
-@import "../mixins/utils";
-@import "../mixins/mixins";
-@import "../mixins/button";
+@import '../common/var';
+@import '../mixins/utils';
+@import '../mixins/mixins';
+@import '../mixins/button';
 
-@include b(button){
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    background: $--button-default-background-color;
-    border: $--border-base;
-    border-color: $--button-default-border-color;
-    color: $--button-default-font-color;
-    border-radius: $--button-default-border-radius;
-    -webkit-appearance: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: none;
-    margin: 0;
-    transition: .1s;
-    font-weight: $--button-font-weight;
-    padding: 8px 12px;
-    font-size: $--font-size-small;
-    box-shadow: inset 0 1px 0 hsl(0deg 0% 100% / 20%), 0 1px 2px rgb(0 0 0 / 5%);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    @include utils-user-select(none);
+@include b(button) {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--button-default-background-color;
+  border: $--border-base;
+  border-color: $--button-default-border-color;
+  color: $--button-default-font-color;
+  border-radius: $--button-default-border-radius;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  height: 32px;
+  font-weight: $--button-font-weight;
+  padding: 8px 12px;
+  font-size: $--font-size-small;
+  box-shadow: inset 0 1px 0 hsl(0deg 0% 100% / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include utils-user-select(none);
+  &:hover {
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
+  }
+  @include when(circle) {
+    border-radius: 50%;
+    padding: $--button-padding-vertical;
+  }
+  @include when(round) {
+    border-radius: $--button-border-radius-round;
+  }
+
+  @include when(disabled) {
+    &,
     &:hover {
-        color: $--color-primary;
-        border-color: $--color-primary-light-7;
-        background-color: $--color-primary-light-9;
+      color: $--button-disabled-font-color;
+      cursor: not-allowed;
+      background-image: none;
+      background-color: $--button-disabled-background-color;
+      border-color: $--button-disabled-border-color;
     }
+
+    &.el-button--text {
+      background-color: transparent;
+    }
+
+    &.is-plain {
+      &,
+      &:hover {
+        background-color: $--color-white;
+        border-color: $--button-disabled-border-color;
+        color: $--button-disabled-font-color;
+      }
+    }
+  }
+
+  // 类型
+  @include m(primary) {
+    @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+  }
+  @include m(success) {
+    @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+  }
+  @include m(info) {
+    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+  }
+  @include m(warning) {
+    @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
+  }
+  @include m(danger) {
+    @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
+  }
+
+  // size
+  @include m(large) {
+    @include button-size($--button-large-padding-vertical, $--button-large-padding-horizontal, $--button-large-font-size, $--button-large-border-radius);
     @include when(circle) {
-        border-radius: 50%;
-        padding: $--button-padding-vertical;
+      padding: $--button-large-padding-vertical;
+      width: 32px;
     }
-
-    @include when(disabled) {
-        &,
-        &:hover {
-            color: $--button-disabled-font-color;
-            cursor: not-allowed;
-            background-image: none;
-            background-color: $--button-disabled-background-color;
-            border-color: $--button-disabled-border-color;
-        }
-    
-        &.el-button--text {
-            background-color: transparent;
-        }
-        
-        &.is-plain {
-            &,
-            &:hover{
-                background-color: $--color-white;
-                border-color: $--button-disabled-border-color;
-                color: $--button-disabled-font-color;
-            }
-        }
+  }
+  @include m(small) {
+    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);
+    @include when(circle) {
+      padding: $--button-small-padding-vertical;
+      width: 32px;
     }
-   
-    // 类型
-    @include m(primary) {
-        @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+  }
+  @include m(smaller) {
+    @include button-size($--button-smaller-padding-vertical, $--button-smaller-padding-horizontal, $--button-smaller-font-size, $--button-smaller-border-radius);
+    @include when(circle) {
+      padding: $--button-smaller-padding-vertical;
+      width: 32px;
     }
-    @include m(success) {
-        @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
-    }
-    @include m(info) {
-        @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
-    }
-    @include m(warning) {
-        @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
-    }
-    @include m(danger) {
-        @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
-    }
-    
-    // size
-    @include m(large) {
-        @include button-size($--button-large-padding-vertical, $--button-large-padding-horizontal, $--button-large-font-size, $--button-large-border-radius);
-        @include when(circle) {
-            padding: $--button-large-padding-vertical;
-        }
-    }
-    @include m(small) {
-        @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);
-        @include when(circle) {
-            padding: $--button-small-padding-vertical;
-        }
-    }
-    @include m(smaller) {
-        @include button-size($--button-smaller-padding-vertical, $--button-smaller-padding-horizontal, $--button-smaller-font-size, $--button-smaller-border-radius);
-        @include when(circle) {
-            padding: $--button-smaller-padding-vertical;
-        }
-    }
+  }
 }
-
 
 @include b(button-group) {
-    display: inline-block;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    &> :first-child{
-        .gf-button{
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
+  display: inline-block;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  & > :first-child {
+    button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
-    &> :last-child{
-        .gf-button{
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            border-left-color: hsla(0,0%,100%,.5);
-        }
+  }
+  & > :last-child {
+    button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-color: hsla(0, 0%, 100%, 0.5);
     }
-    & > :not(&>:first-child):not(&>:last-child) {
-        .gf-button{
-            border-radius: 0;
-            border-left-color: hsla(0,0%,100%,.5);
-        }
+  }
+  & > :not(& > :first-child):not(& > :last-child) {
+    button {
+      border-radius: 0;
+      border-left-color: hsla(0, 0%, 100%, 0.5);
     }
+  }
 }
-  

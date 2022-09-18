@@ -21,7 +21,7 @@ injectComponents({
 @Component({
   tag: 'gf-input',
 })
-export class GfInput {
+export class Input {
   @Prop() disabled: boolean = false //禁用
   @Prop() clearable: boolean = false //清除
   @Prop() value: string = ''
@@ -203,12 +203,12 @@ export class GfInput {
     return (
       <Host>
         <div class={[this.type !== 'textarea' ? ns.b() : nsTextarea.b(), ns.is('disabled', this.disabled), ns.is(`input-${this.status}`, !!this.status)].join(' ')}>
-          <slot name="before"></slot>
+          <slot name='before'></slot>
           {this.getInputInstance()}
           {this.type !== 'textarea' && this.clearable && this.curentValue ? this.getClearInstance() : ''}
           {Number(this.maxlength) > 0 ? this.getMaxLengthInstance() : ''}
           {this.status ? this.getStatusInstance() : ''}
-          <slot name="after"></slot>
+          <slot name='after'></slot>
         </div>
       </Host>
     )

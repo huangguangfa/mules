@@ -14,8 +14,12 @@
     "esModuleInterop": true,
     "removeComments": false,
     "rootDir": ".",
-    "types": [],
+    "types": [
+      "vite/client",
+    ],
     "paths": {},
+    "skipLibCheck": true,
     "experimentalDecorators": true,
   },
+  "exclude": ["**/*.stories.ts", ]
 }
