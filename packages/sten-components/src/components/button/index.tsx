@@ -11,15 +11,16 @@ const ns = useNamespace('button')
   scoped: true,
 })
 export class Button {
-  @Prop() color: ButtonColor = 'default' // 按钮颜色
-  @Prop() disabled: boolean = false // 禁用
-  @Prop() textColor: string = 'white' // 文字颜色
+  @Prop() color?: ButtonColor = 'default' // 按钮颜色
+  @Prop() disabled?: boolean = false // 禁用
+  @Prop() textColor?: string = 'white' // 文字颜色
   @Prop() classNames: string = '' // 自定义类名
-  @Prop() plain: boolean = false // 朴素按钮
-  @Prop() size: ButtonSize = '' // 大 中 小
-  @Prop() circle: boolean = false // 圆形
-  @Prop() round: boolean = false // 是否是圆角按钮
-  @Prop() nativeType: string = 'button' // 原生类型
+  @Prop() plain?: boolean = false // 朴素按钮
+  @Prop() size?: ButtonSize = '' // 大 中 小
+  @Prop() circle?: boolean = false // 圆形
+  @Prop() round?: boolean = false // 是否是圆角按钮
+  @Prop() nativeType?: string = 'button' // 原生类型
+  @Prop() keyEsc?: boolean = false // esc键盘事件
 
   @Event({
     eventName: setEventName('click'),
@@ -33,10 +34,20 @@ export class Button {
     this.displayOnClick.emit(e)
   }
 
+  @Event({
+    eventName: 'keyesc',
+    composed: true,
+    cancelable: true,
+    bubbles: true,
+  })
+  displayOnEsc: EventEmitter
+
   componentWillLoad() {
-    onKeyStroke('Escape', e => {
-      console.log(e)
-    })
+    this.keyEsc &&
+      onKeyStroke('Escape', e => {
+        console.log('escs')
+        this.displayOnEsc.emit(e)
+      })
   }
 
   render() {

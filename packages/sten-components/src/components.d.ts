@@ -12,15 +12,16 @@ export namespace Components {
         "show": Boolean;
     }
     interface GfButton {
-        "circle": boolean;
+        "circle"?: boolean;
         "classNames": string;
-        "color": ButtonColor;
-        "disabled": boolean;
-        "nativeType": string;
-        "plain": boolean;
-        "round": boolean;
-        "size": ButtonSize;
-        "textColor": string;
+        "color"?: ButtonColor;
+        "disabled"?: boolean;
+        "keyEsc"?: boolean;
+        "nativeType"?: string;
+        "plain"?: boolean;
+        "round"?: boolean;
+        "size"?: ButtonSize;
+        "textColor"?: string;
     }
     interface GfButtonGroup {
     }
@@ -746,8 +747,10 @@ declare namespace LocalJSX {
         "classNames"?: string;
         "color"?: ButtonColor;
         "disabled"?: boolean;
+        "keyEsc"?: boolean;
         "nativeType"?: string;
         "onDisplayOnClick"?: (event: GfButtonCustomEvent<any>) => void;
+        "onKeyesc"?: (event: GfButtonCustomEvent<any>) => void;
         "plain"?: boolean;
         "round"?: boolean;
         "size"?: ButtonSize;

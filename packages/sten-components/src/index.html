@@ -12,15 +12,16 @@
 </head>
 
 <body>
-    <div class="reset" style="width: 300px">
-        <gf-button color="primary" round>确认提交</gf-button>
-    </div>
+
 
     <div id="app">
         {{ message }}
-        <div style="width: 200px;">
+        <!-- <div style="width: 200px;">
             <gf-input status="warning" maxlength="10" value="111"></gf-input>
             <gf-input placeholder="最少3列最大10列" type="textarea" min-rows="10" max-rows="10"></gf-input>
+        </div> -->
+        <div class="reset" style="width: 300px">
+            <gf-button ref="mbuttonRef" @keyesc.passive="esc" color="primary" round key-esc>确认提交</gf-button>
         </div>
     </div>
 </body>
@@ -39,6 +40,16 @@
             setTimeout(() => {
                 this.disabled = true
             }, 2000)
-        }
+        },
+        mounted() {
+            this.$refs.mbuttonRef.addEventListener('esc', () => {
+                console.log('2222')
+            })
+        },
+        methods: {
+            esc() {
+                console.log('取消')
+            }
+        },
     })
 </script>
