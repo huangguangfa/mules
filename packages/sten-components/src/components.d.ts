@@ -750,7 +750,7 @@ declare namespace LocalJSX {
         "keyEsc"?: boolean;
         "nativeType"?: string;
         "onDisplayOnClick"?: (event: GfButtonCustomEvent<any>) => void;
-        "onKeyesc"?: (event: GfButtonCustomEvent<any>) => void;
+        "onDisplayOnEsc"?: (event: GfButtonCustomEvent<any>) => void;
         "plain"?: boolean;
         "round"?: boolean;
         "size"?: ButtonSize;

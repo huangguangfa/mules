@@ -35,7 +35,7 @@ export class Button {
   }
 
   @Event({
-    eventName: 'keyesc',
+    eventName: setEventName('keyesc'),
     composed: true,
     cancelable: true,
     bubbles: true,
