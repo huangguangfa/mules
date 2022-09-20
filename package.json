@@ -1,8 +1,10 @@
 {
-  "name": "root",
+  "name": "mules-monorepo",
   "packageManager": "pnpm@7.6.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "pnpm start:ui & pnpm start:themes & pnpm start:doc",
     "commit": "git cz",
     "release": "standard-version",
     "start:ui": "pnpm --filter @gf-ui/components start",

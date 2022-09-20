@@ -32,3 +32,5 @@ export function onKeyStroke(key: KeyFilter, handler: (event: KeyboardEvent) => v
 
   return useEventListener(target, eventName, listener, passive)
 }
+
+// export function KeyStroke
