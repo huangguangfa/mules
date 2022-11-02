@@ -1,4 +1,4 @@
-import { zipUrl } from './baseUrl';
+import { zipUrl } from './baseUrl'
 /**
  * 模板配置信息
  * @param { string } name 展示模板名称
@@ -9,11 +9,11 @@ import { zipUrl } from './baseUrl';
  */
 
 export interface TemplateInfo {
-  name: string;
-  type: string;
-  repositories: string;
-  desc: string;
-  author: string;
+  name: string
+  type: string
+  repositories: string
+  desc: string
+  author: string
 }
 
 export default [
@@ -45,4 +45,4 @@ export default [
     desc: '文档cli、基于vitePress+TS, 开箱即用',
     author: 'gf',
   },
-];
+]
