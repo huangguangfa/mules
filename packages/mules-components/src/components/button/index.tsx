@@ -1,9 +1,9 @@
-import { Component, Host, h, Prop, Event, EventEmitter, Element } from '@stencil/core'
+import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core'
 import { ButtonColor, ButtonSize } from '../../types/gf-button'
 import { getButtonColor, getButtonStyle } from './_button'
-import { setEventName } from '../.internal/config'
+import { setEventName } from '../../.internal/config'
 import { useNamespace } from '../../utils'
-import { useEventListener, onKeyStroke } from '../../hooks'
+import { onKeyStroke } from '../../hooks'
 const ns = useNamespace('button')
 
 @Component({

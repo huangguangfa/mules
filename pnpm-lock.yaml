@@ -109,12 +109,12 @@ importers:
     dependencies:
       '@docsearch/js': 3.1.1
       '@element-plus/icons-vue': 2.0.6_vue@3.2.37
-      '@gf-ui/core': link:../packages/core
+      '@gf-ui/core': 0.1.5
       '@vue/shared': 3.2.37
       '@vueuse/core': 8.9.4_vue@3.2.37
       axios: 0.27.2
       clipboard-copy: 4.0.1
-      element-plus: 2.2.17_vue@3.2.37
+      element-plus: 2.2.19_vue@3.2.37
       markdown-it: 13.0.1
       normalize.css: 8.0.1
       nprogress: 0.2.0
@@ -201,13 +201,13 @@ importers:
     specifiers:
       '@mules/cli': workspace:*
     devDependencies:
-      '@mules/cli': link:../../packages/cli
+      '@mules/cli': link:../../packages/mules-cli
 
   examples/eslint-demo:
     specifiers:
       '@mules/eslint-config-basic': workspace:*
     dependencies:
-      '@mules/eslint-config-basic': link:../../packages/eslint-config
+      '@mules/eslint-config-basic': link:../../packages/mules-eslint
 
   examples/react-ts:
     specifiers:
@@ -331,7 +331,7 @@ importers:
 
   examples/vue2:
     specifiers:
-      '@gf-ui/core': workspace:^0.1.5
+      '@mules/core': workspace:*
       '@vue/cli-plugin-babel': ~4.5.15
       '@vue/cli-plugin-eslint': ~4.5.15
       '@vue/cli-service': ~4.5.15
@@ -347,7 +347,7 @@ importers:
     dependencies:
       vue: 2.7.8
     devDependencies:
-      '@gf-ui/core': link:../../packages/core
+      '@mules/core': link:../../packages/mules-core
       '@vue/cli-plugin-babel': 4.5.19_co5okxmme2qz3y7hmlytk6mv5a
       '@vue/cli-plugin-eslint': 4.5.19_fepo2kslcuyry2fkxxpiwlhxb4
       '@vue/cli-service': 4.5.19_7unolrgjwxngstwwllrtmolbmm
@@ -362,7 +362,7 @@ importers:
 
   examples/vue3:
     specifiers:
-      '@gf-ui/core': workspace:*
+      '@mules/core': workspace:*
       '@rushstack/eslint-patch': ^1.1.0
       '@types/node': ^16.11.27
       '@vitejs/plugin-vue': ^2.3.1
@@ -378,7 +378,7 @@ importers:
       vue: ^3.2.33
       vue-tsc: ^0.34.7
     dependencies:
-      '@gf-ui/core': link:../../packages/core
+      '@mules/core': link:../../packages/mules-core
       axios: 0.27.2
       vue: 3.2.37
     devDependencies:
@@ -395,7 +395,7 @@ importers:
       vite: 2.9.14
       vue-tsc: 0.34.17_typescript@4.6.4
 
-  packages/cli:
+  packages/mules-cli:
     specifiers:
       '@swc/core': ^1.2.246
       '@types/download': ^8.0.1
@@ -444,7 +444,30 @@ importers:
       tsup: 6.2.3_u6t6qvzjlbgnx4q2mzsjhro7ey
       typescript: 4.8.2
 
-  packages/core:
+  packages/mules-components:
+    specifiers:
+      '@mules/core': workspace:*
+      '@rollup/plugin-alias': ^3.1.9
+      '@stencil/core': ^2.15.1
+      '@types/jest': ^27.0.3
+      classnames: ^2.3.1
+      jest: ^27.4.5
+      jest-cli: ^27.4.5
+      puppeteer: ^10.0.0
+      svgson: ^5.2.1
+    dependencies:
+      '@stencil/core': 2.17.1
+    devDependencies:
+      '@mules/core': link:../mules-core
+      '@rollup/plugin-alias': 3.1.9
+      '@types/jest': 27.5.2
+      classnames: 2.3.1
+      jest: 27.5.1
+      jest-cli: 27.5.1
+      puppeteer: 10.4.0
+      svgson: 5.2.1
+
+  packages/mules-core:
     specifiers:
       '@types/crypto-js': ^4.1.1
       '@types/qs': ^6.9.7
@@ -459,33 +482,10 @@ importers:
       '@types/crypto-js': 4.1.1
       '@types/qs': 6.9.7
 
-  packages/eslint-config:
+  packages/mules-eslint:
     specifiers: {}
 
-  packages/sten-components:
-    specifiers:
-      '@mules/core': workspace:^0.0.1
-      '@rollup/plugin-alias': ^3.1.9
-      '@stencil/core': ^2.15.1
-      '@types/jest': ^27.0.3
-      classnames: ^2.3.1
-      jest: ^27.4.5
-      jest-cli: ^27.4.5
-      puppeteer: ^10.0.0
-      svgson: ^5.2.1
-    dependencies:
-      '@stencil/core': 2.17.1
-    devDependencies:
-      '@mules/core': link:../core
-      '@rollup/plugin-alias': 3.1.9
-      '@types/jest': 27.5.2
-      classnames: 2.3.1
-      jest: 27.5.1
-      jest-cli: 27.5.1
-      puppeteer: 10.4.0
-      svgson: 5.2.1
-
-  packages/sten-icons:
+  packages/mules-icons:
     specifiers:
       '@stencil/core': ^2.13.0
       '@types/jest': ^27.0.3
@@ -506,7 +506,7 @@ importers:
       svgo: 2.8.0
       svgson: 5.2.1
 
-  packages/sten-themes:
+  packages/mules-themes:
     specifiers:
       gulp: ^4.0.2
       gulp-autoprefixer: ^8.0.0
@@ -3736,6 +3736,16 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
+  /@gf-ui/core/0.1.5:
+    resolution: {integrity: sha512-zZnKCoI0J3LpvvTGqjakhYqoA5LZ6lbRMTkTYvawRJTRWLL6x0R8VrQlLG3Zi2/fLAIRCdgHv82I/IdalW7Cdg==}
+    dependencies:
+      axios: 0.27.2
+      crypto-js: 4.1.1
+      qs: 6.11.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /@hapi/address/2.1.4:
     resolution: {integrity: sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ==}
     deprecated: Moved to 'npm install @sideway/address'
@@ -5557,7 +5567,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.6.2
+      '@types/node': 18.7.14
     dev: true
     optional: true
 
@@ -11014,8 +11024,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /element-plus/2.2.17_vue@3.2.37:
-    resolution: {integrity: sha512-MGwMIE/q+FFD3kgS23x8HIe5043tmD1cTRwjhIX9o6fim1avFnUkrsfYRvybbz4CkyqSb185EheZS5AUPpXh2g==}
+  /element-plus/2.2.19_vue@3.2.37:
+    resolution: {integrity: sha512-uN0gt9lUus/IHzu5J6vkbYoYJgUtU05osdtFv9RO27bHKOG5GN7dH6uA3OKfkQQ6R2sV8ZxY1rc9PH1X8Dgrow==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -12759,7 +12769,7 @@ packages:
     engines: {node: '>= 10.17.0'}
     hasBin: true
     dependencies:
-      debug: 4.3.1
+      debug: 4.3.4
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -18080,7 +18090,6 @@ packages:
       define-properties: 1.1.4
       has-symbols: 1.0.3
       object-keys: 1.1.1
-    dev: false
 
   /object.defaults/1.1.0:
     resolution: {integrity: sha512-c/K0mw/F11k4dEUBMW8naXUuBuhxRCfG7W+yFy8EcijU/rSmazOUd1XAEEe6bC0OuXY4HUKjTJv7xbxIMqdxrA==}
@@ -23966,7 +23975,7 @@ packages:
       is-valid-glob: 1.0.0
       lazystream: 1.0.1
       lead: 1.0.0
-      object.assign: 4.1.2
+      object.assign: 4.1.4
       pumpify: 1.5.1
       readable-stream: 2.3.7
       remove-bom-buffer: 3.0.0
@@ -25331,7 +25340,7 @@ packages:
     resolution: {integrity: sha512-wpav5XYiddjXxirPoCTUPbqM0PXvJ9hiBMvuJgInvo4/lAOTZzUprArw17q2O1P2+GHhbBr18/iQwjL5Z9BqfA==}
     dependencies:
       camelcase: 3.0.0
-      object.assign: 4.1.2
+      object.assign: 4.1.4
     dev: true
 
   /yargs/13.3.2:

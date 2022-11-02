@@ -7,7 +7,7 @@ const entryDir = resolve(__dirname, '../src/svgs');
 const outDir = resolve(__dirname, '../src/icons');
 const HTMLPATH = resolve(__dirname, '../src/index.html');
 const outDirComponent = resolve(__dirname, '../src/components');
-const stenComponents = resolve(__dirname, '../../sten-components/src/components/gf-icon');
+const stenComponents = resolve(__dirname, '../../mules-components/src/components/icon');
 
 async function clearDir() {
   const rmDirList = [outDir, outDirComponent, stenComponents];
@@ -152,7 +152,7 @@ function writeFiles(svgJSONList) {
     generateIconSvgJson(svgJsonfileName, svgItem);
     const componentName = generateComponent(name);
     // 复制一份到sten-components里面
-    generateComponent(name, stenComponents, '../icons', '../../../../sten-icons/src/icons');
+    generateComponent(name, stenComponents, '../../../../mules-icons/src/icons', '../../../../mules-icons/src/icons');
     componentNameList.push({
       cName: componentName,
       isColor: svgItem._isColor,

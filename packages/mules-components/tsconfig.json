@@ -18,7 +18,7 @@
     },
     "include": [
         "src" 
-    ],
+, "src/.internal/components/icons"    ],
     "exclude": [
         "node_modules",
     ]

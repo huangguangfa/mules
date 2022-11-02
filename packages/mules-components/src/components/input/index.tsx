@@ -3,9 +3,9 @@ import { useNamespace } from '../../utils'
 
 import { calcTextareaHeight } from './utils'
 import { injectComponents } from '../../utils'
-import { GfIconclear } from '../gf-icon/gf-icon-clear'
-import { GfIconinfo } from '../gf-icon/gf-icon-info'
-import { GfIconsuccessFill } from '../gf-icon/gf-icon-successFill'
+import { GfIconclear } from '../icon/gf-icon-clear'
+import { GfIconinfo } from '../icon/gf-icon-info'
+import { GfIconsuccessFill } from '../icon/gf-icon-successFill'
 import type { status } from '../../types/var'
 import { STATUS, disabledIconColor } from './config'
 
