@@ -195,29 +195,6 @@ importers:
       tsup: 6.3.0_ldaqumno46ke76prz5kcgkjhhy
       typescript: 4.8.4
 
-  packages/mules-components:
-    specifiers:
-      '@mules/core': workspace:*
-      '@rollup/plugin-alias': ^3.1.9
-      '@stencil/core': ^2.15.1
-      '@types/jest': ^27.0.3
-      classnames: ^2.3.1
-      jest: ^27.4.5
-      jest-cli: ^27.4.5
-      puppeteer: ^10.0.0
-      svgson: ^5.2.1
-    dependencies:
-      '@stencil/core': 2.19.2
-    devDependencies:
-      '@mules/core': link:../mules-core
-      '@rollup/plugin-alias': 3.1.9
-      '@types/jest': 27.5.2
-      classnames: 2.3.2
-      jest: 27.5.1
-      jest-cli: 27.5.1
-      puppeteer: 10.4.0
-      svgson: 5.2.1
-
   packages/mules-core:
     specifiers:
       '@types/crypto-js': ^4.1.1
@@ -270,6 +247,29 @@ importers:
       gulp-cssmin: 0.2.0
       gulp-sass: 5.1.0
       sass: 1.55.0
+
+  packages/mules-ui:
+    specifiers:
+      '@mules/core': workspace:*
+      '@rollup/plugin-alias': ^3.1.9
+      '@stencil/core': ^2.15.1
+      '@types/jest': ^27.0.3
+      classnames: ^2.3.1
+      jest: ^27.4.5
+      jest-cli: ^27.4.5
+      puppeteer: ^10.0.0
+      svgson: ^5.2.1
+    dependencies:
+      '@stencil/core': 2.19.2
+    devDependencies:
+      '@mules/core': link:../mules-core
+      '@rollup/plugin-alias': 3.1.9
+      '@types/jest': 27.5.2
+      classnames: 2.3.2
+      jest: 27.5.1
+      jest-cli: 27.5.1
+      puppeteer: 10.4.0
+      svgson: 5.2.1
 
 packages:
 

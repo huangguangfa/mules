@@ -59,7 +59,6 @@ export const config: UserConfig = {
   },
   vue: {
     template: {
-      ssr: true,
       compilerOptions: {
         directiveTransforms: buildTransformers(),
         // isCustomElement: tag => tag.includes('gf-'),

@@ -1,5 +1,5 @@
 {
-  "name": "@gf-ui/docs",
+  "name": "@mules/docs",
   "version": "1.0.0",
   "scripts": {
     "dev": "pnpm gen-locale && vitepress dev",

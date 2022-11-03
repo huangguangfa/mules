@@ -31,7 +31,7 @@
       border-color: $input-border-color-focus;
     }
   }
-  & .gf-input__maxlength {
+  & .m-input__maxlength {
     color: #909399;
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@
   @include when(disabled) {
     background: $--input-disabled-fill;
     border-color: $--input-disabled-border;
-    .gf-textarea__inner {
+    .m-textarea__inner {
       background-color: $--input-disabled-fill;
       color: $--input-disabled-color;
       cursor: not-allowed;
@@ -53,7 +53,7 @@
       }
     }
 
-    .gf-input__icon {
+    .m-input__icon {
       cursor: not-allowed;
     }
   }
@@ -80,17 +80,17 @@
   }
   &:hover {
     border-color: $input-border-color-focus;
-    .gf-input__clear {
+    .m-input__clear {
       display: block;
     }
   }
-  & .gf-input__clear {
+  & .m-input__clear {
     cursor: pointer;
     z-index: 2;
     padding-right: 2px;
     display: none;
   }
-  & .gf-input__maxlength {
+  & .m-input__maxlength {
     color: #909399;
     display: flex;
     align-items: center;
@@ -108,7 +108,7 @@
     padding: 0;
     height: 100%;
     border-radius: $--border-radius-base;
-    &:focus + .gf-input__clear {
+    &:focus + .m-input__clear {
       display: block;
     }
     &::placeholder {
@@ -138,7 +138,7 @@
   @include when(disabled) {
     background: $--input-disabled-fill;
     border-color: $--input-disabled-border;
-    .gf-input__inner {
+    .m-input__inner {
       background-color: $--input-disabled-fill;
       color: $--input-disabled-color;
       cursor: not-allowed;
@@ -148,7 +148,7 @@
       }
     }
 
-    .gf-input__icon {
+    .m-input__icon {
       cursor: not-allowed;
     }
   }
