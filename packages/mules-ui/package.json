@@ -1,15 +1,15 @@
 {
-  "name": "@mules/icons",
-  "version": "0.1.8",
-  "description": "跨框架Icon组件库",
+  "name": "@mules/ui",
+  "version": "0.0.11",
+  "description": "跨框架核心库",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/sten-icons/sten-icons.esm.js",
+  "unpkg": "dist/sten-components/sten-components.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
@@ -18,27 +18,32 @@
     "dist/",
     "loader/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
-    "svg": "node script/build-svg-json-files.js"
+    "generate": "stencil generate"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "keywords": [
+    "gf",
+    "gf-ui",
+    "gfui"
+  ],
   "dependencies": {
-    "@stencil/core": "^2.13.0"
+    "@stencil/core": "^2.15.1"
   },
   "devDependencies": {
+    "@mules/core": "workspace:*",
+    "@rollup/plugin-alias": "^3.1.9",
     "@types/jest": "^27.0.3",
-    "camelcase": "^6.3.0",
+    "classnames": "^2.3.1",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0",
-    "svgo": "^2.8.0",
     "svgson": "^5.2.1"
   },
   "license": "MIT",

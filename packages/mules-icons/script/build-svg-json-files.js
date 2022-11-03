@@ -24,16 +24,12 @@ async function clearDir() {
   });
 }
 
-/*
- *  移除svg某个属性
- */
+/* 移除svg某个属性 */
 function removeAttributes(json) {
   const removAttrKeyList = ['t'];
   removAttrKeyList.forEach(key => Reflect.deleteProperty(json.attributes, key));
 }
-/*
- *  添加svg某个属性
- */
+/* 添加svg某个属性 */
 function addAttributes(json, key, value) {
   return Reflect.set(json, key, value);
 }
@@ -55,9 +51,7 @@ async function start() {
   writeFiles(svgJSONList);
 }
 
-/*
- * 生成icon组件
- */
+/* 生成icon组件 */
 function generateComponent(iconName, outDirComponents = outDirComponent, iconBaseComponenPath = '../icon-base/index', iconsSvgDataPath = '../icons') {
   const componentName = `gf-icon-${iconName.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
   const componentsTemplate = `
@@ -112,16 +106,12 @@ function generateHtml(component) {
   fs.writeFileSync(HTMLPATH, htmlTemplate);
 }
 
-/*
- * 生成icon目标JSON数据
- */
+/* 生成icon目标JSON数据 */
 function generateIconSvgJson(fileName, content) {
   const templateCode = `export default ${JSON.stringify(content)}`;
   fs.writeFileSync(resolve(outDir, fileName), templateCode);
 }
-/*
- * 总览所有icon
- */
+/* 总览所有icon */
 function generateAllIconJson(AllComList) {
   const componentJsonLisFileName = 'componentJsonLisFile.js';
   const componentJsonListTemplate = `export default {
@@ -130,9 +120,7 @@ function generateAllIconJson(AllComList) {
     }`;
   fs.writeFileSync(resolve(outDirComponent, componentJsonLisFileName), componentJsonListTemplate);
 }
-/*
- * 生成icon里的index.js 统一导出
- */
+/* 生成icon里的index.js 统一导出 */
 function generateIconIndexContent(content) {
   const fileName = 'index.js';
   fs.writeFileSync(resolve(outDir, fileName), content);
@@ -152,7 +140,7 @@ function writeFiles(svgJSONList) {
     generateIconSvgJson(svgJsonfileName, svgItem);
     const componentName = generateComponent(name);
     // 复制一份到sten-components里面
-    generateComponent(name, stenComponents, '../../../../mules-icons/src/icons', '../../../../mules-icons/src/icons');
+    generateComponent(name, stenComponents, '../../../../mules-icons/src/icon-base', '../../../../mules-icons/src/icons');
     componentNameList.push({
       cName: componentName,
       isColor: svgItem._isColor,

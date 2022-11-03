@@ -1,4 +1,4 @@
-import { defaultNamespace } from '../../../mules-components/src/utils';
+import { defaultNamespace } from '../../../mules-ui/src/utils';
 import { FunctionalComponent, h } from '@stencil/core';
 import { stringify } from 'svgson';
 export interface IconProps {
